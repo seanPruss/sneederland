@@ -40,6 +40,7 @@ nvidia_stage=(
 #the main packages
 install_stage=(
 	rust
+	jdk-openjdk
 	flatpak
 	cmatrix
 	npm
@@ -65,6 +66,14 @@ install_stage=(
 	geoclue
 	redshift-wayland-git
 	zsh-git
+	zsh-auto-notify
+	zsh-fast-syntax-highlighting-git
+	zsh-autoswitch-virtualenv-git
+	fzf-tab-git
+	zsh-autosuggestions-git
+	zsh-history-substring-search-git
+	zsh-you-should-use
+	zsh-autopair-git
 	urlview-git
 	tmux-git
 	ripgrep
@@ -72,6 +81,7 @@ install_stage=(
 	yazi-git
 	lazygit-git
 	zoxide-git
+	eza-git
 	rose-pine-gtk-theme-full
 	rose-pine-cursor
 	libreoffice-fresh
@@ -230,6 +240,9 @@ fi
 echo -e "$CNT Copying config files"
 rm -rf ~/.config
 git clone https://github.com/seanPruss/.config ~/.config
+sudo echo "ParallelDownloads = 5" >>/etc/pacman.conf
+sudo echo "Color" >>/etc/pacman.conf
+sudo echo "ILoveCandy" >>/etc/pacman.conf
 # Prep Stage - Bunch of needed items
 echo -e "$CNT - Prep Stage - Installing needed components, this may take a while..."
 for SOFTWR in ${prep_stage[@]}; do
