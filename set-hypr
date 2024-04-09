@@ -41,6 +41,7 @@ nvidia_stage=(
 install_stage=(
 	rust
 	flatpak
+	cmatrix
 	npm
 	auto-cpufreq
 	kitty-git
