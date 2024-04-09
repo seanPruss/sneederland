@@ -74,6 +74,7 @@ install_stage=(
 	zsh-history-substring-search-git
 	zsh-you-should-use
 	zsh-autopair-git
+	zsh-directory-history-git
 	uwufetch-git
 	urlview-git
 	tmux-git
@@ -241,6 +242,8 @@ fi
 echo -e "$CNT Copying config files"
 rm -rf ~/.config
 git clone https://github.com/seanPruss/.config ~/.config
+rm -rf ~/.config/nvim
+git clone https://github.com/seanPruss/the-sneed-editor ~/.config/nvim
 sudo echo "ParallelDownloads = 5" >>/etc/pacman.conf
 sudo echo "Color" >>/etc/pacman.conf
 sudo echo "ILoveCandy" >>/etc/pacman.conf
