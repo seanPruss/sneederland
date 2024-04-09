@@ -42,7 +42,7 @@ install_stage=(
 	rust
 	jdk-openjdk
 	flatpak
-	cmatrix
+	cmatrix-git
 	npm
 	auto-cpufreq
 	kitty-git
