@@ -74,6 +74,7 @@ install_stage=(
 	zsh-history-substring-search-git
 	zsh-you-should-use
 	zsh-autopair-git
+	uwufetch-git
 	urlview-git
 	tmux-git
 	ripgrep
