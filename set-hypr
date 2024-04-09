@@ -75,6 +75,7 @@ install_stage=(
 	zsh-you-should-use
 	zsh-autopair-git
 	zsh-directory-history-git
+	bash-zsh-insulter
 	uwufetch-git
 	urlview-git
 	tmux-git
