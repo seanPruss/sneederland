@@ -77,6 +77,9 @@ install_stage=(
 	zsh-directory-history-git
 	bash-zsh-insulter
 	uwufetch-git
+	obs-studio-git
+	kdenlive-release-git
+	gimp-devel
 	urlview-git
 	tmux-git
 	ripgrep
@@ -245,9 +248,9 @@ rm -rf ~/.config
 git clone https://github.com/seanPruss/.config ~/.config
 rm -rf ~/.config/nvim
 git clone https://github.com/seanPruss/the-sneed-editor ~/.config/nvim
-sudo echo "ParallelDownloads = 5" >>/etc/pacman.conf
-sudo echo "Color" >>/etc/pacman.conf
-sudo echo "ILoveCandy" >>/etc/pacman.conf
+sudo echo "\nParallelDownloads = 5" >>/etc/pacman.conf
+sudo echo "\nColor" >>/etc/pacman.conf
+sudo echo "\nILoveCandy" >>/etc/pacman.conf
 # Prep Stage - Bunch of needed items
 echo -e "$CNT - Prep Stage - Installing needed components, this may take a while..."
 for SOFTWR in ${prep_stage[@]}; do
