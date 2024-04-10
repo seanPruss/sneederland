@@ -39,6 +39,8 @@ nvidia_stage=(
 
 #the main packages
 install_stage=(
+	ninja-git
+	meson-git
 	rust
 	jdk-openjdk
 	flatpak
@@ -46,20 +48,20 @@ install_stage=(
 	npm
 	auto-cpufreq
 	kitty-git
-	mako
-	waybar
-	swww
-	swaylock-effects
+	mako-git
+	waybar-git
+	swww-git
+	swaylock-effects-git
 	wofi
-	wlogout
-	xdg-desktop-portal-hyprland
-	swappy
-	grim
-	slurp
+	wlogout-git
+	xdg-desktop-portal-hyprland-git
+	swappy-git
+	grim-git
+	slurp-git
 	thunar
-	btop
+	btop-gpu-git
 	floorp-bin
-	webcord-bin
+	webcord-vencord-git
 	spotify
 	spicetify-cli-git
 	spicetify-themes-git
@@ -109,7 +111,7 @@ install_stage=(
 	lxappearance
 	xfce4-settings
 	nwg-look-bin
-	sddm
+	sddm-git
 )
 
 for str in ${myArray[@]}; do
@@ -272,7 +274,7 @@ fi
 
 # Install the correct hyprland version
 echo -e "$CNT - Installing Hyprland, this may take a while..."
-install_software hyprland
+install_software hyprland-git
 
 # Stage 1 - main components
 echo -e "$CNT - Installing main components, this may take a while..."
