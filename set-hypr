@@ -250,9 +250,7 @@ rm -rf ~/.config
 git clone https://github.com/seanPruss/.config ~/.config
 rm -rf ~/.config/nvim
 git clone https://github.com/seanPruss/the-sneed-editor ~/.config/nvim
-sudo echo "\nParallelDownloads = 5" >>/etc/pacman.conf
-sudo echo "\nColor" >>/etc/pacman.conf
-sudo echo "\nILoveCandy" >>/etc/pacman.conf
+sudo echo "\nParallelDownloads = 5\nColor\nILoveCandy" >>/etc/pacman.conf
 # Prep Stage - Bunch of needed items
 echo -e "$CNT - Prep Stage - Installing needed components, this may take a while..."
 for SOFTWR in ${prep_stage[@]}; do
@@ -294,7 +292,7 @@ sleep 2
 
 # Enable auto-cpufreq service
 echo -e "$CNT - Enabling the auto-cpufreq Service..."
-sudo systemctl enable auto-cpufreq &>>$INSTLOG
+sudo systemctl enable --now auto-cpufreq &>>$INSTLOG
 sleep 2
 
 # Clean out other portals
