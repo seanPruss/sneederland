@@ -8,6 +8,6 @@ with the install script modified to install all my packages.
 > [!IMPORTANT]
 > This script will only work on Arch Linux (and Arch-based distros but who uses  
 > those anyway?) so put on your knee high socks and cat ears and start commenting  
-> "I use arch btw :3"
+> "I use arch btw :3" on every social media post you encounter
 
 Clone this repo and run `set-hypr`
