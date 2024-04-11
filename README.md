@@ -5,4 +5,9 @@ with the install script modified to install all my packages.
 
 ## Installation
 
+> [!IMPORTANT]
+> This script will only work on Arch Linux (and Arch-based distros but who uses  
+> those anyway?) so put on your knee high socks and cat ears and start commenting  
+> "I use arch btw :3"
+
 Clone this repo and run `set-hypr`
