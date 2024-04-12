@@ -67,6 +67,7 @@ install_stage=(
 	spicetify-themes-git
 	geoclue
 	redshift-wayland-git
+	fzf
 	zsh-git
 	zsh-auto-notify
 	zsh-fast-syntax-highlighting-git
