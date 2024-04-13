@@ -70,6 +70,7 @@ install_stage=(
 	geoclue
 	redshift-wayland-git
 	fzf
+	tealdeer
 	zsh-git
 	zsh-auto-notify
 	zsh-fast-syntax-highlighting-git
