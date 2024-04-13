@@ -39,6 +39,8 @@ nvidia_stage=(
 
 #the main packages
 install_stage=(
+	man-db
+	man-pages
 	ninja-git
 	meson-git
 	rust
