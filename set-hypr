@@ -256,7 +256,7 @@ rm -rf ~/.config/nvim
 git clone https://github.com/seanPruss/the-sneed-editor ~/.config/nvim
 
 # Set up pacman.conf
-sudo echo "[options]
+echo "[options]
 HoldPkg     = pacman glibc
 Architecture = auto
 CheckSpace
