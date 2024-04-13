@@ -80,6 +80,7 @@ install_stage=(
 	zsh-you-should-use
 	zsh-autopair-git
 	zsh-directory-history-git
+	zsh-vi-mode-git
 	bash-zsh-insulter
 	uwufetch-git
 	obs-studio-git
