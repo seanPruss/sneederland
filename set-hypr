@@ -84,8 +84,6 @@ install_stage=(
 	zsh-vi-mode-git
 	bash-zsh-insulter
 	uwufetch-git
-	obs-studio-git
-	kdenlive-release-git
 	gimp-devel
 	urlview-git
 	tmux-git
