@@ -84,6 +84,7 @@ install_stage=(
 	zsh-vi-mode-git
 	bash-zsh-insulter
 	uwufetch-git
+	onefetch-git
 	gimp-devel
 	urlview-git
 	tmux-git
