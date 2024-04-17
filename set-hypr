@@ -26,6 +26,9 @@ prep_stage=(
 	cliphist
 	python-requests
 	pacman-contrib
+	ninja-git
+	meson-git
+	hyprcursor-git
 )
 
 #software for nvidia GPU only
@@ -41,8 +44,6 @@ nvidia_stage=(
 install_stage=(
 	man-db
 	man-pages
-	ninja-git
-	meson-git
 	rust
 	jdk-openjdk
 	flatpak
