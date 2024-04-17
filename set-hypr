@@ -348,7 +348,7 @@ sudo chmod -R 777 /opt/spotify
 spicetify config current_theme Sleek color_scheme rosepine
 spicetify backup apply
 # set up zsh
-cp ~/.config/.zshenv ~
+ln -sf ~/.config/.zshenv ~
 chsh -s /bin/zsh
 
 ### Install software for Asus ROG laptops ###
