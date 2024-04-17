@@ -44,6 +44,9 @@ nvidia_stage=(
 install_stage=(
 	man-db
 	man-pages
+	fd
+	bat
+	git-delta
 	rust
 	jdk-openjdk
 	flatpak
