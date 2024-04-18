@@ -88,7 +88,7 @@ install_stage=(
 	zsh-directory-history-git
 	zsh-vi-mode-git
 	bash-zsh-insulter
-	nerdfetch-git
+	neofetch-git
 	onefetch-git
 	gimp-devel
 	urlview-git
