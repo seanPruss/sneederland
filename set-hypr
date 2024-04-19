@@ -99,6 +99,9 @@ install_stage=(
 	lazygit-git
 	zoxide-git
 	eza-git
+	rust-lolcat-git
+	toilet
+	toilet-fonts
 	rose-pine-gtk-theme-full
 	rose-pine-cursor
 	libreoffice-fresh
