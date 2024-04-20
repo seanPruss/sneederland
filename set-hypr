@@ -67,7 +67,7 @@ install_stage=(
 	slurp-git
 	thunar
 	btop-gpu-git
-	floorp-bin
+	firefox
 	webcord-vencord-git
 	spotify
 	spicetify-cli-git
