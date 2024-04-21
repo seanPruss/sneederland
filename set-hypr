@@ -58,7 +58,7 @@ install_stage=(
 	mako-git
 	waybar-git
 	swww-git
-	swaylock-effects-git
+	hyprlock-git
 	wofi
 	wlogout-git
 	xdg-desktop-portal-hyprland-git
