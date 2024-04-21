@@ -57,6 +57,7 @@ install_stage=(
 	kitty-git
 	mako-git
 	waybar-git
+	imagemagick
 	swww-git
 	hyprlock-git
 	wofi
