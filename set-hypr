@@ -42,6 +42,7 @@ nvidia_stage=(
 
 #the main packages
 install_stage=(
+	swww-git
 	man-db
 	man-pages
 	fd
@@ -58,8 +59,8 @@ install_stage=(
 	mako-git
 	waybar-git
 	imagemagick
-	swww-git
 	hyprlock-git
+	hypridle-git
 	wofi
 	wlogout-git
 	xdg-desktop-portal-hyprland-git
