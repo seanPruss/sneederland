@@ -57,7 +57,7 @@ install_stage=(
 	rose-pine-hyprcursor
 	kitty-git
 	mako-git
-	waybar-git
+	gbar-git
 	imagemagick
 	hyprlock-git
 	hypridle-git
