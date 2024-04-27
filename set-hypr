@@ -43,6 +43,7 @@ nvidia_stage=(
 #the main packages
 install_stage=(
 	swww-git
+	pyprland-git
 	man-db
 	man-pages
 	fd
