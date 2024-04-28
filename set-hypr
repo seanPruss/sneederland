@@ -76,7 +76,7 @@ install_stage=(
 	spicetify-cli-git
 	spicetify-themes-git
 	geoclue
-	redshift-wayland-git
+	gammastep-wayland-git
 	fzf
 	tealdeer
 	zsh-git
@@ -343,9 +343,9 @@ gsettings set org.gnome.desktop.interface gtk-theme "rose-pine-gtk"
 gsettings set org.gnome.desktop.interface icon-theme "rose-pine-icons"
 gsettings set org.gnome.desktop.interface cursor-theme "BreezeX-RosePine-Linux"
 
-# Set up redshift
+# Set up gammastep
 systemctl --user enable --now geoclue-agent.service
-systemctl --user enable --now redshift.service
+systemctl --user enable --now gammastep.service
 
 # Set up tldr
 tldr --update
