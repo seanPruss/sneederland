@@ -67,7 +67,7 @@ install_stage=(
 	xdg-desktop-portal-hyprland-git
 	swappy-git
 	grim-git
-	slurp-git
+	slurp
 	thunar
 	btop-gpu-git
 	firefox
