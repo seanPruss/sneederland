@@ -95,7 +95,7 @@ install_stage=(
 	onefetch-git
 	gimp-devel
 	urlview-git
-	tmux-git
+	zellij
 	ripgrep
 	neovim-git
 	yazi-git
@@ -350,10 +350,6 @@ systemctl --user enable --now gammastep.service
 # Set up tldr
 tldr --update
 
-# Set up tmux
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-cargo install tmux_sessionizer
-tmux source ~/.config/tmux/tmux.conf
 # set up spicetify
 sudo chmod -R 777 /opt/spotify
 spicetify config current_theme Sleek color_scheme rosepine
