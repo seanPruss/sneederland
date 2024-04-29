@@ -71,7 +71,7 @@ install_stage=(
 	thunar
 	btop-gpu-git
 	firefox
-	webcord-vencord-git
+	webcord
 	spotify
 	spicetify-cli-git
 	spicetify-themes-git
