@@ -1,0 +1,89 @@
+[pyprland]
+plugins = ["scratchpads", "gbar"]
+
+[scratchpads.spotify]
+animation = "fromTop"
+command = "spotify"
+class = "Spotify"
+size = "80% 85%"
+unfocus = "hide"
+
+[scratchpads.webcord]
+animation = "fromTop"
+command = "webcord"
+class = "WebCord"
+size = "90% 90%"
+unfocus = "hide"
+
+[scratchpads.thunar]
+animation = "fromTop"
+command = "thunar"
+class = "thunar"
+size = "60% 80%"
+position = "20% 10%"
+unfocus = "hide"
+lazy = true
+
+[scratchpads.thunderbird]
+animation = "fromTop"
+command = "thunderbird"
+class = "thunderbird"
+size = "90% 90%"
+unfocus = "hide"
+
+[scratchpads.install]
+animation = "fromTop"
+command = "kitty --class='kitty-install' '/home/seanp/.config/install.sh'"
+class = "kitty-install"
+size = "70% 70%"
+position = "15% 15%"
+unfocus = "hide"
+lazy = true
+
+[scratchpads.update]
+animation = "fromTop"
+command = "kitty --class='kitty-update' '/home/seanp/.config/update.sh'"
+class = "kitty-update"
+size = "70% 70%"
+position = "15% 15%"
+unfocus = "hide"
+lazy = true
+
+[scratchpads.btop]
+animation = "fromTop"
+command = "kitty --class='kitty-btop' 'btop'"
+class = "kitty-btop"
+size = "70% 70%"
+position = "15% 15%"
+unfocus = "hide"
+lazy = true
+
+[scratchpads.volume]
+animation = "fromTop"
+command = "pavucontrol"
+class = "pavucontrol"
+size = "40% 40%"
+position = "30% 30%"
+unfocus = "hide"
+lazy = true
+
+[scratchpads.bluetooth]
+animation = "fromTop"
+command = "blueman-manager"
+class = "blueman-manager"
+size = "40% 40%"
+position = "30% 30%"
+unfocus = "hide"
+lazy = true
+
+[scratchpads.network]
+animation = "fromTop"
+command = "nm-connection-editor"
+class = "nm-connection-editor"
+size = "40% 40%"
+position = "30% 30%"
+unfocus = "hide"
+lazy = true
+
+[gbar]
+monitors = ["HDMI-A-1", "eDP-1"]
