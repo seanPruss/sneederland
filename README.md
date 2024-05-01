@@ -14,7 +14,7 @@ Clone this repo and run `installer-script`
 
 > [!IMPORTANT]
 > Clone the repo into the home directory. The installer script assumes that's  
-> the repo is located on your machine.
+> where the repo is located on your machine.
 
 ```bash
 cd
