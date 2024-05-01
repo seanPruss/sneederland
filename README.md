@@ -20,5 +20,6 @@ Clone this repo and run `installer-script`
 cd
 git clone https://github.com/seanPruss/the-sneed-packages.git
 cd the-sneed-packages
+rm -rf .git # do this if you want to create your own fork
 ./installer-script
 ```
