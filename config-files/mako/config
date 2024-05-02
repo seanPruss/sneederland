@@ -10,7 +10,7 @@ on-touch=dismiss
 #on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
 
 # STYLE OPTIONS
-font=Fantasque Sans Mono 14
+font=JetBrains Mono Nerd Font 14
 width=300
 height=100
 margin=10
@@ -33,8 +33,8 @@ anchor=center
 
 background-color=#191724
 text-color=#e0def4
-border-color=#26233a
-progress-color=over #89b4fa
+border-color=#ebbcba
+progress-color=over #31748f
 
 [urgency=low]
 border-color=#31748f
