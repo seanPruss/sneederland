@@ -189,7 +189,7 @@ source /usr/share/zsh/plugins/zsh-autopair/autopair.zsh
 source /usr/share/zsh/plugins/zsh-directory-history/zsh-directory-history.zsh
 source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-AUTO_NOTIFY_IGNORE+=("lazygit" "crontab -e" "yazi" "zellij" "cmatrix" "sudoedit" "git log" "cd")
+AUTO_NOTIFY_IGNORE+=("lazygit" "crontab -e" "yazi" "zellij" "cmatrix" "sudoedit" "git log" "cd" "cava")
 
 if [[ -f /etc/bash.command-not-found ]]; then
     . /etc/bash.command-not-found
