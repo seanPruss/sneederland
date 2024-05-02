@@ -27,6 +27,8 @@ gp ()
     fi
     git push
 }
+alias fsb='~/.config/zsh/fsb.sh'
+alias fshow='~/.config/zsh/fshow.sh'
 alias gc='git commit -m'
 alias gco='git checkout'
 alias ga='git add'
