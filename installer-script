@@ -102,7 +102,7 @@ install_stage=(
 	yazi-git
 	lazygit-git
 	zoxide-git
-	eza-git
+	eza
 	rust-lolcat-git
 	toilet
 	toilet-fonts
