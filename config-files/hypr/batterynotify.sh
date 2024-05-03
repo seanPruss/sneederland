@@ -4,6 +4,9 @@ while true; do
 	if [ "$bat_lvl" -le 25 ]; then
 		notify-send --urgency=CRITICAL "Battery Low" "Level: ${bat_lvl}%"
 		sleep 1200
+	elif [[ "$bat_lvl" -gt 95 ]]; then
+		notify-send --urgency=LOW "Battery High" "Level: ${bat_lvl}%"
+		sleep 1200
 	else
 		sleep 120
 	fi
