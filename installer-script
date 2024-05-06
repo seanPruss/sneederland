@@ -99,7 +99,6 @@ install_stage=(
 	zellij
 	ripgrep
 	neovim-git
-	yazi-git
 	lazygit-git
 	zoxide-git
 	eza
