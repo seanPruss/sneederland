@@ -21,7 +21,7 @@ if [ "$TERM" = "linux" ]; then
 	"
 fi
 
-neofetch
+fastfetch --load-config examples/10.jsonc
 source ~/.config/zsh/git.zsh
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"

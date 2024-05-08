@@ -92,7 +92,7 @@ install_stage=(
 	zsh-directory-history-git
 	zsh-vi-mode-git
 	bash-zsh-insulter
-	neofetch-git
+	fastfetch-git
 	onefetch-git
 	gimp-devel
 	urlview-git
@@ -271,7 +271,6 @@ ln -sf ~/the-sneed-packages/config-files/install.sh ~/.config/install.sh
 ln -sf ~/the-sneed-packages/config-files/kitty ~/.config/kitty
 ln -sf ~/the-sneed-packages/config-files/mako ~/.config/mako
 ln -sf ~/the-sneed-packages/config-files/mimeapps.list ~/.config/mimeapps.list
-ln -sf ~/the-sneed-packages/config-files/neofetch ~/.config/neofetch
 ln -sf ~/the-sneed-packages/config-files/nvim ~/.config/nvim
 ln -sf ~/the-sneed-packages/config-files/nwg-look ~/.config/nwg-look
 ln -sf ~/the-sneed-packages/config-files/pavucontrol.ini ~/.config/pavucontrol.ini
