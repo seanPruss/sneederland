@@ -26,8 +26,6 @@ prep_stage=(
 	cliphist
 	python-requests
 	pacman-contrib
-	ninja-git
-	meson-git
 	hyprcursor-git
 )
 
@@ -94,7 +92,6 @@ install_stage=(
 	bash-zsh-insulter
 	fastfetch-git
 	onefetch-git
-	gimp-devel
 	urlview-git
 	zellij
 	ripgrep
@@ -317,7 +314,7 @@ fi
 
 # Install the correct hyprland version
 echo -e "$CNT - Installing Hyprland, this may take a while..."
-install_software hyprland-git
+install_software hyprland
 
 # Stage 1 - main components
 echo -e "$CNT - Installing main components, this may take a while..."
