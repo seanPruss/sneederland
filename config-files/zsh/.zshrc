@@ -68,10 +68,10 @@ HISTFILE=~/.zsh_history
 # Aliases
 
 # Clear screen and neofetch
-nf ()
+ff ()
 {
     clear
-    neofetch
+    fastfetch --load-config examples/10.jsonc
 }
 # sudo alias because why not
 alias fucking="sudo"
