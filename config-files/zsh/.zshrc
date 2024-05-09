@@ -118,7 +118,7 @@ cd() {
 # cd into a directory I just made
 mcd() {
     mkdir -p $1
-    cd $1
+    cd "./$1"
 }
 
 # cd aliases
