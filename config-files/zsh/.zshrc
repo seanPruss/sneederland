@@ -139,6 +139,7 @@ btw() {
 }
 
 # zellij aliases
+alias zlnew='zellij --session'
 alias zla='zellij attach'
 alias zls='zellij ls'
 
