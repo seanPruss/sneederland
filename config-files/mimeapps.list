@@ -19,6 +19,7 @@ application/xhtml+xml=userapp-Floorp-F12GH2.desktop
 application/x-extension-xhtml=userapp-Floorp-F12GH2.desktop
 application/x-extension-xht=userapp-Floorp-F12GH2.desktop
 x-scheme-handler/msteams=teams.desktop
+x-scheme-handler/postman=Postman.desktop
 
 [Added Associations]
 x-scheme-handler/mailto=userapp-Thunderbird-ZKS4G2.desktop;userapp-Thunderbird-RW59G2.desktop;
