@@ -172,7 +172,7 @@ setopt hist_verify
 setopt inc_append_history
 setopt share_history
 
-autoload -U compinit 
+autoload -U compinit
 compinit
 _comp_options+=(globdots)
 
@@ -190,16 +190,17 @@ source /usr/share/zsh/plugins/zsh-autopair/autopair.zsh
 source /usr/share/zsh/plugins/zsh-directory-history/zsh-directory-history.zsh
 source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+zstyle ':completion:*' matcher_list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:*' fzf-preview 'bat -n --color=always $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --tree --color=always $realpath'
 AUTO_NOTIFY_IGNORE+=("lazygit" "crontab -e" "yazi" "zellij" "cmatrix" "sudoedit" "git log" "cd" "cava")
 
 if [[ -f /etc/bash.command-not-found ]]; then
     . /etc/bash.command-not-found
 fi
 
-zstyle ':completion:*' menu select
-
-# history substring search options
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)

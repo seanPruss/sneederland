@@ -23,3 +23,9 @@ cd the-sneed-packages
 rm -rf .git # do this if you want to create your own fork
 ./installer-script
 ```
+
+> [!NOTE]
+> Some configs are tailored to my setup, such as the gbar plugin in pyprland  
+> that prefers my HDMI monitor instead of my laptop monitor. Feel free to make whatever  
+> changes you want to tailor the config to you, but some things like changing  
+> colour scheme may take some time.
