@@ -23,7 +23,8 @@ vim.keymap.set("n", "G", "Gzz")
 vim.keymap.set(
     "n",
     "<leader>i",
-    [[i<!DOCTYPE html><CR><html lang="en"><CR><head><CR><meta charset="UTF-8"><CR><meta http-equiv="X-UA-Compatible" content="IE=edge"><CR><meta name="viewport" content="width=device-width, initial-scale=1"><CR><title>Document</title><CR></head><CR><body><CR><CR></body><CR></html><Esc>kkcc]]
+    [[i<!DOCTYPE html><CR><html lang="en"><CR><head><CR><meta charset="UTF-8"><CR><meta http-equiv="X-UA-Compatible" content="IE=edge"><CR><meta name="viewport" content="width=device-width, initial-scale=1"><CR><title>Document</title><CR></head><CR><body><CR><CR></body><CR></html><Esc>kkcc]],
+    { desc = "HTML boilerplate" }
 )
 vim.keymap.set("n", "<C-s>", "<nop>")
 vim.keymap.set("i", "<Up>", "<nop>")

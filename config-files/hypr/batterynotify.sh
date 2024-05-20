@@ -1,7 +1,6 @@
 #!/bin/sh
 
-# Send a notification if the laptop battery is either low or is fully charged.
-# Set on a systemd timer (~/.config/systemd/user/battery-alert.timer).
+# Runs with an exec-once when hyprland is launched I hope this works lol
 
 # Battery percentage at which to notify
 WARNING_LEVEL=20
