@@ -98,7 +98,7 @@ install_stage=(
 	urlview-git
 	zellij
 	ripgrep
-	neovim-git
+	neovim
 	lazygit-git
 	zoxide-git
 	eza
