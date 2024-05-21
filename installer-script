@@ -29,6 +29,7 @@ prep_stage=(
 	ninja-git
 	meson-git
 	hyprcursor-git
+	mkinitcpio-firmware
 	cpio
 )
 
