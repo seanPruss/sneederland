@@ -78,6 +78,7 @@ install_stage=(
 	spotify
 	spicetify-cli-git
 	spicetify-themes-git
+	spicetify-marketplace-bin
 	geoclue
 	gammastep-wayland-git
 	fzf
@@ -375,7 +376,8 @@ tldr --update
 # set up spicetify
 sudo chmod -R 777 /opt/spotify
 spicetify config current_theme Sleek color_scheme rosepine
-spicetify backup apply
+spicetify config custom_apps marketplace
+spicetify restore backup apply
 # set up zsh
 ln -sf ~/.config/.zshenv ~
 chsh -s /bin/zsh
