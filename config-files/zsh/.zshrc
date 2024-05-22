@@ -106,9 +106,7 @@ cd() {
         # not in the database but z will still work and ls will run. Also if the
         # directory you want to cd into is inside cwd hit escape if interactive
         # menu pops up
-        if ! zi $1; then
-            z $1
-        fi
+        zi $1 || z $1
     fi
     # If argument in zoxide database, use interactive option
 	check_directory_for_new_repository
