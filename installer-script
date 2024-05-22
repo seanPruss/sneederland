@@ -55,7 +55,7 @@ install_stage=(
 	jdk-openjdk
 	flatpak
 	cmatrix-git
-	cava-git
+	cava
 	npm
 	auto-cpufreq
 	rose-pine-hyprcursor
