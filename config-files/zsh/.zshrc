@@ -80,6 +80,7 @@ alias fucking="sudo"
 alias install="yay -S --noconfirm"
 alias uninstall="yay -Rns --noconfirm"
 alias search="yay -Ss"
+alias query="yay -Q"
 
 # ls aliases
 alias ls="eza -a --icons=auto"
