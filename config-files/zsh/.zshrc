@@ -130,8 +130,6 @@ alias p="cd -"
 # aliases for terminal apps
 alias vim="nvim"
 alias lzg='lazygit'
-alias yz='yazi'
-alias tp="btop"
 btw() {
     clear
     toilet -f ivrit 'I use Arch btw' | lolcat
@@ -193,8 +191,8 @@ zstyle ':completion:*' matcher_list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:*' fzf-preview 'bat -n --color=always $realpath'
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --tree --color=always $realpath'
-AUTO_NOTIFY_IGNORE+=("lazygit" "crontab -e" "yazi" "zellij" "cmatrix" "sudoedit" "git log" "cd" "cava")
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --tree --git-ignore --color=always $realpath'
+AUTO_NOTIFY_IGNORE+=("lazygit" "crontab -e" "zellij" "cmatrix" "sudoedit" "git log" "cd" "cava")
 
 if [[ -f /etc/bash.command-not-found ]]; then
     . /etc/bash.command-not-found
