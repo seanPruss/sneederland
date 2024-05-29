@@ -1,5 +1,5 @@
 [pyprland]
-plugins = ["scratchpads", "gbar"]
+plugins = ["scratchpads"]
 
 [scratchpads.spotify]
 animation = "fromTop"
@@ -65,33 +65,3 @@ class = "kitty-cava"
 size = "70% 70%"
 position = "15% 15%"
 unfocus = "hide"
-
-[scratchpads.volume]
-animation = "fromTop"
-command = "pavucontrol"
-class = "pavucontrol"
-size = "40% 40%"
-position = "30% 30%"
-unfocus = "hide"
-lazy = true
-
-[scratchpads.bluetooth]
-animation = "fromTop"
-command = "blueman-manager"
-class = "blueman-manager"
-size = "40% 40%"
-position = "30% 30%"
-unfocus = "hide"
-lazy = true
-
-[scratchpads.network]
-animation = "fromTop"
-command = "nm-connection-editor"
-class = "nm-connection-editor"
-size = "40% 40%"
-position = "30% 30%"
-unfocus = "hide"
-lazy = true
-
-[gbar]
-monitors = ["HDMI-A-1", "eDP-1"]

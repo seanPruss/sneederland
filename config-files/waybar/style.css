@@ -1,0 +1,203 @@
+* {
+  font-family: "JetBrainsMono NF ExtraBold";
+  font-size: 13px;
+}
+
+window#waybar {
+  background-color: rgba(25, 23, 36, 0);
+  border-radius: 20px;
+  color: rgba(224, 222, 244, 1);
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+#end-right-module,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#network,
+#wireplumber,
+#pulseaudio,
+#custom-media,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#systray,
+#mpd {
+  padding: 0px 8px;
+  color: rgba(224, 222, 244, 1);
+  border-radius: 20px;
+  border: 0.19em solid rgba(235, 111, 146, 1);
+  background-color: rgba(31, 29, 46, 1);
+}
+
+@keyframes blink-workspace {
+  to {
+    color: rgba(224, 222, 244, 0.7);
+    font-weight: 800;
+  }
+}
+
+#workspaces,
+#window {
+  color: rgba(224, 222, 244, 1);
+  border-radius: 20px;
+  border: 0.19em solid rgba(156, 207, 216, 1);
+  background-color: rgba(31, 29, 46, 0.7);
+  transition: all 0.4s ease-out;
+}
+
+#workspaces button {
+  border-radius: 20px;
+  border: none;
+  color: rgba(224, 222, 244, 1);
+  transition: all 0.4s ease-out;
+}
+
+#workspaces button.active {
+  background-color: rgba(156, 207, 216, 0.4);
+  color: rgba(224, 222, 244, 1);
+  animation-name: blink-workspace;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+
+#workspaces button.urgent {
+  color: rgba(235, 111, 146, 0.5);
+  font-weight: 800;
+  animation-name: blink-workspace;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#workspaces button.empty {
+  color: rgba(156, 207, 216, 1);
+  animation-name: blink-workspace;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: 4;
+  animation-direction: alternate;
+}
+
+#workspaces button.occupied {
+  background-color: rgba(235, 188, 186, 0.7);
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+#pulseaudio {
+  border: 0.19em solid rgba(196, 167, 231, 1);
+  padding: 0px 8px;
+}
+
+#pulseaudio.muted {
+  border: 0.19em solid rgba(235, 188, 186, 1);
+}
+
+#custom-media {
+  border: 0.19em solid rgba(49, 116, 143, 1);
+  min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+  border: 0.19em solid rgba(49, 116, 143, 1);
+}
+
+#custom-media.custom-vlc {
+  border: 0.19em solid rgba(235, 111, 146, 1);
+}
+
+#clock {
+  padding: 0px 4px 0px 0px;
+}
+
+#backlight {
+  padding: 0px 8px 0px 4px;
+  color: rgba(246, 193, 119, 1);
+}
+
+#battery {
+  padding: 0px 8px 0px 4px;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: rgba(156, 207, 216, 1);
+}
+
+@keyframes blink-battery {
+  to {
+    color: rgba(224, 222, 244, 1);
+  }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.warning:not(.charging) {
+  color: rgba(235, 188, 186, 1);
+  animation-name: blink-battery;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#battery.critical:not(.charging) {
+  color: rgba(235, 111, 146, 1);
+  animation-name: blink-battery;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#systray {
+  border: 0.19em solid rgba(49, 116, 143, 1);
+  padding: 0px 4px;
+}
+
+#tray {
+  padding: 0px 8px;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: rgba(235, 111, 146, 1);
+}
+
+#power-profiles-daemon {
+  padding-right: 15px;
+}
+
+#power-profiles-daemon.performance {
+  color: rgba(235, 111, 146, 1);
+}
+
+#power-profiles-daemon.balanced {
+  color: rgba(156, 207, 216, 1);
+}
+
+#power-profiles-daemon.power-saver {
+  color: rgba(49, 116, 143, 1);
+}
+
+#custom-power {
+  padding: 0px 6px;
+  color: rgba(235, 111, 146, 1);
+}

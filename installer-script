@@ -61,7 +61,7 @@ install_stage=(
 	rose-pine-hyprcursor
 	kitty-git
 	mako-git
-	gbar-git
+	waybar
 	imagemagick
 	hyprlock-git
 	hypridle-git
@@ -266,7 +266,7 @@ echo -e "$CNT Copying config files"
 ln -sf ~/the-sneed-packages/config-files/.zshenv ~/.zshenv
 ln -sf ~/the-sneed-packages/config-files/bat ~/.config/bat
 ln -sf ~/the-sneed-packages/config-files/fontconfig ~/.config/fontconfig
-ln -sf ~/the-sneed-packages/config-files/gBar ~/.config/gBar
+ln -sf ~/the-sneed-packages/config-files/waybar ~/.config/waybar
 ln -sf ~/the-sneed-packages/config-files/gtk-3.0 ~/.config/gtk-3.0
 ln -sf ~/the-sneed-packages/config-files/hypr ~/.config/hypr
 ln -sf ~/the-sneed-packages/config-files/install.sh ~/.config/install.sh
