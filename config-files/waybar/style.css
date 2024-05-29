@@ -19,7 +19,7 @@ window#waybar {
 #network,
 #wireplumber,
 #pulseaudio,
-#custom-media,
+#custom-spotify,
 #mode,
 #idle_inhibitor,
 #scratchpad,
@@ -103,21 +103,13 @@ window#waybar {
   padding: 0px 8px;
 }
 
+#custom-spotify {
+  border: 0.19em solid rgba(49, 116, 143, 1);
+  padding: 0px 8px;
+}
+
 #pulseaudio.muted {
   border: 0.19em solid rgba(235, 188, 186, 1);
-}
-
-#custom-media {
-  border: 0.19em solid rgba(49, 116, 143, 1);
-  min-width: 100px;
-}
-
-#custom-media.custom-spotify {
-  border: 0.19em solid rgba(49, 116, 143, 1);
-}
-
-#custom-media.custom-vlc {
-  border: 0.19em solid rgba(235, 111, 146, 1);
 }
 
 #clock {

@@ -1,23 +1,11 @@
 {
-  // Media Player
-  "custom/media": {
-    "format": "{}",
-    "on-click-middle": "playerctl play-pause",
-    "on-click": "playerctl previous",
-    "on-click-right": "playerctl next",
-    "return-type": "json",
-    "max-length": 40,
-    "escape": true,
-    "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null", // Script in resources folder
-  },
-
   // Workspaces
   "hyprland/workspaces": {
     "active-only": false,
     "format": "{name}",
   },
   "custom/pacman": {
-    "format": "{icon}{}",
+    "format": "{icon}",
     "return-type": "json",
     "format-icons": {
       "pending-updates": " ",
@@ -98,5 +86,12 @@
   "tray": {
     "icon-size": 18,
     "spacing": 5,
+  },
+
+  "custom/spotify": {
+    "format": " {}",
+    "return-type": "json",
+    "on-click-right": "spotifatius toggle-liked",
+    "exec": "spotifatius monitor",
   },
 }
