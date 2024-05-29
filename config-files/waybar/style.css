@@ -201,3 +201,19 @@ window#waybar {
   padding: 0px 6px;
   color: rgba(235, 111, 146, 1);
 }
+
+@keyframes blink-update {
+  to {
+    background-color: rgba(156, 207, 216, 1);
+  }
+}
+
+#custom-pacman {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#custom-pacman.pending-updates {
+  animation-name: blink-update;
+  animation-duration: 3s;
+}

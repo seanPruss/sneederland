@@ -16,6 +16,16 @@
     "active-only": false,
     "format": "{name}",
   },
+  "custom/pacman": {
+    "format": "{icon}{}",
+    "return-type": "json",
+    "format-icons": {
+      "pending-updates": " ",
+      "updated": " ",
+    },
+    "exec-if": "which waybar-updates",
+    "exec": "waybar-updates",
+  },
 
   // Clock
   "clock": {

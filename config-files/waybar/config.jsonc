@@ -7,7 +7,7 @@
     "exclusive": true,
     "fixed-center": true,
     "modules-left": ["pulseaudio", "custom/media"],
-    "modules-center": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/workspaces", "custom/pacman"],
     "modules-right": ["group/systray", "group/end-right-module"],
     "include": [
       "~/.config/waybar/modules/modules.jsonc",
