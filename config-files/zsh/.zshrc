@@ -198,6 +198,6 @@ if [[ -f /etc/bash.command-not-found ]]; then
     . /etc/bash.command-not-found
 fi
 
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)

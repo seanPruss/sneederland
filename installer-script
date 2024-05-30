@@ -85,7 +85,7 @@ install_stage=(
 	gammastep-wayland-git
 	fzf
 	tealdeer
-	zsh-git
+	zsh
 	zsh-auto-notify
 	zsh-fast-syntax-highlighting-git
 	zsh-autoswitch-virtualenv-git
