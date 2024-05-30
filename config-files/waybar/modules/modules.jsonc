@@ -25,7 +25,7 @@
   // Battery
   "battery": {
     "states": {
-      "warning": 30,
+      "warning": 25,
       "critical": 15,
     },
     "format": "{capacity}% {icon}",
@@ -73,7 +73,7 @@
       "car": "",
       "default": ["", "", ""],
     },
-    "on-click": "pavucontrol",
+    "on-click": "pypr toggle volume",
   },
 
   // Brightness Information

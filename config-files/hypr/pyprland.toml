@@ -65,3 +65,12 @@ class = "kitty-cava"
 size = "70% 70%"
 position = "15% 15%"
 unfocus = "hide"
+
+[scratchpads.volume]
+animation = "fromTop"
+command = "pavucontrol"
+class = "pavucontrol"
+size = "40% 40%"
+position = "30% 30%"
+unfocus = "hide"
+lazy = true
