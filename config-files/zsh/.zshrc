@@ -190,7 +190,7 @@ source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring
 zstyle ':completion:*' matcher_list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:*' fzf-preview 'bat -n --color=always $realpath'
+zstyle ':fzf-tab:complete:nvim:*' fzf-preview 'bat -n --color=always $realpath'
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --tree --git-ignore --color=always $realpath'
 AUTO_NOTIFY_IGNORE+=("lazygit" "crontab -e" "zellij" "cmatrix" "sudoedit" "git log" "cd" "cava")
 
