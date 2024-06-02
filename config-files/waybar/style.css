@@ -29,7 +29,7 @@ window#waybar {
   color: rgba(224, 222, 244, 1);
   border-radius: 20px;
   border: 0.19em solid rgba(235, 111, 146, 1);
-  background-color: rgba(31, 29, 46, 1);
+  background-color: rgba(31, 29, 46, 0.7);
 }
 
 @keyframes blink-workspace {
@@ -203,7 +203,7 @@ window#waybar {
 #custom-pacman {
   padding: 0px 8px;
   color: rgba(224, 222, 244, 1);
-  background-color: rgba(25, 23, 36, 1);
+  background-color: rgba(31, 29, 46, 0.7);
   border: 0.19em solid rgba(156, 207, 216, 1);
   border-radius: 20px;
   animation-timing-function: linear;
