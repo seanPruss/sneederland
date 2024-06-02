@@ -266,6 +266,7 @@ fi
 # copy my configs
 echo -e "$CNT Copying config files"
 ln -sf ~/the-sneed-packages/config-files/.zshenv ~/.zshenv
+ln -sf ~/the-sneed-packages/config-files/.gitconfig ~/.gitconfig
 ln -sf ~/the-sneed-packages/config-files/bat ~/.config/bat
 ln -sf ~/the-sneed-packages/config-files/fontconfig ~/.config/fontconfig
 ln -sf ~/the-sneed-packages/config-files/waybar ~/.config/waybar
