@@ -22,7 +22,6 @@ class = "thunar"
 size = "60% 80%"
 position = "20% 10%"
 unfocus = "hide"
-lazy = true
 
 [scratchpads.thunderbird]
 animation = "fromTop"
@@ -56,7 +55,6 @@ class = "kitty-btop"
 size = "70% 70%"
 position = "15% 15%"
 unfocus = "hide"
-lazy = true
 
 [scratchpads.cava]
 animation = "fromTop"
@@ -73,4 +71,3 @@ class = "pavucontrol"
 size = "40% 40%"
 position = "30% 30%"
 unfocus = "hide"
-lazy = true

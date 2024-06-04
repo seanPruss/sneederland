@@ -116,7 +116,6 @@ cd() {
         # menu pops up
         zi $1 || z $1
     fi
-    # If argument in zoxide database, use interactive option
 	check_directory_for_new_repository
     ls # I have never seen anyone ever do a cd without also doing ls
 }
@@ -128,10 +127,15 @@ mcd() {
 }
 
 # cd aliases
-alias b="cd .."
-alias bb="cd ../.."
-alias bbb="cd ../../.."
-alias bbbb="cd ../../../.."
+alias ..="cd .."
+alias .2="cd ../.."
+alias .3="cd ../../.."
+alias .4="cd ../../../.."
+alias .5="cd ../../../../.."
+alias .6="cd ../../../../../.."
+alias .7="cd ../../../../../../.."
+alias .8="cd ../../../../../../../.."
+alias .9="cd ../../../../../../../../.."
 alias p="cd -"
 
 # aliases for terminal apps
@@ -183,9 +187,6 @@ setopt nocaseglob
 autoload -U compinit
 compinit
 _comp_options+=(globdots)
-
-bindkey '^a' beginning-of-line
-bindkey '^e' end-of-line
 
 # plugins
 source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
