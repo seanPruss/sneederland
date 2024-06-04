@@ -1,3 +1,11 @@
+fastfetch --load-config examples/10.jsonc
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 eval "$(ssh-agent -s)" &>/dev/null
 # Linux TTY colours (I doubt I will ever use this)
 if [ "$TERM" = "linux" ]; then
@@ -21,9 +29,9 @@ if [ "$TERM" = "linux" ]; then
 	"
 fi
 
-fastfetch --load-config examples/10.jsonc
 source ~/.config/zsh/git.zsh
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 # fzf config
@@ -168,6 +176,10 @@ setopt hist_ignore_space
 setopt hist_verify
 setopt inc_append_history
 setopt share_history
+setopt correct
+setopt nobeep
+setopt extendedglob
+setopt nocaseglob
 
 autoload -U compinit
 compinit
@@ -201,3 +213,6 @@ fi
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

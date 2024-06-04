@@ -96,6 +96,7 @@ install_stage=(
 	zsh-autopair-git
 	zsh-directory-history-git
 	zsh-vi-mode-git
+	zsh-theme-powerlevel10k-git
 	bash-zsh-insulter
 	fastfetch-git
 	onefetch-git
@@ -124,7 +125,6 @@ install_stage=(
 	gvfs
 	thunar-archive-plugin
 	file-roller
-	starship
 	ttf-jetbrains-mono-nerd
 	noto-fonts-emoji
 	lxappearance
@@ -281,7 +281,6 @@ ln -sf ~/the-sneed-packages/config-files/nwg-look ~/.config/nwg-look
 ln -sf ~/the-sneed-packages/config-files/pavucontrol.ini ~/.config/pavucontrol.ini
 ln -sf ~/the-sneed-packages/config-files/pulse ~/.config/pulse
 ln -sf ~/the-sneed-packages/config-files/sddm-rose-pine ~/.config/sddm-rose-pine
-ln -sf ~/the-sneed-packages/config-files/starship.toml ~/.config/starship.toml
 ln -sf ~/the-sneed-packages/config-files/systemd ~/.config/systemd
 ln -sf ~/the-sneed-packages/config-files/Thunar ~/.config/Thunar
 ln -sf ~/the-sneed-packages/config-files/TrenTwins.png ~/.config/TrenTwins.png
