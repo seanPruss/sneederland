@@ -30,7 +30,6 @@ if [ "$TERM" = "linux" ]; then
 fi
 
 source ~/.config/zsh/git.zsh
-# eval "$(starship init zsh)"
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
