@@ -210,7 +210,16 @@ window#waybar {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+
 #custom-pacman.pending-updates {
   animation-name: blink-update;
   animation-duration: 3s;
+}
+
+#custom-weather {
+  color: rgba(224, 222, 244, 1);
+  background-color: rgba(31, 29, 46, 0.7);
+  border: 0.19em solid rgba(156, 207, 216, 1);
+  border-radius: 20px;
+  padding: 0px 8px;
 }

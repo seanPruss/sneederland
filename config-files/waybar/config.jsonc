@@ -8,7 +8,11 @@
     "fixed-center": true,
     "modules-left": ["pulseaudio", "custom/spotify"],
     "modules-center": ["hyprland/workspaces", "custom/pacman"],
-    "modules-right": ["group/systray", "group/end-right-module"],
+    "modules-right": [
+      "group/systray",
+      "custom/weather",
+      "group/end-right-module",
+    ],
     "include": [
       "~/.config/waybar/modules/modules.jsonc",
       "~/.config/waybar/modules/groups.jsonc",

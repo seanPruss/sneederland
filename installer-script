@@ -63,6 +63,7 @@ install_stage=(
 	mako-git
 	waybar
 	waybar-updates
+	wttrbar
 	imagemagick
 	hyprlock-git
 	hypridle-git

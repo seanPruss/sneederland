@@ -94,4 +94,11 @@
     "on-click-right": "spotifatius toggle-liked",
     "exec": "spotifatius monitor",
   },
+  "custom/weather": {
+    "format": "{}°",
+    "tooltip": true,
+    "interval": 3600,
+    "exec": "wttrbar",
+    "return-type": "json",
+  },
 }
