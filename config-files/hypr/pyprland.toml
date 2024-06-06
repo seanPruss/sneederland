@@ -67,7 +67,7 @@ unfocus = "hide"
 [scratchpads.volume]
 animation = "fromTop"
 command = "pavucontrol"
-class = "pavucontrol"
+class = "org.pulseaudio.pavucontrol"
 size = "40% 40%"
 position = "30% 30%"
 unfocus = "hide"

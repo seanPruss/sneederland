@@ -27,6 +27,8 @@ if [ "$TERM" = "linux" ]; then
 	\e]PE#ebbcba
 	\e]PF#e0def4
 	"
+else
+    export TERM="xterm-256color"
 fi
 
 source ~/.config/zsh/git.zsh
