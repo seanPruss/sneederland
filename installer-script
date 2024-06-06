@@ -57,6 +57,7 @@ install_stage=(
 	cmatrix-git
 	cava
 	npm
+	composer
 	auto-cpufreq
 	rose-pine-hyprcursor
 	kitty-git
@@ -132,6 +133,7 @@ install_stage=(
 	xfce4-settings
 	nwg-look-bin
 	sddm-git
+	archlinux-themes-sddm
 )
 
 for str in ${myArray[@]}; do
@@ -281,7 +283,6 @@ ln -sf ~/the-sneed-packages/config-files/nvim ~/.config/nvim
 ln -sf ~/the-sneed-packages/config-files/nwg-look ~/.config/nwg-look
 ln -sf ~/the-sneed-packages/config-files/pavucontrol.ini ~/.config/pavucontrol.ini
 ln -sf ~/the-sneed-packages/config-files/pulse ~/.config/pulse
-ln -sf ~/the-sneed-packages/config-files/sddm-rose-pine ~/.config/sddm-rose-pine
 ln -sf ~/the-sneed-packages/config-files/systemd ~/.config/systemd
 ln -sf ~/the-sneed-packages/config-files/Thunar ~/.config/Thunar
 ln -sf ~/the-sneed-packages/config-files/TrenTwins.png ~/.config/TrenTwins.png
@@ -351,10 +352,8 @@ yay -R --noconfirm xdg-desktop-portal-gnome xdg-desktop-portal-gtk &>>$INSTLOG
 
 # Set up sddm
 echo -e "$CNT - Setting up the login screen."
-sudo cp -R ~/.config/sddm-rose-pine /usr/share/sddm/themes/
-sudo chown -R $USER:$USER /usr/share/sddm/themes/sddm-rose-pine
 sudo mkdir /etc/sddm.conf.d
-echo -e "[Theme]\nCurrent=sddm-rose-pine" | sudo tee -a /etc/sddm.conf.d/10-theme.conf &>>$INSTLOG
+echo -e "[Theme]\nCurrent=archlinux-simplyblack" | sudo tee -a /etc/sddm.conf.d/10-theme.conf &>>$INSTLOG
 WLDIR=/usr/share/wayland-sessions
 if [ -d "$WLDIR" ]; then
 	echo -e "$COK - $WLDIR found"
