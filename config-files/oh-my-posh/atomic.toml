@@ -1,0 +1,248 @@
+#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+version = 2
+
+[[blocks]]
+type = 'prompt'
+alignment = 'left'
+
+[[blocks.segments]]
+type = 'os'
+style = 'diamond'
+foreground = 'black'
+background = 'blue'
+leading_diamond = '╭─'
+template = ' {{ if .WSL }}WSL at {{ end }}{{.Icon}} '
+
+[blocks.segments.properties]
+linux = ''
+macos = ''
+windows = ''
+
+[[blocks.segments]]
+type = 'path'
+style = 'powerline'
+powerline_symbol = ''
+foreground = 'black'
+background = 'cyan'
+template = '  {{ .Path }} '
+
+[blocks.segments.properties]
+folder_icon = '  '
+home_icon = ''
+style = 'folder'
+
+[[blocks.segments]]
+type = 'git'
+style = 'powerline'
+powerline_symbol = ''
+foreground = 'black'
+background = 'yellow'
+background_templates = [
+    '{{ if or (.Working.Changed) (.Staging.Changed) }}yellow{{ end }}',
+    '{{ if and (gt .Ahead 0) (gt .Behind 0) }}green{{ end }}',
+    '{{ if gt .Ahead 0 }}red{{ end }}',
+    '{{ if gt .Behind 0 }}red{{ end }}',
+]
+template = ' {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<#ef5350>  {{ .Staging.String }}</>{{ end }} '
+
+[blocks.segments.properties]
+branch_icon = ' '
+fetch_status = true
+fetch_upstream_icon = true
+
+[[blocks.segments]]
+type = 'executiontime'
+style = 'diamond'
+foreground = 'black'
+background = 'magenta'
+trailing_diamond = ''
+template = '  {{ .FormattedMs }}⠀'
+
+[blocks.segments.properties]
+style = 'roundrock'
+threshold = 0.0
+
+[[blocks]]
+type = 'prompt'
+alignment = 'right'
+
+[[blocks.segments]]
+type = 'node'
+style = 'diamond'
+foreground = 'green'
+background = 'black'
+leading_diamond = ''
+trailing_diamond = ' '
+template = ' {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}'
+
+[blocks.segments.properties]
+fetch_package_manager = true
+npm_icon = ' <red></> '
+yarn_icon = ' <blue></>'
+
+[[blocks.segments]]
+type = 'python'
+style = 'diamond'
+foreground = 'yellow'
+background = 'blue'
+leading_diamond = ''
+trailing_diamond = ' '
+template = ' {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}'
+
+[[blocks.segments]]
+type = 'java'
+style = 'diamond'
+foreground = 'white'
+background = 'blue'
+leading_diamond = ''
+trailing_diamond = ' '
+template = ' {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}'
+
+[[blocks.segments]]
+type = 'dotnet'
+style = 'diamond'
+foreground = 'blue'
+background = 'black'
+leading_diamond = ''
+trailing_diamond = ' '
+template = ' {{ if .Unsupported }}{{ else }}{{ .Full }}{{ end }}'
+
+[[blocks.segments]]
+type = 'go'
+style = 'diamond'
+foreground = 'blue'
+background = 'white'
+leading_diamond = ''
+trailing_diamond = ' '
+template = ' {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}'
+
+[[blocks.segments]]
+type = 'rust'
+style = 'diamond'
+foreground = 'red'
+background = 'white'
+leading_diamond = ''
+trailing_diamond = ' '
+template = ' {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}'
+
+[[blocks.segments]]
+type = 'dart'
+style = 'diamond'
+foreground = 'blue'
+background = 'white'
+leading_diamond = ' '
+trailing_diamond = ' '
+template = ' {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}'
+
+[[blocks.segments]]
+type = 'angular'
+style = 'diamond'
+foreground = 'red'
+background = 'white'
+leading_diamond = ' '
+trailing_diamond = ' '
+template = ' {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}'
+
+[[blocks.segments]]
+type = 'nx'
+style = 'diamond'
+foreground = 'white'
+background = 'black'
+leading_diamond = ' '
+trailing_diamond = ' '
+template = '{{ if .Error }}{{ .Error }}{{ else }}Nx {{ .Full }}{{ end }}'
+
+[[blocks.segments]]
+type = 'julia'
+style = 'diamond'
+foreground = 'green'
+background = 'magenta'
+leading_diamond = ' '
+trailing_diamond = ' '
+template = '<red></> {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}'
+
+[[blocks.segments]]
+type = 'ruby'
+style = 'diamond'
+foreground = 'red'
+background = 'white'
+leading_diamond = ''
+trailing_diamond = ' '
+template = ' {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}'
+
+[[blocks.segments]]
+type = 'azfunc'
+style = 'diamond'
+foreground = 'blue'
+background = 'white'
+leading_diamond = ''
+trailing_diamond = ' '
+template = '<yellow></> {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}'
+
+[[blocks.segments]]
+type = 'aws'
+style = 'diamond'
+foreground = 'cyan'
+background = 'black'
+leading_diamond = ''
+trailing_diamond = ' '
+template = ' {{.Profile}}{{if .Region}}@{{.Region}}{{end}}'
+
+[[blocks.segments]]
+type = 'kubectl'
+style = 'diamond'
+foreground = 'white'
+background = 'blue'
+leading_diamond = ''
+trailing_diamond = ''
+template = ' {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}'
+
+[[blocks.segments]]
+type = 'shell'
+style = 'diamond'
+foreground = 'black'
+background = 'green'
+leading_diamond = ''
+template = ' {{ .Name }} '
+
+
+[[blocks.segments]]
+type = 'time'
+style = 'diamond'
+invert_powerline = true
+foreground = 'black'
+background = 'blue'
+leading_diamond = ''
+trailing_diamond = ''
+template = '  {{ .CurrentDate | date .Format }} '
+
+[blocks.segments.properties]
+time_format = '_2,15:04'
+
+[[blocks]]
+type = 'prompt'
+alignment = 'left'
+newline = true
+
+[[blocks.segments]]
+type = 'text'
+style = 'plain'
+foreground = 'green'
+template = '╰─'
+
+[[blocks.segments]]
+type = 'status'
+style = 'plain'
+foreground = 'green'
+foreground_templates = ['{{ if gt .Code 0 }}red{{ end }}']
+template = ' '
+
+[blocks.segments.properties]
+always_enabled = true
+
+[transient_prompt]
+foreground = "green"
+foreground_templates = ['{{ if gt .Code 0 }}red{{ end }}']
+background = "transparent"
+template = " "
