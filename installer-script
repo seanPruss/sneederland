@@ -98,7 +98,7 @@ install_stage=(
 	zsh-autopair-git
 	zsh-directory-history-git
 	zsh-vi-mode-git
-	zsh-theme-powerlevel10k-git
+	oh-my-posh-bin
 	bash-zsh-insulter
 	fastfetch-git
 	onefetch-git
@@ -293,6 +293,7 @@ ln -sf ~/the-sneed-packages/config-files/xfce4 ~/.config/xfce4
 ln -sf ~/the-sneed-packages/config-files/xsettingsd ~/.config/xsettingsd
 ln -sf ~/the-sneed-packages/config-files/zellij ~/.config/zellij
 ln -sf ~/the-sneed-packages/config-files/zsh ~/.config/zsh
+ln -sf ~/the-sneed-packages/config-files/oh-my-posh ~/.config/oh-my-posh
 # Set up pacman.conf
 echo -e "[options]
 HoldPkg     = pacman glibc

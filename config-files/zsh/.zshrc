@@ -1,10 +1,4 @@
 fastfetch --load-config examples/10.jsonc
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
 eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/atomic.toml)"
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
@@ -35,7 +29,6 @@ else
 fi
 
 source ~/.config/zsh/git.zsh
-# source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # fzf config
 export FZF_DEFAULT_OPTS="
 	--color=fg:#908caa,bg:#191724,hl:#ebbcba
@@ -216,6 +209,3 @@ fi
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-
-# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
-# [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
