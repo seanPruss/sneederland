@@ -173,22 +173,6 @@ window#waybar {
   background-color: rgba(235, 111, 146, 1);
 }
 
-#power-profiles-daemon {
-  padding-right: 15px;
-}
-
-#power-profiles-daemon.performance {
-  color: rgba(235, 111, 146, 1);
-}
-
-#power-profiles-daemon.balanced {
-  color: rgba(156, 207, 216, 1);
-}
-
-#power-profiles-daemon.power-saver {
-  color: rgba(49, 116, 143, 1);
-}
-
 #custom-power {
   padding: 0px 6px;
   color: rgba(235, 111, 146, 1);

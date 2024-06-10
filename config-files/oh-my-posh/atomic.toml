@@ -29,7 +29,7 @@ template = '  {{ .Path }} '
 
 [blocks.segments.properties]
 folder_icon = '  '
-home_icon = ''
+home_icon = '󰋜'
 style = 'powerlevel'
 max_width = 50
 
