@@ -28,7 +28,6 @@ prep_stage=(
 	pacman-contrib
 	ninja-git
 	meson-git
-	hyprcursor-git
 	mkinitcpio-firmware
 	cpio
 )
@@ -66,10 +65,10 @@ install_stage=(
 	waybar-updates
 	wttrbar
 	imagemagick
-	hyprlock-git
+	hyprlock
 	wofi
 	wlogout-git
-	xdg-desktop-portal-hyprland-git
+	xdg-desktop-portal-hyprland
 	swappy-git
 	grim-git
 	slurp
@@ -323,7 +322,7 @@ fi
 
 # Install the correct hyprland version
 echo -e "$CNT - Installing Hyprland, this may take a while..."
-install_software hyprland-git
+install_software hyprland
 
 # Stage 1 - main components
 echo -e "$CNT - Installing main components, this may take a while..."
