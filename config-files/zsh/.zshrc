@@ -163,7 +163,6 @@ alias bwt="btw"
 # options
 unsetopt menu_complete
 unsetopt flowcontrol
-
 setopt prompt_subst
 setopt always_to_end
 setopt append_history
@@ -184,6 +183,8 @@ setopt nocaseglob
 autoload -U compinit
 compinit
 _comp_options+=(globdots)
+
+bindkey -v
 
 # plugins
 source /usr/share/zsh/plugins/zsh-autoswitch-virtualenv/zsh-autoswitch-virtualenv.plugin.zsh

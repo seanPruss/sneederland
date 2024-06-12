@@ -26,10 +26,7 @@ prep_stage=(
 	cliphist
 	python-requests
 	pacman-contrib
-	ninja-git
-	meson-git
 	mkinitcpio-firmware
-	cpio
 )
 
 #software for nvidia GPU only
@@ -366,6 +363,7 @@ xfconf-query -c xsettings -p /Net/IconThemeName -s "rose-pine-icons"
 gsettings set org.gnome.desktop.interface gtk-theme "rose-pine-gtk"
 gsettings set org.gnome.desktop.interface icon-theme "rose-pine-icons"
 gsettings set org.gnome.desktop.interface cursor-theme "BreezeX-RosePine-Linux"
+bat cache --build
 
 # Set up gammastep
 systemctl --user enable --now geoclue-agent.service
