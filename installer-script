@@ -93,7 +93,8 @@ install_stage=(
 	zsh-autopair-git
 	zsh-directory-history-git
 	zsh-vi-mode-git
-	oh-my-posh-bin
+	oh-my-posh
+	yazi-git
 	bash-zsh-insulter
 	fastfetch-git
 	onefetch-git

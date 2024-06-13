@@ -1,5 +1,5 @@
 [pyprland]
-plugins = ["scratchpads"]
+plugins = ["scratchpads", "wallpapers"]
 
 [scratchpads.spotify]
 animation = "fromTop"
@@ -71,3 +71,11 @@ class = "org.pulseaudio.pavucontrol"
 size = "40% 40%"
 position = "30% 30%"
 unfocus = "hide"
+
+[wallpapers]
+path = "~/.config/hypr/wallpapers/"
+extensions = ["png", "jpg", "jpeg", "webp", "JPG"]
+interval = 10
+recurse = true
+command = 'swww img --transition-type any "[file]"'
+clear_command = "swww clear"

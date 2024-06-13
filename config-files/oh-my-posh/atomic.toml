@@ -25,12 +25,13 @@ style = 'powerline'
 powerline_symbol = ''
 foreground = 'black'
 background = 'cyan'
-template = '  {{ .Path }} '
+template = ' {{ .Path }} '
 
 [blocks.segments.properties]
-folder_icon = '  '
-home_icon = '󰋜'
-style = 'full'
+folder_icon = ''
+home_icon = ''
+style = 'mixed'
+mixed_threshold = 10
 
 [[blocks.segments]]
 type = 'git'
@@ -50,6 +51,14 @@ template = ' {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatu
 branch_icon = ' '
 fetch_status = true
 fetch_upstream_icon = true
+
+[[blocks.segments]]
+type = 'text'
+style = 'powerline'
+powerline_symbol = ''
+foreground = 'black'
+background = 'green'
+template = '{{if .Env.ZELLIJ_SESSION_NAME}}  $ZELLIJ_SESSION_NAME {{end}}'
 
 [[blocks.segments]]
 type = 'executiontime'

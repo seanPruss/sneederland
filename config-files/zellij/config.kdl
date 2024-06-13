@@ -199,6 +199,19 @@ plugins {
     }
 }
 
+floating_pane {
+  default_size {
+    width 135
+    height 100
+  }
+}
+
+ui {
+    pane_frames {
+        rounded_corners true
+    }
+}
+
 themes {
 	rose-pine {
 		bg "#403d52"

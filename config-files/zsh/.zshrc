@@ -76,8 +76,6 @@ ff ()
     clear
     fastfetch --load-config examples/10.jsonc
 }
-# sudo alias because why not
-alias fucking="sudo"
 
 # yay aliases
 alias install="yay -S --noconfirm"
@@ -105,7 +103,6 @@ cd() {
     if [[ $1 = "" || $1 = "-" ]]; then
         z $1
     else
-        # open interactive mode if arg is in zoxide database
         # NOTE: "zoxide: no match found" will be displayed if the argument is 
         # not in the database but z will still work and ls will run. Also if the
         # directory you want to cd into is inside cwd hit escape if interactive
