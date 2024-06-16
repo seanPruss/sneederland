@@ -76,7 +76,7 @@
   },
 
   "custom/spotify": {
-    "format": " |  {}",
+    "format": " {} ",
     "return-type": "json",
     "on-click-right": "spotifatius toggle-liked",
     "exec": "spotifatius monitor",

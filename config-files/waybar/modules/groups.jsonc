@@ -1,7 +1,7 @@
 {
   "group/systray": {
     "orientation": "horizontal",
-    "modules": ["pulseaudio", "tray"],
+    "modules": ["custom/spotify", "pulseaudio", "tray"],
   },
   "group/end-right-module": {
     "orientation": "horizontal",
@@ -9,6 +9,6 @@
   },
   "group/window-info": {
     "orientation": "horizontal",
-    "modules": ["hyprland/window", "custom/spotify"],
+    "modules": ["hyprland/window", "wlr/taskbar"],
   },
 }

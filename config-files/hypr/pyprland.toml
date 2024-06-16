@@ -63,6 +63,7 @@ class = "kitty-cava"
 size = "70% 70%"
 position = "15% 15%"
 unfocus = "hide"
+lazy = true
 
 [scratchpads.yazi]
 animation = "fromTop"
@@ -71,6 +72,7 @@ class = "kitty-yazi"
 size = "70% 70%"
 position = "15% 15%"
 unfocus = "hide"
+lazy = true
 
 [scratchpads.volume]
 animation = "fromTop"
@@ -79,6 +81,7 @@ class = "org.pulseaudio.pavucontrol"
 size = "40% 40%"
 position = "30% 30%"
 unfocus = "hide"
+lazy = true
 
 [wallpapers]
 path = "~/.config/hypr/wallpapers/"
