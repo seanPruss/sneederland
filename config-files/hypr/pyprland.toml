@@ -64,6 +64,14 @@ size = "70% 70%"
 position = "15% 15%"
 unfocus = "hide"
 
+[scratchpads.yazi]
+animation = "fromTop"
+command = "kitty --class='kitty-yazi' 'yazi'"
+class = "kitty-yazi"
+size = "70% 70%"
+position = "15% 15%"
+unfocus = "hide"
+
 [scratchpads.volume]
 animation = "fromTop"
 command = "pavucontrol"

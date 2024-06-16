@@ -93,8 +93,12 @@ install_stage=(
 	zsh-autopair-git
 	zsh-directory-history-git
 	zsh-vi-mode-git
-	oh-my-posh
+	oh-my-posh-git
 	yazi
+	ffmpegthumbnailer
+	unarchiver
+	jq
+	poppler
 	bash-zsh-insulter
 	fastfetch-git
 	onefetch-git
@@ -365,10 +369,6 @@ gsettings set org.gnome.desktop.interface gtk-theme "rose-pine-gtk"
 gsettings set org.gnome.desktop.interface icon-theme "rose-pine-icons"
 gsettings set org.gnome.desktop.interface cursor-theme "BreezeX-RosePine-Linux"
 bat cache --build
-
-# Set up gammastep
-systemctl --user enable --now geoclue-agent.service
-systemctl --user enable --now gammastep.service
 
 # Set up tldr
 tldr --update

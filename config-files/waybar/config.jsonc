@@ -6,7 +6,7 @@
     "margin": "4px 5px",
     "exclusive": true,
     "fixed-center": true,
-    "modules-left": ["pulseaudio", "custom/spotify"],
+    "modules-left": ["custom/launcher", "group/window-info"],
     "modules-center": ["hyprland/workspaces", "custom/pacman"],
     "modules-right": [
       "group/systray",

@@ -18,8 +18,6 @@ window#waybar {
 #temperature,
 #network,
 #wireplumber,
-#pulseaudio,
-#custom-spotify,
 #mode,
 #idle_inhibitor,
 #scratchpad,
@@ -40,10 +38,10 @@ window#waybar {
 }
 
 #workspaces,
-#window {
+#window-info {
   color: rgba(224, 222, 244, 1);
   border-radius: 20px;
-  border: 0.19em solid rgba(156, 207, 216, 1);
+  border: 0.19em solid rgba(49, 116, 143, 1);
   background-color: rgba(31, 29, 46, 0.7);
   transition: all 0.4s ease-out;
 }
@@ -56,7 +54,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-  background-color: rgba(156, 207, 216, 0.4);
+  background-color: rgba(49, 116, 143, 0.7);
   color: rgba(224, 222, 244, 1);
   animation-name: blink-workspace;
   animation-duration: 0.5s;
@@ -96,20 +94,6 @@ window#waybar {
 /* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #workspaces {
   margin-right: 0;
-}
-
-#pulseaudio {
-  border: 0.19em solid rgba(196, 167, 231, 1);
-  padding: 0px 8px;
-}
-
-#custom-spotify {
-  border: 0.19em solid rgba(49, 116, 143, 1);
-  padding: 0px 8px;
-}
-
-#pulseaudio.muted {
-  border: 0.19em solid rgba(235, 188, 186, 1);
 }
 
 #clock {
@@ -184,8 +168,8 @@ window#waybar {
   }
 }
 
+#custom-launcher,
 #custom-pacman {
-  padding: 0px 8px;
   color: rgba(224, 222, 244, 1);
   background-color: rgba(31, 29, 46, 0.7);
   border: 0.19em solid rgba(156, 207, 216, 1);
@@ -193,6 +177,11 @@ window#waybar {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+}
+
+#custom-launcher,
+#custom-pacman {
+  padding: 0px 6px;
 }
 
 #custom-pacman.pending-updates {

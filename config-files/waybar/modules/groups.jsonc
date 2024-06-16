@@ -1,10 +1,14 @@
 {
   "group/systray": {
     "orientation": "horizontal",
-    "modules": ["tray", "power-profiles-daemon"],
+    "modules": ["pulseaudio", "tray"],
   },
   "group/end-right-module": {
     "orientation": "horizontal",
     "modules": ["clock", "battery", "backlight", "custom/power"],
+  },
+  "group/window-info": {
+    "orientation": "horizontal",
+    "modules": ["hyprland/window", "custom/spotify"],
   },
 }

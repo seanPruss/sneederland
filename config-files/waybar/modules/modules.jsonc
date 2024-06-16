@@ -76,7 +76,7 @@
   },
 
   "custom/spotify": {
-    "format": " {}",
+    "format": " |  {}",
     "return-type": "json",
     "on-click-right": "spotifatius toggle-liked",
     "exec": "spotifatius monitor",
@@ -87,5 +87,9 @@
     "interval": 3600,
     "exec": "wttrbar",
     "return-type": "json",
+  },
+  "custom/launcher": {
+    "format": " ",
+    "on-click": "wofi",
   },
 }
