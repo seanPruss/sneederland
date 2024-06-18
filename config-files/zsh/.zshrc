@@ -1,4 +1,4 @@
-fastfetch --load-config examples/10.jsonc
+fastfetch
 eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/atomic.toml)"
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
@@ -74,7 +74,7 @@ HISTFILE=~/.zsh_history
 ff ()
 {
     clear
-    fastfetch --load-config examples/10.jsonc
+    fastfetch
 }
 
 # yay aliases
@@ -86,6 +86,7 @@ alias query="yay -Q"
 # ls aliases
 alias ls="eza -a --icons=auto"
 alias ll="ls -lh --git --git-repos"
+alias lt="ll --tree --git-ignore"
 alias tree='eza --tree --git-ignore'
 # declutter screen and ls
 cls() {
@@ -185,7 +186,6 @@ bindkey -v
 
 # plugins
 source /usr/share/zsh/plugins/zsh-autoswitch-virtualenv/zsh-autoswitch-virtualenv.plugin.zsh
-source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 source /usr/share/zsh/plugins/zsh-autopair/autopair.zsh
 source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
 source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
