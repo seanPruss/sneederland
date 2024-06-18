@@ -207,28 +207,6 @@ leading_diamond = ''
 trailing_diamond = ''
 template = ' {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}'
 
-[[blocks.segments]]
-type = 'shell'
-style = 'diamond'
-foreground = 'black'
-background = 'green'
-leading_diamond = ''
-template = ' {{ .Name }} '
-
-
-[[blocks.segments]]
-type = 'time'
-style = 'diamond'
-invert_powerline = true
-foreground = 'black'
-background = 'blue'
-leading_diamond = ''
-trailing_diamond = ''
-template = '  {{ .CurrentDate | date .Format }} '
-
-[blocks.segments.properties]
-time_format = '_2,15:04'
-
 [[blocks]]
 type = 'prompt'
 alignment = 'left'
