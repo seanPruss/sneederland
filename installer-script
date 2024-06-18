@@ -62,6 +62,7 @@ install_stage=(
 	waybar-updates
 	wttrbar
 	imagemagick
+    gimp
 	hyprlock
 	rofi-wayland
 	wlogout-git

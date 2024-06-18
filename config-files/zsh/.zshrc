@@ -98,6 +98,8 @@ cll() {
     ll
 }
 
+alias grep="grep --color=auto"
+
 # better cd
 cd() {
     # do we want to go home or to previous directory

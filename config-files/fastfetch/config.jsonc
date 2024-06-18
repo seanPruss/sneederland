@@ -39,7 +39,7 @@
         },
         {
             "key": "󰇄 desktop",
-            "type": "de",
+            "type": "wm",
             "keyColor": "36"
         },
         {
@@ -70,7 +70,17 @@
             "keyColor": "35"
         },
         {
-            "key": " colors",
+            "key": " player",
+            "type": "player",
+            "keyColor": "cyan"
+        },{
+            "key": "󰝚 song",
+            "type": "media",
+            "keyColor": "red"
+        },
+
+        {
+            "key": " colours",
             "type": "colors",
             "symbol": "circle",
             "keyColor": "39"
