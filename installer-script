@@ -63,7 +63,7 @@ install_stage=(
 	wttrbar
 	imagemagick
 	hyprlock
-	wofi
+	rofi-wayland
 	wlogout-git
 	xdg-desktop-portal-hyprland
 	swappy-git
@@ -287,7 +287,7 @@ ln -sf ~/the-sneed-packages/config-files/Thunar ~/.config/Thunar
 ln -sf ~/the-sneed-packages/config-files/TrenTwins.png ~/.config/TrenTwins.png
 ln -sf ~/the-sneed-packages/config-files/update.sh ~/.config/update.sh
 ln -sf ~/the-sneed-packages/config-files/wlogout ~/.config/wlogout
-ln -sf ~/the-sneed-packages/config-files/wofi ~/.config/wofi
+ln -sf ~/the-sneed-packages/config-files/rofi ~/.config/rofi
 ln -sf ~/the-sneed-packages/config-files/xfce4 ~/.config/xfce4
 ln -sf ~/the-sneed-packages/config-files/xsettingsd ~/.config/xsettingsd
 ln -sf ~/the-sneed-packages/config-files/zellij ~/.config/zellij

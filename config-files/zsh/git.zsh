@@ -9,7 +9,6 @@ check_directory_for_new_repository() {
 	fi
 	last_repository=$current_repository
 }
-check_directory_for_new_repository
 
 # Git aliases
 find_main_branch() {
