@@ -13,6 +13,7 @@
     },
     "exec-if": "which waybar-updates",
     "exec": "waybar-updates",
+    "on-click": "pypr toggle update"
   },
 
   // Clock

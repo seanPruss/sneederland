@@ -70,10 +70,6 @@
             "keyColor": "35"
         },
         {
-            "key": " player",
-            "type": "player",
-            "keyColor": "cyan"
-        },{
             "key": "󰝚 song",
             "type": "media",
             "keyColor": "red"
