@@ -101,7 +101,6 @@ install_stage=(
 	bash-zsh-insulter
 	fastfetch
 	onefetch-git
-	urlview-git
 	zellij
 	ripgrep
 	neovim
