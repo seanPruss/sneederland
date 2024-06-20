@@ -13,7 +13,7 @@
     },
     "exec-if": "which waybar-updates",
     "exec": "waybar-updates",
-    "on-click": "pypr toggle update"
+    "on-click": "pypr toggle update",
   },
 
   // Clock
@@ -78,9 +78,12 @@
 
   "custom/spotify": {
     "format": " {} ",
+    "exec": "~/.config/waybar/scripts/mediaplayer.sh",
     "return-type": "json",
-    "on-click-right": "spotifatius toggle-liked",
-    "exec": "spotifatius monitor",
+    "on-click": "playerctl -p spotify play-pause",
+    "on-scroll-up": "playerctl -p spotify next",
+    "on-scroll-down": "playerctl -p spotify previous",
+    "exec-if": "pgrep spotfiy",
   },
   "custom/weather": {
     "format": "{}°",

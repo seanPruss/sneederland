@@ -84,7 +84,7 @@ alias search="yay -Ss"
 alias query="yay -Q"
 
 # ls aliases
-alias ls="eza -a --icons=auto"
+alias ls="eza -a --icons=auto --group-directories-first"
 alias ll="ls -lh --git --git-repos"
 alias lt="ll --tree --git-ignore"
 alias tree='eza --tree --git-ignore'

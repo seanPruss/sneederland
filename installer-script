@@ -62,7 +62,7 @@ install_stage=(
 	waybar-updates
 	wttrbar
 	imagemagick
-    gimp
+	gimp
 	hyprlock
 	rofi-wayland
 	wlogout-git
@@ -75,7 +75,6 @@ install_stage=(
 	firefox
 	webcord
 	spotify
-	spotifatius
 	spicetify-cli-git
 	spicetify-themes-git
 	spicetify-marketplace-bin
