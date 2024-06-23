@@ -94,6 +94,21 @@
   },
   "custom/launcher": {
     "format": " ",
-    "on-click": "wofi",
+    "on-click": "rofi -show",
+  },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 24,
+    "icon-theme": "candy-icons",
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "app_ids-mapping": {
+      "firefoxdeveloperedition": "firefox-developer-edition",
+    },
+    "rewrite": {
+      "Firefox Web Browser": "Firefox",
+      "Foot Server": "Terminal",
+    },
   },
 }

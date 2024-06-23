@@ -112,6 +112,7 @@ install_stage=(
 	toilet-fonts
 	rose-pine-gtk-theme-full
 	rose-pine-cursor
+	candy-icons-git
 	libreoffice-fresh
 	thunderbird
 	mpv
@@ -129,7 +130,7 @@ install_stage=(
 	noto-fonts-emoji
 	lxappearance
 	xfce4-settings
-	nwg-look-bin
+	nwg-look
 	sddm-git
 	archlinux-themes-sddm
 )

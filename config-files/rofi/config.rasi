@@ -5,7 +5,7 @@ configuration {
     font: "JetBrains Mono Nerd Font Medium 15";
     modi: "drun,window";
     show-icons: true;
-    icon-theme: "rose-pine-icons";
+    icon-theme: "candy-icons";
 }
 @import "default"
 
@@ -118,6 +118,7 @@ configuration {
 	spacing:    0;
 	text-color: @foreground;
 	padding:    1px ;
+    children: [prompt, entry];
 }
 #case-indicator {
 	spacing:    0;
@@ -139,4 +140,8 @@ configuration {
 	str:        ":";
 	margin:     0px 0.3em 0em 0em;
 	text-color: @grn;
+}
+
+#element-icon {
+    size: 40;
 }
