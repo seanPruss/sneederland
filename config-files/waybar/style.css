@@ -46,6 +46,7 @@ window#waybar {
   transition: all 0.4s ease-out;
 }
 
+#taskbar button,
 #workspaces button {
   border-radius: 20px;
   border: none;
@@ -53,6 +54,7 @@ window#waybar {
   transition: all 0.4s ease-out;
 }
 
+#taskbar button.active,
 #workspaces button.active {
   background-color: rgba(49, 116, 143, 0.7);
   color: rgba(224, 222, 244, 1);
@@ -177,10 +179,6 @@ window#waybar {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-}
-
-#custom-launcher,
-#custom-pacman {
   padding: 0px 6px;
 }
 

@@ -110,7 +110,7 @@ install_stage=(
 	rust-lolcat-git
 	toilet
 	toilet-fonts
-	rose-pine-gtk-theme-full
+	rose-pine-gtk-theme
 	rose-pine-cursor
 	candy-icons-git
 	libreoffice-fresh
@@ -293,14 +293,7 @@ ln -sf ~/the-sneed-packages/config-files/xsettingsd ~/.config/xsettingsd
 ln -sf ~/the-sneed-packages/config-files/zellij ~/.config/zellij
 ln -sf ~/the-sneed-packages/config-files/zsh ~/.config/zsh
 ln -sf ~/the-sneed-packages/config-files/oh-my-posh ~/.config/oh-my-posh
-# Set up pacman.conf
-echo -e "[options]
-HoldPkg     = pacman glibc
-Architecture = auto
-CheckSpace
-Color
-ParallelDownloads = 5
-ILoveCandy" | sudo tee -a /etc/pacman.conf
+ln -sf ~/the-sneed-packages/config-files/yazi ~/.config/yazi
 
 # Prep Stage - Bunch of needed items
 echo -e "$CNT - Prep Stage - Installing needed components, this may take a while..."
@@ -363,22 +356,16 @@ else
 fi
 # Set up rose pine desktop theme
 xfconf-query -c xsettings -p /Net/ThemeName -s "rose-pine-gtk"
-xfconf-query -c xsettings -p /Net/IconThemeName -s "rose-pine-icons"
+xfconf-query -c xsettings -p /Net/IconThemeName -s "candy-icons"
 gsettings set org.gnome.desktop.interface gtk-theme "rose-pine-gtk"
-gsettings set org.gnome.desktop.interface icon-theme "rose-pine-icons"
+gsettings set org.gnome.desktop.interface icon-theme "candy-icons"
 gsettings set org.gnome.desktop.interface cursor-theme "BreezeX-RosePine-Linux"
 bat cache --build
 
 # Set up tldr
 tldr --update
 
-# set up spicetify
-sudo chmod -R 777 /opt/spotify
-spicetify config current_theme Sleek color_scheme rosepine
-spicetify config custom_apps marketplace
-spicetify restore backup apply
 # set up zsh
-ln -sf ~/.config/.zshenv ~
 chsh -s /bin/zsh
 
 ### Install software for Asus ROG laptops ###

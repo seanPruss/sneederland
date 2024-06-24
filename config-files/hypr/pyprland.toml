@@ -72,14 +72,6 @@ size = "70% 70%"
 position = "15% 15%"
 unfocus = "hide"
 
-[scratchpads.volume]
-animation = "fromTop"
-command = "pavucontrol"
-class = "org.pulseaudio.pavucontrol"
-size = "40% 40%"
-position = "30% 30%"
-unfocus = "hide"
-
 [wallpapers]
 path = "~/.config/hypr/wallpapers/"
 extensions = ["png", "jpg", "jpeg", "webp", "JPG"]

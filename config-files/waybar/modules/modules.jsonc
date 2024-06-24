@@ -61,7 +61,7 @@
       "car": "",
       "default": ["", "", ""],
     },
-    "on-click": "pypr toggle volume",
+    "on-click": "pavucontrol",
   },
 
   // Brightness Information
@@ -96,6 +96,7 @@
     "format": " ",
     "on-click": "rofi -show",
   },
+
   "wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 24,
@@ -110,5 +111,10 @@
       "Firefox Web Browser": "Firefox",
       "Foot Server": "Terminal",
     },
+  },
+
+  "hyprland/window": {
+    "separate-outputs": true,
+    "icon": true,
   },
 }
