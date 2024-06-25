@@ -27,3 +27,7 @@ rm -rf .git # do this if you want to create your own fork
 > [!NOTE]
 > My name and noreply github email is in `.gitconfig` so obviously change that  
 > to yours
+
+> [!IMPORTANT]
+> hyprwinwrap is currently broken for my machine at least so enable it at your  
+> own risk
