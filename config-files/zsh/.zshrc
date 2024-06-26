@@ -206,7 +206,7 @@ if [[ -f /etc/bash.command-not-found ]]; then
     . /etc/bash.command-not-found
 fi
 
-bindkey "^f" autosuggest-execute
+bindkey "^y" autosuggest-execute
 bindkey "^k" history-substring-search-up
 bindkey "^j" history-substring-search-down
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
