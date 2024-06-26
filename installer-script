@@ -27,6 +27,8 @@ prep_stage=(
 	python-requests
 	pacman-contrib
 	mkinitcpio-firmware
+	hyprlang-git
+	hyprcursor-git
 	cpio
 )
 
@@ -97,7 +99,6 @@ install_stage=(
 	yazi
 	ffmpegthumbnailer
 	unarchiver
-	jq
 	poppler
 	bash-zsh-insulter
 	fastfetch
@@ -282,7 +283,6 @@ ln -sf ~/the-sneed-packages/config-files/mimeapps.list ~/.config/mimeapps.list
 ln -sf ~/the-sneed-packages/config-files/nvim ~/.config/nvim
 ln -sf ~/the-sneed-packages/config-files/nwg-look ~/.config/nwg-look
 ln -sf ~/the-sneed-packages/config-files/pavucontrol.ini ~/.config/pavucontrol.ini
-ln -sf ~/the-sneed-packages/config-files/pulse ~/.config/pulse
 ln -sf ~/the-sneed-packages/config-files/systemd ~/.config/systemd
 ln -sf ~/the-sneed-packages/config-files/Thunar ~/.config/Thunar
 ln -sf ~/the-sneed-packages/config-files/TrenTwins.png ~/.config/TrenTwins.png
