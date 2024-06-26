@@ -70,6 +70,7 @@ install_stage=(
 	rofi-wayland
 	wlogout-git
 	xdg-desktop-portal-hyprland
+	hyprland-autoname-workspaces-git
 	swappy-git
 	grim-git
 	slurp
