@@ -1,0 +1,12 @@
+[Unit]
+Description=Lock Wayland session with hyprlock for user %i
+Before=sleep.target
+
+[Service]
+User=%i
+Environment=WAYLAND_DISPLAY=wayland-1 XDG_RUNTIME_DIR=/run/user/1000
+ExecStart=/usr/bin/hyprlock
+ExecStartPost=/usr/bin/sleep 1
+
+[Install]
+WantedBy=sleep.target
