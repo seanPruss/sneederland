@@ -17,7 +17,6 @@ margin=10
 padding=15
 border-size=2
 border-radius=10
-icon-path=/home/seanp/.local/icons/mako
 icons=1
 max-icon-size=48
 icon-location=left
