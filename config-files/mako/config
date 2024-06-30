@@ -30,7 +30,7 @@ max-visible=5
 layer=overlay
 anchor=center
 
-background-color=#191724
+background-color=#19172480
 text-color=#e0def4
 border-color=#ebbcba
 progress-color=over #31748f
@@ -46,7 +46,7 @@ default-timeout=5000
 [urgency=high]
 border-color=#eb6f92
 text-color=#eb6f92
-default-timeout=0
+default-timeout=5000
 
 [category=mpd]
 border-color=#f6c177

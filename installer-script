@@ -101,7 +101,7 @@ install_stage=(
 	unarchiver
 	poppler
 	bash-zsh-insulter
-	fastfetch
+	fastfetch-git
 	onefetch-git
 	zellij
 	ripgrep
@@ -373,7 +373,7 @@ bat cache --build
 tldr --update
 
 # set up zsh
-chsh -s /bin/zsh
+chsh -s "$(which zsh)"
 
 ### Install software for Asus ROG laptops ###
 read -rep $'[\e[1;33mACTION\e[0m] - For ASUS ROG Laptops - Would you like to install Asus ROG software support? (y,n) ' ROG
