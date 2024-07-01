@@ -25,10 +25,10 @@ size = "60% 80%"
 position = "20% 10%"
 unfocus = "hide"
 
-[scratchpads.thunderbird]
+[scratchpads.betterbird]
 animation = "fromTop"
-command = "thunderbird"
-class = "thunderbird"
+command = "betterbird"
+class = "betterbird"
 size = "90% 90%"
 position = "5% 5%"
 unfocus = "hide"
@@ -43,7 +43,7 @@ unfocus = "hide"
 
 [scratchpads.install]
 animation = "fromTop"
-command = 'kitty --class="kitty-install" "/home/$USER/.config/install.sh"'
+command = 'kitty --class="kitty-install" "$HOME/.config/install.sh"'
 class = "kitty-install"
 size = "70% 70%"
 position = "15% 15%"
@@ -52,7 +52,7 @@ lazy = true
 
 [scratchpads.update]
 animation = "fromTop"
-command = 'kitty --class="kitty-update" "/home/$USER/.config/update.sh"'
+command = 'kitty --class="kitty-update" "$HOME/.config/update.sh"'
 class = "kitty-update"
 size = "70% 70%"
 position = "15% 15%"

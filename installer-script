@@ -116,7 +116,7 @@ install_stage=(
 	rose-pine-cursor
 	candy-icons-git
 	libreoffice-fresh
-	thunderbird
+	betterbird-bin
 	mpv
 	pamixer
 	pulsecontrol-git
