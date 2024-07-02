@@ -270,6 +270,7 @@ fi
 
 # copy my configs
 echo -e "$CNT Copying config files (dw I'm backing up your configs)"
+mkdir ~/.config.bak
 [[ -f ~/.zshenv ]] && mv ~/.zshenv ~/.zshenv.bak
 ln -sf ~/the-sneed-packages/config-files/.zshenv ~/.zshenv
 [[ -f ~/.gitconfig ]] && mv ~/.gitconfig ~/.gitconfig.bak
