@@ -45,6 +45,7 @@ nvidia_stage=(
 install_stage=(
 	swww-git
 	pyprland
+	playerctl
 	man-db
 	man-pages
 	fd
@@ -268,32 +269,50 @@ if [ ! -f /sbin/yay ]; then
 fi
 
 # copy my configs
-echo -e "$CNT Copying config files"
+echo -e "$CNT Copying config files (dw I'm backing up your configs)"
+[[ -f ~/.zshenv ]] && mv ~/.zshenv ~/.zshenv.bak
 ln -sf ~/the-sneed-packages/config-files/.zshenv ~/.zshenv
+[[ -f ~/.gitconfig ]] && mv ~/.gitconfig ~/.gitconfig.bak
 ln -sf ~/the-sneed-packages/config-files/.gitconfig ~/.gitconfig
+[[ -d ~/.config/bat ]] && mv ~/.config/bat ~/.config.bak/bat
 ln -sf ~/the-sneed-packages/config-files/bat ~/.config/bat
+[[ -d ~/.config/fontconfig ]] && mv ~/.config/fontconfig ~/.config.bak/fontconfig
 ln -sf ~/the-sneed-packages/config-files/fontconfig ~/.config/fontconfig
+[[ -d ~/.config/waybar ]] && mv ~/.config/waybar ~/.config.bak/waybar
 ln -sf ~/the-sneed-packages/config-files/waybar ~/.config/waybar
+[[ -d ~/.config/gtk-3.0 ]] && mv ~/.config/gtk-3.0 ~/.config.bak/gtk-3.0
 ln -sf ~/the-sneed-packages/config-files/gtk-3.0 ~/.config/gtk-3.0
+[[ -d ~/.config/hypr ]] && mv ~/.config/hypr ~/.config.bak/hypr
 ln -sf ~/the-sneed-packages/config-files/hypr ~/.config/hypr
 ln -sf ~/the-sneed-packages/config-files/install.sh ~/.config/install.sh
+[[ -d ~/.config/kitty ]] && mv ~/.config/kitty ~/.config.bak/kitty
 ln -sf ~/the-sneed-packages/config-files/kitty ~/.config/kitty
+[[ -d ~/.config/mako ]] && mv ~/.config/mako ~/.config.bak/mako
 ln -sf ~/the-sneed-packages/config-files/mako ~/.config/mako
-ln -sf ~/the-sneed-packages/config-files/mimeapps.list ~/.config/mimeapps.list
+[[ -d ~/.config/nvim ]] && mv ~/.config/nvim ~/.config.bak/nvim
 ln -sf ~/the-sneed-packages/config-files/nvim ~/.config/nvim
+[[ -d ~/.config/nwg-look ]] && mv ~/.config/nwg-look ~/.config.bak/nwg-look
 ln -sf ~/the-sneed-packages/config-files/nwg-look ~/.config/nwg-look
-ln -sf ~/the-sneed-packages/config-files/pavucontrol.ini ~/.config/pavucontrol.ini
+[[ -d ~/.config/systemd ]] && mv ~/.config/systemd ~/.config.bak/systemd
 ln -sf ~/the-sneed-packages/config-files/systemd ~/.config/systemd
+[[ -d ~/.config/Thunar ]] && mv ~/.config/Thunar ~/.config.bak/Thunar
 ln -sf ~/the-sneed-packages/config-files/Thunar ~/.config/Thunar
-ln -sf ~/the-sneed-packages/config-files/TrenTwins.png ~/.config/TrenTwins.png
 ln -sf ~/the-sneed-packages/config-files/update.sh ~/.config/update.sh
+[[ -d ~/.config/wlogout ]] && mv ~/.config/wlogout ~/.config.bak/wlogout
 ln -sf ~/the-sneed-packages/config-files/wlogout ~/.config/wlogout
+[[ -d ~/.config/rofi ]] && mv ~/.config/rofi ~/.config.bak/rofi
 ln -sf ~/the-sneed-packages/config-files/rofi ~/.config/rofi
+[[ -d ~/.config/xfce4 ]] && mv ~/.config/xfce4 ~/.config.bak/xfce4
 ln -sf ~/the-sneed-packages/config-files/xfce4 ~/.config/xfce4
+[[ -d ~/.config/xsettingsd ]] && mv ~/.config/xsettingsd ~/.config.bak/xsettingsd
 ln -sf ~/the-sneed-packages/config-files/xsettingsd ~/.config/xsettingsd
+[[ -d ~/.config/zellij ]] && mv ~/.config/zellij ~/.config.bak/zellij
 ln -sf ~/the-sneed-packages/config-files/zellij ~/.config/zellij
+[[ -d ~/.config/zsh ]] && mv ~/.config/zsh ~/.config.bak/zsh
 ln -sf ~/the-sneed-packages/config-files/zsh ~/.config/zsh
+[[ -d ~/.config/oh-my-posh ]] && mv ~/.config/oh-my-posh ~/.config.bak/oh-my-posh
 ln -sf ~/the-sneed-packages/config-files/oh-my-posh ~/.config/oh-my-posh
+[[ -d ~/.config/yazi ]] && mv ~/.config/yazi ~/.config.bak/yazi
 ln -sf ~/the-sneed-packages/config-files/yazi ~/.config/yazi
 
 # Prep Stage - Bunch of needed items
