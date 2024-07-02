@@ -79,7 +79,7 @@ install_stage=(
 	firefox
 	webcord
 	spotify
-	spicetify-cli-git
+	spicetify-cli
 	spicetify-themes-git
 	spicetify-marketplace-bin
 	geoclue
