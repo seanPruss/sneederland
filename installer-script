@@ -283,6 +283,8 @@ ln -sf ~/the-sneed-packages/config-files/fontconfig ~/.config/fontconfig
 ln -sf ~/the-sneed-packages/config-files/waybar ~/.config/waybar
 [[ -d ~/.config/gtk-3.0 ]] && mv ~/.config/gtk-3.0 ~/.config.bak/gtk-3.0
 ln -sf ~/the-sneed-packages/config-files/gtk-3.0 ~/.config/gtk-3.0
+[[ -d ~/.config/gtk-4.0 ]] && mv ~/.config/gtk-4.0 ~/.config.bak/gtk-4.0
+ln -sf ~/the-sneed-packages/config-files/gtk-4.0 ~/.config/gtk-4.0
 [[ -d ~/.config/hypr ]] && mv ~/.config/hypr ~/.config.bak/hypr
 ln -sf ~/the-sneed-packages/config-files/hypr ~/.config/hypr
 ln -sf ~/the-sneed-packages/config-files/install.sh ~/.config/install.sh
