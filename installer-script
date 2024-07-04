@@ -185,6 +185,17 @@ install_software() {
 	fi
 }
 
+backup_and_link_file() {
+	[[ -f ~/$1 ]] && mv ~/"$1" ~/"$1".bak
+	ln -sf ~/the-sneed-packages/config-files/"$1" ~/"$1"
+}
+
+backup_and_link_dir() {
+	[[ -d ~/.config.bak ]] || mkdir ~/.config.bak
+	[[ -d ~/.config/$1 ]] && mv ~/.config/"$1" .config.bak/"$1"
+	ln -sf ~/the-sneed-packages/config-files/"$1" ~/.config/"$1"
+}
+
 # clear the screen
 clear
 
@@ -265,53 +276,28 @@ fi
 
 # copy my configs
 echo -e "$CNT Copying config files (dw I'm backing up your configs)"
-mkdir ~/.config.bak
-[[ -f ~/.zshenv ]] && mv ~/.zshenv ~/.zshenv.bak
-ln -sf ~/the-sneed-packages/config-files/.zshenv ~/.zshenv
-[[ -f ~/.gitconfig ]] && mv ~/.gitconfig ~/.gitconfig.bak
-ln -sf ~/the-sneed-packages/config-files/.gitconfig ~/.gitconfig
-[[ -d ~/.config/bat ]] && mv ~/.config/bat ~/.config.bak/bat
-ln -sf ~/the-sneed-packages/config-files/bat ~/.config/bat
-[[ -d ~/.config/fontconfig ]] && mv ~/.config/fontconfig ~/.config.bak/fontconfig
-ln -sf ~/the-sneed-packages/config-files/fontconfig ~/.config/fontconfig
-[[ -d ~/.config/waybar ]] && mv ~/.config/waybar ~/.config.bak/waybar
-ln -sf ~/the-sneed-packages/config-files/waybar ~/.config/waybar
-[[ -d ~/.config/gtk-3.0 ]] && mv ~/.config/gtk-3.0 ~/.config.bak/gtk-3.0
-ln -sf ~/the-sneed-packages/config-files/gtk-3.0 ~/.config/gtk-3.0
-[[ -d ~/.config/gtk-4.0 ]] && mv ~/.config/gtk-4.0 ~/.config.bak/gtk-4.0
-ln -sf ~/the-sneed-packages/config-files/gtk-4.0 ~/.config/gtk-4.0
-[[ -d ~/.config/hypr ]] && mv ~/.config/hypr ~/.config.bak/hypr
-ln -sf ~/the-sneed-packages/config-files/hypr ~/.config/hypr
-ln -sf ~/the-sneed-packages/config-files/install.sh ~/.config/install.sh
-[[ -d ~/.config/kitty ]] && mv ~/.config/kitty ~/.config.bak/kitty
-ln -sf ~/the-sneed-packages/config-files/kitty ~/.config/kitty
-[[ -d ~/.config/mako ]] && mv ~/.config/mako ~/.config.bak/mako
-ln -sf ~/the-sneed-packages/config-files/mako ~/.config/mako
-[[ -d ~/.config/nvim ]] && mv ~/.config/nvim ~/.config.bak/nvim
-ln -sf ~/the-sneed-packages/config-files/nvim ~/.config/nvim
-[[ -d ~/.config/nwg-look ]] && mv ~/.config/nwg-look ~/.config.bak/nwg-look
-ln -sf ~/the-sneed-packages/config-files/nwg-look ~/.config/nwg-look
-[[ -d ~/.config/systemd ]] && mv ~/.config/systemd ~/.config.bak/systemd
-ln -sf ~/the-sneed-packages/config-files/systemd ~/.config/systemd
-[[ -d ~/.config/Thunar ]] && mv ~/.config/Thunar ~/.config.bak/Thunar
-ln -sf ~/the-sneed-packages/config-files/Thunar ~/.config/Thunar
-ln -sf ~/the-sneed-packages/config-files/update.sh ~/.config/update.sh
-[[ -d ~/.config/wlogout ]] && mv ~/.config/wlogout ~/.config.bak/wlogout
-ln -sf ~/the-sneed-packages/config-files/wlogout ~/.config/wlogout
-[[ -d ~/.config/rofi ]] && mv ~/.config/rofi ~/.config.bak/rofi
-ln -sf ~/the-sneed-packages/config-files/rofi ~/.config/rofi
-[[ -d ~/.config/xfce4 ]] && mv ~/.config/xfce4 ~/.config.bak/xfce4
-ln -sf ~/the-sneed-packages/config-files/xfce4 ~/.config/xfce4
-[[ -d ~/.config/xsettingsd ]] && mv ~/.config/xsettingsd ~/.config.bak/xsettingsd
-ln -sf ~/the-sneed-packages/config-files/xsettingsd ~/.config/xsettingsd
-[[ -d ~/.config/zellij ]] && mv ~/.config/zellij ~/.config.bak/zellij
-ln -sf ~/the-sneed-packages/config-files/zellij ~/.config/zellij
-[[ -d ~/.config/zsh ]] && mv ~/.config/zsh ~/.config.bak/zsh
-ln -sf ~/the-sneed-packages/config-files/zsh ~/.config/zsh
-[[ -d ~/.config/oh-my-posh ]] && mv ~/.config/oh-my-posh ~/.config.bak/oh-my-posh
-ln -sf ~/the-sneed-packages/config-files/oh-my-posh ~/.config/oh-my-posh
-[[ -d ~/.config/yazi ]] && mv ~/.config/yazi ~/.config.bak/yazi
-ln -sf ~/the-sneed-packages/config-files/yazi ~/.config/yazi
+backup_and_link_file .zshenv
+backup_and_link_file .gitconfig
+backup_and_link_dir bat
+backup_and_link_dir fontconfig
+backup_and_link_dir waybar
+backup_and_link_dir gtk-3.0
+backup_and_link_dir gtk-4.0
+backup_and_link_dir hypr
+backup_and_link_dir kitty
+backup_and_link_dir mako
+backup_and_link_dir nvim
+backup_and_link_dir nwg-look
+backup_and_link_dir systemd
+backup_and_link_dir Thunar
+backup_and_link_dir wlogout
+backup_and_link_dir rofi
+backup_and_link_dir xfce4
+backup_and_link_dir xsettingsd
+backup_and_link_dir zellij
+backup_and_link_dir zsh
+backup_and_link_dir oh-my-posh
+backup_and_link_dir yazi
 
 # Prep Stage - Bunch of needed items
 echo -e "$CNT - Prep Stage - Installing needed components, this may take a while..."

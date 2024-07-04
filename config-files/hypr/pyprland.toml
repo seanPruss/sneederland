@@ -43,7 +43,7 @@ unfocus = "hide"
 
 [scratchpads.install]
 animation = "fromTop"
-command = 'kitty --class="kitty-install" "$HOME/.config/install.sh"'
+command = 'kitty --class="kitty-install" "$HOME/.config/hypr/install.sh"'
 class = "kitty-install"
 size = "70% 70%"
 position = "15% 15%"
@@ -52,7 +52,7 @@ lazy = true
 
 [scratchpads.update]
 animation = "fromTop"
-command = 'kitty --class="kitty-update" "$HOME/.config/update.sh"'
+command = 'kitty --class="kitty-update" "$HOME/.config/hypr/update.sh"'
 class = "kitty-update"
 size = "70% 70%"
 position = "15% 15%"
