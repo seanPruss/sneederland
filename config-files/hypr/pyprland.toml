@@ -3,15 +3,15 @@ plugins = ["scratchpads", "wallpapers"]
 
 [scratchpads.spotify]
 animation = "fromTop"
-command = "spotify"
+command = 'spotify'
 class = "Spotify"
-size = "80% 80%"
-position = "10% 10%"
+size = "90% 90%"
+position = "5% 5%"
 unfocus = "hide"
 
 [scratchpads.webcord]
 animation = "fromTop"
-command = "webcord"
+command = 'webcord'
 class = "WebCord"
 size = "90% 90%"
 position = "5% 5%"
@@ -19,23 +19,23 @@ unfocus = "hide"
 
 [scratchpads.thunar]
 animation = "fromTop"
-command = "thunar"
+command = 'thunar'
 class = "thunar"
-size = "60% 80%"
-position = "20% 10%"
+size = "80% 80%"
+position = "10% 10%"
 unfocus = "hide"
 
-[scratchpads.betterbird]
+[scratchpads.thunderbird]
 animation = "fromTop"
-command = "betterbird"
-class = "betterbird"
+command = 'thunderbird'
+class = "thunderbird"
 size = "90% 90%"
 position = "5% 5%"
 unfocus = "hide"
 
 [scratchpads.volume]
 animation = "fromTop"
-command = "pulsecontrol"
+command = 'pulsecontrol'
 class = "org.test.pulsecontrol"
 size = "70% 70%"
 position = "15% 15%"
@@ -61,7 +61,7 @@ lazy = true
 
 [scratchpads.btop]
 animation = "fromTop"
-command = "kitty --class='kitty-btop' 'btop'"
+command = 'kitty --class="kitty-btop" "btop"'
 class = "kitty-btop"
 size = "70% 70%"
 position = "15% 15%"
@@ -69,7 +69,7 @@ unfocus = "hide"
 
 [scratchpads.cava]
 animation = "fromTop"
-command = "kitty --class='kitty-cava' 'cava'"
+command = 'kitty --class="kitty-cava" "cava"'
 class = "kitty-cava"
 size = "70% 70%"
 position = "15% 15%"
@@ -77,7 +77,7 @@ unfocus = "hide"
 
 [scratchpads.yazi]
 animation = "fromTop"
-command = "kitty --class='kitty-yazi' 'yazi'"
+command = 'kitty --class="kitty-yazi" "yazi"'
 class = "kitty-yazi"
 size = "70% 70%"
 position = "15% 15%"

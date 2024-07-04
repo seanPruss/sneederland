@@ -96,6 +96,7 @@ install_stage=(
 	zsh-you-should-use
 	zsh-autopair-git
 	zsh-directory-history-git
+	trash-cli
 	oh-my-posh-git
 	yazi
 	ffmpegthumbnailer
@@ -117,7 +118,7 @@ install_stage=(
 	rose-pine-cursor
 	candy-icons-git
 	libreoffice-fresh
-	betterbird-bin
+	thunderbird
 	mpv
 	pamixer
 	pulsecontrol-git
@@ -131,7 +132,6 @@ install_stage=(
 	file-roller
 	ttf-jetbrains-mono-nerd
 	noto-fonts-emoji
-	lxappearance
 	xfce4-settings
 	nwg-look
 	sddm-git
@@ -191,7 +191,6 @@ clear
 # set some expectations for the user
 echo -e "$CNT - You are about to execute a script that would attempt to setup Hyprland.
 Please note that Hyprland is still in Beta."
-sleep 1
 
 # attempt to discover if this is a VM or not
 echo -e "$CNT - Checking for Physical or VM..."
@@ -200,13 +199,11 @@ echo -e "Using $ISVM"
 if [[ $ISVM == *"vm"* ]]; then
 	echo -e "$CWR - Please note that VMs are not fully supported and if you try to run this on
     a Virtual Machine there is a high chance this will fail."
-	sleep 1
 fi
 
 # let the user know that we will use sudo
 echo -e "$CNT - This script will run some commands that require sudo. You will be prompted to enter your password.
 If you are worried about entering your password then you may want to review the content of the script."
-sleep 1
 
 # give the user an option to exit out
 read -rep $'[\e[1;33mACTION\e[0m] - Would you like to continue with the install (y,n) ' CONTINST
@@ -232,7 +229,6 @@ if [[ $WIFI == "Y" || $WIFI == "y" ]]; then
 	echo -e "$CNT - The following file has been created $LOC.\n"
 	echo -e "[connection]\nwifi.powersave = 2" | sudo tee -a $LOC &>>$INSTLOG
 	echo -en "$CNT - Restarting NetworkManager service, Please wait."
-	sleep 2
 	sudo systemctl restart NetworkManager &>>$INSTLOG
 
 	#wait for services to restore (looking at you DNS)
@@ -241,7 +237,6 @@ if [[ $WIFI == "Y" || $WIFI == "y" ]]; then
 		sleep 1
 	done
 	echo -en "Done!\n"
-	sleep 2
 	echo -e "\e[1A\e[K$COK - NetworkManager restart completed."
 fi
 
@@ -350,23 +345,19 @@ done
 # Start the bluetooth service
 echo -e "$CNT - Starting the Bluetooth Service..."
 sudo systemctl enable --now bluetooth.service &>>$INSTLOG
-sleep 2
 
 # Enable the sddm login manager service
 echo -e "$CNT - Enabling the SDDM Service..."
 sudo systemctl enable sddm &>>$INSTLOG
-sleep 2
 
 # Enable auto-cpufreq service
 echo -e "$CNT - Enabling the auto-cpufreq Service..."
 sudo systemctl enable --now auto-cpufreq &>>$INSTLOG
-sleep 2
 
 # Enable screen lock service
 echo -e "$CNT - Enabling the screen lock Service..."
 sudo cp ~/the-sneed-packages/config-files/suspend@.service /etc/systemd/system
 sudo systemctl enable --now suspend@$USER.service &>>$INSTLOG
-sleep 2
 
 # Clean out other portals
 echo -e "$CNT - Cleaning out conflicting xdg portals..."
@@ -419,9 +410,7 @@ if [[ $ROG == "Y" || $ROG == "y" ]]; then
 
 	echo -e "$CNT - Activating ROG services..."
 	sudo systemctl enable --now power-profiles-daemon.service &>>$INSTLOG
-	sleep 2
 	sudo systemctl enable --now supergfxd &>>$INSTLOG
-	sleep 2
 
 	# add the ROG keybinding file to the config
 	echo -e "\nsource = ~/.config/hypr/rog-g15-strix-2021-binds.conf" >>~/.config/hypr/hyprland.conf
