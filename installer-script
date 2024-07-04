@@ -74,7 +74,6 @@ install_stage=(
 	swappy-git
 	grim-git
 	slurp
-	thunar
 	btop-gpu-git
 	firefox
 	webcord
@@ -128,7 +127,6 @@ install_stage=(
 	blueman
 	network-manager-applet
 	gvfs
-	thunar-archive-plugin
 	file-roller
 	ttf-jetbrains-mono-nerd
 	noto-fonts-emoji
@@ -155,7 +153,6 @@ config_dirs=(
 	nvim
 	nwg-look
 	systemd
-	Thunar
 	wlogout
 	rofi
 	xfce4
