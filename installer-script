@@ -138,9 +138,33 @@ install_stage=(
 	archlinux-themes-sddm
 )
 
-for str in ${myArray[@]}; do
-	echo $str
-done
+config_files=(
+	.zshenv
+	.gitconfig
+)
+
+config_dirs=(
+	bat
+	fontconfig
+	waybar
+	gtk-3.0
+	gtk-4.0
+	hypr
+	kitty
+	mako
+	nvim
+	nwg-look
+	systemd
+	Thunar
+	wlogout
+	rofi
+	xfce4
+	xsettingsd
+	zellij
+	zsh
+	oh-my-posh
+	yazi
+)
 
 # set some colors
 CNT="[\e[1;36mNOTE\e[0m]"
@@ -156,7 +180,7 @@ INSTLOG="install.log"
 
 # function that would show a progress bar to the user
 show_progress() {
-	while ps | grep $1 &>/dev/null; do
+	while pgrep $1 &>/dev/null; do
 		echo -n "."
 		sleep 2
 	done
@@ -255,7 +279,7 @@ fi
 if [ ! -f /sbin/yay ]; then
 	echo -en "$CNT - Configuring yay."
 	git clone https://aur.archlinux.org/yay.git &>>$INSTLOG
-	cd yay
+	cd yay || exit
 	makepkg -si --noconfirm &>>../$INSTLOG &
 	show_progress $!
 	if [ -f /sbin/yay ]; then
@@ -276,28 +300,13 @@ fi
 
 # copy my configs
 echo -e "$CNT Copying config files (dw I'm backing up your configs)"
-backup_and_link_file .zshenv
-backup_and_link_file .gitconfig
-backup_and_link_dir bat
-backup_and_link_dir fontconfig
-backup_and_link_dir waybar
-backup_and_link_dir gtk-3.0
-backup_and_link_dir gtk-4.0
-backup_and_link_dir hypr
-backup_and_link_dir kitty
-backup_and_link_dir mako
-backup_and_link_dir nvim
-backup_and_link_dir nwg-look
-backup_and_link_dir systemd
-backup_and_link_dir Thunar
-backup_and_link_dir wlogout
-backup_and_link_dir rofi
-backup_and_link_dir xfce4
-backup_and_link_dir xsettingsd
-backup_and_link_dir zellij
-backup_and_link_dir zsh
-backup_and_link_dir oh-my-posh
-backup_and_link_dir yazi
+for file in ${config_files[@]}; do
+	backup_and_link_file $file
+done
+
+for dir in ${config_dirs[@]}; do
+	backup_and_link_dir $dir
+done
 
 # Prep Stage - Bunch of needed items
 echo -e "$CNT - Prep Stage - Installing needed components, this may take a while..."
