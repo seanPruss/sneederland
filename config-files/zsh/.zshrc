@@ -24,6 +24,7 @@ if [ "$TERM" = "linux" ]; then
 	\e]PE#ebbcba
 	\e]PF#e0def4
 	"
+    clear
 else
     export TERM="xterm-256color"
 fi
