@@ -192,7 +192,7 @@ backup_and_link_file() {
 
 backup_and_link_dir() {
 	[[ -d ~/.config.bak ]] || mkdir ~/.config.bak
-	[[ -d ~/.config/$1 ]] && mv ~/.config/"$1" .config.bak/"$1"
+	[[ -d ~/.config/$1 ]] && mv ~/.config/"$1" ~/.config.bak/"$1"
 	ln -sf ~/the-sneed-packages/config-files/"$1" ~/.config/"$1"
 }
 
