@@ -199,11 +199,7 @@ plugins {
     }
 }
 
-ui {
-    pane_frames {
-        rounded_corners true
-    }
-}
+pane_frames false
 
 themes {
 	rose-pine {
