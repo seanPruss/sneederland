@@ -344,12 +344,12 @@ sudo systemctl enable sddm &>>$INSTLOG
 
 # Enable auto-cpufreq service
 echo -e "$CNT - Enabling the auto-cpufreq Service..."
-sudo systemctl enable --now auto-cpufreq &>>$INSTLOG
+sudo systemctl enable auto-cpufreq &>>$INSTLOG
 
 # Enable screen lock service
 echo -e "$CNT - Enabling the screen lock Service..."
 sudo cp ~/the-sneed-packages/config-files/suspend@.service /etc/systemd/system
-sudo systemctl enable --now suspend@$USER.service &>>$INSTLOG
+sudo systemctl enable suspend@$USER.service &>>$INSTLOG
 
 # Clean out other portals
 echo -e "$CNT - Cleaning out conflicting xdg portals..."
@@ -357,8 +357,8 @@ yay -R --noconfirm xdg-desktop-portal-gnome xdg-desktop-portal-gtk &>>$INSTLOG
 
 # Set up sddm
 echo -e "$CNT - Setting up the login screen."
-sudo mkdir /etc/sddm.conf.d
-echo -e "[Theme]\nCurrent=archlinux-simplyblack" | sudo tee -a /etc/sddm.conf.d/10-theme.conf &>>$INSTLOG
+[[ -d /etc/sddm.conf.d ]] || sudo mkdir /etc/sddm.conf.d
+[[ -f /etc/sddm.conf.d/10-theme.conf ]] || echo -e "[Theme]\nCurrent=archlinux-simplyblack" | sudo tee -a /etc/sddm.conf.d/10-theme.conf &>>$INSTLOG
 WLDIR=/usr/share/wayland-sessions
 if [ -d "$WLDIR" ]; then
 	echo -e "$COK - $WLDIR found"

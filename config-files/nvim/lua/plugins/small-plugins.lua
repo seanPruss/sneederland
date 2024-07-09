@@ -5,10 +5,6 @@ return {
         filesize = 2,
     },
     {
-        "APZelos/blamer.nvim",
-        event = "BufReadPre",
-    },
-    {
         "mbbill/undotree",
         keys = {
             { "<leader>ct", "<cmd>UndotreeToggle<CR>", desc = "UndoTree" },
