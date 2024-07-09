@@ -12,20 +12,10 @@ check_directory_for_new_repository() {
 
 # Git aliases
 find_main_branch() {
-    # Add SSH key to agent if not already added
-    if ! ssh-add -l | grep -q "$(ssh-keygen -lf ~/.ssh/id_rsa.pub)"; then
-        ssh-add -t 28800 ~/.ssh/id_rsa &>/dev/null
-    fi
     local main_branch_ref=$(git ls-remote --heads origin | grep -E '\b(main|master)\b' | cut -f 1)
     echo "$main_branch_ref"
 }
-gp ()
-{
-    if ! ssh-add -l | grep -q "$(ssh-keygen -lf ~/.ssh/id_rsa.pub)"; then
-        ssh-add -t 28800 ~/.ssh/id_rsa &>/dev/null
-    fi
-    git push
-}
+alias gp='git push'
 alias fsb='~/.config/zsh/fsb.sh'
 alias fshow='~/.config/zsh/fshow.sh'
 alias gc='git commit -m'
