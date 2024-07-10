@@ -123,6 +123,11 @@
     },
 
     "break",
-    "colors",
+    {
+      "key": " colors",
+      "type": "colors",
+      "symbol": "circle",
+      "keyColor": "39",
+    },
   ],
 }
