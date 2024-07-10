@@ -99,7 +99,7 @@ cll() {
     ll
 }
 
-alias grep="grep --color=auto"
+alias grep="rg --color=auto"
 
 # better cd
 cd() {

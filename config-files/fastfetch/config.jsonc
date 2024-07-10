@@ -1,84 +1,128 @@
+// Load with --load-config examples/2.jsonc
+// Note that you must replace the image path to an existing image to display it.
+
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "type": "small",
+    "padding": {
+      "top": 2,
+    },
   },
   "display": {
-    "separator": "",
-    "keyWidth": 12,
+    "separator": " -> ",
   },
   "modules": [
+    "title",
+    "separator",
     {
-      // draw borders first to make colors of left and right border consistant
-      "key": " user",
-      "type": "title",
-      "format": "{1}",
-      "keyColor": "31",
-    },
-    {
-      "key": "󰇅 hname",
-      "type": "title",
-      "format": "{2}",
-      "keyColor": "32",
-    },
-    {
-      "key": "󰅐 uptime",
-      "type": "uptime",
-      "keyColor": "33",
-    },
-    {
-      "key": "󰟾 distro",
       "type": "os",
-      "keyColor": "34",
+      "key": " OS",
+      "keyColor": "yellow",
+      "format": "{2}",
     },
     {
-      "key": " kernel",
       "type": "kernel",
-      "keyColor": "35",
+      "key": "├",
+      "keyColor": "yellow",
     },
     {
-      "key": "󰇄 desktop",
-      "type": "wm",
-      "keyColor": "36",
+      "type": "packages",
+      "key": "├󰏖",
+      "keyColor": "yellow",
     },
     {
-      "key": " term",
-      "type": "terminal",
-      "keyColor": "31",
-    },
-    {
-      "key": " shell",
       "type": "shell",
-      "keyColor": "32",
+      "key": "└",
+      "keyColor": "yellow",
     },
-    {
-      "key": "󰍛 cpu",
-      "type": "cpu",
-      "showPeCoreCount": true,
-      "keyColor": "33",
-    },
-    {
-      "key": "󰉉 disk",
-      "type": "disk",
-      "folders": "/",
-      "keyColor": "34",
-    },
-    {
-      "key": " memory",
-      "type": "memory",
-      "keyColor": "35",
-    },
-    {
-      "key": "󱖏 media",
-      "type": "media",
-      "keyColor": "red",
-    },
+    "break",
 
     {
-      "key": " colours",
-      "type": "colors",
-      "symbol": "circle",
-      "keyColor": "39",
+      "type": "wm",
+      "key": " DE/WM",
+      "keyColor": "blue",
     },
+    {
+      "type": "lm",
+      "key": "├󰧨",
+      "keyColor": "blue",
+    },
+    {
+      "type": "wmtheme",
+      "key": "├󰉼",
+      "keyColor": "blue",
+    },
+    {
+      "type": "icons",
+      "key": "├󰀻",
+      "keyColor": "blue",
+    },
+    {
+      "type": "terminal",
+      "key": "└",
+      "keyColor": "blue",
+    },
+
+    "break",
+    {
+      "type": "host",
+      "key": "󰌢 PC",
+      "keyColor": "green",
+    },
+    {
+      "type": "cpu",
+      "key": "├󰻠",
+      "keyColor": "green",
+    },
+    {
+      "type": "gpu",
+      "key": "├󰍛",
+      "keyColor": "green",
+    },
+    {
+      "type": "disk",
+      "key": "├",
+      "keyColor": "green",
+    },
+    {
+      "type": "memory",
+      "key": "├󰑭",
+      "keyColor": "green",
+    },
+    {
+      "type": "swap",
+      "key": "├󰓡",
+      "keyColor": "green",
+    },
+    {
+      "type": "display",
+      "key": "├󰍹",
+      "keyColor": "green",
+    },
+    {
+      "type": "uptime",
+      "key": "└󰅐",
+      "keyColor": "green",
+    },
+
+    "break",
+    {
+      "type": "sound",
+      "key": " SOUND",
+      "keyColor": "cyan",
+    },
+    {
+      "type": "player",
+      "key": "├󰥠",
+      "keyColor": "cyan",
+    },
+    {
+      "type": "media",
+      "key": "└󰝚",
+      "keyColor": "cyan",
+    },
+
+    "break",
+    "colors",
   ],
 }
