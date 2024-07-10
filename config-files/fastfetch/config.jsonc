@@ -124,7 +124,7 @@
 
     "break",
     {
-      "key": " colors",
+      "key": " COLORS",
       "type": "colors",
       "symbol": "circle",
       "keyColor": "39",
