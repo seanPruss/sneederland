@@ -59,7 +59,6 @@ class = "kitty-btop"
 size = "70% 70%"
 position = "15% 15%"
 unfocus = "hide"
-lazy = true
 
 [scratchpads.cava]
 animation = "fromTop"

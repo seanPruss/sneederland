@@ -14,7 +14,9 @@ Clone this repo and run `installer-script`
 
 > [!IMPORTANT]
 > Clone the repo into the home directory. The installer script assumes that's  
-> where the repo is located on your machine.
+> where the repo is located on your machine. Also make sure none of your installed  
+> packages conflict with the packages in the package list because using --noconfirm  
+> in yay makes it fail if a conflict is detected.
 
 ```bash
 cd

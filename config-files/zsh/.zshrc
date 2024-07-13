@@ -72,11 +72,7 @@ HISTFILE=~/.zsh_history
 # Aliases
 
 # Clear screen and neofetch
-ff ()
-{
-    clear
-    fastfetch
-}
+alias ff="clear && fastfetch"
 
 # yay aliases
 alias install="yay -S --noconfirm"
@@ -90,14 +86,8 @@ alias ll="ls -lh --git --git-repos"
 alias lt="ll --tree --git-ignore"
 alias tree='eza --tree --git-ignore'
 # declutter screen and ls
-cls() {
-    clear
-    ls
-}
-cll() {
-    clear
-    ll
-}
+alias cls="clear && ls"
+alias cll="clear && ll"
 
 alias grep="rg --color=auto"
 
