@@ -57,6 +57,7 @@ install_stage=(
 	cmatrix-git
 	cava
 	npm
+	vlc
 	composer
 	auto-cpufreq
 	rose-pine-hyprcursor
@@ -297,16 +298,6 @@ if [ ! -f /sbin/yay ]; then
 	fi
 fi
 
-# copy my configs
-echo -e "$CNT Copying config files (dw I'm backing up your configs)"
-for file in ${config_files[@]}; do
-	backup_and_link_file $file
-done
-
-for dir in ${config_dirs[@]}; do
-	backup_and_link_dir $dir
-done
-
 # Prep Stage - Bunch of needed items
 echo -e "$CNT - Prep Stage - Installing needed components, this may take a while..."
 for SOFTWR in ${prep_stage[@]}; do
@@ -334,6 +325,16 @@ install_software hyprland-git
 echo -e "$CNT - Installing main components, this may take a while..."
 for SOFTWR in ${install_stage[@]}; do
 	install_software $SOFTWR
+done
+
+# copy my configs
+echo -e "$CNT Copying config files (dw I'm backing up your configs)"
+for file in ${config_files[@]}; do
+	backup_and_link_file $file
+done
+
+for dir in ${config_dirs[@]}; do
+	backup_and_link_dir $dir
 done
 
 # Start the bluetooth service
