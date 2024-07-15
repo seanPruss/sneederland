@@ -238,7 +238,9 @@ fi
 echo -e "$CNT - This script will run some commands that require sudo. You will be prompted to enter your password.
 If you are worried about entering your password then you may want to review the content of the script.
 IMPORTANT: yay will panic if a package it is trying to install conflicts with an already installed package.
-Feel free to look through the package list and remove any packages that would conflict (AUR packages that may be development branches of official packages)."
+Feel free to look through the package list and remove any packages that would conflict (AUR packages that may be development branches of official packages).
+ALSO: There are a lot of packages that will be installed. While each package in the list is installed sequentially setting up parallel downloads in pacman.conf
+will allow dependencies to be downloaded concurrently saving time."
 
 # give the user an option to exit out
 read -rep $'[\e[1;33mACTION\e[0m] - Would you like to continue with the install (y,n) ' CONTINST
@@ -376,6 +378,10 @@ gsettings set org.gnome.desktop.interface gtk-theme "rose-pine-gtk"
 gsettings set org.gnome.desktop.interface icon-theme "candy-icons"
 gsettings set org.gnome.desktop.interface cursor-theme "BreezeX-RosePine-Linux"
 bat cache --build
+
+# Need this for spicetify to work. I'm not sure if I wanna put the spicetify commands in the script
+sudo chmod -R 777 /opt/spotify
+sudo chmod -R 777 /usr/share/spotify
 
 # Set up tldr
 tldr --update
