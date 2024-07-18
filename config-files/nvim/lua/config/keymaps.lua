@@ -5,6 +5,14 @@
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-o>", "<C-o>zz")
+vim.keymap.set("n", "<C-i>", "<C-i>zz")
+vim.keymap.set("n", "j", "gjzz")
+vim.keymap.set("n", "k", "gkzz")
+vim.keymap.set("n", "<CR>", "<CR>zz")
+vim.keymap.set("n", "-", "-zz")
+vim.keymap.set("n", "G", "Gzz")
+vim.keymap.set("n", "%", "%zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
@@ -15,12 +23,6 @@ vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>m", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Make executable" })
 vim.keymap.set("n", "<leader>[", "A {<CR><CR>}<Esc>kcc", { desc = "Create squirly braces" })
 vim.keymap.set("n", "<leader>;", "A:<Esc>o", { desc = "Add colon + new line" })
-vim.keymap.set("n", "j", "gjzz")
-vim.keymap.set("n", "k", "gkzz")
-vim.keymap.set("n", "<CR>", "<CR>zz")
-vim.keymap.set("n", "-", "-zz")
-vim.keymap.set("n", "G", "Gzz")
-vim.keymap.set("n", "%", "%zz")
 vim.keymap.set(
     "n",
     "<leader>i",

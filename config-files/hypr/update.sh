@@ -1,4 +1,4 @@
 #!/bin/bash
-yay -Syu --noconfirm
+yay -Syyu --noconfirm
 flatpak update
 notify-send "Updates Finished"

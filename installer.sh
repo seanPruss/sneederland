@@ -10,6 +10,7 @@
 # Define the software that would be inbstalled
 #Need some prep work
 prep_stage=(
+	reflector
 	qt5-wayland
 	qt5ct
 	qt6-wayland
@@ -289,15 +290,20 @@ if [ ! -f /sbin/yay ]; then
 		cd ..
 
 		# update the yay database
-		echo -en "$CNT - Updating yay."
-		yay -Suy --noconfirm &>>$INSTLOG &
+		echo -en "$CNT - Running a system update."
+		yay -Syyu --noconfirm &>>$INSTLOG &
 		show_progress $!
-		echo -e "\e[1A\e[K$COK - yay updated."
+		echo -e "\e[1A\e[K$COK - System updated."
 	else
 		# if this is hit then a package is missing, exit to review log
 		echo -e "\e[1A\e[K$CER - yay install failed, please check the install.log"
 		exit
 	fi
+else
+	echo -en "$CNT - Running a system update."
+	yay -Syyu --noconfirm &>>$INSTLOG &
+	show_progress $!
+	echo -e "\e[1A\e[K$COK - System updated."
 fi
 
 # Prep Stage - Bunch of needed items
@@ -305,6 +311,12 @@ echo -e "$CNT - Prep Stage - Installing needed components, this may take a while
 for SOFTWR in ${prep_stage[@]}; do
 	install_software $SOFTWR
 done
+
+# Use fast mirrors
+echo -en "$CNT - Updating mirrorlist"
+sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist &>>$INSTLOG &
+show_progress $!
+echo -e "\e[1A\e[K$COK - Mirrors updated."
 
 # Setup Nvidia if it was found
 if [[ "$ISNVIDIA" == true ]]; then
