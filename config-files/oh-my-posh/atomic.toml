@@ -31,7 +31,7 @@ template = ' {{ .Path }} '
 folder_icon = ''
 home_icon = ''
 style = 'mixed'
-mixed_threshold = 20
+mixed_threshold = 15
 
 [[blocks.segments]]
 type = 'git'

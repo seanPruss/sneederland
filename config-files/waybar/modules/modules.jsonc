@@ -71,6 +71,16 @@
     "format-icons": ["", "", "", "", "", "", "", "", ""],
   },
 
+  "cpu": {
+    "format": " {}% ",
+    "on-click": "pypr toggle btop",
+  },
+
+  "memory": {
+    "format": " {}% ",
+    "on-click": "pypr toggle btop",
+  },
+
   // System Tray
   "tray": {
     "icon-size": 18,

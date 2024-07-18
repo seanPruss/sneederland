@@ -12,8 +12,6 @@ window#waybar {
 }
 
 #end-right-module,
-#cpu,
-#memory,
 #disk,
 #temperature,
 #network,
@@ -120,6 +118,18 @@ window#waybar {
   to {
     color: rgba(224, 222, 244, 1);
   }
+}
+
+/* CPU and Memory warning state */
+#cpu.warning,
+#memory.warning {
+  color: @gold; /* Orange color for warning */
+}
+
+/* CPU and Memory critical state */
+#cpu.critical,
+#memory.critical {
+  color: @love; /* Red color for critical */
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
