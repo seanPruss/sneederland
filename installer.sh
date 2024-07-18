@@ -310,13 +310,14 @@ fi
 echo -e "$CNT - Prep Stage - Installing needed components, this may take a while..."
 for SOFTWR in ${prep_stage[@]}; do
 	install_software $SOFTWR
+	if [[ "$SOFTWR" == "reflector" ]]; then
+		# Use fast mirrors
+		echo -en "$CNT - Updating mirrorlist"
+		sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist &>>$INSTLOG &
+		show_progress $!
+		echo -e "\e[1A\e[K$COK - Mirrors updated."
+	fi
 done
-
-# Use fast mirrors
-echo -en "$CNT - Updating mirrorlist"
-sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist &>>$INSTLOG &
-show_progress $!
-echo -e "\e[1A\e[K$COK - Mirrors updated."
 
 # Setup Nvidia if it was found
 if [[ "$ISNVIDIA" == true ]]; then
