@@ -114,7 +114,7 @@
   "wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 24,
-    "icon-theme": "candy-icons",
+    "icon-theme": "BeautyLine",
     "tooltip-format": "{title}",
     "on-click": "activate",
     "on-click-middle": "close",

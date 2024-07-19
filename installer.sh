@@ -117,7 +117,7 @@ install_stage=(
 	toilet-fonts
 	rose-pine-gtk-theme
 	rose-pine-cursor
-	candy-icons-git
+	beautyline
 	libreoffice-fresh
 	thunderbird
 	mpv
@@ -384,12 +384,8 @@ else
 	echo -e "$CWR - $WLDIR NOT found, creating..."
 	sudo mkdir $WLDIR
 fi
-# Set up rose pine desktop theme
-xfconf-query -c xsettings -p /Net/ThemeName -s "rose-pine-gtk"
-xfconf-query -c xsettings -p /Net/IconThemeName -s "candy-icons"
-gsettings set org.gnome.desktop.interface gtk-theme "rose-pine-gtk"
-gsettings set org.gnome.desktop.interface icon-theme "candy-icons"
-gsettings set org.gnome.desktop.interface cursor-theme "BreezeX-RosePine-Linux"
+
+# Build theme cache for bat
 bat cache --build
 
 # Need this for spicetify to work. I'm not sure if I wanna put the spicetify commands in the script
