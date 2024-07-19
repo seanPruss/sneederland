@@ -1,5 +1,6 @@
 #!/bin/bash
 sudo touch /tmp/sudo.tmp
 read -rp $'Package(s) to install: ' PACKAGES
-yay -S --noconfirm $PACKAGES
+[[ -f ~/install.log ]] && rm ~/install.log
+yay -S --noconfirm $PACKAGES &>>~/install.log
 notify-send "Installation Finished"
