@@ -54,7 +54,6 @@ install_stage=(
 	git-delta
 	rust
 	jdk-openjdk
-	flatpak
 	cmatrix-git
 	cava
 	npm
