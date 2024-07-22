@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Upgrade
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Cleaning pacman and yay cache...
+When = PostTransaction
+Exec = /usr/share/libalpm/scripts/clearcache
+Depends = pacman-contrib

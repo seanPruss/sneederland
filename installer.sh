@@ -305,6 +305,8 @@ else
 	echo -e "\e[1A\e[K$COK - System updated."
 fi
 
+sudo cp ~/the-sneed-packages/config-files/cleancache.hook /usr/share/libalpm/hooks
+sudo cp ~/the-sneed-packages/config-files/clearcache /usr/share/libalpm/scripts
 # Prep Stage - Bunch of needed items
 echo -e "$CNT - Prep Stage - Installing needed components, this may take a while..."
 for SOFTWR in ${prep_stage[@]}; do
