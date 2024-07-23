@@ -28,8 +28,6 @@ prep_stage=(
 	python-requests
 	pacman-contrib
 	mkinitcpio-firmware
-	hyprlang-git
-	hyprcursor-git
 	cpio
 )
 
@@ -335,7 +333,7 @@ fi
 
 # Install the correct hyprland version
 echo -e "$CNT - Installing Hyprland, this may take a while..."
-install_software hyprland-git
+install_software hyprland
 
 # Stage 1 - main components
 echo -e "$CNT - Installing main components, this may take a while..."
