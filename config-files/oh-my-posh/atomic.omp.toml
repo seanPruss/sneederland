@@ -1,10 +1,11 @@
-#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
-
+"$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
 version = 2
+final_space = true
 
 [[blocks]]
 type = 'prompt'
 alignment = 'left'
+newline = true
 
 [[blocks.segments]]
 type = 'os'
@@ -223,7 +224,7 @@ type = 'status'
 style = 'plain'
 foreground = 'green'
 foreground_templates = ['{{ if gt .Code 0 }}red{{ end }}']
-template = ' '
+template = ''
 
 [blocks.segments.properties]
 always_enabled = true
@@ -232,4 +233,4 @@ always_enabled = true
 foreground = "green"
 foreground_templates = ['{{ if gt .Code 0 }}red{{ end }}']
 background = "transparent"
-template = " "
+template = ''

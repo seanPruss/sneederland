@@ -1,5 +1,4 @@
 fastfetch
-eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/atomic.toml)"
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 
@@ -74,8 +73,9 @@ HISTFILE=~/.zsh_history
 # Clear screen and fastfetch
 alias ff="clear && fastfetch"
 
-# yay aliases
+# package manager aliases
 alias y="yay"
+alias fp="flatpak"
 
 # ls aliases
 alias ls="eza -a --icons=auto --group-directories-first"
@@ -226,3 +226,4 @@ bindkey "^f" autosuggest-execute
 bindkey "^k" history-substring-search-up
 bindkey "^j" history-substring-search-down
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/atomic.omp.toml)"
