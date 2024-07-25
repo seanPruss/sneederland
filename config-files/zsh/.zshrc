@@ -71,14 +71,11 @@ HISTFILE=~/.zsh_history
 
 # Aliases
 
-# Clear screen and neofetch
+# Clear screen and fastfetch
 alias ff="clear && fastfetch"
 
 # yay aliases
-alias install="yay -S --noconfirm"
-alias uninstall="yay -Rns --noconfirm"
-alias search="yay -Ss"
-alias query="yay -Q"
+alias y="yay"
 
 # ls aliases
 alias ls="eza -a --icons=auto --group-directories-first"
@@ -94,7 +91,7 @@ alias grep="rg --color=auto"
 # better cd
 cd() {
     # do we want to go home or to previous directory
-    if [[ $1 = "" || $1 = "-" ]]; then
+    if [[ -z $1 || $1 = "-" ]]; then
         z $1
     else
         # NOTE: "zoxide: no match found" will be displayed if the argument is 
@@ -107,31 +104,38 @@ cd() {
     ls # I have never seen anyone ever do a cd without also doing ls
 }
 
+alias mkdir="mkdir -pv"
 # cd into a directory I just made
 mcd() {
-    mkdir -p $1
+    mkdir $1
     cd "./$1"
 }
 
-# cd aliases
-alias ..="cd .."
-alias .2="cd ../.."
-alias .3="cd ../../.."
-alias .4="cd ../../../.."
-alias .5="cd ../../../../.."
-alias .6="cd ../../../../../.."
-alias .7="cd ../../../../../../.."
-alias .8="cd ../../../../../../../.."
-alias .9="cd ../../../../../../../../.."
+# moving up directories
+up() {
+    local d=""
+    local limit="$1"
+    if [[ -z $limit ]] || [[ $limit -le 0 ]]; then
+        limit=1
+    fi
+    for ((i=1;i<=limit;i++)); do
+        d="../$d"
+    done
+
+    cd "$d" || echo "Couldn't go up $1 directores"
+}
 alias p="cd -"
+
+# confirmation
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+alias ln='ln -i'
 
 # aliases for terminal apps
 alias vim="nvim"
 alias lzg='lazygit'
-btw() {
-    clear
-    toilet -f ivrit 'I use Arch btw' | lolcat
-}
+alias btw="clear && toilet -f ivrit 'I use Arch btw' | lolcat"
 
 # zellij aliases
 alias zlnew='zellij --session'
@@ -175,7 +179,28 @@ autoload -U compinit
 compinit
 _comp_options+=(globdots)
 
+# vi mode
 bindkey -v
+export KEYTIMEOUT=1
+autoload edit-command-line && zle -N edit-command-line
+bindkey '^v' edit-command-line
+zle-keymap-select() {
+    if [[ ${KEYMAP} == vicmd ]] || [[ $1 == 'block' ]]; then
+        echo -ne '\e[1 q'
+    elif [[ ${KEYMAP} == main ]] || [[ ${KEYMAP} == viins ]] || [[ ${KEYMAP} = '' ]]; then
+        echo -ne '\e[5 q'
+    fi
+}
+zle -N zle-keymap-select
+
+zle-line-init() {
+    zle -K viins
+    echo -ne "\e[5 q"
+}
+zle -N zle-line-init
+
+echo -ne '\e[5q'
+preexec() { echo -ne '\e[5 q' ;}
 
 # plugins
 source /usr/share/zsh/plugins/zsh-autoswitch-virtualenv/zsh-autoswitch-virtualenv.plugin.zsh

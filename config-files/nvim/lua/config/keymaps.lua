@@ -19,7 +19,12 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace word" })
+vim.keymap.set(
+    "n",
+    "<leader>rw",
+    [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gIc<Left><Left><Left><Left>]],
+    { desc = "Replace word" }
+)
 vim.keymap.set("n", "<leader>m", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Make executable" })
 vim.keymap.set("n", "<leader>[", "A {<CR><CR>}<Esc>kcc", { desc = "Create squirly braces" })
 vim.keymap.set("n", "<leader>;", "A:<Esc>o", { desc = "Add colon + new line" })

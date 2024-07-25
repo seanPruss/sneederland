@@ -42,6 +42,7 @@ nvidia_stage=(
 
 #the main packages
 install_stage=(
+	flatpak
 	swww-git
 	pyprland
 	playerctl
@@ -207,13 +208,13 @@ install_software() {
 
 backup_and_link_file() {
 	[[ -f ~/$1 ]] && mv ~/"$1" ~/"$1".bak
-	ln -sf ~/the-sneed-packages/config-files/"$1" ~/"$1"
+	ln -sf ~/the-sneed-packages/config-files/"$1" ~/"$1" && echo e "$COK backed up $1" || echo -e "$CER failed to back up $1"
 }
 
 backup_and_link_dir() {
 	[[ -d ~/.config.bak ]] || mkdir ~/.config.bak
 	[[ -d ~/.config/$1 ]] && mv ~/.config/"$1" ~/.config.bak/"$1"
-	ln -sf ~/the-sneed-packages/config-files/"$1" ~/.config/"$1"
+	ln -sf ~/the-sneed-packages/config-files/"$1" ~/.config/"$1" && echo e "$COK backed up $1 config" || echo -e "$CER failed to back up $1 config"
 }
 
 # clear the screen
