@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo touch /tmp/sudo.tmp
 read -rp $'Package(s) to install: ' PACKAGES
 [[ -f ~/install.log ]] && rm ~/install.log

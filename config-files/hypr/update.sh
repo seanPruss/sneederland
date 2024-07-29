@@ -1,3 +1,4 @@
+#!/bin/bash
 [[ -f ~/update.log ]] && rm ~/update.log
 yay -Syyu --noconfirm &>>~/update.log
 notify-send "Yay Finished"

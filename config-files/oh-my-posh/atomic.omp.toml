@@ -233,4 +233,5 @@ always_enabled = true
 foreground = "green"
 foreground_templates = ['{{ if gt .Code 0 }}red{{ end }}']
 background = "transparent"
-template = ''
+template = ' '
+newline = true

@@ -76,7 +76,7 @@ install_stage=(
 	slurp
 	btop-gpu-git
 	firefox
-	webcord
+	vesktop
 	spotify
 	spicetify-cli
 	spicetify-themes-git

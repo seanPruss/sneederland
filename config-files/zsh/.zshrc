@@ -155,6 +155,9 @@ alias sl="ls"
 alias xs="cd"
 alias bwt="btw"
 
+# misc
+alias svba="source venv/bin/activate"
+
 # options
 unsetopt menu_complete
 unsetopt flowcontrol
