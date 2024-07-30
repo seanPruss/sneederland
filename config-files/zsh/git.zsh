@@ -11,10 +11,6 @@ check_directory_for_new_repository() {
 }
 
 # Git aliases
-find_main_branch() {
-    local main_branch_ref=$(git ls-remote --heads origin | grep -E '\b(main|master)\b' | cut -f 1)
-    echo "$main_branch_ref"
-}
 alias gp='git push'
 alias fsb='~/.config/zsh/fsb.sh'
 alias fshow='~/.config/zsh/fshow.sh'
@@ -31,7 +27,7 @@ alias grs='git restore --staged'
 alias gst='git rev-parse --git-dir > /dev/null 2>&1 && git status || ls'
 alias gu='git reset --soft HEAD~1'
 alias gpr='git remote prune origin'
-alias gpl='git pull origin $(find_main_branch)'
+alias gpl='git pull'
 alias grd='git fetch origin && git rebase origin/master'
 alias gbb='git-switchbranch'
 alias gbf='git branch | head -1 | xargs' # top branch
