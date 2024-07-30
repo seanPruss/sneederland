@@ -104,6 +104,10 @@ cd() {
     ls # I have never seen anyone ever do a cd without also doing ls
 }
 
+cd.() {
+    cd "./$1"
+}
+
 alias mkdir="mkdir -pv"
 # cd into a directory I just made
 mcd() {
