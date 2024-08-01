@@ -61,7 +61,7 @@ install_stage=(
 	auto-cpufreq
 	rose-pine-hyprcursor
 	kitty-git
-	mako-git
+	swaync
 	waybar
 	waybar-updates
 	wttrbar
@@ -149,7 +149,7 @@ config_dirs=(
 	gtk-4.0
 	hypr
 	kitty
-	mako
+	swaync
 	nvim
 	nwg-look
 	systemd

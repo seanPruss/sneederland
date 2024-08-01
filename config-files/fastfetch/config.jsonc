@@ -41,7 +41,7 @@
 
     {
       "type": "wm",
-      "key": " DE/WM",
+      "key": " WM",
       "format": "{1}",
       "keyColor": "blue",
     },

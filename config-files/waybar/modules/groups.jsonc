@@ -1,7 +1,14 @@
 {
   "group/systray": {
     "orientation": "horizontal",
-    "modules": ["custom/spotify", "pulseaudio", "tray", "cpu", "memory"],
+    "modules": [
+      "custom/notification",
+      "custom/spotify",
+      "pulseaudio",
+      "tray",
+      "cpu",
+      "memory",
+    ],
   },
   "group/end-right-module": {
     "orientation": "horizontal",
