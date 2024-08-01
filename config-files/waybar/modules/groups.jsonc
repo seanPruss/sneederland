@@ -1,18 +1,11 @@
 {
   "group/systray": {
     "orientation": "horizontal",
-    "modules": [
-      "custom/notification",
-      "custom/spotify",
-      "pulseaudio",
-      "tray",
-      "cpu",
-      "memory",
-    ],
+    "modules": ["custom/spotify", "pulseaudio", "tray"],
   },
   "group/end-right-module": {
     "orientation": "horizontal",
-    "modules": ["clock", "battery", "backlight", "custom/power"],
+    "modules": ["battery", "cpu", "memory", "backlight", "custom/power"],
   },
   "group/window-info": {
     "orientation": "horizontal",

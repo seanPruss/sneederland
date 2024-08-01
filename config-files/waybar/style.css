@@ -36,12 +36,19 @@ window#waybar {
 }
 
 #workspaces,
-#window-info {
+#taskbar,
+#window {
   color: rgba(224, 222, 244, 1);
   border-radius: 20px;
   border: 0.19em solid rgba(49, 116, 143, 1);
   background-color: rgba(31, 29, 46, 0.7);
   transition: all 0.4s ease-out;
+}
+
+#window {
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 0.19em solid rgba(156, 207, 216, 1);
 }
 
 #taskbar button,
@@ -97,7 +104,12 @@ window#waybar {
 }
 
 #clock {
-  padding: 0px 4px 0px 0px;
+  color: rgba(224, 222, 244, 1);
+  border-radius: 20px;
+  border: 0.19em solid rgba(235, 188, 186, 1);
+  background-color: rgba(31, 29, 46, 0.7);
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #backlight {
@@ -190,6 +202,21 @@ window#waybar {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   padding: 0px 6px;
+}
+
+#custom-launcher {
+  border: 0.19em solid rgba(235, 111, 146, 1);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#custom-notification {
+  background-color: rgba(31, 29, 46, 0.7);
+  border: 0.19em solid rgba(196, 167, 231, 1);
+  padding-left: 10px;
+  padding-right: 5px;
+  border-radius: 20px;
+  color: rgba(246, 193, 119, 1);
 }
 
 #custom-pacman.pending-updates {

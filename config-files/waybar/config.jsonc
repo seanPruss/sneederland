@@ -6,11 +6,13 @@
     "margin": "4px 5px",
     "exclusive": true,
     "fixed-center": true,
-    "modules-left": ["custom/launcher", "group/window-info"],
+    "modules-left": ["custom/launcher", "hyprland/window", "wlr/taskbar"],
     "modules-center": ["hyprland/workspaces", "custom/pacman"],
     "modules-right": [
+      "custom/notification",
       "group/systray",
       "custom/weather",
+      "clock",
       "group/end-right-module",
     ],
     "include": [

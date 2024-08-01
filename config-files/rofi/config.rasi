@@ -68,7 +68,9 @@ configuration {
     columns: 1;
 }
 #element {
-	border:  0;
+	border:  2px solid;
+    border-color: @cya;
+    border-radius: 15%;
 	padding: 12px 12px 12px 12px;
 }
 #element.normal.normal {

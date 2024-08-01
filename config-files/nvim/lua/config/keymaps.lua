@@ -46,5 +46,7 @@ set("n", "<leader>p", "p", { silent = true, noremap = true, desc = "Paste from d
 set("v", "<leader>p", "p", { silent = true, noremap = true, desc = "Paste from default register" })
 set("n", "y", '"+y', { silent = true, noremap = true })
 set("v", "y", '"+y', { silent = true, noremap = true })
+set("n", "Y", '"+Y', { silent = true, noremap = true })
+set("v", "Y", '"+Y', { silent = true, noremap = true })
 set("n", "p", '"+p', { silent = true, noremap = true })
 set("v", "p", '"+p', { silent = true, noremap = true })
