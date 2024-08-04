@@ -112,7 +112,7 @@ alias mkdir="mkdir -pv"
 # cd into a directory I just made
 mcd() {
     mkdir $1
-    cd "./$1"
+    cd. $1
 }
 
 # moving up directories

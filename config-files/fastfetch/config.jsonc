@@ -46,8 +46,14 @@
       "keyColor": "blue",
     },
     {
+      "type": "de",
+      "key": "󰧨 DE",
+      "format": "{1}",
+      "keyColor": "blue",
+    },
+    {
       "type": "lm",
-      "key": "├󰧨",
+      "key": "├󰍂",
       "format": "{1} {3}",
       "keyColor": "blue",
     },

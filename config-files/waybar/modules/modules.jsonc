@@ -72,12 +72,12 @@
   },
 
   "cpu": {
-    "format": "{}%   ",
+    "format": " {}%  ",
     "on-click": "pypr toggle btop",
   },
 
   "memory": {
-    "format": "{}%   ",
+    "format": "{}%  ",
     "on-click": "pypr toggle btop",
   },
 
@@ -106,7 +106,7 @@
   },
 
   "custom/launcher": {
-    "format": "󰀻",
+    "format": " ",
     "on-click": "rofi -show",
     "tooltip-format": "Keybindings:\nSUPER+Q: Close window\nSUPER+L: Lock screen\nSUPER+M: Logout menu\nSUPER+T: Launch terminal\nSUPER+B: Launch browser\nSUPER+TAB: Launch Rofi\nSUPER+D: Toggle Discord\nSUPER+S: Toggle Spotify\nSUPER+E: Toggle Thunderbird\nSUPER+C: Toggle Cava\nSUPER+F: Toggle Thunar\nSUPER+Y: Toggle Yazi\nSUPER+V: Toggle volume control\nSUPER+I: Install a package\nSUPER+U: Update packages\nSUPER+P: Cycle wallpaper\nSUPER+W: Restart Waybar\nSUPER+SHIFT+S: Take a screenshot\nSUPER+SHIFT+B: Toggle btop\nALT+TAB: Show active apps\nALT+V: Launch cliphist\nALT+W: Wipe cliphist cache",
   },
