@@ -3,12 +3,8 @@
     "orientation": "horizontal",
     "modules": ["custom/spotify", "pulseaudio", "tray"],
   },
-  "group/end-right-module": {
+  "group/hardware-info": {
     "orientation": "horizontal",
     "modules": ["battery", "cpu", "memory", "backlight", "custom/power"],
-  },
-  "group/window-info": {
-    "orientation": "horizontal",
-    "modules": ["hyprland/window", "wlr/taskbar"],
   },
 }

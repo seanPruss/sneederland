@@ -7,6 +7,9 @@
 # This is a quick and dirty script there are some error checking
 # IMPORTANT - This script is meant to run on a clean fresh Arch install on physical hardware
 
+# Env var for where the repo was cloned
+REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CONFIG_DIR=$REPO_DIR/config-files
 # Define the software that would be inbstalled
 #Need some prep work
 prep_stage=(
@@ -170,7 +173,7 @@ CER="[\e[1;31mERROR\e[0m]"
 CAT="[\e[1;37mATTENTION\e[0m]"
 CWR="[\e[1;35mWARNING\e[0m]"
 CAC="[\e[1;33mACTION\e[0m]"
-INSTLOG="install.log"
+INSTLOG=REPO_DIR/install.log
 
 ######
 # functions go here
@@ -208,13 +211,13 @@ install_software() {
 
 backup_and_link_file() {
 	[[ -f ~/$1 ]] && mv ~/"$1" ~/"$1".bak
-	ln -sf ~/the-sneed-packages/config-files/"$1" ~/"$1" && echo e "$COK backed up $1" || echo -e "$CER failed to back up $1"
+	ln -sf $CONFIG_DIR/"$1" ~/"$1" && echo e "$COK backed up $1" || echo -e "$CER failed to back up $1"
 }
 
 backup_and_link_dir() {
 	[[ -d ~/.config.bak ]] || mkdir ~/.config.bak
 	[[ -d ~/.config/$1 ]] && mv ~/.config/"$1" ~/.config.bak/"$1"
-	ln -sf ~/the-sneed-packages/config-files/"$1" ~/.config/"$1" && echo e "$COK backed up $1 config" || echo -e "$CER failed to back up $1 config"
+	ln -sf $CONFIG_DIR/"$1" ~/.config/"$1" && echo e "$COK backed up $1 config" || echo -e "$CER failed to back up $1 config"
 }
 
 # clear the screen
@@ -281,7 +284,7 @@ if [ ! -f /sbin/yay ]; then
 	echo -en "$CNT - Configuring yay."
 	git clone https://aur.archlinux.org/yay.git &>>$INSTLOG
 	cd yay || exit
-	makepkg -si --noconfirm &>>../$INSTLOG &
+	makepkg -si --noconfirm &>>$INSTLOG &
 	show_progress $!
 	if [ -f /sbin/yay ]; then
 		echo -e "\e[1A\e[K$COK - yay configured"
@@ -304,8 +307,8 @@ else
 	echo -e "\e[1A\e[K$COK - System updated."
 fi
 
-sudo cp ~/the-sneed-packages/config-files/cleancache.hook /usr/share/libalpm/hooks
-sudo cp ~/the-sneed-packages/config-files/clearcache /usr/share/libalpm/scripts
+sudo cp $CONFIG_DIR/cleancache.hook /usr/share/libalpm/hooks
+sudo cp $CONFIG_DIR/clearcache /usr/share/libalpm/scripts
 # Prep Stage - Bunch of needed items
 echo -e "$CNT - Prep Stage - Installing needed components, this may take a while..."
 for SOFTWR in ${prep_stage[@]}; do
@@ -366,7 +369,7 @@ sudo systemctl enable auto-cpufreq &>>$INSTLOG
 
 # Enable screen lock service
 echo -e "$CNT - Enabling the screen lock Service..."
-sudo cp ~/the-sneed-packages/config-files/suspend@.service /etc/systemd/system
+sudo cp $CONFIG_DIR/suspend@.service /etc/systemd/system
 sudo systemctl enable suspend@$USER.service &>>$INSTLOG
 
 # Clean out other portals

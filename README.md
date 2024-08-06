@@ -12,24 +12,13 @@ with the install script modified to install all my packages.
 
 Clone this repo and run `installer-script`
 
-> [!IMPORTANT]
-> Clone the repo into the home directory. The installer script assumes that's  
-> where the repo is located on your machine. Also make sure none of your installed  
-> packages conflict with the packages in the package list because using --noconfirm  
-> in yay makes it fail if a conflict is detected.
-
 ```bash
-cd
 git clone https://github.com/seanPruss/the-sneed-packages.git
 cd the-sneed-packages
 rm -rf .git # do this if you want to create your own fork
-./installer-script
+./installer.sh
 ```
 
 > [!NOTE]
 > My name and noreply github email is in `.gitconfig` so obviously change that  
 > to yours
-
-> [!IMPORTANT]
-> hyprwinwrap is currently broken for my machine at least so enable it at your  
-> own risk

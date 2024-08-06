@@ -13,7 +13,7 @@
       "group/systray",
       "custom/weather",
       "clock",
-      "group/end-right-module",
+      "group/hardware-info",
     ],
     "include": [
       "~/.config/waybar/modules/modules.jsonc",

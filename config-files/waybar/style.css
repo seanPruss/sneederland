@@ -11,7 +11,7 @@ window#waybar {
   transition-duration: 0.5s;
 }
 
-#end-right-module,
+#hardware-info,
 #disk,
 #temperature,
 #network,
