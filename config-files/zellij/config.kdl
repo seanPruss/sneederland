@@ -3,15 +3,16 @@ keybinds {
     unbind "Ctrl o"
     unbind "Ctrl g"
     unbind "Ctrl q"
-        normal {
-            // uncomment this and adjust key if using copy_on_select=false
-            unbind "Alt h"
-            unbind "Alt q"
-                unbind "Alt j"
-                unbind "Alt k"
-                unbind "Alt l"
-                // bind "Alt c" { Copy; }
-        }
+    normal {
+        // uncomment this and adjust key if using copy_on_select=false
+        unbind "Alt h"
+        unbind "Ctrl g"
+        unbind "Ctrl q"
+        unbind "Alt j"
+        unbind "Alt k"
+        unbind "Alt l"
+        // bind "Alt c" { Copy; }
+    }
     resize {
         bind "Ctrl n" { SwitchToMode "Normal"; }
         bind "h" "Left" { Resize "Increase Left"; }
