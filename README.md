@@ -10,7 +10,7 @@ with the install script modified to install all my packages.
 > those anyway?) so put on your knee high socks and cat ears and start commenting  
 > "I use arch btw :3" on every social media post you encounter
 
-Clone this repo and run `installer-script`
+Clone this repo and run `installer.sh`
 
 ```bash
 git clone https://github.com/seanPruss/the-sneed-packages.git

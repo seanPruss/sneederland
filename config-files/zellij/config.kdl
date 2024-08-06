@@ -2,6 +2,7 @@
 keybinds {
     unbind "Ctrl o"
     unbind "Ctrl g"
+    unbind "Ctrl q"
         normal {
             // uncomment this and adjust key if using copy_on_select=false
             unbind "Alt h"
@@ -130,7 +131,6 @@ keybinds {
         bind "x" { CloseFocus; SwitchToMode "Normal"; }
     }
     shared_except "locked" {
-        bind "Ctrl q" { Quit; }
         bind "Alt n" { NewPane; }
         bind "Alt i" { MoveTab "Left"; }
         bind "Alt o" { MoveTab "Right"; }
