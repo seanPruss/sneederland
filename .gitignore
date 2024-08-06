@@ -1,3 +1,4 @@
 config-files/zsh/.zcompdump
 config-files/btop/btop.log
 config-files/btop/btop.log.1
+config-files/systemd/user/*.wants
