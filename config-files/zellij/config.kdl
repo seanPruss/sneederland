@@ -6,6 +6,7 @@ keybinds {
         normal {
             // uncomment this and adjust key if using copy_on_select=false
             unbind "Alt h"
+            unbind "Alt q"
                 unbind "Alt j"
                 unbind "Alt k"
                 unbind "Alt l"

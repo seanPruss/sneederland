@@ -66,7 +66,6 @@ install_stage=(
 	kitty-git
 	swaync
 	waybar
-	waybar-updates
 	wttrbar
 	imagemagick
 	gimp

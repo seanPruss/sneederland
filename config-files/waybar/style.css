@@ -193,7 +193,7 @@ window#waybar {
 }
 
 #custom-launcher,
-#custom-pacman {
+#custom-updates {
   color: rgba(224, 222, 244, 1);
   background-color: rgba(31, 29, 46, 0.7);
   border: 0.19em solid rgba(156, 207, 216, 1);
@@ -201,27 +201,27 @@ window#waybar {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  padding: 0px 6px;
 }
 
 #custom-launcher {
   border: 0.19em solid rgba(235, 111, 146, 1);
-  padding-left: 10px;
-  padding-right: 6px;
+  padding-left: 9px;
+  padding-right: 9px;
+  font-size: 20px;
+}
+
+#custom-updates {
+  padding-right: 8px;
+  padding-left: 8px;
 }
 
 #custom-notification {
   background-color: rgba(31, 29, 46, 0.7);
   border: 0.19em solid rgba(196, 167, 231, 1);
   padding-left: 10px;
-  padding-right: 5px;
+  padding-right: 2px;
   border-radius: 20px;
   color: rgba(246, 193, 119, 1);
-}
-
-#custom-pacman.pending-updates {
-  animation-name: blink-update;
-  animation-duration: 3s;
 }
 
 #custom-weather {
