@@ -14,6 +14,8 @@ keybinds {
         // bind "Alt c" { Copy; }
     }
     resize {
+        unbind "Ctrl g"
+        unbind "Ctrl q"
         bind "Ctrl n" { SwitchToMode "Normal"; }
         bind "h" "Left" { Resize "Increase Left"; }
         bind "j" "Down" { Resize "Increase Down"; }
@@ -28,6 +30,8 @@ keybinds {
     }
     pane {
         unbind "w"
+        unbind "Ctrl g"
+        unbind "Ctrl q"
         bind "Ctrl p" { SwitchToMode "Normal"; }
         bind "h" "Left" { MoveFocus "Left"; SwitchToMode "Normal"; }
         bind "l" "Right" { MoveFocus "Right"; SwitchToMode "Normal"; }
@@ -46,6 +50,8 @@ keybinds {
     }
     move {
         bind "Ctrl h" { SwitchToMode "Normal"; }
+        unbind "Ctrl g"
+        unbind "Ctrl q"
         bind "n" "Tab" { MovePane; }
         bind "p" { MovePaneBackwards; }
         bind "h" "Left" { MovePane "Left"; }
@@ -55,6 +61,8 @@ keybinds {
     }
     tab {
         bind "Ctrl t" { SwitchToMode "Normal"; }
+        unbind "Ctrl g"
+        unbind "Ctrl q"
         bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
         bind "h" "Left" "Up" "k" { GoToPreviousTab; }
         bind "l" "Right" "Down" "j" { GoToNextTab; }
@@ -98,6 +106,8 @@ keybinds {
         bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
     }
     session {
+        unbind "Ctrl g"
+        unbind "Ctrl q"
         unbind "w"
         bind "d" { Detach; }
         bind "Ctrl s" { SwitchToMode "Normal"; }

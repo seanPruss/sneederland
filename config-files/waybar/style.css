@@ -204,9 +204,9 @@ window#waybar {
 }
 
 #custom-launcher {
-  border: 0.19em solid rgba(235, 111, 146, 1);
+  border: 3px solid rgba(235, 111, 146, 1);
   padding-left: 9px;
-  padding-right: 9px;
+  padding-right: 10px;
   font-size: 20px;
 }
 
