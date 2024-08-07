@@ -9,7 +9,7 @@
     "format": " {}",
     "exec": "~/.config/waybar/scripts/check-updates.sh",
     "on-click": "pypr toggle update",
-    "interval": 300,
+    "interval": 60,
   },
 
   // Clock
