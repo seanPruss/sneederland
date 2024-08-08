@@ -84,7 +84,7 @@ install_stage=(
 	spicetify-themes-git
 	spicetify-marketplace-bin
 	geoclue
-	gammastep-wayland-git
+	gammastep
 	fzf
 	tealdeer
 	zsh
@@ -96,9 +96,8 @@ install_stage=(
 	zsh-history-substring-search-git
 	zsh-you-should-use
 	zsh-autopair-git
-	zsh-directory-history-git
 	trash-cli
-	oh-my-posh-git
+	oh-my-posh
 	yazi
 	ffmpegthumbnailer
 	unarchiver
