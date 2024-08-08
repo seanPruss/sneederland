@@ -104,7 +104,7 @@
   "custom/launcher": {
     "format": "󰀻",
     "on-click": "rofi -show",
-    "tooltip-format": "Keybindings:\nSUPER+Q: Close window\nSUPER+L: Lock screen\nSUPER+M: Logout menu\nSUPER+T: Launch terminal\nSUPER+B: Launch browser\nSUPER+D: Launch Discord\nSUPER+S: Toggle Spotify\nSUPER+E: Toggle Thunderbird\nSUPER+C: Toggle Cava\nSUPER+Y: Toggle Yazi\nSUPER+V: Launch volume control\nSUPER+I: Install a package\nSUPER+U: Update packages\nSUPER+TAB: App launcher\nSUPER+P: Cycle wallpaper\nSUPER+W: Restart Waybar\nSUPER+SHIFT+S: Take a screenshot\nSUPER+SHIFT+B: Toggle btop\nALT+TAB: Show active windows\nALT+V: Launch cliphist\nALT+W: Wipe cliphist cache",
+    "tooltip-format": "Keybindings:\nSUPER+Q: Close window\nSUPER+L: Lock screen\nSUPER+M: Logout menu\nSUPER+T: Launch terminal\nSUPER+B: Launch browser\nSUPER+D: Launch Discord\nSUPER+S: Toggle Spotify\nSUPER+E: Toggle Thunderbird\nSUPER+C: Toggle Cava\nSUPER+Y: Toggle Yazi\nSUPER+V: Launch volume control\nSUPER+I: Install a package\nSUPER+U: Update packages\nSUPER+TAB: App launcher\nSUPER+P: Cycle wallpaper\nSUPER+W: Restart Waybar\nSUPER+N: Restart SwayNC\nSUPER+SHIFT+S: Take a screenshot\nSUPER+SHIFT+B: Toggle btop\nALT+TAB: Show active windows\nALT+V: Launch cliphist\nALT+W: Wipe cliphist cache",
   },
 
   "wlr/taskbar": {
