@@ -13,8 +13,8 @@ with the install script modified to install all my packages.
 Clone this repo and run `installer.sh`
 
 ```bash
-git clone https://github.com/seanPruss/the-sneed-packages.git
-cd the-sneed-packages
+git clone https://github.com/seanPruss/sneederland.git
+cd sneederland
 rm -rf .git # do this if you want to create your own fork
 ./installer.sh
 ```
