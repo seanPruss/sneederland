@@ -189,34 +189,29 @@ show_progress() {
 
 # function that will test for a package and if not found it will attempt to install it
 install_software() {
-	# First lets see if the package is there
+	# Install a package if it is not installed or out of date with --needed flag
+	echo -en "$CNT - Now installing $1 ."
+	yay -S --needed --noconfirm $1 &>>$INSTLOG &
+	show_progress $!
+	# test to make sure package installed
 	if yay -Q $1 &>>/dev/null; then
-		echo -e "$COK - $1 is already installed."
+		echo -e "\e[1A\e[K$COK - $1 was installed."
 	else
-		# no package found so installing
-		echo -en "$CNT - Now installing $1 ."
-		yay -S --noconfirm $1 &>>$INSTLOG &
-		show_progress $!
-		# test to make sure package installed
-		if yay -Q $1 &>>/dev/null; then
-			echo -e "\e[1A\e[K$COK - $1 was installed."
-		else
-			# if this is hit then a package is missing, exit to review log
-			echo -e "\e[1A\e[K$CER - $1 install had failed, please check the install.log"
-			exit
-		fi
+		# if this is hit then a package is missing, exit to review log
+		echo -e "\e[1A\e[K$CER - $1 install had failed, please check the install.log"
+		exit
 	fi
 }
 
 backup_and_link_file() {
-	[[ -f ~/$1 ]] && mv ~/"$1" ~/"$1".bak
-	ln -sf $CONFIG_DIR/"$1" ~/"$1" && echo e "$COK backed up $1" || echo -e "$CER failed to back up $1"
+	[[ -e ~/$1 ]] && mv ~/"$1" ~/"$1".bak
+	ln -sf "$CONFIG_DIR/$1" ~/"$1" && echo -e "$COK linked $1" || echo -e "$CER failed to link $1"
 }
 
 backup_and_link_dir() {
 	[[ -d ~/.config.bak ]] || mkdir ~/.config.bak
-	[[ -d ~/.config/$1 ]] && mv ~/.config/"$1" ~/.config.bak/"$1"
-	ln -sf $CONFIG_DIR/"$1" ~/.config/"$1" && echo e "$COK backed up $1 config" || echo -e "$CER failed to back up $1 config"
+	[[ -e ~/.config/$1 ]] && mv ~/.config/"$1" ~/.config.bak/"$1"
+	ln -sf "$CONFIG_DIR/$1" ~/.config/"$1" && echo -e "$COK linked $1 config" || echo -e "$CER failed to link $1 config"
 }
 
 # clear the screen
