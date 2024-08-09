@@ -104,7 +104,7 @@
   "custom/launcher": {
     "format": "󰀻",
     "on-click": "rofi -show",
-    "tooltip-format": "Keybindings:\nSUPER+HJKL: Navigate windows\nSUPER+1-9: Navigate workspaces\nSUPER+Q: Close window\nSUPER+M: Logout menu\nSUPER+T: Launch terminal\nSUPER+B: Launch browser\nSUPER+D: Launch Discord\nSUPER+S: Toggle Spotify\nSUPER+E: Toggle Thunderbird\nSUPER+C: Toggle Cava\nSUPER+Y: Toggle Yazi\nSUPER+V: Launch volume control\nSUPER+I: Install a package\nSUPER+U: Update packages\nSUPER+TAB: App launcher\nSUPER+P: Cycle wallpaper\nSUPER+W: Restart Waybar\nSUPER+N: Restart SwayNC\nSUPER+SHIFT+1-9: Move window to workspace\nSUPER+SHIFT+L: Lock screen\nSUPER+SHIFT+S: Take a screenshot\nSUPER+SHIFT+B: Toggle btop\nALT+TAB: Show active windows\nALT+V: Launch cliphist\nALT+W: Wipe cliphist cache",
+    "tooltip-format": "Keybindings:\nSUPER+HJKL: Navigate windows\nSUPER+1-9: Navigate workspaces\nSUPER+Q: Close window\nSUPER+M: Logout menu\nSUPER+T: Launch terminal\nSUPER+B: Launch browser\nSUPER+D: Launch Discord\nSUPER+S: Toggle Spotify\nSUPER+E: Toggle Thunderbird\nSUPER+C: Toggle Cava\nSUPER+Y: Toggle Yazi\nSUPER+V: Launch volume control\nSUPER+I: Install a package\nSUPER+U: Update packages\nSUPER+TAB: App launcher\nSUPER+P: Cycle wallpaper\nSUPER+R: Reload Hyprland\nSUPER+SHIFT+1-9: Move window to workspace\nSUPER+SHIFT+L: Lock screen\nSUPER+SHIFT+S: Take a screenshot\nSUPER+SHIFT+B: Toggle btop\nALT+TAB: Show active windows\nALT+V: Launch cliphist\nALT+W: Wipe cliphist cache",
   },
 
   "wlr/taskbar": {
