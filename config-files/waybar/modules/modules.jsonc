@@ -57,7 +57,7 @@
       "car": "",
       "default": ["", "", ""],
     },
-    "on-click": "pypr toggle volume",
+    "on-click": "pulsecontrol",
     "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
   },
 
