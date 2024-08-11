@@ -11,4 +11,4 @@ git fetch origin
 LOCAL="$(git rev-parse @)"
 REMOTE="$(git rev-parse @{u})"
 
-[ "$LOCAL" != "$REMOTE" ] && git pull
+[ "$LOCAL" != "$REMOTE" ] && notify-send " Update available for SneederLand" "Run git pull in $REPO_DIR" -u critical
