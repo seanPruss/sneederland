@@ -85,6 +85,7 @@ install_stage=(
 	spicetify-marketplace-bin
 	geoclue
 	gammastep
+	shellcheck
 	fzf
 	tealdeer
 	zsh
