@@ -145,24 +145,27 @@ config_files=(
 
 config_dirs=(
 	bat
+	btop
+	cava
+	fastfetch
 	fontconfig
-	waybar
 	gtk-3.0
 	gtk-4.0
 	hypr
 	kitty
-	swaync
 	nvim
 	nwg-look
-	systemd
-	wlogout
+	oh-my-posh
 	rofi
+	swaync
+	systemd
+	waybar
+	wlogout
 	xfce4
 	xsettingsd
+	yazi
 	zellij
 	zsh
-	oh-my-posh
-	yazi
 )
 
 # set some colors
@@ -184,7 +187,7 @@ show_progress() {
 		sleep 2
 	done
 	echo -en "Done!\n"
-	sleep 2
+	sleep 1
 }
 
 # function that will test for a package and if not found it will attempt to install it
@@ -345,6 +348,7 @@ for file in ${config_files[@]}; do
 	backup_and_link_file $file
 done
 
+[[ -e ~/.config.bak ]] && rm -rf ~/.config.bak
 for dir in ${config_dirs[@]}; do
 	backup_and_link_dir $dir
 done
@@ -368,7 +372,8 @@ sudo systemctl enable suspend@$USER.service &>>$INSTLOG
 
 # Clean out other portals
 echo -e "$CNT - Cleaning out conflicting xdg portals..."
-yay -R --noconfirm xdg-desktop-portal-gnome xdg-desktop-portal-gtk &>>$INSTLOG
+yay -Q xdg-desktop-portal-gnome &>/dev/null && yay -R --noconfirm xdg-desktop-portal-gnome &>>$INSTLOG
+yay -Q xdg-desktop-portal-gtk &>/dev/null && yay -R xdg-desktop-portal-gtk &>>$INSTLOG
 
 # Set up sddm
 echo -e "$CNT - Setting up the login screen."
@@ -383,11 +388,11 @@ else
 fi
 
 # Build theme cache for bat
-bat cache --build
+bat cache --build &>>$INSTLOG
 
 # Need this for spicetify to work. I'm not sure if I wanna put the spicetify commands in the script
-sudo chmod -R 777 /opt/spotify
-sudo chmod -R 777 /usr/share/spotify
+sudo chmod -R 777 /opt/spotify &>>$INSTLOG
+sudo chmod -R 777 /usr/share/spicetify-cli &>>$INSTLOG
 
 # Set up tldr
 tldr --update
@@ -428,12 +433,12 @@ echo -e "$CNT - Script had completed!"
 if [[ "$ISNVIDIA" == true ]]; then
 	echo -e "$CAT - Since we attempted to setup an Nvidia GPU the script will now end and you should reboot.
     Please type 'reboot' at the prompt and hit Enter when ready."
-	exit
+	exit 0
 fi
 
 read -rep $'[\e[1;33mACTION\e[0m] - Would you like to start Hyprland now? (y,n) ' HYP
 if [[ $HYP == "Y" || $HYP == "y" ]]; then
 	exec sudo systemctl start sddm &>>$INSTLOG
 else
-	exit
+	exit 0
 fi
