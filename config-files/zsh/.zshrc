@@ -142,6 +142,15 @@ alias vim="nvim"
 alias lzg='lazygit'
 alias btw="clear && toilet -f ivrit 'I use Arch btw' | lolcat"
 
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
 # zellij aliases
 alias zlnew='zellij --session'
 alias zla='zellij attach'

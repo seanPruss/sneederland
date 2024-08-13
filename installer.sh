@@ -100,6 +100,7 @@ install_stage=(
 	trash-cli
 	oh-my-posh
 	yazi
+	ueberzugpp
 	ffmpegthumbnailer
 	unarchiver
 	poppler
