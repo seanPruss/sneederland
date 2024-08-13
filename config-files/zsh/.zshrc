@@ -236,4 +236,4 @@ bindkey "^f" autosuggest-execute
 bindkey "^k" history-substring-search-up
 bindkey "^j" history-substring-search-down
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/atomic.omp.toml)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/sonicboom_dark.omp.toml)"
