@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Navigate to the local Git repository
-REPO_DIR="$(fd -td sneederland -a)"
+REPO_DIR="$(fd -td sneederland -a $HOME)"
 cd "$REPO_DIR" || exit
 
 # Fetch the latest changes from the remote repository

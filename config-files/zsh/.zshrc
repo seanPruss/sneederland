@@ -81,7 +81,7 @@ alias fp="flatpak"
 # ls aliases
 alias ls="eza -a --icons=auto --group-directories-first"
 alias ll="ls -lh --git --git-repos"
-alias lt="ll --tree --git-ignore"
+alias lt="ll --tree"
 alias tree='eza --tree --git-ignore'
 # declutter screen and ls
 alias cls="clear && ls"
@@ -235,7 +235,7 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:nvim:*' fzf-preview 'bat -n --color=always $realpath'
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --tree --git-ignore --color=always $realpath'
-AUTO_NOTIFY_IGNORE+=("lazygit" "crontab -e" "zellij" "cmatrix" "sudoedit" "git log" "cd" "cava")
+AUTO_NOTIFY_IGNORE+=("lazygit" "crontab -e" "zellij" "cmatrix" "sudoedit" "git log" "cd" "cava" "yy")
 
 if [[ -f /etc/bash.command-not-found ]]; then
     . /etc/bash.command-not-found
