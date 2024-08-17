@@ -63,7 +63,7 @@ install_stage=(
 	composer
 	auto-cpufreq
 	rose-pine-hyprcursor
-	kitty-git
+	kitty
 	swaync
 	waybar
 	wttrbar
