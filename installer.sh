@@ -77,7 +77,7 @@ install_stage=(
 	grim-git
 	slurp
 	btop-gpu-git
-	firefox
+	floorp-bin
 	vesktop
 	spotify
 	spicetify-cli

@@ -5,6 +5,7 @@ eval "$(fzf --zsh)"
 eval "$(ssh-agent -s)" &>/dev/null
 
 source ~/.config/zsh/git.zsh
+source ~/.config/zsh/rose-pine-man.zsh
 # fzf config
 export FZF_DEFAULT_OPTS="
 	--color=fg:#908caa,bg:#191724,hl:#ebbcba
@@ -118,7 +119,7 @@ alias vim="nvim"
 alias lzg='lazygit'
 alias btw="clear && toilet -f ivrit 'I use Arch btw' | lolcat"
 
-function yy() {
+yy() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
 	yazi "$@" --cwd-file="$tmp"
 	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
@@ -206,11 +207,15 @@ source /usr/share/zsh/plugins/zsh-auto-notify/auto-notify.plugin.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
+# Completion options
 zstyle ':completion:*' matcher_list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:nvim:*' fzf-preview 'bat -n --color=always $realpath'
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --tree --git-ignore --color=always $realpath'
+
+# commands I don't want notifications for
 AUTO_NOTIFY_IGNORE+=("lazygit" "crontab -e" "zellij" "cmatrix" "sudoedit" "git log" "cd" "cava" "yy")
 
 if [[ -f /etc/bash.command-not-found ]]; then
