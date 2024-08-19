@@ -46,7 +46,7 @@ nvidia_stage=(
 #the main packages
 install_stage=(
 	flatpak
-	swww-git
+	swww
 	pyprland
 	playerctl
 	man-db
@@ -56,7 +56,7 @@ install_stage=(
 	git-delta
 	rust
 	jdk-openjdk
-	cmatrix-git
+	cmatrix
 	cava
 	npm
 	vlc
@@ -71,7 +71,7 @@ install_stage=(
 	gimp
 	hyprlock
 	rofi-wayland
-	wlogout-git
+	wlogout
 	xdg-desktop-portal-hyprland
 	swappy-git
 	grim-git
@@ -110,8 +110,8 @@ install_stage=(
 	zellij
 	ripgrep
 	neovim
-	lazygit-git
-	zoxide-git
+	lazygit
+	zoxide
 	eza
 	rust-lolcat-git
 	toilet

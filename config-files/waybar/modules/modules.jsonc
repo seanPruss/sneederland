@@ -9,7 +9,7 @@
     "format": " {}",
     "exec": "~/.config/waybar/scripts/check-updates.sh",
     "on-click": "pypr toggle update",
-    "interval": 120,
+    "interval": 30,
   },
 
   // Clock
@@ -114,6 +114,7 @@
     "tooltip-format": "{title}",
     "on-click": "activate",
     "on-click-middle": "close",
+    "ignore-list": ["kitty-bg"],
   },
 
   "hyprland/window": {
