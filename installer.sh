@@ -77,7 +77,7 @@ install_stage=(
 	grim-git
 	slurp
 	btop-gpu-git
-	floorp-bin
+	zen-browser-bin
 	vesktop
 	spotify
 	spicetify-cli
@@ -106,7 +106,7 @@ install_stage=(
 	poppler
 	bash-zsh-insulter
 	fastfetch-git
-	onefetch-git
+	onefetch
 	zellij
 	ripgrep
 	neovim
