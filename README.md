@@ -13,7 +13,7 @@ with the install script modified to install all my packages.
 Clone this repo and run `installer.sh`
 
 ```bash
-git clone https://github.com/seanPruss/sneederland.git
+git clone --depth=1 https://github.com/seanPruss/sneederland.git
 cd sneederland
 ./installer.sh
 ```
