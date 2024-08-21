@@ -13,6 +13,7 @@ CONFIG_DIR=$REPO_DIR/config-files
 # Define the software that would be inbstalled
 #Need some prep work
 prep_stage=(
+	reflector
 	qt5-wayland
 	qt5ct
 	qt6-wayland
