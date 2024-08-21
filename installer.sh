@@ -260,7 +260,7 @@ else
 fi
 
 sudo pacman -Syyu --noconfirm &>>$INSTLOG
-sudo pacman -S reflector &>>$INSTLOG && sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist &>>$INSTLOG
+sudo pacman -S reflector --noconfirm &>>$INSTLOG && sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist &>>$INSTLOG
 
 ### Disable wifi powersave mode ###
 read -rep $'[\e[1;33mACTION\e[0m] - Would you like to disable WiFi powersave? (y,n) ' WIFI
