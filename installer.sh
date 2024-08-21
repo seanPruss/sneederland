@@ -281,6 +281,7 @@ if [ -z "$(which yay)" ]; then
 	cd yay || exit
 	makepkg -si --noconfirm &>>$INSTLOG &
 	show_progress $!
+	sleep 2
 	if [ -e "$(which yay)" ]; then
 		echo -e "\e[1A\e[K$COK - yay configured"
 		cd ..
