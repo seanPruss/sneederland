@@ -260,6 +260,8 @@ else
 	ISNVIDIA=false
 fi
 
+sudo pacman -Syyu --noconfirm &>>$INSTLOG
+
 ### Disable wifi powersave mode ###
 read -rep $'[\e[1;33mACTION\e[0m] - Would you like to disable WiFi powersave? (y,n) ' WIFI
 if [[ $WIFI == "Y" || $WIFI == "y" ]]; then
