@@ -198,6 +198,13 @@ install_software() {
 	echo -en "$CNT - Now installing $1."
 	yay -S --needed --noconfirm $1 &>>$INSTLOG &
 	show_progress $!
+	if yay -Q $1 &>>/dev/null; then
+		echo -e "\e[1A\e[K$COK - $1 was installed."
+	else
+		# if this is hit then a package is missing, exit to review log
+		echo -e "\e[1A\e[K$CER - $1 install had failed, please check the install.log"
+		exit
+	fi
 }
 
 backup_and_link_file() {
