@@ -279,13 +279,13 @@ if [[ $WIFI == "Y" || $WIFI == "y" ]]; then
 fi
 
 #### Check for package manager ####
-if [ ! -f /sbin/yay ]; then
+if [ ! -e "$(which yay)" ]; then
 	echo -en "$CNT - Configuring yay."
 	git clone https://aur.archlinux.org/yay.git &>>$INSTLOG
 	cd yay || exit
 	makepkg -si --noconfirm &>>$INSTLOG &
 	show_progress $!
-	if [ -f /sbin/yay ]; then
+	if [ -e "$(which yay)" ]; then
 		echo -e "\e[1A\e[K$COK - yay configured"
 		cd ..
 
