@@ -56,7 +56,7 @@ install_stage=(
 	git-delta
 	rust
 	jdk-openjdk
-	cmatrix
+	cmatrix-git
 	cava
 	npm
 	vlc
