@@ -57,6 +57,7 @@ install_stage=(
 	rust
 	jdk-openjdk
 	cmatrix-git
+	pipes-rs
 	cava
 	npm
 	vlc

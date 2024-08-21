@@ -43,14 +43,6 @@ size = "70% 70%"
 position = "15% 15%"
 unfocus = "hide"
 
-[scratchpads.cava]
-animation = "fromTop"
-command = 'kitty --class="kitty-cava" "cava"'
-class = "kitty-cava"
-size = "70% 70%"
-position = "15% 15%"
-unfocus = "hide"
-
 [wallpapers]
 path = "~/.config/hypr/wallpapers/"
 extensions = ["png", "jpg", "jpeg", "webp", "JPG"]
