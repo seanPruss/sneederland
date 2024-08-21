@@ -184,7 +184,7 @@ INSTLOG=$REPO_DIR/install.log
 
 # function that would show a progress bar to the user
 show_progress() {
-	while pgrep $1 &>/dev/null; do
+	while ps | grep $1 &>/dev/null; do
 		echo -n "."
 		sleep 2
 	done
