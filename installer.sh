@@ -189,7 +189,7 @@ show_progress() {
 		sleep 2
 	done
 	echo -en " Done!\n"
-	sleep 2
+	sleep 1
 }
 
 # function that will test for a package and if not found it will attempt to install it
