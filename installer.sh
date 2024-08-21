@@ -278,6 +278,8 @@ if [[ $WIFI == "Y" || $WIFI == "y" ]]; then
 	echo -e "\e[1A\e[K$COK - NetworkManager restart completed."
 fi
 
+sleep 5
+
 #### Check for package manager ####
 if [ ! -e "$(which yay)" ]; then
 	echo -en "$CNT - Configuring yay."
