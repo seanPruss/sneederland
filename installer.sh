@@ -188,14 +188,14 @@ show_progress() {
 		echo -n "."
 		sleep 2
 	done
-	echo -en "Done!\n"
+	echo -en " Done!\n"
 	sleep 2
 }
 
 # function that will test for a package and if not found it will attempt to install it
 install_software() {
 	# Install a package if it is not installed or out of date with --needed flag
-	echo -en "$CNT - Now installing $1 ."
+	echo -en "$CNT - Now installing $1."
 	yay -S --needed --noconfirm $1 &>>$INSTLOG &
 	show_progress $!
 }
