@@ -281,7 +281,7 @@ fi
 sleep 5
 
 #### Check for package manager ####
-if [ ! -e "$(which yay)" ]; then
+if [ -z "$(which yay)" ]; then
 	echo -en "$CNT - Configuring yay."
 	git clone https://aur.archlinux.org/yay.git &>>$INSTLOG
 	cd yay || exit
