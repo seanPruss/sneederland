@@ -106,7 +106,7 @@ install_stage=(
 	unarchiver
 	poppler
 	bash-zsh-insulter
-	fastfetch-git
+	fastfetch
 	onefetch
 	zellij
 	ripgrep
