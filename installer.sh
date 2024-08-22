@@ -192,21 +192,6 @@ show_progress() {
 	sleep 1
 }
 
-# function that will test for a package and if not found it will attempt to install it
-install_software() {
-	# Install a package if it is not installed or out of date with --needed flag
-	echo -en "$CNT - Now installing $1."
-	yay -S --needed --noconfirm $1 &>>$INSTLOG &
-	show_progress $!
-	if yay -Q $1 &>>/dev/null; then
-		echo -e "\e[1A\e[K$COK - $1 was installed."
-	else
-		# if this is hit then a package is missing, exit to review log
-		echo -e "\e[1A\e[K$CER - $1 install had failed, please check the install.log"
-		exit
-	fi
-}
-
 backup_and_link_file() {
 	[[ -e ~/$1 ]] && mv ~/"$1" ~/"$1".bak
 	ln -sf "$CONFIG_DIR/$1" ~/"$1" && echo -e "$COK linked $1" || echo -e "$CER failed to link $1"
@@ -313,14 +298,14 @@ sudo cp $CONFIG_DIR/clearcache /usr/share/libalpm/scripts
 # Prep Stage - Bunch of needed items
 echo -e "$CNT - Prep Stage - Installing needed components, this may take a while..."
 for SOFTWR in ${prep_stage[@]}; do
-	install_software $SOFTWR
+	yay -S --needed $SOFTWR || exit
 done
 
 # Setup Nvidia if it was found
 if [[ "$ISNVIDIA" == true ]]; then
 	echo -e "$CNT - Nvidia GPU support setup stage, this may take a while..."
 	for SOFTWR in ${nvidia_stage[@]}; do
-		install_software $SOFTWR
+		yay -S --needed $SOFTWR || exit
 	done
 
 	# update config
@@ -331,12 +316,12 @@ fi
 
 # Install the correct hyprland version
 echo -e "$CNT - Installing Hyprland, this may take a while..."
-install_software hyprland
+yay -S --needed hyprland || exit
 
 # Stage 1 - main components
 echo -e "$CNT - Installing main components, this may take a while..."
 for SOFTWR in ${install_stage[@]}; do
-	install_software $SOFTWR
+	yay -S --needed $SOFTWR || exit
 done
 
 # copy my configs
@@ -413,9 +398,9 @@ if [[ $ROG == "Y" || $ROG == "y" ]]; then
 	sudo pacman -Suy --noconfirm &>>$INSTLOG
 
 	echo -e "$CNT - Installing ROG pacakges..."
-	install_software asusctl
-	install_software supergfxctl
-	install_software rog-control-center
+	yay -S --needed asusctl || exit
+	yay -S --needed supergfxctl || exit
+	yay -S --needed rog-control-center || exit
 
 	echo -e "$CNT - Activating ROG services..."
 	sudo systemctl enable --now power-profiles-daemon.service &>>$INSTLOG
