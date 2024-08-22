@@ -392,7 +392,7 @@ sudo chmod -R 777 /opt/spotify &>>$INSTLOG
 sudo chmod -R 777 /usr/share/spicetify-cli &>>$INSTLOG
 
 # Set up tldr
-tldr --update
+tldr --update &>>$INSTLOG
 
 # set up zsh
 chsh -s "$(which zsh)"
