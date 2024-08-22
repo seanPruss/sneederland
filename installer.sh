@@ -298,14 +298,14 @@ sudo cp $CONFIG_DIR/clearcache /usr/share/libalpm/scripts
 # Prep Stage - Bunch of needed items
 echo -e "$CNT - Prep Stage - Installing needed components, this may take a while..."
 for SOFTWR in ${prep_stage[@]}; do
-	yay -S --needed $SOFTWR || exit
+	yay -S --noconfirm --needed $SOFTWR || exit
 done
 
 # Setup Nvidia if it was found
 if [[ "$ISNVIDIA" == true ]]; then
 	echo -e "$CNT - Nvidia GPU support setup stage, this may take a while..."
 	for SOFTWR in ${nvidia_stage[@]}; do
-		yay -S --needed $SOFTWR || exit
+		yay -S --noconfirm --needed $SOFTWR || exit
 	done
 
 	# update config
@@ -316,12 +316,12 @@ fi
 
 # Install the correct hyprland version
 echo -e "$CNT - Installing Hyprland, this may take a while..."
-yay -S --needed hyprland || exit
+yay -S --needed --noconfirm hyprland || exit
 
 # Stage 1 - main components
 echo -e "$CNT - Installing main components, this may take a while..."
 for SOFTWR in ${install_stage[@]}; do
-	yay -S --needed $SOFTWR || exit
+	yay -S --needed --noconfirm $SOFTWR || exit
 done
 
 # copy my configs
@@ -398,9 +398,9 @@ if [[ $ROG == "Y" || $ROG == "y" ]]; then
 	sudo pacman -Suy --noconfirm &>>$INSTLOG
 
 	echo -e "$CNT - Installing ROG pacakges..."
-	yay -S --needed asusctl || exit
-	yay -S --needed supergfxctl || exit
-	yay -S --needed rog-control-center || exit
+	yay -S --needed --noconfirm asusctl || exit
+	yay -S --needed --noconfirm supergfxctl || exit
+	yay -S --needed --noconfirm rog-control-center || exit
 
 	echo -e "$CNT - Activating ROG services..."
 	sudo systemctl enable --now power-profiles-daemon.service &>>$INSTLOG
