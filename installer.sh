@@ -77,7 +77,7 @@ install_stage=(
 	swappy-git
 	grim-git
 	slurp
-	btop-gpu-git
+	btop
 	zen-browser-bin
 	vesktop
 	spotify
@@ -283,14 +283,14 @@ sleep 5
 
 #### Check for package manager ####
 if [ -z "$(which yay)" ]; then
-	echo -en "$CNT - Configuring yay."
+	echo -en "$CNT - Installing yay."
 	git clone https://aur.archlinux.org/yay.git &>>$INSTLOG
 	cd yay || exit
 	makepkg -si --noconfirm &>>$INSTLOG &
 	show_progress $!
 	sleep 2
 	if [ -e "$(which yay)" ]; then
-		echo -e "\e[1A\e[K$COK - yay configured"
+		echo -e "\e[1A\e[K$COK - yay installed"
 		cd ..
 
 		# update the yay database
