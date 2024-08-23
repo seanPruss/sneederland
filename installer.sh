@@ -244,9 +244,9 @@ else
 fi
 
 sudo pacman -Syyu --noconfirm &>>$INSTLOG
-sudo pacman -S reflector --noconfirm &>>$INSTLOG
+sudo pacman -S reflector --needed --noconfirm &>>$INSTLOG || exit
 echo -e "$CNT - Updating mirrorlist"
-sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist &>>$INSTLOG
+sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist &>>$INSTLOG || exit
 echo -e "\e[1A\e[K$COK - Mirrorlist updated."
 
 ### Disable wifi powersave mode ###
@@ -398,7 +398,7 @@ if [[ $ROG == "Y" || $ROG == "y" ]]; then
 	echo -e "$CNT - Updating $LOC with g14 repo."
 	echo -e "\n[g14]\nServer = https://arch.asus-linux.org" | sudo tee -a $LOC &>>$INSTLOG
 	echo -e "$CNT - Update the system..."
-	sudo pacman -Suy --noconfirm &>>$INSTLOG
+	sudo pacman -Syu --noconfirm &>>$INSTLOG
 
 	echo -e "$CNT - Installing ROG pacakges..."
 	yay -S --needed --noconfirm asusctl || exit
