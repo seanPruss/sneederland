@@ -13,7 +13,6 @@ CONFIG_DIR=$REPO_DIR/config-files
 # Define the software that would be inbstalled
 #Need some prep work
 prep_stage=(
-	reflector
 	qt5-wayland
 	qt5ct
 	qt6-wayland
@@ -245,6 +244,10 @@ else
 fi
 
 sudo pacman -Syyu --noconfirm &>>$INSTLOG
+sudo pacman -S reflector &>>$INSTLOG
+echo -e "$CNT - Updating mirrorlist"
+sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist &>>$INSTLOG
+echo -e "\e[1A\e[K$COK - Mirrorlist updated."
 
 ### Disable wifi powersave mode ###
 read -rep $'[\e[1;33mACTION\e[0m] - Would you like to disable WiFi powersave? (y,n) ' WIFI
