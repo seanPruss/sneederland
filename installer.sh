@@ -244,7 +244,7 @@ else
 fi
 
 sudo pacman -Syyu --noconfirm &>>$INSTLOG
-sudo pacman -S reflector &>>$INSTLOG
+sudo pacman -S reflector --noconfirm &>>$INSTLOG
 echo -e "$CNT - Updating mirrorlist"
 sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist &>>$INSTLOG
 echo -e "\e[1A\e[K$COK - Mirrorlist updated."
