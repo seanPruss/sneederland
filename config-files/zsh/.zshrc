@@ -127,6 +127,7 @@ yy() {
 	fi
 	rm -f -- "$tmp"
 }
+zle -N yy
 
 # zellij aliases
 alias zlnew='zellij --session'
@@ -213,7 +214,7 @@ zstyle ':completion:*' matcher_list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:nvim:*' fzf-preview 'bat -n --color=always $realpath'
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --tree --git-ignore --color=always $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --tree --git-ignore --color=always --icons=auto $realpath'
 
 # commands I don't want notifications for
 AUTO_NOTIFY_IGNORE+=("lazygit" "crontab -e" "zellij" "cmatrix" "sudoedit" "git log" "cd" "cava" "yy")
@@ -225,5 +226,6 @@ fi
 bindkey "^f" autosuggest-execute
 bindkey "^k" history-substring-search-up
 bindkey "^j" history-substring-search-down
+bindkey "^y" yy
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/sonicboom_dark.omp.toml)"

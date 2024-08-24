@@ -1,6 +1,6 @@
 export EDITOR="nvim"
 export TERMINAL="kitty"
-export BROWSER="firefox"
+export BROWSER="zen-browser"
 export ZDOTDIR="$HOME/.config/zsh"
 export PATH=$PATH:/home/seanp/.cargo/bin
 export PATH=$PATH:/home/seanp/.local/bin
