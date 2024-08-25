@@ -31,10 +31,10 @@ size = "70% 70%"
 position = "15% 15%"
 lazy = true
 
-[scratchpads.btop]
+[scratchpads.htop]
 animation = "fromTop"
-command = 'kitty --class="kitty-btop" "btop"'
-class = "kitty-btop"
+command = 'kitty --class="kitty-htop" "htop"'
+class = "kitty-htop"
 size = "70% 70%"
 position = "15% 15%"
 
