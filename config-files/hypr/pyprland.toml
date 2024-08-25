@@ -7,7 +7,6 @@ command = 'spotify'
 class = "Spotify"
 size = "90% 90%"
 position = "5% 5%"
-unfocus = "hide"
 
 [scratchpads.thunderbird]
 animation = "fromTop"
@@ -15,7 +14,6 @@ command = 'thunderbird'
 class = "thunderbird"
 size = "90% 90%"
 position = "5% 5%"
-unfocus = "hide"
 
 [scratchpads.install]
 animation = "fromTop"
@@ -23,7 +21,6 @@ command = 'kitty --class="kitty-install" "$HOME/.config/hypr/install.sh"'
 class = "kitty-install"
 size = "70% 70%"
 position = "15% 15%"
-unfocus = "hide"
 lazy = true
 
 [scratchpads.update]
@@ -32,7 +29,6 @@ command = 'kitty --class="kitty-update" "$HOME/.config/hypr/update.sh"'
 class = "kitty-update"
 size = "70% 70%"
 position = "15% 15%"
-unfocus = "hide"
 lazy = true
 
 [scratchpads.btop]
@@ -41,7 +37,6 @@ command = 'kitty --class="kitty-btop" "btop"'
 class = "kitty-btop"
 size = "70% 70%"
 position = "15% 15%"
-unfocus = "hide"
 
 [wallpapers]
 path = "~/.config/hypr/wallpapers/"

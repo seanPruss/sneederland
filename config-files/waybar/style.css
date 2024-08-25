@@ -48,8 +48,8 @@ window#waybar {
 }
 
 #window {
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 7px;
+  padding-right: 7px;
   border: 0.19em solid rgba(156, 207, 216, 1);
 }
 
@@ -223,7 +223,7 @@ window#waybar {
   background-color: rgba(31, 29, 46, 0.7);
   border: 0.19em solid rgba(196, 167, 231, 1);
   padding-left: 10px;
-  padding-right: 2px;
+  padding-right: 10px;
   border-radius: 20px;
   color: rgba(246, 193, 119, 1);
 }
