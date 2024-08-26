@@ -24,7 +24,7 @@ window#waybar {
   padding: 0px 8px;
   color: rgba(235, 111, 146, 1);
   border-radius: 20px;
-  background-color: rgba(31, 29, 46, 0.7);
+  background-color: rgba(25, 23, 36, 0.9);
   margin-left: 10px;
 }
 
@@ -41,7 +41,7 @@ window#waybar {
   color: rgba(224, 222, 244, 1);
   margin-right: 10px;
   border-radius: 20px;
-  background-color: rgba(31, 29, 46, 0.7);
+  background-color: rgba(25, 23, 36, 0.9);
   transition: all 0.4s ease-out;
 }
 
@@ -107,7 +107,7 @@ window#waybar {
   margin-left: 10px;
   color: rgba(235, 188, 186, 1);
   border-radius: 20px;
-  background-color: rgba(31, 29, 46, 0.7);
+  background-color: rgba(25, 23, 36, 0.9);
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -195,7 +195,7 @@ window#waybar {
 #custom-updates {
   margin-right: 10px;
   color: rgba(156, 207, 216, 1);
-  background-color: rgba(31, 29, 46, 0.7);
+  background-color: rgba(25, 23, 36, 0.9);
   border-radius: 20px;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -215,7 +215,7 @@ window#waybar {
 }
 
 #custom-notification {
-  background-color: rgba(31, 29, 46, 0.7);
+  background-color: rgba(25, 23, 36, 0.9);
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 20px;
@@ -225,7 +225,7 @@ window#waybar {
 #custom-weather {
   margin-left: 10px;
   color: rgba(156, 207, 216, 1);
-  background-color: rgba(31, 29, 46, 0.7);
+  background-color: rgba(25, 23, 36, 0.9);
   border-radius: 20px;
   padding: 0px 8px;
 }
