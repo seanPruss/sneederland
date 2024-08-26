@@ -22,9 +22,8 @@ window#waybar {
 #systray,
 #mpd {
   padding: 0px 8px;
-  color: rgba(224, 222, 244, 1);
+  color: rgba(235, 111, 146, 1);
   border-radius: 20px;
-  border: 0.19em solid rgba(235, 111, 146, 1);
   background-color: rgba(31, 29, 46, 0.7);
   margin-left: 10px;
 }
@@ -42,7 +41,6 @@ window#waybar {
   color: rgba(224, 222, 244, 1);
   margin-right: 10px;
   border-radius: 20px;
-  border: 0.19em solid rgba(49, 116, 143, 1);
   background-color: rgba(31, 29, 46, 0.7);
   transition: all 0.4s ease-out;
 }
@@ -50,14 +48,14 @@ window#waybar {
 #window {
   padding-left: 7px;
   padding-right: 7px;
-  border: 0.19em solid rgba(156, 207, 216, 1);
+  color: rgba(156, 207, 216, 1);
 }
 
 #taskbar button,
 #workspaces button {
   border-radius: 20px;
   border: none;
-  color: rgba(224, 222, 244, 1);
+  color: rgba(49, 116, 143, 1);
   transition: all 0.4s ease-out;
 }
 
@@ -107,9 +105,8 @@ window#waybar {
 
 #clock {
   margin-left: 10px;
-  color: rgba(224, 222, 244, 1);
+  color: rgba(235, 188, 186, 1);
   border-radius: 20px;
-  border: 0.19em solid rgba(235, 188, 186, 1);
   background-color: rgba(31, 29, 46, 0.7);
   padding-left: 5px;
   padding-right: 5px;
@@ -117,7 +114,6 @@ window#waybar {
 
 #backlight {
   padding: 0px 8px 0px 4px;
-  color: rgba(246, 193, 119, 1);
 }
 
 #battery {
@@ -167,7 +163,7 @@ window#waybar {
 }
 
 #systray {
-  border: 0.19em solid rgba(49, 116, 143, 1);
+  color: rgba(49, 116, 143, 1);
   padding: 0px 4px;
 }
 
@@ -198,9 +194,8 @@ window#waybar {
 #custom-launcher,
 #custom-updates {
   margin-right: 10px;
-  color: rgba(224, 222, 244, 1);
+  color: rgba(156, 207, 216, 1);
   background-color: rgba(31, 29, 46, 0.7);
-  border: 0.19em solid rgba(156, 207, 216, 1);
   border-radius: 20px;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -208,7 +203,7 @@ window#waybar {
 }
 
 #custom-launcher {
-  border: 3px solid rgba(235, 111, 146, 1);
+  color: rgba(235, 111, 146, 1);
   padding-left: 9px;
   padding-right: 10px;
   font-size: 20px;
@@ -221,7 +216,6 @@ window#waybar {
 
 #custom-notification {
   background-color: rgba(31, 29, 46, 0.7);
-  border: 0.19em solid rgba(196, 167, 231, 1);
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 20px;
@@ -230,9 +224,8 @@ window#waybar {
 
 #custom-weather {
   margin-left: 10px;
-  color: rgba(224, 222, 244, 1);
+  color: rgba(156, 207, 216, 1);
   background-color: rgba(31, 29, 46, 0.7);
-  border: 0.19em solid rgba(156, 207, 216, 1);
   border-radius: 20px;
   padding: 0px 8px;
 }

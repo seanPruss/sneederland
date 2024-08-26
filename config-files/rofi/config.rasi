@@ -150,7 +150,6 @@ button {
 #prompt {
     border-radius: 3px;
     padding: 12px;
-    border-radius: 3px;
 	text-color: @grn;
 }
 #textbox-prompt-colon {
