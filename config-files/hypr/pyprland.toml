@@ -37,4 +37,3 @@ command = 'kitty --class="kitty-htop" "htop"'
 class = "kitty-htop"
 size = "70% 70%"
 position = "15% 15%"
-lazy = true

@@ -13,5 +13,7 @@ URGENCY="low"
 
 [[ $UPDATE_COUNT -eq 0 ]] && [[ -e $NOTIFICATION_SENT ]] && rm $NOTIFICATION_SENT
 
-[[ $UPDATE_COUNT -gt 0 ]] && [[ ! -e $NOTIFICATION_SENT ]] && notify-send "$UPDATE_COUNT updates available" "$OFFICIAL_UPDATES from pacman $AUR_UPDATES from AUR" -u $URGENCY -i edit-download && touch $NOTIFICATION_SENT
+[[ $UPDATE_COUNT -gt 1 ]] && PLURALS="s"
+
+[[ $UPDATE_COUNT -gt 0 ]] && [[ ! -e $NOTIFICATION_SENT ]] && notify-send "$UPDATE_COUNT update$PLURALS available" "$OFFICIAL_UPDATES from pacman $AUR_UPDATES from AUR" -u $URGENCY -i edit-download && touch $NOTIFICATION_SENT
 echo "$UPDATE_COUNT"
