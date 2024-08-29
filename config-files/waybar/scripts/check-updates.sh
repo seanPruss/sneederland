@@ -3,7 +3,7 @@
 which yay &>/dev/null || exit 1
 which checkupdates &>/dev/null || exit 1
 
-NOTIFICATION_SENT="/tmp/update_notif"
+NOTIFICATION_SENT=/tmp/update_notif
 OFFICIAL_UPDATES=$(checkupdates | wc -l)
 AUR_UPDATES=$(yay -Qua | wc -l)
 UPDATE_COUNT=$((OFFICIAL_UPDATES + AUR_UPDATES))

@@ -1,5 +1,5 @@
 [pyprland]
-plugins = ["scratchpads", "wallpapers"]
+plugins = ["scratchpads"]
 
 [scratchpads.spotify]
 animation = "fromTop"
@@ -38,11 +38,3 @@ class = "kitty-htop"
 size = "70% 70%"
 position = "15% 15%"
 lazy = true
-
-[wallpapers]
-path = "~/.config/hypr/wallpapers/"
-extensions = ["png", "jpg", "jpeg", "webp", "JPG"]
-interval = 10
-recurse = true
-command = 'swww img --transition-type any "[file]"'
-clear_command = "swww clear"
