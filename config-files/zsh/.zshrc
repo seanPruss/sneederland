@@ -119,7 +119,7 @@ alias vim="nvim"
 alias lzg='lazygit'
 alias btw="clear && toilet -f ivrit 'I use Arch btw' | lolcat"
 
-yy() {
+yz() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
 	yazi "$@" --cwd-file="$tmp"
 	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
@@ -127,7 +127,7 @@ yy() {
 	fi
 	rm -f -- "$tmp"
 }
-zle -N yy
+zle -N yz
 
 # zellij aliases
 alias zlnew='zellij --session'
@@ -217,7 +217,7 @@ zstyle ':fzf-tab:complete:nvim:*' fzf-preview 'bat -n --color=always $realpath'
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --tree --git-ignore --color=always --icons=auto $realpath'
 
 # commands I don't want notifications for
-AUTO_NOTIFY_IGNORE+=("lazygit" "crontab -e" "zellij" "cmatrix" "sudoedit" "git log" "cd" "cava" "yy")
+AUTO_NOTIFY_IGNORE+=("lazygit" "crontab -e" "zellij" "cmatrix" "sudoedit" "git log" "cd" "cava" "yz")
 
 if [[ -f /etc/bash.command-not-found ]]; then
     . /etc/bash.command-not-found
@@ -226,6 +226,6 @@ fi
 bindkey "^f" autosuggest-execute
 bindkey "^k" history-substring-search-up
 bindkey "^j" history-substring-search-down
-bindkey "^y" yy
+bindkey "^y" yz
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/sonicboom_dark.omp.toml)"

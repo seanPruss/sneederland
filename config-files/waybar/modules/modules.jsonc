@@ -1,5 +1,4 @@
 {
-  // Workspaces
   "hyprland/workspaces": {
     "active-only": false,
     "format": "{name}",
@@ -12,14 +11,12 @@
     "interval": 30,
   },
 
-  // Clock
   "clock": {
     "format": "󰥔 {:%H:%M %Y-%m-%d}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}",
   },
 
-  // Battery
   "battery": {
     "states": {
       "warning": 25,
@@ -33,14 +30,12 @@
     "format-icons": ["", "", "", "", ""],
   },
 
-  // Power Button
   "custom/power": {
     "format": "&#x23FB;",
     "tooltip": true,
     "on-click": "wlogout",
   },
 
-  // Audio Information
   "pulseaudio": {
     "format": "{icon} {volume}% ",
     "format-bluetooth": "{icon}  {volume}%",
@@ -61,7 +56,6 @@
     "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
   },
 
-  // Brightness Information
   "backlight": {
     "format": "{percent}% {icon}",
     "format-icons": ["", "", "", "", "", "", "", "", ""],
@@ -77,7 +71,6 @@
     "on-click": "pypr toggle htop",
   },
 
-  // System Tray
   "tray": {
     "icon-size": 18,
     "spacing": 5,
