@@ -1,13 +1,6 @@
 [pyprland]
 plugins = ["scratchpads"]
 
-[scratchpads.spotify]
-animation = "fromTop"
-command = 'spotify'
-class = "Spotify"
-size = "90% 90%"
-position = "5% 5%"
-
 [scratchpads.thunderbird]
 animation = "fromTop"
 command = 'thunderbird'
