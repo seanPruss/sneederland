@@ -56,7 +56,7 @@ alias y="yay"
 alias fp="flatpak"
 
 # ls aliases
-alias ls="eza -a --icons=auto --group-directories-first"
+alias ls="eza -A --icons=auto --group-directories-first"
 alias ll="ls -lh --git --git-repos"
 alias lt="ll --tree"
 alias tree='eza --tree --git-ignore'
