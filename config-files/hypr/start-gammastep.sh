@@ -1,8 +1,6 @@
 #!/bin/bash
 while true; do
-	if [[ -z "$(pgrep gammastep)" ]]; then
-		systemctl --user enable --now geoclue-agent.service
-		systemctl --user enable --now gammastep.service
-	fi
+	systemctl --user enable --now geoclue-agent.service
+	systemctl --user enable --now gammastep.service
 	sleep 60
 done
