@@ -243,12 +243,6 @@ else
 	ISNVIDIA=false
 fi
 
-sudo pacman -Syyu --noconfirm &>>$INSTLOG
-sudo pacman -S reflector --needed --noconfirm &>>$INSTLOG || exit
-echo -e "$CNT - Updating mirrorlist"
-sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist &>>$INSTLOG || exit
-echo -e "\e[1A\e[K$COK - Mirrorlist updated."
-
 ### Disable wifi powersave mode ###
 read -rep $'[\e[1;33mACTION\e[0m] - Would you like to disable WiFi powersave? (y,n) ' WIFI
 if [[ $WIFI == "Y" || $WIFI == "y" ]]; then
@@ -266,6 +260,12 @@ if [[ $WIFI == "Y" || $WIFI == "y" ]]; then
 	echo -en "Done!\n"
 	echo -e "\e[1A\e[K$COK - NetworkManager restart completed."
 fi
+
+sudo pacman -Syyu --noconfirm &>>$INSTLOG
+sudo pacman -S reflector --needed --noconfirm &>>$INSTLOG || exit
+echo -e "$CNT - Updating mirrorlist"
+sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist &>>$INSTLOG || exit
+echo -e "\e[1A\e[K$COK - Mirrorlist updated."
 
 #### Check for package manager ####
 if [ -z "$(which yay)" ]; then
