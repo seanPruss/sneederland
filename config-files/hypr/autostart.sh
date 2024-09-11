@@ -1,3 +1,4 @@
+#!/bin/bash
 while ! ping -c 1 archlinux.org; do
 	true
 done
