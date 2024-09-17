@@ -1,13 +1,6 @@
 [pyprland]
 plugins = ["scratchpads"]
 
-[scratchpads.thunderbird]
-animation = "fromTop"
-command = 'thunderbird'
-class = "thunderbird"
-size = "90% 90%"
-position = "5% 5%"
-
 [scratchpads.install]
 animation = "fromTop"
 command = 'kitty --class="kitty-install" "$HOME/.config/hypr/install.sh"'

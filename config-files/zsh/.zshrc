@@ -126,6 +126,7 @@ yz() {
 		builtin cd -- "$cwd"
 	fi
 	rm -f -- "$tmp"
+    pwd
 }
 zle -N yz
 

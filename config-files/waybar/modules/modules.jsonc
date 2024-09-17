@@ -6,6 +6,7 @@
 
   "custom/updates": {
     "format": " {}",
+    "tooltip-format": "{} updates available",
     "exec": "~/.config/waybar/scripts/check-updates.sh",
     "on-click": "pypr toggle update",
     "interval": 30,

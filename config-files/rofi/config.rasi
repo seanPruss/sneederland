@@ -1,166 +1,19 @@
 configuration {
-    display-drun: " 󰀻  Apps ";
-    display-run: "   Command ";
-    display-window: " 󱂬  Windows ";
-    drun-display-format: "{icon} {name}";
-    font: "JetBrains Mono Nerd Font Bold 14";
-    modi: "drun,window,run";
-    show-icons: true;
-    icon-theme: "BeautyLine";
-    terminal: "kitty";
-    location: 0;
-    disable-history: false;
-    hide-scrollbar: true;
-    sidebar-mode: true;
-}
-@import "default"
+display-drun: "Applications";
+display-window: "Windows";
+drun-display-format: "{icon} {name}";
+font: "JetBrainsMono Nerd Font Mono: 15";
+icon-theme: "BeautyLine";
+show-icons: true;
 
-* {
-	bg: #19172480;
-	cur: #1f1d2e;
-	fgd: #e0def4;
-	cmt: #6e6a86;
-	cya: #9ccfd8;
-	grn: #31748f;
-	ora: #ebbcba;
-	pur: #c4a7e7;
-	red: #eb6f92;
-	yel: #f6c177;
-
-	foreground: @fgd;
-	background: @bg;
-	active-background: @grn;
-	urgent-background: @red;
-
-	selected-background: @active-background;
-	selected-urgent-background: @urgent-background;
-	selected-active-background: @active-background;
-	separatorcolor: @active-background;
-	bordercolor: @ora;
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
 }
 
-#window {
-	background-color: @background;
-	border:           3;
-	border-radius:    3%;
-	border-color:     @bordercolor;
-	padding:          5;
-}
-#mainbox {
-	border:  0;
-	padding: 5;
-}
-#message {
-	border:       1px dash 0px 0px ;
-	border-color: @separatorcolor;
-	padding:      1px ;
-}
-#textbox {
-	text-color: @foreground;
-}
-#listview {
-	fixed-height: 0;
-	border:       2px dash 0px 0px ;
-	border-color: @bordercolor;
-	spacing:      2px ;
-	scrollbar:    false;
-	padding:      2px 0px 0px ;
-    columns: 1;
-}
-#element {
-	border:  3px solid;
-    border-color: @cya;
-    border-radius: 15%;
-	padding: 12px 12px 12px 12px;
-}
-#element.normal.normal {
-	background-color: @background;
-	text-color:       @foreground;
-}
-#element.normal.urgent {
-	background-color: @urgent-background;
-	text-color:       @urgent-foreground;
-}
-#element.normal.active {
-	background-color: @active-background;
-	text-color:       @background;
-}
-#element.selected.normal {
-	background-color: @selected-background;
-	text-color:       @foreground;
-}
-#element.selected.urgent {
-	background-color: @selected-urgent-background;
-	text-color:       @foreground;
-}
-#element.selected.active {
-	background-color: @selected-active-background;
-	text-color:       @background;
-}
-#element.alternate.normal {
-	background-color: @background;
-	text-color:       @foreground;
-}
-#element.alternate.urgent {
-	background-color: @urgent-background;
-	text-color:       @foreground;
-}
-#element.alternate.active {
-	background-color: @active-background;
-	text-color:       @foreground;
-}
-#scrollbar {
-	width:        2px ;
-	border:       0;
-	handle-width: 8px ;
-	padding:      0;
-}
-#sidebar {
-	border:       2px dash 0px 0px ;
-	border-color: @separatorcolor;
-}
-button {
-    padding: 12px;
-    margin: 10px;
-    vertical-align: 0.5; 
-    horizontal-align: 0.5;
-	border:  3px solid;
-    border-color: @cya;
-    border-radius: 15%;
-}
-#button.selected {
-	background-color: @selected-background;
-	text-color:       @foreground;
-}
-#inputbar {
-	text-color: @foreground;
-	padding:    2px ;
-    children: [entry,case-indicator];
-    border-radius: 3px;
-}
-#case-indicator {
-	spacing:    0;
-	text-color: @foreground;
-}
-#entry {
-    padding: 6px;
-    margin: 14px 0px 0px 2.5px;
-	text-color: @cya;
-}
-#prompt {
-    border-radius: 3px;
-    padding: 12px;
-	text-color: @grn;
-}
-#textbox-prompt-colon {
-	expand:     false;
-	str:        ":";
-	margin:     0px 0.3em 0em 0em;
-	text-color: @grn;
-}
-#element-icon {
-    size: 25px;
-}
-#mode-switcher {
-    spacing: 0;
-}
+@theme ".config/rofi/app_menu.rasi"
