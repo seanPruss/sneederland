@@ -34,8 +34,8 @@ configuration {
 /*****----- change active / selected -----*****/
 * {
     font:                        "JetBrains Mono Nerd Font 13";
-    background:                  #19172480;
-    background-alt:              #19172480;
+    background:                  #1917248f;
+    background-alt:              #1917248f;
     foreground:                  #e0def4;
     selected:                    #c4a7e7;
     active:                      #c4a7e7;
