@@ -6,7 +6,11 @@ update-wallpaper() {
 	swww img --transition-type any "$WALLPAPER"
 }
 
-while true; do
+if [[ -z $1 ]]; then
+	while true; do
+		update-wallpaper
+		sleep 900
+	done
+else
 	update-wallpaper
-	sleep 900
-done
+fi
