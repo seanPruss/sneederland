@@ -114,8 +114,8 @@
   "hyprland/window": {
     "separate-outputs": true,
   },
+
   "custom/notification": {
-    "tooltip": false,
     "format": " {}",
     "return-type": "json",
     "exec-if": "which swaync-client",
