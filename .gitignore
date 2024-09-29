@@ -3,4 +3,4 @@ config-files/btop/btop.log
 config-files/btop/btop.log.1
 config-files/systemd/user/*.wants
 install.log
-yay
+yay-bin
