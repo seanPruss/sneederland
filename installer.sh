@@ -270,8 +270,8 @@ echo -e "\e[1A\e[K$COK - Mirrorlist updated."
 #### Check for package manager ####
 if [ -z "$(which yay)" ]; then
 	echo -en "$CNT - Installing yay."
-	git clone https://aur.archlinux.org/yay.git &>>$INSTLOG
-	cd yay || exit
+	git clone https://aur.archlinux.org/yay-bin.git &>>$INSTLOG
+	cd yay-bin || exit
 	makepkg -si --noconfirm &>>$INSTLOG &
 	show_progress $!
 	sleep 2
