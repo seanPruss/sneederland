@@ -119,17 +119,6 @@ alias vim="nvim"
 alias lzg='lazygit'
 alias btw="clear && toilet -f ivrit 'I use Arch btw' | lolcat"
 
-yz() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-    pwd
-}
-zle -N yz
-
 # zellij aliases
 alias zlnew='zellij --session'
 alias zla='zellij attach'
@@ -177,6 +166,25 @@ autoload -U compinit
 compinit
 _comp_options+=(globdots)
 
+# plugins
+source /usr/share/zsh/plugins/zsh-autoswitch-virtualenv/zsh-autoswitch-virtualenv.plugin.zsh
+source /usr/share/zsh/plugins/zsh-autopair/autopair.zsh
+source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
+source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
+source /usr/share/zsh/plugins/zsh-auto-notify/auto-notify.plugin.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
+yz() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+         builtin cd "$cwd"
+    fi
+    rm -f -- "$tmp"
+}
+
 # vi mode
 bindkey -v
 export KEYTIMEOUT=1
@@ -200,16 +208,6 @@ zle -N zle-line-init
 echo -ne '\e[5q'
 preexec() { echo -ne '\e[5 q' ;}
 
-# plugins
-source /usr/share/zsh/plugins/zsh-autoswitch-virtualenv/zsh-autoswitch-virtualenv.plugin.zsh
-source /usr/share/zsh/plugins/zsh-autopair/autopair.zsh
-source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
-source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
-source /usr/share/zsh/plugins/zsh-auto-notify/auto-notify.plugin.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-
 # Completion options
 zstyle ':completion:*' matcher_list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
@@ -218,7 +216,7 @@ zstyle ':fzf-tab:complete:nvim:*' fzf-preview 'bat -n --color=always $realpath'
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --tree --git-ignore --color=always --icons=auto $realpath'
 
 # commands I don't want notifications for
-AUTO_NOTIFY_IGNORE+=("lazygit" "crontab -e" "zellij" "cmatrix" "sudoedit" "git log" "cd" "cava" "yz")
+AUTO_NOTIFY_IGNORE+=("lazygit" "crontab -e" "zellij" "sudoedit" "git" "cd" "yz")
 
 if [[ -f /etc/bash.command-not-found ]]; then
     . /etc/bash.command-not-found
@@ -227,6 +225,5 @@ fi
 bindkey "^f" autosuggest-execute
 bindkey "^k" history-substring-search-up
 bindkey "^j" history-substring-search-down
-bindkey "^y" yz
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/sonicboom_dark.omp.toml)"

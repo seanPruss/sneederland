@@ -73,7 +73,7 @@ install_stage=(
 	rofi-wayland
 	wlogout
 	xdg-desktop-portal-hyprland
-	swappy-git
+	swappy
 	grim-git
 	slurp
 	btop

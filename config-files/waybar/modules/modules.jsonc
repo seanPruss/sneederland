@@ -102,16 +102,16 @@
   },
 
   "wlr/taskbar": {
-    "format": "{icon} {name}",
     "icon-size": 24,
     "icon-theme": "BeautyLine",
-    "tooltip-format": "{title}",
+    "tooltip-format": "{name}",
     "on-click": "activate",
     "on-click-middle": "close",
-    "ignore-list": ["kitty-bg", "kitty-update", "kitty-install", "kitty-htop"],
+    "ignore-list": ["kitty-bg", "kitty-update", "kitty-install"],
   },
 
   "hyprland/window": {
+    "format": "{initialTitle}",
     "separate-outputs": true,
   },
 
