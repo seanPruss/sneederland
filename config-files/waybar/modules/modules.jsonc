@@ -77,14 +77,11 @@
     "spacing": 5,
   },
 
-  "custom/spotify": {
-    "format": " {} ",
+  "custom/media": {
+    "format": "󰝚 {} ",
     "exec": "~/.config/waybar/scripts/mediaplayer.sh",
     "return-type": "json",
-    "on-click": "playerctl -p spotify play-pause",
-    "on-scroll-up": "playerctl -p spotify next",
-    "on-scroll-down": "playerctl -p spotify previous",
-    "exec-if": "pgrep spotfiy",
+    "on-click": "playerctl play-pause",
   },
 
   "custom/weather": {

@@ -55,7 +55,7 @@ window#waybar {
 #workspaces button {
   border-radius: 20px;
   border: none;
-  color: rgba(49, 116, 143, 1);
+  color: rgba(224, 222, 244, 1);
   transition: all 0.4s ease-out;
 }
 
@@ -163,7 +163,7 @@ window#waybar {
 }
 
 #systray {
-  color: rgba(49, 116, 143, 1);
+  color: rgba(224, 222, 244, 1);
   padding: 0px 4px;
 }
 
