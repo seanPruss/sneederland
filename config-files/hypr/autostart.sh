@@ -7,7 +7,7 @@ hyprwinwrap-background() {
 }
 
 update-hyprpm() {
-	hyprpm update && hyprwinwrap-background
+	hyprpm update --no-shallow && hyprwinwrap-background
 }
 
 swaync &
