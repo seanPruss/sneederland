@@ -62,7 +62,7 @@ install_stage=(
 	vlc
 	composer
 	auto-cpufreq
-	rose-pine-hyprcursor
+	banana-cursor-bin
 	kitty
 	swaync
 	waybar
@@ -117,7 +117,6 @@ install_stage=(
 	toilet
 	toilet-fonts
 	rose-pine-gtk-theme
-	rose-pine-cursor
 	beautyline
 	libreoffice-fresh
 	thunderbird
