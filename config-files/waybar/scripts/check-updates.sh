@@ -3,6 +3,10 @@
 which yay &>/dev/null || exit 1
 which checkupdates &>/dev/null || exit 1
 
+while ! ping -c 1 archlinux.org &>/dev/null; do
+	true
+done
+
 NOTIFICATION_SENT=/tmp/update_notif
 OFFICIAL_UPDATES=$(checkupdates | wc -l)
 AUR_UPDATES=$(yay -Qua | wc -l)

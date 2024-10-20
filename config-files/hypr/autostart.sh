@@ -13,9 +13,10 @@ update-hyprpm() {
 swaync &
 waybar &
 swww-daemon &
-hyprctl setcursor rose-pine-hyprcursor 24
+pypr &
+hyprctl setcursor rose-pine-hyprcursor 28
 gsettings set org.gnome.desktop.interface cursor-theme BreezeX-RosePine-Linux
-gsettings set org.gnome.desktop.interface cursor-size 24
+gsettings set org.gnome.desktop.interface cursor-size 28
 hyprctl monitors | grep HDMI-A-1 && hyprctl dispatch workspace 2
 while ! ping -c 1 archlinux.org; do
 	true
