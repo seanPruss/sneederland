@@ -23,7 +23,7 @@ while ! ping -c 1 archlinux.org; do
 done
 update-hyprpm &
 tldr --update &
-hyprctl dispatch exec spotify
+hyprctl dispatch exec spotify-launcher
 hyprctl dispatch exec vesktop
 sleep 10
 hyprctl dispatch closewindow Spotify

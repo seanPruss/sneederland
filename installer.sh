@@ -80,10 +80,7 @@ install_stage=(
 	btop
 	zen-browser-bin
 	vesktop
-	spotify
-	spicetify-cli
-	spicetify-themes-git
-	spicetify-marketplace-bin
+	spotify-launcher
 	geoclue
 	gammastep
 	shellcheck
