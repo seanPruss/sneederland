@@ -71,6 +71,7 @@ install_stage=(
 	gimp
 	hyprlock
 	rofi-wayland
+	rofimoji
 	wlogout
 	xdg-desktop-portal-hyprland
 	swappy

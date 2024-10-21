@@ -9,11 +9,11 @@
     "tooltip-format": "{} updates available",
     "exec": "~/.config/waybar/scripts/check-updates.sh",
     "on-click": "pypr toggle update",
-    "interval": 30,
+    "interval": 3600,
   },
 
   "clock": {
-    "format": "󰥔 {:%H:%M %Y-%m-%d}",
+    "format": "󰥔 {:%H:%M 󰃭 %Y-%m-%d}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}",
   },

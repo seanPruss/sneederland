@@ -60,6 +60,11 @@
       "keyColor": "blue",
     },
     {
+      "type": "cursor",
+      "key": "├󰆿",
+      "keyColor": "blue",
+    },
+    {
       "type": "terminal",
       "key": "├",
       "keyColor": "blue",
