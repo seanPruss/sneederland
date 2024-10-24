@@ -9,7 +9,7 @@
     "tooltip-format": "{} updates available",
     "exec": "~/.config/waybar/scripts/check-updates.sh",
     "on-click": "pypr toggle update",
-    "interval": 3600,
+    "interval": 60,
   },
 
   "clock": {
