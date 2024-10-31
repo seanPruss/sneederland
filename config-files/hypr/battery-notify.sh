@@ -3,12 +3,13 @@
 # Battery percentage at which to notify
 WARNING_LEVEL=20
 CRITICAL_LEVEL=5
+CHARGED_LEVEL=98
 while true; do
 	BATTERY_DISCHARGING=$(acpi -b | grep "Battery 0" | grep -c "Discharging")
 	BATTERY_LEVEL=$(acpi -b | grep "Battery 0" | grep -P -o '[0-9]+(?=%)')
 
 	# If the battery is charging and is full (and has not shown notification yet)
-	if [ "$BATTERY_LEVEL" -gt 99 ] && [ "$BATTERY_DISCHARGING" -eq 0 ]; then
+	if [ "$BATTERY_LEVEL" -gt $CHARGED_LEVEL ] && [ "$BATTERY_DISCHARGING" -eq 0 ]; then
 		notify-send "Battery Charged" "Battery is fully charged." -u low -i gpm-battery-000-charging
 		# If the battery is low and is not charging (and has not shown notification yet)
 	elif [ "$BATTERY_LEVEL" -le $WARNING_LEVEL ] && [ "$BATTERY_DISCHARGING" -eq 1 ]; then

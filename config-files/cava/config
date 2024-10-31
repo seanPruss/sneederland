@@ -22,9 +22,9 @@
 
 # The number of bars (0-512). 0 sets it to auto (fill up console).
 # Bars' width and space between bars in number of characters.
-; bars = 0
-; bar_width = 2
-; bar_spacing = 1
+bars = 0
+bar_width = 1
+bar_spacing = 0
 # bar_height is only used for output in "noritake" format
 ; bar_height = 32
 
@@ -205,7 +205,7 @@
 ; disable_blanking = 0
 
 # show a flat bar at the bottom of the screen when idle, 1 = on, 0 = off
-; show_idle_bar_heads = 1
+show_idle_bar_heads = 0
 
 # show waveform instead of frequency spectrum, 1 = on, 0 = off
 ; waveform = 0
