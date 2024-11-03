@@ -50,6 +50,7 @@ install_stage=(
 	playerctl
 	man-db
 	man-pages
+	kanata-bin
 	fd
 	bat
 	git-delta
@@ -77,7 +78,7 @@ install_stage=(
 	swappy
 	grim-git
 	slurp
-	htop
+	htim
 	zen-browser-bin
 	vesktop
 	spotify-launcher
@@ -136,12 +137,12 @@ install_stage=(
 	archlinux-themes-sddm
 )
 
-config_files=(
+home_dir_links=(
 	.zshenv
 	.gitconfig
 )
 
-config_dirs=(
+dotconfig_links=(
 	bat
 	cava
 	fastfetch
@@ -149,6 +150,7 @@ config_dirs=(
 	gtk-3.0
 	gtk-4.0
 	hypr
+	kanata
 	kitty
 	nvim
 	nwg-look
@@ -325,12 +327,12 @@ done
 
 # copy my configs
 echo -e "$CNT Copying config files (dw I'm backing up your configs)"
-for file in ${config_files[@]}; do
+for file in ${home_dir_links[@]}; do
 	backup_and_link_home $file
 done
 
 [[ -e ~/.config.bak ]] && rm -rf ~/.config.bak
-for dir in ${config_dirs[@]}; do
+for dir in ${dotconfig_links[@]}; do
 	backup_and_link_conf $dir
 done
 
@@ -351,6 +353,10 @@ echo -e "$CNT - Enabling the screen lock Service..."
 sudo cp $CONFIG_DIR/suspend@.service /etc/systemd/system
 sudo systemctl enable suspend@$USER.service &>>$INSTLOG
 
+sudo cp $CONFIG_DIR/kanata.service /etc/systemd/system
+sudo cp $CONFIG_DIR/config.kbd /etc
+sudo systemctl enable kanata.service &>>$INSTLOG
+
 # Clean out other portals
 echo -e "$CNT - Cleaning out conflicting xdg portals..."
 yay -Q xdg-desktop-portal-gnome &>/dev/null && yay -R --noconfirm xdg-desktop-portal-gnome &>>$INSTLOG
@@ -370,10 +376,6 @@ fi
 
 # Build theme cache for bat
 bat cache --build &>>$INSTLOG
-
-# Need this for spicetify to work. I'm not sure if I wanna put the spicetify commands in the script
-sudo chmod -R 777 /opt/spotify &>>$INSTLOG
-sudo chmod -R 777 /usr/share/spicetify-cli &>>$INSTLOG
 
 # Set up tldr
 tldr --update &>>$INSTLOG

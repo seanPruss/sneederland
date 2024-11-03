@@ -1,0 +1,13 @@
+[Unit]
+Description=Kanata keyboard remapper
+Documentation=https://github.com/jtroo/kanata
+
+[Service]
+Environment=PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:$HOME/.cargo/bin
+Environment=WAYLAND_DISPLAY=wayland-1 XDG_RUNTIME_DIR=/run/user/1000 DISPLAY=:1
+Type=simple
+ExecStart=/usr/bin/sh -c 'exec $$(which kanata) --cfg /etc/config.kbd'
+Restart=no
+
+[Install]
+WantedBy=default.target
