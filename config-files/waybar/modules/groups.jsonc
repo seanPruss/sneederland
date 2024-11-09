@@ -5,6 +5,13 @@
   },
   "group/hardware-info": {
     "orientation": "horizontal",
-    "modules": ["battery", "cpu", "memory", "backlight", "custom/power"],
+    "modules": [
+      "power-profiles-daemon",
+      "battery",
+      "cpu",
+      "memory",
+      "backlight",
+      "custom/power",
+    ],
   },
 }

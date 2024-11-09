@@ -18,5 +18,5 @@ while true; do
 	elif [ "$BATTERY_LEVEL" -le $CRITICAL_LEVEL ] && [ "$BATTERY_DISCHARGING" -eq 1 ]; then
 		notify-send "Battery Critical" "The computer will shutdown soon." -u critical -i notification-battery-low
 	fi
-	sleep 5
+	sleep 10
 done

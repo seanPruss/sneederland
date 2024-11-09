@@ -67,6 +67,7 @@ install_stage=(
 	kitty
 	swaync
 	waybar
+	power-profiles-daemon
 	wttrbar
 	imagemagick
 	gimp
@@ -105,7 +106,6 @@ install_stage=(
 	poppler
 	bash-zsh-insulter
 	fastfetch
-	onefetch
 	zellij
 	ripgrep
 	neovim

@@ -9,7 +9,7 @@
     "tooltip-format": "{} updates available",
     "exec": "~/.config/waybar/scripts/check-updates.sh",
     "on-click": "pypr toggle update",
-    "interval": 60,
+    "interval": 180,
   },
 
   "clock": {
@@ -28,6 +28,18 @@
     "format-plugged": "{capacity}% ",
     "format-alt": "{time} {icon}",
     "format-icons": ["", "", "", "", ""],
+  },
+
+  "power-profiles-daemon": {
+    "format": "{icon} {profile} ",
+    "tooltip-format": "Power profile: {profile}nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": "",
+    },
   },
 
   "custom/power": {

@@ -33,6 +33,7 @@ iris = '#c4a7e7'
 
 [character]
 format = "[󰁔 ](fg:iris)"
+
 [directory]
 format = "[](fg:overlay)[ $path ]($style)[](fg:overlay)"
 style = "bg:overlay fg:pine"
