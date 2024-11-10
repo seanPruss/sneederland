@@ -17,6 +17,7 @@ set -Ux FZF_ALT_C_OPTS "--preview 'eza --tree --color=always {} | head -200'"
 set -Ux FZF_DEFAULT_COMMAND "fd --hidden --strip-cwd-prefix --exclude .git"
 set -Ux FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
 set -Ux FZF_ALT_C_COMMAND "fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+set -U FZF_COMPLETE 3
 fzf --fish | source
 
 function starship_transient_prompt_func
