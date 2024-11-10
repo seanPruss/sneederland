@@ -88,6 +88,8 @@ install_stage=(
 	shellcheck
 	fzf
 	tealdeer
+	fish
+	thefuck
 	zsh
 	zsh-auto-notify
 	zsh-fast-syntax-highlighting-git
@@ -146,6 +148,7 @@ dotconfig_links=(
 	bat
 	cava
 	fastfetch
+	fish
 	fontconfig
 	gtk-3.0
 	gtk-4.0
@@ -381,7 +384,7 @@ bat cache --build &>>$INSTLOG
 tldr --update &>>$INSTLOG
 
 # set up zsh
-chsh -s "$(which zsh)"
+chsh -s "$(which fish)"
 
 ### Install software for Asus ROG laptops ###
 read -rep $'[\e[1;33mACTION\e[0m] - For ASUS ROG Laptops - Would you like to install Asus ROG software support? (y,n) ' ROG
