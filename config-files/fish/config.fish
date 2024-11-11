@@ -1,4 +1,3 @@
-# fastfetch
 fish_config theme choose "Rosé Pine"
 zoxide init fish | source
 set fish_greeting
@@ -15,9 +14,12 @@ set -Ux FZF_DEFAULT_OPTS "
 set -Ux FZF_CTRL_T_OPTS "--preview 'bat -n --color=always --line-range :500 {}'"
 set -Ux FZF_ALT_C_OPTS "--preview 'eza --tree --color=always {} | head -200'"
 set -Ux FZF_DEFAULT_COMMAND "fd --hidden --strip-cwd-prefix --exclude .git"
+set -Ux FZF_FIND_FILE_COMMAND "fd --hidden --strip-cwd-prefix --exclude .git"
 set -Ux FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
 set -Ux FZF_ALT_C_COMMAND "fd --type=d --hidden --strip-cwd-prefix --exclude .git"
 set -U FZF_COMPLETE 3
+set -U FZF_PREVIEW_DIR_CMD "eza --tree --color=always"
+set -U FZF_PREVIEW_FILE_CMD "bat -n --color=always --line-range :500"
 fzf --fish | source
 
 function starship_transient_prompt_func
