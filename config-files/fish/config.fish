@@ -39,13 +39,14 @@ alias mkdir='mkdir -pv'
 
 # Fun stuff
 abbr -a ff "clear && fastfetch"
-abbr -a btw "clear && toilet -f ivrit 'I use arch btw' | lolcat"
+abbr -a btw "clear && toilet -f ivrit 'I use Arch btw' | lolcat"
 
 # Package manager aliases
 abbr -a y yay
 abbr -a fp flatpak
 
 # Git aliases
+abbr -a lzg lazygit
 abbr -a gp 'git push'
 abbr -a gc 'git commit -m'
 abbr -a gco 'git checkout'
