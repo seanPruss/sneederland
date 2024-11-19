@@ -1,13 +1,7 @@
 #!/bin/bash
 
-hyprwinwrap-background() {
-	kitty -c "$HOME/.config/kitty/kittyconfigbg.conf" --class="kitty-bg" "$HOME/.config/hypr/pipes-rs.sh" &
-	kitty -c "$HOME/.config/kitty/kittyconfigbg.conf" --class="kitty-bg" "$HOME/.config/hypr/cmatrix.sh" &
-	kitty -c "$HOME/.config/kitty/kittyconfigbg.conf" --class="kitty-bg" "$HOME/.config/hypr/cava.sh" &
-}
-
 update-hyprpm() {
-	hyprpm update --no-shallow && hyprwinwrap-background
+	hyprpm update --no-shallow && kitty -c "$HOME/.config/kitty/kittyconfigbg.conf" --class="kitty-bg" "$HOME/.config/hypr/cava.sh" &
 }
 
 swaync &
