@@ -21,7 +21,7 @@ prep_stage=(
 	qt5-quickcontrols2
 	qt5-graphicaleffects
 	gtk3
-	polkit-gnome
+	hyprpolkitagent-git
 	pipewire
 	wireplumber
 	jq
