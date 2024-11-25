@@ -36,10 +36,13 @@ bind \eh prevd-or-backward-word
 alias ls="eza -A --icons=auto --group-directories-first"
 alias tree='eza --tree --git-ignore'
 alias mkdir='mkdir -pv'
+abbr -a cls "clear && ls"
+abbr -a cll "clear && ll"
 
 # Fun stuff
 abbr -a ff "clear && fastfetch"
 abbr -a btw "clear && toilet -f ivrit 'I use Arch btw' | lolcat"
+abbr -a bwt "clear && toilet -f ivrit 'I use Arch btw' | lolcat"
 
 # Package manager aliases
 abbr -a y yay
@@ -97,7 +100,6 @@ abbr -a mirrora "sudo reflector --latest 50 --number 20 --sort age --save /etc/p
 abbr -a cim vim
 abbr -a sl ls
 abbr -a xs cd
-abbr -a bwt btw
 
 starship init fish | source
 enable_transience

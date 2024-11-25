@@ -30,7 +30,7 @@ window#waybar {
 
 @keyframes blink-workspace {
   to {
-    color: rgba(224, 222, 244, 0.7);
+    color: rgba(25, 23, 36, 0.7);
     font-weight: 800;
   }
 }
@@ -38,10 +38,9 @@ window#waybar {
 #workspaces,
 #taskbar,
 #window {
-  color: rgba(224, 222, 244, 1);
   margin-right: 10px;
   border-radius: 20px;
-  background-color: rgba(25, 23, 36, 0.75);
+  background-color: rgba(25, 23, 36, 0.7);
   transition: all 0.4s ease-out;
 }
 
@@ -55,14 +54,14 @@ window#waybar {
 #workspaces button {
   border-radius: 20px;
   border: none;
-  color: rgba(224, 222, 244, 1);
+  color: rgba(196, 167, 231, 1);
   transition: all 0.4s ease-out;
 }
 
 #taskbar button.active,
 #workspaces button.active {
-  background-color: rgba(49, 116, 143, 0.7);
-  color: rgba(224, 222, 244, 1);
+  background-color: rgba(196, 167, 231, 0.7);
+  color: rgba(25, 23, 36, 1);
   animation-name: blink-workspace;
   animation-duration: 0.5s;
   animation-timing-function: steps(12);

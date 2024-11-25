@@ -69,7 +69,7 @@
   },
 
   "backlight": {
-    "format": "{percent}% {icon}",
+    "format": " {percent}% {icon}",
     "format-icons": ["", "", "", "", "", "", "", "", ""],
   },
 
@@ -79,7 +79,7 @@
   },
 
   "memory": {
-    "format": "{}%  ",
+    "format": " {}%  ",
     "on-click": "kitty --class=\"kitty-htop\" \"htop\"",
   },
 
