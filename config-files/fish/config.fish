@@ -21,6 +21,8 @@ set -U FZF_COMPLETE 3
 set -U FZF_PREVIEW_DIR_CMD "eza --tree --color=always"
 set -U FZF_PREVIEW_FILE_CMD "bat -n --color=always --line-range :500"
 fzf --fish | source
+starship init fish | source
+enable_transience
 
 function starship_transient_prompt_func
     starship module character
@@ -100,6 +102,3 @@ abbr -a mirrora "sudo reflector --latest 50 --number 20 --sort age --save /etc/p
 abbr -a cim vim
 abbr -a sl ls
 abbr -a xs cd
-
-starship init fish | source
-enable_transience
