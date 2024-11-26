@@ -10,6 +10,8 @@ keybinds {
         unbind "Alt h"
         unbind "Ctrl g"
         unbind "Ctrl q"
+        unbind "Ctrl p"
+        unbind "Ctrl n"
         unbind "Alt j"
         unbind "Alt k"
         unbind "Alt l"
