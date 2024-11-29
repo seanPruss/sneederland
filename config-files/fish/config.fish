@@ -20,6 +20,7 @@ set -Ux FZF_ALT_C_COMMAND "fd --type=d --hidden --strip-cwd-prefix --exclude .gi
 set -U FZF_COMPLETE 3
 set -U FZF_PREVIEW_DIR_CMD "eza --tree --color=always"
 set -U FZF_PREVIEW_FILE_CMD "bat -n --color=always --line-range :500"
+set -Ux MANPAGER 'nvim +Man!'
 fzf --fish | source
 starship init fish | source
 enable_transience

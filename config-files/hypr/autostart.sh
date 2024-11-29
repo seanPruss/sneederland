@@ -1,7 +1,7 @@
 #!/bin/bash
 
 update-hyprpm() {
-	hyprpm update --no-shallow && kitty -c "$HOME/.config/kitty/kittyconfigbg.conf" --class="kitty-bg" "$HOME/.config/hypr/cava.sh" &
+	hyprpm update --no-shallow
 }
 
 swaync &

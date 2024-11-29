@@ -22,6 +22,7 @@ SETUVAR --export LESS_TERMCAP_se:\x1b\x28B\x1b\x5bm
 SETUVAR --export LESS_TERMCAP_so:\x1b\x5b7m\x1b\x5b38\x3b2\x3b240\x3b203\x3b2m
 SETUVAR --export LESS_TERMCAP_ue:\x1b\x28B\x1b\x5bm
 SETUVAR --export LESS_TERMCAP_us:\x1b\x5b4m\x1b\x5b38\x3b2\x3b91\x3b165\x3b2m
+SETUVAR --export MANPAGER:nvim\x20\x2bMan\x21
 SETUVAR --export TERMINAL:kitty
 SETUVAR __fish_initialized:3400
 SETUVAR _fisher_upgraded_to_4_4:\x1d

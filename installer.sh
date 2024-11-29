@@ -56,7 +56,6 @@ install_stage=(
 	git-delta
 	rust
 	jdk-openjdk
-	cava
 	npm
 	vlc
 	composer
@@ -64,7 +63,7 @@ install_stage=(
 	banana-cursor-bin
 	kitty
 	swaync
-	waybar
+	waybar-cava
 	power-profiles-daemon
 	wttrbar
 	imagemagick
