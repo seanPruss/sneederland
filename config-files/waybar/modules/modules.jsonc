@@ -133,11 +133,10 @@
 		"escape": true
 	},
 	"cava": {
-		// "cava_config": "$HOME/.config/cava/config",
 		"framerate": 60,
 		"autosens": 1,
 		"sensitivity": 1,
-		"bars": 30,
+		"bars": 18,
 		"lower_cutoff_freq": 20,
 		"higher_cutoff_freq": 20000,
 		"method": "pipewire",

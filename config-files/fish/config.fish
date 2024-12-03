@@ -42,14 +42,16 @@ alias mkdir='mkdir -pv'
 abbr -a cls "clear && ls"
 abbr -a cll "clear && ll"
 
+# Type less letters
+abbr -a v vim
+abbr -a y yay
+abbr -a fp flatpak
+abbr -a sd sudo
+
 # Fun stuff
 abbr -a ff "clear && fastfetch"
 abbr -a btw "clear && toilet -f ivrit 'I use Arch btw' | lolcat"
 abbr -a bwt "clear && toilet -f ivrit 'I use Arch btw' | lolcat"
-
-# Package manager aliases
-abbr -a y yay
-abbr -a fp flatpak
 
 # Git aliases
 abbr -a lzg lazygit
@@ -100,6 +102,5 @@ abbr -a mirrors "sudo reflector --latest 50 --number 20 --sort score --save /etc
 abbr -a mirrora "sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
 # typo aliases
-abbr -a cim vim
 abbr -a sl ls
 abbr -a xs cd
