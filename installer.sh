@@ -105,6 +105,7 @@ install_stage=(
 	poppler
 	bash-zsh-insulter
 	fastfetch
+	shell-color-scripts-git
 	zellij
 	ripgrep
 	neovim

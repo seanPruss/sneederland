@@ -19,7 +19,7 @@ set -Ux FZF_PREVIEW_DIR_CMD "eza --tree --color=always"
 set -Ux FZF_PREVIEW_FILE_CMD "bat -n --color=always --line-range :500"
 set -Ux MANPAGER 'nvim +Man!'
 if status is-interactive
-    fastfetch
+    $HOME/.config/fish/randomlogo.sh
     fish_config theme choose "Rosé Pine"
     zoxide init fish | source
     set fish_greeting
