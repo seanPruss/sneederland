@@ -15,7 +15,7 @@ set -Ux FZF_FIND_FILE_COMMAND "fd --hidden --strip-cwd-prefix --exclude .git"
 set -Ux FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
 set -Ux FZF_ALT_C_COMMAND "fd --type=d --hidden --strip-cwd-prefix --exclude .git"
 set -Ux FZF_COMPLETE 3
-set -Ux FZF_PREVIEW_DIR_CMD "eza --tree --color=always"
+set -Ux FZF_PREVIEW_DIR_CMD "eza -A --tree --color=always --git-ignore --group-directories-first"
 set -Ux FZF_PREVIEW_FILE_CMD "bat -n --color=always --line-range :500"
 set -Ux MANPAGER 'nvim +Man!'
 if status is-interactive
@@ -36,8 +36,9 @@ if status is-interactive
     bind \eh prevd-or-backward-word
 
     # Aliases for builtins
+    abbr -a c 'clear && $HOME/.config/fish/randomlogo.sh'
     alias ls="eza -A --icons=auto --group-directories-first"
-    alias tree='eza --tree --git-ignore'
+    alias tree='eza -A --tree --git-ignore --group-directories-first'
     alias mkdir='mkdir -pv'
     abbr -a cls "clear && ls"
     abbr -a cll "clear && ll"
@@ -47,11 +48,6 @@ if status is-interactive
     abbr -a y yay
     abbr -a fp flatpak
     abbr -a sd sudo
-
-    # Fun stuff
-    abbr -a ff "clear && fastfetch"
-    abbr -a btw "clear && toilet -f ivrit 'I use Arch btw' | lolcat"
-    abbr -a bwt "clear && toilet -f ivrit 'I use Arch btw' | lolcat"
 
     # Git aliases
     abbr -a lzg lazygit

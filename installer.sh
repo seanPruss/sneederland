@@ -112,7 +112,6 @@ install_stage=(
 	lazygit
 	zoxide
 	eza
-	rust-lolcat-git
 	toilet
 	toilet-fonts
 	rose-pine-gtk-theme
@@ -260,7 +259,6 @@ if [[ $WIFI == "Y" || $WIFI == "y" ]]; then
 	echo -e "\e[1A\e[K$COK - NetworkManager restart completed."
 fi
 
-sudo pacman -Syyu --noconfirm &>>$INSTLOG
 sudo pacman -S reflector --needed --noconfirm &>>$INSTLOG || exit
 echo -e "$CNT - Updating mirrorlist"
 sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist &>>$INSTLOG || exit
