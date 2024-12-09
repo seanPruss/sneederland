@@ -16,3 +16,8 @@ class = "kitty-update"
 size = "70% 70%"
 position = "15% 15%"
 lazy = true
+
+[scratchpads.thunderbird]
+animation = "fromTop"
+command = 'thunderbird'
+class = "thunderbird"

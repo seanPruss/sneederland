@@ -115,7 +115,7 @@
 		"tooltip-format": "{name}",
 		"on-click": "activate",
 		"on-click-middle": "close",
-		"ignore-list": ["kitty-bg", "kitty-update", "kitty-install"]
+		"ignore-list": ["kitty-bg", "kitty-update", "kitty-install", "thunderbird"]
 	},
 
 	"hyprland/window": {
