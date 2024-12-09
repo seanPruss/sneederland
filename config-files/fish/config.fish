@@ -11,7 +11,7 @@ set -Ux FZF_DEFAULT_OPTS "
 set -Ux FZF_CTRL_T_OPTS "--preview 'bat -n --color=always --line-range :500 {}'"
 set -Ux FZF_ALT_C_OPTS "--preview 'eza --tree --color=always {} | head -200'"
 set -Ux FZF_DEFAULT_COMMAND "fd --hidden --strip-cwd-prefix --exclude .git"
-set -Ux FZF_FIND_FILE_COMMAND "fd --hidden --strip-cwd-prefix --exclude .git"
+set -Ux FZF_FIND_FILE_COMMAND "fd --type=f --hidden --strip-cwd-prefix --exclude .git"
 set -Ux FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
 set -Ux FZF_ALT_C_COMMAND "fd --type=d --hidden --strip-cwd-prefix --exclude .git"
 set -Ux FZF_COMPLETE 3
@@ -40,6 +40,7 @@ if status is-interactive
     alias ls="eza -A --icons=auto --group-directories-first"
     alias tree='eza -A --tree --git-ignore --group-directories-first'
     alias mkdir='mkdir -pv'
+    alias fd='fd --hidden'
     abbr -a cls "clear && ls"
     abbr -a cll "clear && ll"
 

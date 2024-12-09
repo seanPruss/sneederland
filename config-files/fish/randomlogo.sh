@@ -7,7 +7,7 @@ if [ $rand -eq 0 ]; then
 elif [ $rand -eq 1 ]; then
 	colorscript random
 elif [ $rand -eq 2 ]; then
-	toilet -t -f doom -F metal 'I use Arch btw'
+	toilet -t -f mono9 -F rainbow 'I use Arch btw'
 else
-	toilet -t -f doom -F metal 'The Sneed Machine'
+	toilet -t -f mono9 -F rainbow 'The Sneed Machine'
 fi

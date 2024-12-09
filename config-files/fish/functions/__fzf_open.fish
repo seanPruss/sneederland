@@ -1,9 +1,9 @@
 function __fzf_open -d "Open files and directories."
     function __fzf_open_get_open_cmd -d "Find appropriate open command."
         if type -q xdg-open
-            echo "xdg-open"
+            echo xdg-open
         else if type -q open
-            echo "open"
+            echo open
         end
     end
 
@@ -17,14 +17,14 @@ function __fzf_open -d "Open files and directories."
             functions -e argparse # deletes itself
         end
         if contains -- --editor $argv; or contains -- -e $argv
-            set _flag_editor "yes"
+            set _flag_editor yes
         end
         if contains -- --preview $argv; or contains -- -p $argv
-            set _flag_preview "yes"
+            set _flag_preview yes
         end
     end
 
-    set -l options "e/editor" "p/preview=?"
+    set -l options e/editor "p/preview=?"
     argparse $options -- $argv
 
     set -l preview_cmd
@@ -33,11 +33,7 @@ function __fzf_open -d "Open files and directories."
     end
 
     set -q FZF_OPEN_COMMAND
-    or set -l FZF_OPEN_COMMAND "
-    command find -L \$dir -mindepth 1 \\( -path \$dir'*/\\.*' -o -fstype 'sysfs' -o -fstype 'devfs' -o -fstype 'devtmpfs' \\) -prune \
-    -o -type f -print \
-    -o -type d -print \
-    -o -type l -print 2> /dev/null | sed 's@^\./@@'"
+    or set -l FZF_OPEN_COMMAND "fd --hidden --strip-cwd-prefix --exclude .git"
 
     set -l select (eval "$FZF_OPEN_COMMAND | "(__fzfcmd) $preview_cmd "-m $FZF_DEFAULT_OPTS $FZF_OPEN_OPTS --query \"$fzf_query\"" | string escape)
 
