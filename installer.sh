@@ -80,7 +80,6 @@ install_stage=(
 	zen-browser-bin
 	vesktop
 	spotify-launcher
-	geoclue
 	gammastep
 	shellcheck
 	fzf
