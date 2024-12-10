@@ -1,11 +1,10 @@
-
 [Unit]
 Description=Gammastep display colour temperature adjustment
 Documentation=https://gitlab.com/chinstrap/gammastep
 After=display-manager.service
 
 [Service]
-ExecStart=/usr/bin/gammastep -t 6500:1200
+ExecStart=/usr/bin/gammastep-script.sh
 Restart=always
 
 [Install]

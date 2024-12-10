@@ -295,6 +295,7 @@ fi
 
 sudo cp $CONFIG_DIR/cleancache.hook /usr/share/libalpm/hooks
 sudo cp $CONFIG_DIR/clearcache /usr/share/libalpm/scripts
+sudo cp $CONFIG_DIR/systemd/user/gammastep-script.sh /usr/bin
 # Prep Stage - Bunch of needed items
 echo -e "$CNT - Prep Stage - Installing needed components, this may take a while..."
 for SOFTWR in ${prep_stage[@]}; do
