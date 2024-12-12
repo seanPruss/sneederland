@@ -62,14 +62,13 @@
 			"keyColor": "blue"
 		},
 		{
-			"type": "terminal",
-			"key": "├",
+			"type": "font",
+			"key": "├",
 			"keyColor": "blue"
 		},
-
 		{
-			"type": "terminalfont",
-			"key": "└",
+			"type": "terminal",
+			"key": "└",
 			"keyColor": "blue"
 		},
 

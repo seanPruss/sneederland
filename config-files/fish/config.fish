@@ -25,14 +25,6 @@ if status is-interactive
     set fish_greeting
     fzf --fish | source
 
-    function starship_transient_prompt_func
-        starship module character
-    end
-
-    function starship_transient_rprompt_func
-        starship module time
-    end
-
     bind \eh prevd-or-backward-word
 
     # Aliases for builtins
@@ -49,6 +41,10 @@ if status is-interactive
     abbr -a y yay
     abbr -a fp flatpak
     abbr -a sd sudo
+    abbr -a .. "cd .."
+    abbr -a .2 "cd ../.."
+    abbr -a .3 "cd ../../.."
+    abbr -a .4 "cd ../../../.."
 
     # Git aliases
     abbr -a lzg lazygit
@@ -101,6 +97,13 @@ if status is-interactive
     # typo aliases
     abbr -a sl ls
     abbr -a xs cd
+
+    function starship_transient_prompt_func
+        starship module character
+    end
+    function starship_transient_rprompt_func
+        starship module time
+    end
     starship init fish | source
     enable_transience
 end
