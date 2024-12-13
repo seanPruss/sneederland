@@ -86,15 +86,6 @@ install_stage=(
 	tealdeer
 	fish
 	thefuck
-	zsh
-	zsh-auto-notify
-	zsh-fast-syntax-highlighting-git
-	zsh-autoswitch-virtualenv-git
-	fzf-tab-git
-	zsh-autosuggestions-git
-	zsh-history-substring-search-git
-	zsh-you-should-use
-	zsh-autopair-git
 	trash-cli
 	starship
 	yazi
@@ -102,10 +93,9 @@ install_stage=(
 	ffmpegthumbnailer
 	unarchiver
 	poppler
-	bash-zsh-insulter
 	fastfetch
 	shell-color-scripts-git
-	zellij
+	tmux
 	ripgrep
 	neovim
 	lazygit
@@ -136,8 +126,8 @@ install_stage=(
 )
 
 home_dir_links=(
-	.zshenv
 	.gitconfig
+	.tmux.conf
 )
 
 dotconfig_links=(
@@ -162,8 +152,6 @@ dotconfig_links=(
 	xfce4
 	xsettingsd
 	yazi
-	zellij
-	zsh
 )
 
 # set some colors
@@ -376,10 +364,13 @@ fi
 # Build theme cache for bat
 bat cache --build &>>$INSTLOG
 
+# Set up tpm for tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # Set up tldr
 tldr --update &>>$INSTLOG
 
-# set up zsh
+# set up fish
 chsh -s "$(which fish)"
 
 ### Install software for Asus ROG laptops ###
