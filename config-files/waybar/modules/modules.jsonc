@@ -89,7 +89,7 @@
 	},
 
 	"custom/media": {
-		"format": " 󰝚 {} ",
+		"format": "  {} ",
 		"exec": "~/.config/waybar/scripts/mediaplayer.sh",
 		"return-type": "json",
 		"on-click": "playerctl play-pause"
