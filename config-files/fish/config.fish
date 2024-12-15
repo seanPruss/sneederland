@@ -82,12 +82,6 @@ if status is-interactive
     abbr -a gnext 'git log --ancestry-path --format=%H ${commit}..master | tail -1 | xargs git checkout'
     abbr -a gprev 'git checkout HEAD^'
 
-    # Zellij aliases
-    abbr -a zla "zellij attach"
-    abbr -a zls "zellij ls"
-    abbr -a zlnew "zellij --session"
-    abbr -a zldelete "zellij delete-session --force"
-
     # update mirrors
     abbr -a mirror "sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
     abbr -a mirrord "sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"

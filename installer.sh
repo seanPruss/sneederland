@@ -96,6 +96,7 @@ install_stage=(
 	fastfetch
 	shell-color-scripts-git
 	tmux
+	sesh-bin
 	ripgrep
 	neovim
 	lazygit
