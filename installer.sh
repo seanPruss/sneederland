@@ -69,8 +69,7 @@ install_stage=(
 	imagemagick
 	gimp
 	hyprlock
-	rofi-wayland
-	rofimoji
+	tofi
 	wlogout
 	xdg-desktop-portal-hyprland
 	swappy
@@ -145,7 +144,7 @@ dotconfig_links=(
 	nvim
 	nwg-look
 	starship.toml
-	rofi
+	tofi
 	swaync
 	systemd
 	waybar
