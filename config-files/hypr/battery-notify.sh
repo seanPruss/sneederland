@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Battery percentage at which to notify
 WARNING_LEVEL=20

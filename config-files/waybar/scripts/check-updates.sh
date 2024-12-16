@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 which yay &>/dev/null || exit 1
 which checkupdates &>/dev/null || exit 1

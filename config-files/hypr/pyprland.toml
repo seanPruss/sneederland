@@ -1,5 +1,5 @@
 [pyprland]
-plugins = ["scratchpads"]
+plugins = ["scratchpads", "wallpapers"]
 
 [scratchpads.update]
 animation = "fromTop"
@@ -13,3 +13,11 @@ lazy = true
 animation = "fromTop"
 command = 'thunderbird'
 class = "thunderbird"
+
+[wallpapers]
+interval = 15
+extensions = ["png", "jpg", "jpeg", "webp", "JPG"]
+path = '~/.config/hypr/wallpapers/'
+recurse = true
+command = '~/.config/hypr/change-wallpaper.sh "[file]"'
+clear_command = 'swww clear'

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # HyprV4 By SolDoesTech - https://www.youtube.com/@SolDoesTech
 # License..? - You may copy, edit and ditribute this script any way you like, enjoy! :)

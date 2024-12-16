@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 while true; do
 	spotify_status=$(playerctl -p spotify status 2>/dev/null)

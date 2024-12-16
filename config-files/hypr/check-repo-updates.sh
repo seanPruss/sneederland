@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Navigate to the local Git repository
 REPO_DIR="$(fd -td sneederland -a $HOME)"

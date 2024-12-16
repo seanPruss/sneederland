@@ -3,10 +3,10 @@
 CHOSEN=$(printf "Lock\nSuspend\nReboot\nShutdown\nLog Out" | tofi --config "$HOME"/.config/tofi/powermenu-config)
 
 case "$CHOSEN" in
-"Lock") lockscreen ;;
+"Lock") hyprlock ;;
 "Suspend") systemctl suspend ;;
-"Reboot") reboot ;;
-"Shutdown") poweroff ;;
+"Reboot") systemctl reboot ;;
+"Shutdown") systemctl poweroff ;;
 "Log Out") hyprctl dispatch exit ;;
 *) exit 1 ;;
 esac

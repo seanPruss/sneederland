@@ -1,10 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 waybar &
 swaync &
 swww-daemon &
 pypr &
-hyprctl setcursor "Banana" 38
 gsettings set org.gnome.desktop.interface cursor-theme "Banana"
 gsettings set org.gnome.desktop.interface cursor-size 38
 hyprctl monitors | grep HDMI-A-1 && hyprctl dispatch workspace 2
