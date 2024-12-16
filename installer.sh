@@ -70,7 +70,6 @@ install_stage=(
 	gimp
 	hyprlock
 	tofi
-	wlogout
 	xdg-desktop-portal-hyprland
 	swappy
 	grim-git
@@ -148,7 +147,6 @@ dotconfig_links=(
 	swaync
 	systemd
 	waybar
-	wlogout
 	xfce4
 	xsettingsd
 	yazi
