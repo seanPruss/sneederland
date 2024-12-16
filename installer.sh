@@ -78,6 +78,7 @@ install_stage=(
 	gimp
 	hyprlock
 	tofi
+	rofimoji
 	xdg-desktop-portal-hyprland
 	swappy
 	grim-git
