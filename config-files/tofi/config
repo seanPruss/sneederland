@@ -1,7 +1,11 @@
-# Font
-font = Ubuntu Nerd Font
-font-size = 18
-
+# ▄▄▄▄▄▄▄▄               ▄▄▄▄      ██
+# ▀▀▀██▀▀▀              ██▀▀▀      ▀▀
+#    ██      ▄████▄   ███████    ████
+#    ██     ██▀  ▀██    ██         ██
+#    ██     ██    ██    ██         ██
+#    ██     ▀██▄▄██▀    ██      ▄▄▄██▄▄▄
+#    ▀▀       ▀▀▀▀      ▀▀      ▀▀▀▀▀▀▀▀
+#
 # Window Style
 anchor = top
 width = 100%
@@ -15,11 +19,12 @@ padding-bottom = 0
 padding-left = 35%
 padding-right = 0
 num-results = 5
-prompt-text = "Applications: "
+prompt-text = "󰀻 "
 
 background-color = #1917248f
 text-color = #e0def4
 input-color = #c4a7e7
+prompt-color = #eb6f92
 selection-color = #1f1d2e
 selection-background-corner-radius = 10
 selection-background-padding = 10, 16
