@@ -58,7 +58,7 @@
 	},
 
 	"pulseaudio": {
-		"format": "{icon} {volume}% ",
+		"format": " {icon} {volume}% ",
 		"format-bluetooth": "{icon}  {volume}%",
 		"format-bluetooth-muted": " {icon}  ",
 		"format-muted": " ",
@@ -98,7 +98,7 @@
 	},
 
 	"custom/media": {
-		"format": "  {} ",
+		"format": "  {}",
 		"exec": "~/.config/waybar/scripts/mediaplayer.sh",
 		"return-type": "json",
 		"on-click": "playerctl play-pause"

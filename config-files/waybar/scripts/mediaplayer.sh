@@ -9,7 +9,7 @@ while true; do
 		title=$(playerctl -p spotify metadata title | sed 's/&/&amp;/g')
 		echo '{"text": "'"$artist - $title"'", "class": "custom-media", "alt": "Media"}'
 	else
-		echo '{"text": "Paused", "class": "custom-media", "alt": "Media (Paused)"}'
+		echo ''
 	fi
 	sleep 3
 done
