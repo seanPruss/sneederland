@@ -54,15 +54,15 @@
 	"custom/power": {
 		"format": "&#x23FB;",
 		"tooltip": true,
-		"on-click": "wlogout"
+		"on-click": "~/.config/tofi/powermenu.sh"
 	},
 
 	"pulseaudio": {
 		"format": " {icon} {volume}% ",
-		"format-bluetooth": "{icon}  {volume}%",
-		"format-bluetooth-muted": " {icon}  ",
-		"format-muted": " ",
-		"format-source": " {volume}%",
+		"format-bluetooth": " {icon}  {volume}%",
+		"format-bluetooth-muted": "  {icon}  ",
+		"format-muted": "  ",
+		"format-source": "  {volume}%",
 		"format-source-muted": "",
 		"format-icons": {
 			"headphone": "",

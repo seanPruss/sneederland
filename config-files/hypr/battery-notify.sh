@@ -3,7 +3,7 @@
 # Battery percentage at which to notify
 WARNING_LEVEL=20
 CRITICAL_LEVEL=5
-CHARGED_LEVEL=98
+CHARGED_LEVEL=99
 while true; do
 	BATTERY_DISCHARGING=$(acpi -b | grep "Battery 0" | grep -c "Discharging")
 	BATTERY_LEVEL=$(acpi -b | grep "Battery 0" | grep -P -o '[0-9]+(?=%)')
