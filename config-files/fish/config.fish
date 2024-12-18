@@ -42,6 +42,7 @@ if status is-interactive
     alias mkdir='mkdir -pv'
     alias fd='fd --hidden'
     alias grep='grep -Ir --color=auto'
+    alias vim='nvim'
     abbr -a cls "clear && ls"
     abbr -a cll "clear && ll"
 

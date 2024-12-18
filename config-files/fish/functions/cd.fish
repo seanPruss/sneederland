@@ -2,7 +2,7 @@ function cd
     if test (count $argv) -eq 0
         z $argv
     else
-        zi $argv &>>/dev/null || z $argv
+        zi $argv || z $argv
     end
-    eza -A --icons=auto --group-directories-first
+    ls
 end

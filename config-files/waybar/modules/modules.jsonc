@@ -54,6 +54,7 @@
 	"custom/power": {
 		"format": "&#x23FB;",
 		"tooltip": true,
+		"tooltip-format": "Power Menu",
 		"on-click": "~/.config/tofi/powermenu.sh"
 	},
 
@@ -115,7 +116,7 @@
 	"custom/launcher": {
 		"format": "󰀻",
 		"on-click": "tofi-drun | xargs hyprctl dispatch exec --",
-		"tooltip-format": "Keybindings:\nSUPER+HJKL: Navigate windows\nSUPER+1-9: Navigate workspaces\nSUPER+Q: Close window\nSUPER+M: Logout menu\nSUPER+T: Launch terminal\nSUPER+B: Launch browser\nSUPER+D: Launch Discord\nSUPER+S: Launch Spotify\nSUPER+E: Launch Thunderbird\nSUPER+N: Show notifications\nSUPER+V: Launch volume control\nSUPER+I: Install a package\nSUPER+U: Update packages\nSUPER+TAB: App launcher\nSUPER+P: Play/pause Spotify\nSUPER+W: Cycle wallpaper\nSUPER+SHIFT+1-9: Move window to workspace\nSUPER+SHIFT+L: Lock screen\nSUPER+SHIFT+S: Take a screenshot\nSUPER+SHIFT+H: Launch htop\nALT+V: Launch cliphist\nALT+W: Wipe cliphist cache"
+		"tooltip-format": "Keybindings:\nSUPER+HJKL: Navigate windows\nSUPER+1-9: Navigate workspaces\nSUPER+Q: Close window\nSUPER+M: Logout menu\nSUPER+T: Launch terminal\nSUPER+B: Launch browser\nSUPER+D: Launch Discord\nSUPER+S: Launch Spotify\nSUPER+E: Launch Thunderbird\nSUPER+N: Show notifications\nSUPER+V: Launch volume control\nSUPER+I: Install a package\nSUPER+U: Update packages\nSUPER+TAB or SUPER+SPACE: App launcher\nSUPER+P: Play/pause Spotify\nSUPER+W: Cycle wallpaper\nSUPER+SHIFT+1-9: Move window to workspace\nSUPER+SHIFT+L: Lock screen\nSUPER+SHIFT+S: Take a screenshot\nSUPER+SHIFT+H: Launch htop\nALT+V: Launch cliphist\nALT+W: Wipe cliphist cache"
 	},
 
 	"wlr/taskbar": {
