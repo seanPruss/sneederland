@@ -27,7 +27,7 @@ set -Ux FZF_PREVIEW_DIR_CMD "eza -A --tree --color=always --git-ignore --group-d
 set -Ux FZF_PREVIEW_FILE_CMD "bat -n --color=always --line-range :500"
 set -Ux MANPAGER 'nvim +Man!'
 if status is-interactive
-    $HOME/.config/fish/randomlogo.sh
+    $HOME/.local/bin/randomlogo.sh
     fish_config theme choose "Rosé Pine"
     zoxide init fish | source
     set fish_greeting
@@ -36,7 +36,7 @@ if status is-interactive
     bind \eh prevd-or-backward-word
 
     # Aliases for builtins
-    abbr -a c 'clear && $HOME/.config/fish/randomlogo.sh'
+    abbr -a c 'clear && $HOME/.local/bin/randomlogo.sh'
     alias ls="eza -A --icons=auto --group-directories-first"
     alias tree='eza -A --tree --git-ignore --group-directories-first'
     alias mkdir='mkdir -pv'
