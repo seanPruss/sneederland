@@ -184,17 +184,6 @@ show_progress() {
 	sleep 1
 }
 
-backup_and_link_home() {
-	[[ -e ~/$1 ]] && mv ~/"$1" ~/"$1".bak
-	ln -sf "$CONFIG_DIR/$1" ~/"$1" && echo -e "$COK linked $1" || echo -e "$CER failed to link $1"
-}
-
-backup_and_link_conf() {
-	[[ -e ~/.config.bak ]] || mkdir ~/.config.bak
-	[[ -e ~/.config/$1 ]] && mv ~/.config/"$1" ~/.config.bak/"$1"
-	ln -sf "$CONFIG_DIR/$1" ~/.config/"$1" && echo -e "$COK linked $1 config" || echo -e "$CER failed to link $1 config"
-}
-
 # clear the screen
 clear
 
@@ -320,16 +309,7 @@ for SOFTWR in ${install_stage[@]}; do
 	yay -S --needed --noconfirm $SOFTWR || exit
 done
 
-# copy my configs
-echo -e "$CNT Copying config files (dw I'm backing up your configs)"
-for file in ${home_dir_links[@]}; do
-	backup_and_link_home $file
-done
-
-[[ -e ~/.config.bak ]] && rm -rf ~/.config.bak
-for dir in ${dotconfig_links[@]}; do
-	backup_and_link_conf $dir
-done
+stow --target=$HOME --adopt $CONFIG_DIR
 
 # Start the bluetooth service
 echo -e "$CNT - Starting the Bluetooth Service..."
