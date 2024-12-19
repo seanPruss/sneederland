@@ -21,6 +21,7 @@ CONFIG_DIR=$REPO_DIR/config-files
 # Define the software that would be inbstalled
 #Need some prep work
 prep_stage=(
+	stow
 	qt5-wayland
 	qt5ct
 	qt6-wayland
@@ -287,9 +288,9 @@ else
 	echo -e "\e[1A\e[K$COK - System updated."
 fi
 
-sudo cp $CONFIG_DIR/cleancache.hook /usr/share/libalpm/hooks
-sudo cp $CONFIG_DIR/clearcache /usr/share/libalpm/scripts
-sudo cp $CONFIG_DIR/systemd/user/gammastep-script.sh /usr/bin
+sudo cp $REPO_DIR/cleancache.hook /usr/share/libalpm/hooks
+sudo cp $REPO_DIR/clearcache /usr/share/libalpm/scripts
+sudo cp $REPO_DIR/gammastep-script.sh /usr/bin
 # Prep Stage - Bunch of needed items
 echo -e "$CNT - Prep Stage - Installing needed components, this may take a while..."
 for SOFTWR in ${prep_stage[@]}; do
@@ -344,11 +345,11 @@ sudo systemctl enable auto-cpufreq &>>$INSTLOG
 
 # Enable screen lock service
 echo -e "$CNT - Enabling the screen lock Service..."
-sudo cp $CONFIG_DIR/suspend@.service /etc/systemd/system
+sudo cp $REPO_DIR/suspend@.service /etc/systemd/system
 sudo systemctl enable suspend@$USER.service &>>$INSTLOG
 
-sudo cp $CONFIG_DIR/kanata.service /etc/systemd/system
-sudo cp $CONFIG_DIR/config.kbd /etc
+sudo cp $REPO_DIR/kanata.service /etc/systemd/system
+sudo cp $REPO_DIR/config.kbd /etc
 sudo systemctl enable kanata.service &>>$INSTLOG
 
 # Clean out other portals

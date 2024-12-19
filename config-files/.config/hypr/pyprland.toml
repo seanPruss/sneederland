@@ -12,7 +12,7 @@ plugins = ["scratchpads", "wallpapers"]
 
 [scratchpads.update]
 animation = "fromTop"
-command = 'kitty --class="kitty-update" "$HOME/.config/hypr/update.sh"'
+command = 'kitty --class="kitty-update" "$HOME/.local/bin/update.sh"'
 class = "kitty-update"
 size = "70% 70%"
 position = "15% 15%"
@@ -26,7 +26,7 @@ class = "thunderbird"
 [wallpapers]
 interval = 15
 extensions = ["png", "jpg", "jpeg", "webp", "JPG"]
-path = '~/.config/hypr/wallpapers/'
+path = '~/Pictures/wallpapers/'
 recurse = true
-command = '~/.config/hypr/change-wallpaper.sh "[file]"'
+command = '~/.local/bin/change-wallpaper.sh "[file]"'
 clear_command = 'swww clear'
