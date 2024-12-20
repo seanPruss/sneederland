@@ -369,9 +369,5 @@ if [[ "$ISNVIDIA" == true ]]; then
 	exit 0
 fi
 
-read -rep $'[\e[1;33mACTION\e[0m] - Would you like to start Hyprland now? (y,n) ' HYP
-if [[ $HYP == "Y" || $HYP == "y" ]]; then
-	exec sudo systemctl start sddm &>>$INSTLOG
-else
-	exit 0
-fi
+echo -e "$CNT - run git status and if there are changes, remove the changes with lazygit then reboot"
+exit 0
