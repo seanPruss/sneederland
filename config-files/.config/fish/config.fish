@@ -42,7 +42,6 @@ if status is-interactive
     alias tree='eza -A --tree --git-ignore --group-directories-first'
     alias mkdir='mkdir -pv'
     alias fd='fd --hidden'
-    alias grep='grep -Ir --color=auto'
     alias vim='nvim'
     abbr -a cls "clear && ls"
     abbr -a cll "clear && ll"

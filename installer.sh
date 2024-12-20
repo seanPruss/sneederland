@@ -300,10 +300,6 @@ echo -e "$CNT - Enabling the screen lock Service..."
 sudo cp $REPO_DIR/suspend@.service /etc/systemd/system
 sudo systemctl enable suspend@$USER.service &>>$INSTLOG
 
-sudo cp $REPO_DIR/kanata.service /etc/systemd/system
-sudo cp $REPO_DIR/config.kbd /etc
-sudo systemctl enable kanata.service &>>$INSTLOG
-
 # Clean out other portals
 echo -e "$CNT - Cleaning out conflicting xdg portals..."
 yay -Q xdg-desktop-portal-gnome &>/dev/null && yay -R --noconfirm xdg-desktop-portal-gnome &>>$INSTLOG
@@ -368,6 +364,12 @@ if [[ "$ISNVIDIA" == true ]]; then
     Please type 'reboot' at the prompt and hit Enter when ready."
 	exit 0
 fi
+
+echo -e "$CNT - If you are using a laptop, consider using the kanata service to remap your laptop keyboard for easier access to modifier keys. Just run these commands after ensuring that the device specified in config.kbd is the correct one:
+sudo cp $REPO_DIR/kanata.service /etc/systemd/system
+sudo cp $REPO_DIR/config.kbd /etc
+sudo systemctl enable kanata.service &>>$INSTLOG
+"
 
 echo -e "$CNT - run git status and if there are changes, remove the changes with lazygit then reboot"
 exit 0

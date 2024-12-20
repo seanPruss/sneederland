@@ -1,6 +1,7 @@
 ;; defsrc is still necessary
 (defcfg
   process-unmapped-keys yes
+  linux-dev /dev/input/event4
 )
 
 (defsrc
