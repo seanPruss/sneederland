@@ -16,7 +16,7 @@
 	"custom/updates": {
 		"format": " {}",
 		"tooltip-format": "{} updates available",
-		"exec": "~/.local/bin/check-updates.sh",
+		"exec": "check-updates.sh",
 		"on-click": "pypr toggle update",
 		"interval": 180
 	},
@@ -100,7 +100,7 @@
 
 	"custom/media": {
 		"format": "  {}",
-		"exec": "~/.local/bin/mediaplayer.sh",
+		"exec": "mediaplayer.sh",
 		"return-type": "json",
 		"on-click": "playerctl play-pause"
 	},

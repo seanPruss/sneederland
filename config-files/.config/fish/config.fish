@@ -6,6 +6,7 @@
 # ██        ▄▄▄██▄▄▄  █▄▄▄▄▄██  ██    ██  ██    ██   ██▄▄▄▄█
 # ▀▀        ▀▀▀▀▀▀▀▀   ▀▀▀▀▀▀   ▀▀    ▀▀  ▀▀    ▀▀▀    ▀▀▀▀
 
+set -Ux fish_user_paths $HOME/.local/bin $fish_user_paths
 set -Ux TERMINAL kitty
 set -Ux BROWSER zen-browser
 set -Ux EDITOR nvim

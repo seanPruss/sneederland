@@ -134,34 +134,6 @@ install_stage=(
 	archlinux-themes-sddm
 )
 
-home_dir_links=(
-	.gitconfig
-	.tmux.conf
-)
-
-dotconfig_links=(
-	bat
-	cava
-	fastfetch
-	fish
-	fontconfig
-	gtk-3.0
-	gtk-4.0
-	hypr
-	kanata
-	kitty
-	nvim
-	nwg-look
-	starship.toml
-	tofi
-	swaync
-	systemd
-	waybar
-	xfce4
-	xsettingsd
-	yazi
-)
-
 # set some colors
 CNT="[\e[1;36mNOTE\e[0m]"
 COK="[\e[1;32mOK\e[0m]"
