@@ -31,6 +31,7 @@ prep_stage=(
 	qt5-graphicaleffects
 	gtk3
 	hyprpolkitagent-git
+	hyprland-qtutils
 	pipewire
 	wireplumber
 	jq
@@ -132,6 +133,17 @@ install_stage=(
 	nwg-look
 	sddm-git
 	archlinux-themes-sddm
+	catppuccin-sddm-theme-mocha
+	chili-sddm-theme
+	sddm-archlinux-theme-git
+	sddm-theme-abstractdark-git
+	sddm-theme-corners-git
+	sddm-theme-mnmlst
+	sddm-theme-mountain-git
+	sddm-theme-tokyo-night-git
+	simple-sddm-theme-2-git
+	simple-sddm-theme-git
+	win11-sddm-theme
 )
 
 # set some colors
@@ -308,7 +320,9 @@ yay -Q xdg-desktop-portal-gtk &>/dev/null && yay -R xdg-desktop-portal-gtk &>>$I
 # Set up sddm
 echo -e "$CNT - Setting up the login screen."
 [[ -d /etc/sddm.conf.d ]] || sudo mkdir /etc/sddm.conf.d
-[[ -f /etc/sddm.conf.d/10-theme.conf ]] || echo -e "[Theme]\nCurrent=archlinux-simplyblack" | sudo tee -a /etc/sddm.conf.d/10-theme.conf &>>$INSTLOG
+sudo cp $REPO_DIR/random-sddm-theme.service /etc/systemd/system
+sudo cp $REPO_DIR/random-sddm-theme.sh /usr/bin
+sudo systemctl enable random-sddm-theme.service
 WLDIR=/usr/share/wayland-sessions
 if [ -d "$WLDIR" ]; then
 	echo -e "$COK - $WLDIR found"

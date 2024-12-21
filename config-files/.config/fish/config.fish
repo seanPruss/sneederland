@@ -34,7 +34,8 @@ if status is-interactive
     set fish_greeting
     fzf --fish | source
 
-    bind \eh prevd-or-backward-word
+    bind \eb prevd-or-backward-word
+    bind \ef nextd-or-forward-word
 
     # Aliases for builtins
     abbr -a c 'clear && $HOME/.local/bin/randomlogo.sh'

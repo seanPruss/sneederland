@@ -1,0 +1,10 @@
+[Unit]
+Description=Set a random SDDM theme
+Before=sddm.service
+
+[Service]
+ExecStart=/usr/bin/random-sddm-theme.sh
+Type=oneshot
+
+[Install]
+WantedBy=multi-user.target
