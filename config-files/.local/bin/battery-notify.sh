@@ -10,7 +10,7 @@ while true; do
 
 	# If the battery is charging and is full (and has not shown notification yet)
 	if [ "$BATTERY_LEVEL" -gt $CHARGED_LEVEL ] && [ "$BATTERY_DISCHARGING" -eq 0 ]; then
-		notify-send "Battery Charged" "Battery is fully charged." -u low -i gpm-battery-000-charging
+		notify-send "Battery Charged" "Battery is fully charged." -u low -i gpm-battery-000-charging -r 9991
 		# If the battery is low and is not charging (and has not shown notification yet)
 	elif [ "$BATTERY_LEVEL" -le $WARNING_LEVEL ] && [ "$BATTERY_DISCHARGING" -eq 1 ]; then
 		notify-send "Low Battery" "${BATTERY_LEVEL}% of battery remaining." -u critical -i notification-battery-low -r 9991
