@@ -16,6 +16,6 @@ hyprpm update --no-shallow &
 tldr --update &
 hyprctl dispatch exec spotify-launcher
 hyprctl dispatch exec vesktop
-sleep 10
-hyprctl dispatch closewindow Spotify
-hyprctl dispatch closewindow vesktop
+sleep 4
+hyprctl dispatch killactive
+hyprctl dispatch killactive
