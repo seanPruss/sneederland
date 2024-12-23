@@ -30,7 +30,7 @@ prep_stage=(
 	qt5-quickcontrols2
 	qt5-graphicaleffects
 	gtk3
-	hyprpolkitagent-git
+	hyprpolkitagent
 	hyprland-qtutils
 	pipewire
 	wireplumber
@@ -83,7 +83,7 @@ install_stage=(
 	rofimoji
 	xdg-desktop-portal-hyprland
 	swappy
-	grim-git
+	grim
 	slurp
 	htim
 	zen-browser-bin
