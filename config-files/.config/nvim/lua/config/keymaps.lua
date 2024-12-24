@@ -31,6 +31,6 @@ set(
     { desc = "HTML boilerplate" }
 )
 set("n", "<C-s>", "<nop>")
-set({ "n", "v" }, "y", '"+y', { silent = true, noremap = true })
-set({ "n", "v" }, "Y", '"+Y', { silent = true, noremap = true })
+set({ "n", "v" }, "<leader>y", '"+y', { silent = true, noremap = true })
+set({ "n", "v" }, "<leader>Y", '"+Y', { silent = true, noremap = true })
 set({ "n", "v" }, "<leader>p", '"+p', { silent = true, noremap = true })
