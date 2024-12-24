@@ -22,6 +22,7 @@ CONFIG_DIR=$REPO_DIR/config-files
 #Need some prep work
 prep_stage=(
 	stow
+	plocate
 	qt5-wayland
 	qt5ct
 	qt6-wayland
@@ -330,6 +331,10 @@ else
 	echo -e "$CWR - $WLDIR NOT found, creating..."
 	sudo mkdir $WLDIR
 fi
+
+# Set up plocate
+echo -e "$CNT - Updating plocate database"
+sudo updatedb &>>$INSTLOG
 
 # Build theme cache for bat
 bat cache --build &>>$INSTLOG

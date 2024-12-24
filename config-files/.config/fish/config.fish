@@ -44,6 +44,7 @@ if status is-interactive
     alias mkdir='mkdir -pv'
     alias fd='fd --hidden'
     alias vim='nvim'
+    alias locate='plocate'
     abbr -a cls "clear && ls"
     abbr -a cll "clear && ll"
 
