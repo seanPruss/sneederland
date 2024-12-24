@@ -140,7 +140,6 @@ install_stage=(
 	sddm-theme-abstractdark-git
 	sddm-theme-corners-git
 	sddm-theme-mnmlst
-	sddm-theme-mountain-git
 	sddm-theme-tokyo-night-git
 	simple-sddm-theme-2-git
 	simple-sddm-theme-git

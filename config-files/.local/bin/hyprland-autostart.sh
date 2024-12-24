@@ -13,7 +13,7 @@ while ! ping -c 1 archlinux.org; do
 done
 
 hyprpm update --no-shallow &
-tldr --update &
+hyprctl dispatch exec -- tldr --update
 hyprctl dispatch exec spotify-launcher
 hyprctl dispatch exec vesktop
 sleep 8
