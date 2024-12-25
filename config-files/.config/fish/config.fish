@@ -27,6 +27,7 @@ set -Ux FZF_COMPLETE 3
 set -Ux FZF_PREVIEW_DIR_CMD "eza -A --tree --color=always --git-ignore --group-directories-first"
 set -Ux FZF_PREVIEW_FILE_CMD "bat -n --color=always --line-range :500"
 set -Ux MANPAGER 'nvim +Man!'
+tmux ls &>/dev/null || tmux new-session -d
 if status is-interactive
     randomlogo.sh
     fish_config theme choose "Rosé Pine"
