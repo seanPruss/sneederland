@@ -21,7 +21,6 @@ CONFIG_DIR=$REPO_DIR/config-files
 # Define the software that would be inbstalled
 #Need some prep work
 prep_stage=(
-	stow
 	plocate
 	qt5-wayland
 	qt5ct
@@ -227,7 +226,7 @@ if [[ $WIFI == "Y" || $WIFI == "y" ]]; then
 	echo -e "\e[1A\e[K$COK - NetworkManager restart completed."
 fi
 
-sudo pacman -S reflector --needed --noconfirm &>>$INSTLOG || exit
+sudo pacman -S reflector stow --needed --noconfirm &>>$INSTLOG || exit
 echo -e "$CNT - Updating mirrorlist"
 sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist &>>$INSTLOG || exit
 echo -e "\e[1A\e[K$COK - Mirrorlist updated."
