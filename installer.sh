@@ -56,6 +56,7 @@ nvidia_stage=(
 #the main packages
 install_stage=(
 	flatpak
+	ufw
 	swww
 	pyprland
 	playerctl
@@ -337,6 +338,14 @@ sudo updatedb &>>$INSTLOG
 
 # Build theme cache for bat
 bat cache --build &>>$INSTLOG
+
+# Set up ufw
+sudo ufw limit 22/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw enable
 
 # Set up tpm for tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
