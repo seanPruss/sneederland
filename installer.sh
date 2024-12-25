@@ -96,7 +96,6 @@ install_stage=(
 	fzf
 	tealdeer
 	fish
-	thefuck
 	trash-cli
 	starship
 	yazi
@@ -340,12 +339,12 @@ sudo updatedb &>>$INSTLOG
 bat cache --build &>>$INSTLOG
 
 # Set up ufw
-sudo ufw limit 22/tcp
-sudo ufw allow 80/tcp
-sudo ufw allow 443/tcp
-sudo ufw default deny incoming
-sudo ufw default allow outgoing
-sudo ufw enable
+sudo ufw limit 22/tcp &>>$INSTLOG
+sudo ufw allow 80/tcp &>>$INSTLOG
+sudo ufw allow 443/tcp &>>$INSTLOG
+sudo ufw default deny incoming &>>$INSTLOG
+sudo ufw default allow outgoing &>>$INSTLOG
+sudo ufw enable &>>$INSTLOG
 
 # Set up tpm for tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
