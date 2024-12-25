@@ -74,7 +74,7 @@ install_stage=(
 	banana-cursor-bin
 	kitty
 	swaync
-	waybar-cava
+	waybar
 	power-profiles-daemon
 	wttrbar
 	imagemagick
