@@ -264,6 +264,10 @@ fi
 sudo cp $REPO_DIR/cleancache.hook /usr/share/libalpm/hooks
 sudo cp $REPO_DIR/clearcache /usr/share/libalpm/scripts
 sudo cp $REPO_DIR/gammastep-script.sh /usr/bin
+
+# generate symlinks for dotfiles
+stow --target=$HOME $CONFIG_DIR
+
 # Prep Stage - Bunch of needed items
 echo -e "$CNT - Prep Stage - Installing needed components, this may take a while..."
 for SOFTWR in ${prep_stage[@]}; do
@@ -292,8 +296,6 @@ echo -e "$CNT - Installing main components, this may take a while..."
 for SOFTWR in ${install_stage[@]}; do
 	yay -S --needed --noconfirm $SOFTWR || exit
 done
-
-stow --target=$HOME --adopt $CONFIG_DIR
 
 # Start the bluetooth service
 echo -e "$CNT - Starting the Bluetooth Service..."
