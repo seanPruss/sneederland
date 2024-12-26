@@ -293,6 +293,7 @@ for SOFTWR in ${install_stage[@]}; do
 done
 
 # generate symlinks for dotfiles
+cd $REPO_DIR || exit
 stow --adopt --target=$HOME config-files
 
 # Start the bluetooth service
