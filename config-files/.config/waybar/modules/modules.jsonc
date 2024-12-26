@@ -75,12 +75,16 @@
 			"default": ["", "", ""]
 		},
 		"on-click": "pulsecontrol",
-		"on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+		"on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"on-scroll-up": "change-volume.sh up",
+		"on-scroll-down": "change-volume.sh down"
 	},
 
 	"backlight": {
 		"format": " {percent}% {icon}",
-		"format-icons": ["", "", "", "", "", "", "", "", ""]
+		"format-icons": ["", "", "", "", "", "", "", "", ""],
+		"on-scroll-up": "change-brightness.sh up",
+		"on-scroll-down": "change-brightness.sh down"
 	},
 
 	"cpu": {
