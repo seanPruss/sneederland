@@ -17,7 +17,6 @@
 
 # Env var for where the repo was cloned
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-CONFIG_DIR=$REPO_DIR/config-files
 # Define the software that would be inbstalled
 #Need some prep work
 prep_stage=(
@@ -290,11 +289,11 @@ yay -S --needed --noconfirm hyprland || exit
 # Stage 1 - main components
 echo -e "$CNT - Installing main components, this may take a while..."
 for SOFTWR in ${install_stage[@]}; do
-	yay -S --needed --noconfirm $SOFTWR
+	yay -S --needed --noconfirm $SOFTWR || exit
 done
 
 # generate symlinks for dotfiles
-stow --adopt --target=$HOME $CONFIG_DIR
+stow --adopt --target=$HOME config-files
 
 # Start the bluetooth service
 echo -e "$CNT - Starting the Bluetooth Service..."

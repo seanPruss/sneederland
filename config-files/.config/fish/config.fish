@@ -48,6 +48,8 @@ if status is-interactive
     alias locate='plocate'
     abbr -a cls "clear && ls"
     abbr -a cll "clear && ll"
+    abbr -a SS "sudo systemctl"
+    abbr -a se sudoedit
 
     # Type less letters
     abbr -a v vim
