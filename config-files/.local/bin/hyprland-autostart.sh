@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 hyprctl dispatch exec swww-daemon
-hyprctl dispatch exec swaync
+hyprctl dispatch exec dunst
 hyprctl dispatch exec waybar
 hyprctl dispatch exec pypr
 gsettings set org.gnome.desktop.interface cursor-theme "Banana"

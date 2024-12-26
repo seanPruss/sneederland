@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
 yay -Syyu --noconfirm
-notify-send "Yay Finished"
+dunstify "Yay Finished"
 flatpak update
-notify-send "Flatpak Finished"
+dunstify "Flatpak Finished"

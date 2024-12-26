@@ -21,6 +21,7 @@ CONFIG_DIR=$REPO_DIR/config-files
 # Define the software that would be inbstalled
 #Need some prep work
 prep_stage=(
+	stow
 	plocate
 	qt5-wayland
 	qt5ct
@@ -73,7 +74,7 @@ install_stage=(
 	auto-cpufreq
 	banana-cursor-bin
 	kitty
-	swaync
+	dunst
 	waybar
 	power-profiles-daemon
 	wttrbar
@@ -226,7 +227,7 @@ if [[ $WIFI == "Y" || $WIFI == "y" ]]; then
 	echo -e "\e[1A\e[K$COK - NetworkManager restart completed."
 fi
 
-sudo pacman -S reflector stow --needed --noconfirm &>>$INSTLOG || exit
+sudo pacman -S reflector --needed --noconfirm &>>$INSTLOG || exit
 echo -e "$CNT - Updating mirrorlist"
 sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist &>>$INSTLOG || exit
 echo -e "\e[1A\e[K$COK - Mirrorlist updated."
@@ -264,9 +265,6 @@ sudo cp $REPO_DIR/cleancache.hook /usr/share/libalpm/hooks
 sudo cp $REPO_DIR/clearcache /usr/share/libalpm/scripts
 sudo cp $REPO_DIR/gammastep-script.sh /usr/bin
 
-# generate symlinks for dotfiles
-stow --target=$HOME $CONFIG_DIR
-
 # Prep Stage - Bunch of needed items
 echo -e "$CNT - Prep Stage - Installing needed components, this may take a while..."
 for SOFTWR in ${prep_stage[@]}; do
@@ -295,6 +293,9 @@ echo -e "$CNT - Installing main components, this may take a while..."
 for SOFTWR in ${install_stage[@]}; do
 	yay -S --needed --noconfirm $SOFTWR || exit
 done
+
+# generate symlinks for dotfiles
+stow --adopt --target=$HOME $CONFIG_DIR
 
 # Start the bluetooth service
 echo -e "$CNT - Starting the Bluetooth Service..."
