@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
 yay -Syyu --noconfirm
-dunstify "Yay Finished"
+dunstify -u low "Yay Finished" "System packages are up to date"
 flatpak update
-dunstify "Flatpak Finished"
+dunstify -u low "Flatpak Finished" "Flatpaks are up to date"
