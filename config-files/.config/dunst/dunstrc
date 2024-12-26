@@ -30,7 +30,6 @@
     separator_height = 2
     padding = 15
     horizontal_padding = 15
-    frame_width = 0
     corner_radius = 10
     sort = yes
     idle_threshold = 120

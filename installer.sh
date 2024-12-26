@@ -263,7 +263,6 @@ fi
 
 sudo cp $REPO_DIR/cleancache.hook /usr/share/libalpm/hooks
 sudo cp $REPO_DIR/clearcache /usr/share/libalpm/scripts
-sudo cp $REPO_DIR/gammastep-script.sh /usr/bin
 
 # Prep Stage - Bunch of needed items
 echo -e "$CNT - Prep Stage - Installing needed components, this may take a while..."
