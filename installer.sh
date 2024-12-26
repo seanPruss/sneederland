@@ -290,7 +290,7 @@ yay -S --needed --noconfirm hyprland || exit
 # Stage 1 - main components
 echo -e "$CNT - Installing main components, this may take a while..."
 for SOFTWR in ${install_stage[@]}; do
-	yay -S --needed --noconfirm $SOFTWR || exit
+	yay -S --needed --noconfirm $SOFTWR
 done
 
 # generate symlinks for dotfiles
