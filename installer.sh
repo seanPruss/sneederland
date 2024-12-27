@@ -72,7 +72,7 @@ install_stage=(
 	composer
 	auto-cpufreq
 	banana-cursor-bin
-	ghostty-git
+	ghostty
 	dunst
 	waybar
 	power-profiles-daemon
