@@ -119,7 +119,7 @@ install_stage=(
 	thunderbird
 	mpv
 	pamixer
-	pulsecontrol-git
+	pavucontrol-compact-git
 	brightnessctl
 	bluez
 	bluez-utils
