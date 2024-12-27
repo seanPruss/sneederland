@@ -232,7 +232,7 @@ sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist
 echo -e "\e[1A\e[K$COK - Mirrorlist updated."
 
 #### Check for package manager ####
-if [ -z "$(which yay)" ]; then
+if ! which yay &>/dev/null; then
 	echo -en "$CNT - Installing yay."
 	git clone https://aur.archlinux.org/yay-bin.git &>>$INSTLOG
 	cd yay-bin || exit
@@ -348,13 +348,13 @@ sudo ufw default allow outgoing &>>$INSTLOG
 sudo ufw enable &>>$INSTLOG
 
 # Set up tpm for tmux
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &>>$INSTLOG
 
 # Set up tldr
 tldr --update &>>$INSTLOG
 
 # set up fish
-chsh -s "$(which fish)"
+chsh -s "$(which fish)" &>>$INSTLOG
 
 ### Install software for Asus ROG laptops ###
 read -rep $'[\e[1;33mACTION\e[0m] - For ASUS ROG Laptops - Would you like to install Asus ROG software support? (y,n) ' ROG
@@ -395,7 +395,7 @@ fi
 echo -e "$CNT - If you are using a laptop, consider using the kanata service to remap your laptop keyboard for easier access to modifier keys. Just run these commands after ensuring that the device specified in config.kbd is the correct one:
 sudo cp $REPO_DIR/kanata.service /etc/systemd/system
 sudo cp $REPO_DIR/config.kbd /etc
-sudo systemctl enable kanata.service &>>$INSTLOG
+sudo systemctl enable kanata.service
 "
 
 echo -e "$CNT - run git status and if there are changes, remove the changes with lazygit then reboot"
