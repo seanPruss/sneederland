@@ -20,6 +20,7 @@ REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # Define the software that would be inbstalled
 #Need some prep work
 prep_stage=(
+	wget
 	stow
 	plocate
 	qt5-wayland
