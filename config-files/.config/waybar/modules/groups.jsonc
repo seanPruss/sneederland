@@ -1,7 +1,7 @@
 {
 	"group/systray": {
 		"orientation": "horizontal",
-		"modules": ["cava", "custom/media", "pulseaudio", "tray"]
+		"modules": ["custom/media", "pulseaudio", "tray"]
 	},
 	"group/hardware-info": {
 		"orientation": "horizontal",
