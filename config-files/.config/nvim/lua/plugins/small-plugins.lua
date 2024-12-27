@@ -1,9 +1,4 @@
 return {
-    "LunarVim/bigfile.nvim",
-    event = "BufReadPre",
-    opts = {
-        filesize = 2,
-    },
     {
         "mbbill/undotree",
         keys = {
