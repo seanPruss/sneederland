@@ -129,8 +129,7 @@
 		"icon-theme": "BeautyLine",
 		"tooltip-format": "{name}",
 		"on-click": "activate",
-		"on-click-middle": "close",
-		"ignore-list": ["kitty-bg", "kitty-update", "kitty-install", "thunderbird"]
+		"on-click-middle": "close"
 	},
 
 	"hyprland/window": {
