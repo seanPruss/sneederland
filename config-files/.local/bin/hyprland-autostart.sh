@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-hyprctl dispatch exec gammastep
 hyprctl dispatch exec swww-daemon
 hyprctl dispatch exec dunst
 hyprctl dispatch exec battery-notify
