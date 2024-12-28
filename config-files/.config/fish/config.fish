@@ -7,9 +7,10 @@
 # ▀▀        ▀▀▀▀▀▀▀▀   ▀▀▀▀▀▀   ▀▀    ▀▀  ▀▀    ▀▀▀    ▀▀▀▀
 
 set -Ux fish_user_paths $HOME/.local/bin $fish_user_paths
-set -Ux TERMINAL kitty
+set -Ux TERMINAL ghostty
 set -Ux BROWSER zen-browser
 set -Ux EDITOR nvim
+set -Ux VISUAL nvim
 set -Ux BAT_THEME rose-pine
 set -Ux FZF_DEFAULT_OPTS "
 	--color=fg:#908caa,bg:#191724,hl:#ebbcba
