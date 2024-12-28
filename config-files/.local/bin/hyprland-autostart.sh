@@ -3,6 +3,7 @@
 hyprctl dispatch exec gammastep
 hyprctl dispatch exec swww-daemon
 hyprctl dispatch exec dunst
+hyprctl dispatch exec battery-notify
 hyprctl dispatch exec waybar
 hyprctl dispatch exec pypr
 gsettings set org.gnome.desktop.interface cursor-theme "Banana"

@@ -21,7 +21,7 @@
   s (tap-hold $tap-time $hold-time s lalt)
   d (tap-hold $tap-time $hold-time d lsft)
   f (tap-hold $tap-time $fast-hold-time f lctl)
-  j (tap-hold $tap-time $fasthold-time j rctl)
+  j (tap-hold $tap-time $fast-hold-time j rctl)
   k (tap-hold $tap-time $hold-time k rsft)
   l (tap-hold $tap-time $hold-time l ralt)
   ; (tap-hold $tap-time $slow-hold-time ; rmet)
