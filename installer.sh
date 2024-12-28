@@ -324,7 +324,7 @@ echo -e "$CNT - Setting up the login screen."
 [[ -d /etc/sddm.conf.d ]] || sudo mkdir /etc/sddm.conf.d
 sudo cp $REPO_DIR/random-sddm-theme.service /etc/systemd/system
 sudo cp $REPO_DIR/random-sddm-theme.sh /usr/bin
-sudo systemctl enable random-sddm-theme.service
+sudo systemctl enable random-sddm-theme.service &>>$INSTLOG
 WLDIR=/usr/share/wayland-sessions
 if [ -d "$WLDIR" ]; then
 	echo -e "$COK - $WLDIR found"
@@ -338,9 +338,11 @@ echo -e "$CNT - Updating plocate database"
 sudo updatedb &>>$INSTLOG
 
 # Build theme cache for bat
+echo -e "$CNT - Building Bat theme cache"
 bat cache --build &>>$INSTLOG
 
 # Set up ufw
+echo -e "$CNT - Setting up UFW"
 sudo ufw limit 22/tcp &>>$INSTLOG
 sudo ufw allow 80/tcp &>>$INSTLOG
 sudo ufw allow 443/tcp &>>$INSTLOG
@@ -349,12 +351,15 @@ sudo ufw default allow outgoing &>>$INSTLOG
 sudo ufw enable &>>$INSTLOG
 
 # Set up tpm for tmux
+echo -e "$CNT - Setting up tmux plugins"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &>>$INSTLOG
 
 # Set up tldr
+echo -e "$CNT - Setting up tldr"
 tldr --update &>>$INSTLOG
 
 # set up fish
+echo -e "$CNT - Changing your login shell. Please enter your password."
 chsh -s "$(which fish)" &>>$INSTLOG
 
 ### Install software for Asus ROG laptops ###
