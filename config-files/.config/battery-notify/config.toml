@@ -17,7 +17,7 @@ sleep_command = 'systemctl suspend'
 # is inadvertently disconnected at a desk.
 #
 # Set to 0 to disable.
-warn_on_mons_with_no_ac = 2
+warn_on_mons_with_no_ac = 0
 
 # If a bluetooth device is below this percentage, notify about low battery.
 # Note that you need to run bluetoothd with --experimental in order for it to

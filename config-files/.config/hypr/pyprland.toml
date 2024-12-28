@@ -12,8 +12,8 @@ plugins = ["scratchpads", "wallpapers"]
 
 [scratchpads.update]
 animation = "fromTop"
-command = 'ghostty -e update.sh'
-class = "com.mitchellh.ghostty"
+command = 'ghostty --class="ghostty.update" -e update.sh'
+class = "ghostty.update"
 size = "70% 70%"
 position = "15% 15%"
 lazy = true
