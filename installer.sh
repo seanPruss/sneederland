@@ -20,6 +20,7 @@ REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # Define the software that would be inbstalled
 #Need some prep work
 prep_stage=(
+	xdg-user-dirs
 	wget
 	stow
 	plocate
@@ -295,6 +296,7 @@ done
 
 # generate symlinks for dotfiles
 cd $REPO_DIR || exit
+xdg-user-dirs-update
 stow --adopt --target=$HOME config-files
 
 # Start the bluetooth service
