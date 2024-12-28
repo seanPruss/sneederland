@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-hyprctl dispatch exec swww-daemon
+hyprctl dispatch exec hyprpaper
 hyprctl dispatch exec dunst
 hyprctl dispatch exec battery-notify
 hyprctl dispatch exec waybar

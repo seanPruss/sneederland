@@ -58,7 +58,7 @@ nvidia_stage=(
 install_stage=(
 	flatpak
 	ufw
-	swww
+	hyprpaper
 	pyprland
 	playerctl
 	man-db
