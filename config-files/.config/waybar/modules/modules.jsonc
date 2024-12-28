@@ -89,12 +89,12 @@
 
 	"cpu": {
 		"format": " {}%  ",
-		"on-click": "kitty --class=\"kitty-htop\" \"htop\""
+		"on-click": "ghostty --class=\"ghostty.htop\" -e htop"
 	},
 
 	"memory": {
 		"format": " {}%  ",
-		"on-click": "kitty --class=\"kitty-htop\" \"htop\""
+		"on-click": "ghostty --class=\"ghostty.htop\" -e htop"
 	},
 
 	"tray": {
