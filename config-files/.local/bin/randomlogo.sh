@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 
-rand=$((RANDOM % 6))
+rand=$((RANDOM % 8))
 
 if [ $rand -eq 0 ] || [ $rand -eq 4 ]; then
 	fastfetch
 elif [ $rand -eq 1 ] || [ $rand -eq 5 ]; then
 	colorscript random
 elif [ $rand -eq 2 ]; then
-	toilet -t -f mono9 -F rainbow 'I use Arch btw'
+	toilet -t -f mono9 'I use Arch btw' | lolcat
 elif [ $rand -eq 3 ]; then
-	toilet -t -f mono9 -F rainbow 'The Sneed Machine'
+	toilet -t -f mono9 'The Sneed Machine' | lolcat
+else
+	fortune | cowsay -f $(cowsay -l | shuf -n 1) | lolcat
 fi

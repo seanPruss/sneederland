@@ -115,6 +115,9 @@ install_stage=(
 	eza
 	toilet
 	toilet-fonts
+	fortune-mod
+	cowsay
+	lolcat
 	rose-pine-gtk-theme
 	beautyline
 	libreoffice-fresh
