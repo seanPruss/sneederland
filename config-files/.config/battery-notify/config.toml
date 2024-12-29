@@ -1,5 +1,5 @@
 # How often to check battery status, in seconds.
-interval_secs = 30
+interval_secs = 10
 
 # At what percentage of battery capacity to notify about low battery.
 low_pct = 20

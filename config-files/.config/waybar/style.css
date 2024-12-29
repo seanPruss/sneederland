@@ -33,7 +33,8 @@ window#waybar {
   padding: 0px 8px;
   color: rgba(235, 111, 146, 1);
   border-radius: 20px;
-  background-color: rgba(25, 23, 36, 0.75);
+  border: 1px solid rgba(196, 167, 231, 1);
+  background-color: rgba(25, 23, 36, 0.5);
   margin-left: 10px;
 }
 
@@ -48,8 +49,9 @@ window#waybar {
 #taskbar,
 #window {
   margin-right: 10px;
+  border: 1px solid rgba(196, 167, 231, 1);
   border-radius: 20px;
-  background-color: rgba(25, 23, 36, 0.7);
+  background-color: rgba(25, 23, 36, 0.5);
   transition: all 0.4s ease-out;
 }
 
@@ -69,7 +71,7 @@ window#waybar {
 
 #taskbar button.active,
 #workspaces button.active {
-  background-color: rgba(196, 167, 231, 0.7);
+  background-color: rgba(196, 167, 231, 0.5);
   color: rgba(25, 23, 36, 1);
   animation-name: blink-workspace;
   animation-duration: 0.5s;
@@ -98,7 +100,7 @@ window#waybar {
 }
 
 #workspaces button.occupied {
-  background-color: rgba(235, 188, 186, 0.7);
+  background-color: rgba(235, 188, 186, 0.5);
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -112,10 +114,11 @@ window#waybar {
 }
 
 #clock {
+  border: 1px solid rgba(196, 167, 231, 1);
   margin-left: 10px;
   color: rgba(235, 188, 186, 1);
   border-radius: 20px;
-  background-color: rgba(25, 23, 36, 0.75);
+  background-color: rgba(25, 23, 36, 0.5);
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -201,9 +204,10 @@ window#waybar {
 
 #custom-launcher,
 #custom-updates {
+  border: 1px solid rgba(196, 167, 231, 1);
   margin-right: 10px;
   color: rgba(156, 207, 216, 1);
-  background-color: rgba(25, 23, 36, 0.75);
+  background-color: rgba(25, 23, 36, 0.5);
   border-radius: 20px;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -223,7 +227,7 @@ window#waybar {
 }
 
 #custom-notification {
-  background-color: rgba(25, 23, 36, 0.75);
+  background-color: rgba(25, 23, 36, 0.5);
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 20px;
@@ -231,9 +235,10 @@ window#waybar {
 }
 
 #custom-weather {
+  border: 1px solid rgba(196, 167, 231, 1);
   margin-left: 10px;
   color: rgba(156, 207, 216, 1);
-  background-color: rgba(25, 23, 36, 0.75);
+  background-color: rgba(25, 23, 36, 0.5);
   border-radius: 20px;
   padding: 0px 8px;
 }
