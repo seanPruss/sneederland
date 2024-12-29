@@ -24,3 +24,5 @@ term = xterm-256color
 confirm-close-surface = false
 mouse-hide-while-typing = true
 window-padding-color = background
+
+shell-integration-features = no-cursor,sudo,no-title

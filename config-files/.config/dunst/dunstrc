@@ -11,13 +11,15 @@
     font = Jetbrains Mono Nerd Font 19
 
     icon_theme = BeautyLine
+    icon_corner_radius = 20
     enable_recursive_icon_lookup = true
-    corner_radius = 2
+    corner_radius = 20
 
     background = "#26233a"
     foreground = "#e0def4"
     follow = mouse
-    offset = 48x48
+    origin = top-center
+    offset = (0, 48)
 
     progress_bar = true
     progress_bar_height = 10
@@ -49,35 +51,31 @@
     icon_position = left
     min_icon_size = 50
     max_icon_size = 60
-    icon_path = $HOME/.local/share/icons/dunst
     sticky_history = yes
     history_length = 20
     always_run_script = true
-    title = Dunst
-    class = Dunst
     ignore_dbusclose = false
     force_xwayland = false
-    force_xinerama = false
     mouse_left_click = do_action, close_current
     mouse_middle_click = do_action, close_current
     mouse_right_click = close_all
 
 [urgency_low]
-    background = "#26273d"
+    background = "#26273d80"
     highlight = "#31748f"
     frame_color = "#31748f"
     default_icon = "dialog-information"
     format = "<b><span foreground='#31748f'>%s</span></b>\n%b"
 
 [urgency_normal]
-    background = "#362e3c"
+    background = "#362e3c80"
     highlight = "#f6c177"
     frame_color = "#f6c177"
     default_icon = "dialog-warning"
     format = "<b><span foreground='#f6c177'>%s</span></b>\n%b"
 
 [urgency_critical]
-    background = "#35263d"
+    background = "#35263d80"
     highlight = "#eb6f92"
     frame_color = "#eb6f92"
     default_icon = "dialog-error"

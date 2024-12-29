@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 hyprctl dispatch exec hyprpaper
-hyprctl dispatch exec dunst
 hyprctl dispatch exec battery-notify
 hyprctl dispatch exec waybar
 hyprctl dispatch exec pypr
