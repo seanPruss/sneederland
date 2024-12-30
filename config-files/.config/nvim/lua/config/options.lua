@@ -25,4 +25,4 @@ opt.updatetime = 50
 
 opt.colorcolumn = "80"
 opt.clipboard = ""
-opt.cursorline = false
+opt.cursorcolumn = true

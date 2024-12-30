@@ -29,4 +29,3 @@ extensions = ["png", "jpg", "jpeg", "webp", "JPG"]
 path = '~/Pictures/wallpapers/'
 recurse = true
 command = 'change-wallpaper.sh "[file]"'
-clear_command = 'swww clear'
