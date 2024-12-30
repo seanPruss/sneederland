@@ -1,7 +1,27 @@
 # SneederLand
 
-This is a fork of [HyprV4](https://github.com/SolDoesTech/HyprV4) by [SolDoesTech](https://github.com/SolDoesTech)  
-with the install script modified to install all my packages.
+![Screenshot](./screenshot.png)
+
+A fork of [HyprV4](https://github.com/SolDoesTech/HyprV4) by [SolDoesTech](https://github.com/SolDoesTech)
+
+## Overview
+
+This is my dotfiles repo which includes a script that installs all needed  
+packages and links my configuration with GNU Stow. Feel free to copy the stuff  
+in this repo since I copied a lot of it mostly from [Eric Murphy](https://github.com/ericmurphyxyz).  
+You should also look at the docs for the packages if you wanna change anything.
+
+### Programs I use
+
+- Window manager: [Hyprland](https://wiki.hyprland.org)
+- Status bar: [Waybar](https://github.com/Alexays/waybar)
+- Notification daemon: [Dunst](https://github.com/dunst-project/dunst)
+- Terminal: [Ghostty](https://github.com/ghostty-org/ghostty)
+- Shell: [Fish](https://github.com/fish-shell/fish-shell)
+- Browser: [Zen Browser](https://zen-browser.app/)
+- Text editor: [Neovim](https://github.com/neovim/neovim)
+- File manager: [Yazi](https://github.com/sxyazi/yazi)
+  and a ton of other stuff
 
 ## Installation
 
