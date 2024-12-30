@@ -21,7 +21,8 @@ You should also look at the docs for the packages if you wanna change anything.
 - Browser: [Zen Browser](https://zen-browser.app/)
 - Text editor: [Neovim](https://github.com/neovim/neovim)
 - File manager: [Yazi](https://github.com/sxyazi/yazi)
-  and a ton of other stuff
+
+and a ton of other stuff
 
 ## Installation
 
