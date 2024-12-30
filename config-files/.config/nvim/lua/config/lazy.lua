@@ -43,7 +43,6 @@ require("lazy").setup({
         { import = "lazyvim.plugins.extras.editor.mini-move" },
         { import = "lazyvim.plugins.extras.editor.mini-diff" },
         { import = "lazyvim.plugins.extras.editor.refactoring" },
-        { import = "lazyvim.plugins.extras.editor.inc-rename" },
         { import = "lazyvim.plugins.extras.editor.fzf" },
         { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
         { import = "lazyvim.plugins.extras.util.dot" },
