@@ -13,11 +13,11 @@ set -Ux EDITOR nvim
 set -Ux VISUAL nvim
 set -Ux BAT_THEME rose-pine
 set -Ux FZF_DEFAULT_OPTS "
-	--color=fg:#908caa,bg:#191724,hl:#ebbcba
-	--color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba
-	--color=border:#403d52,header:#31748f,gutter:#191724
-	--color=spinner:#f6c177,info:#9ccfd8,separator:#403d52
-	--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
+    --color=fg:#908caa,bg:#191724,hl:#ebbcba
+    --color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba
+    --color=border:#403d52,header:#31748f,gutter:#191724
+    --color=spinner:#f6c177,info:#9ccfd8,separator:#403d52
+    --color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
 set -Ux FZF_CTRL_T_OPTS "--preview 'bat -n --color=always --line-range :500 {}'"
 set -Ux FZF_ALT_C_OPTS "--preview 'eza --tree --color=always {} | head -200'"
 set -Ux FZF_DEFAULT_COMMAND "fd --hidden --strip-cwd-prefix --exclude .git"
@@ -25,6 +25,7 @@ set -Ux FZF_FIND_FILE_COMMAND "fd --type=f --hidden --strip-cwd-prefix --exclude
 set -Ux FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
 set -Ux FZF_ALT_C_COMMAND "fd --type=d --hidden --strip-cwd-prefix --exclude .git"
 set -Ux FZF_COMPLETE 3
+set -Ux FZF_COMPLETE_OPTS "--height 40%"
 set -Ux FZF_PREVIEW_DIR_CMD "eza -A --tree --color=always --git-ignore --group-directories-first"
 set -Ux FZF_PREVIEW_FILE_CMD "bat -n --color=always --line-range :500"
 set -Ux MANPAGER 'nvim +Man!'
@@ -40,7 +41,7 @@ if status is-interactive
     bind \ef nextd-or-forward-word
 
     # Aliases for builtins
-    abbr -a c 'clear && randomlogo.sh'
+    abbr -a c "clear && randomlogo.sh"
     alias ls="eza -A --icons=auto --group-directories-first"
     alias tree='eza -A --tree --git-ignore --group-directories-first'
     alias mkdir='mkdir -pv'
