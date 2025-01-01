@@ -15,6 +15,7 @@ set -Ux BAT_THEME rose-pine
 set -Ux FZF_DEFAULT_OPTS "--color=fg:#908caa,bg:#191724,hl:#ebbcba --color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba --color=border:#403d52,header:#31748f,gutter:#191724 --color=spinner:#f6c177,info:#9ccfd8,separator:#403d52 --color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
 set -Ux FZF_FIND_FILE_COMMAND "fd --type=f --hidden --strip-cwd-prefix --exclude .git"
 set -Ux FZF_CD_COMMAND "fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+set -Ux FZF_CD_OPTS "--height 40% --reverse"
 set -Ux FZF_COMPLETE 3
 set -Ux FZF_LEGACY_KEYBINDINGS 0
 set -Ux FZF_COMPLETE_OPTS "--height 40%"
