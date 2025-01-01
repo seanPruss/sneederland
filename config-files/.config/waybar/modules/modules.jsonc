@@ -18,7 +18,7 @@
 		"tooltip-format": "{} updates available",
 		"exec": "update.sh check",
 		"on-click": "pypr toggle update",
-		"interval": 180
+		"interval": 60
 	},
 
 	"clock": {
