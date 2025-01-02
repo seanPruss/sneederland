@@ -58,7 +58,7 @@
 		"on-click": "~/.config/tofi/powermenu.sh"
 	},
 
-	"pulseaudio": {
+	"wireplumber": {
 		"format": " {icon} {volume}% ",
 		"format-bluetooth": " {icon}  {volume}%",
 		"format-bluetooth-muted": "  {icon}  ",
@@ -74,8 +74,8 @@
 			"car": "",
 			"default": ["", "", ""]
 		},
-		"on-click": "pulsecontrol",
-		"on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"on-click": "pavucontrol",
+		"on-click-right": "change-volume.sh mute",
 		"on-scroll-up": "change-volume.sh up",
 		"on-scroll-down": "change-volume.sh down"
 	},

@@ -1,7 +1,7 @@
 {
 	"group/systray": {
 		"orientation": "horizontal",
-		"modules": ["custom/media", "pulseaudio", "tray"]
+		"modules": ["custom/media", "wireplumber", "tray"]
 	},
 	"group/hardware-info": {
 		"orientation": "horizontal",

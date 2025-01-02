@@ -3,7 +3,7 @@
 show-updating() {
 	local VALUE=0
 	while ps | grep $1 &>/dev/null; do
-		((VALUE == 100)) && ((VALUE = 0))
+		((VALUE >= 100)) && ((VALUE = 0))
 		dunstify -u low -r 9995 -h int:value:"$VALUE" -i "edit-download" "Updating" "$2 packages updating" -t 500
 		((VALUE++))
 	done
