@@ -7,7 +7,7 @@ function t
         --bind 'ctrl-g:change-prompt(⚙️  )+reload(sesh list -c)' \
         --bind 'ctrl-x:change-prompt(📁  )+reload(sesh list -z)' \
         --bind 'ctrl-f:change-prompt(🔎  )+reload(fd -H -d 2 -t d -E .Trash . ~)' \
-        --bind 'ctrl-d:execute(tmux kill-session -t {})+change-prompt(⚡  )+reload(sesh list)'
+        --bind 'ctrl-d:execute(tmux kill-session -t {})+change-prompt(⚡  )+reload(sesh list -t -c)'
     )
     [ -z "$session" ] && return
     sesh connect $session

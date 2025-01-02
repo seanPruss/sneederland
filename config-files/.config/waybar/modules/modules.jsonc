@@ -107,7 +107,7 @@
 		"exec": "mediaplayer.sh",
 		"return-type": "json",
 		"interval": 3,
-		"on-click": "playerctl play-pause"
+		"on-click": "playerctl -p spotify play-pause"
 	},
 
 	"custom/weather": {
