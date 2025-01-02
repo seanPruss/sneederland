@@ -86,6 +86,7 @@ install_stage=(
 	tofi
 	rofimoji
 	xdg-desktop-portal-hyprland
+	xdg-desktop-portal-gtk
 	swappy
 	grim
 	slurp
@@ -322,7 +323,6 @@ sudo systemctl enable suspend@$USER.service &>>$INSTLOG
 # Clean out other portals
 echo -e "$CNT - Cleaning out conflicting xdg portals..."
 yay -Q xdg-desktop-portal-gnome &>/dev/null && yay -R --noconfirm xdg-desktop-portal-gnome &>>$INSTLOG
-yay -Q xdg-desktop-portal-gtk &>/dev/null && yay -R xdg-desktop-portal-gtk &>>$INSTLOG
 
 # Set up sddm
 echo -e "$CNT - Setting up the login screen."

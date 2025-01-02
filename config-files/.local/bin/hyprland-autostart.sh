@@ -29,17 +29,6 @@ check-repo-updates() {
 	[ "$LOCAL" != "$REMOTE" ] && dunstify "Update available for SneederLand" "Run git pull in $REPO_DIR and run installer.sh" -u critical -i edit-download
 }
 
-start-xdg-portal() {
-	sleep 1
-	killall xdg-desktop-portal-hyprland
-	killall xdg-desktop-portal-wlr
-	killall xdg-desktop-portal
-	/usr/lib/xdg-desktop-portal-hyprland &
-	sleep 2
-	/usr/lib/xdg-desktop-portal
-}
-
-start-xdg-portal &
 hyprctl dispatch exec hyprpaper
 hyprctl dispatch exec battery-notify
 hyprctl dispatch exec waybar
