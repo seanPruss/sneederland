@@ -36,7 +36,8 @@
 		"format-charging": "{capacity}% ",
 		"format-plugged": "{capacity}% ",
 		"format-alt": "{time} {icon}",
-		"format-icons": ["", "", "", "", ""]
+		"format-icons": ["", "", "", "", ""],
+		"interval": 10
 	},
 
 	"power-profiles-daemon": {
@@ -129,8 +130,7 @@
 		"icon-theme": "BeautyLine",
 		"tooltip-format": "{name}",
 		"on-click": "activate",
-		"on-click-middle": "close",
-		"ignore-list": ["ghostty.update", "thunderbird"]
+		"on-click-middle": "close"
 	},
 
 	"hyprland/window": {

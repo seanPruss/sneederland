@@ -30,6 +30,8 @@ window-padding-y = 10
 window-padding-balance = true
 cursor-style = bar
 cursor-color = #e0def4
-background-opacity = 0.7
+background-opacity = 0.5
 
 shell-integration-features = true
+custom-shader = shaders/bloom025.glsl
+custom-shader = shaders/matrix-hallway.glsl
