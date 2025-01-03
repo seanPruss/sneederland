@@ -138,7 +138,7 @@ install_stage=(
 	noto-fonts-emoji
 	xfce4-settings
 	nwg-look
-	sddm-git
+	sddm
 	archlinux-themes-sddm
 	catppuccin-sddm-theme-mocha
 	chili-sddm-theme
