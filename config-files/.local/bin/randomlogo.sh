@@ -11,5 +11,5 @@ elif [ $rand -eq 2 ]; then
 elif [ $rand -eq 3 ]; then
 	toilet -t -f mono9 'The Sneed Machine' | lolcat
 else
-	fortune | cowsay -f $(cowsay -l | shuf -n 1) | lolcat
+	fortune | cowsay -f "$(cowsay -l | shuf -n 1)" | lolcat
 fi
