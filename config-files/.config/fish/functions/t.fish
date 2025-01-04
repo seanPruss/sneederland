@@ -1,4 +1,5 @@
 function t
+    # Use sesh and fzf to search and attach to a tmux session
     set session $(sesh list -t -c | fzf --height 40% --reverse --border-label ' sesh ' --border --prompt '  '\
         --header '  ^a all ^t tmux ^g configs ^x zoxide ^d tmux kill ^f find' \
         --bind 'tab:down,btab:up' \

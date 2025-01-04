@@ -1,4 +1,5 @@
 function cd
+    # Better cd
     if test (count $argv) -eq 0
         z $argv
     else
