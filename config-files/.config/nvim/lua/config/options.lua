@@ -3,7 +3,7 @@
 -- Add any additional options here
 local opt = vim.opt
 
-opt.winbar = "%=%m %f"
+opt.winbar = "%m %f"
 
 opt.tabstop = 4
 opt.softtabstop = 4
