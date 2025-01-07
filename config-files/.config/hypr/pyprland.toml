@@ -12,7 +12,7 @@ plugins = ["scratchpads", "wallpapers"]
 
 [scratchpads.update]
 animation = "fromTop"
-command = 'ghostty --class="ghostty.update" -e update.sh update'
+command = 'ghostty --class="ghostty.update" -e ~/.local/bin/update.sh update'
 class = "ghostty.update"
 size = "70% 70%"
 position = "15% 15%"
@@ -28,4 +28,4 @@ interval = 15
 extensions = ["png", "jpg", "jpeg", "webp", "JPG"]
 path = '~/Pictures/wallpapers/'
 recurse = true
-command = 'change-wallpaper.sh "[file]"'
+command = '~/.local/bin/change-wallpaper.sh "[file]"'
