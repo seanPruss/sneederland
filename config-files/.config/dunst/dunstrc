@@ -68,11 +68,11 @@
     format = "<b><span foreground='#31748f'>%s</span></b>\n%b"
 
 [urgency_normal]
-    background = "#362e3c80"
-    highlight = "#f6c177"
-    frame_color = "#f6c177"
-    default_icon = "dialog-warning"
-    format = "<b><span foreground='#f6c177'>%s</span></b>\n%b"
+    background = "#26273d80"
+    highlight = "#31748f"
+    frame_color = "#31748f"
+    default_icon = "dialog-information"
+    format = "<b><span foreground='#31748f'>%s</span></b>\n%b"
 
 [urgency_critical]
     background = "#35263d80"

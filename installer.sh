@@ -99,6 +99,8 @@ install_stage=(
 	fzf
 	tealdeer
 	fish
+	nushell
+	carapace
 	trash-cli
 	starship
 	yazi
@@ -364,8 +366,16 @@ echo -e "$CNT - Setting up tldr"
 tldr --update &>>$INSTLOG
 
 # set up fish
+read -rep " $CAT - Would you like to use fish or nushell? Press 1 for fish, 2 for nushell" SELECTION
 echo -e "$CNT - Changing your login shell. Please enter your password."
-chsh -s "$(which fish)" &>>$INSTLOG
+case "$SELECTION" in
+1)
+	chsh -s "$(which fish)" &>>$INSTLOG
+	;;
+2)
+	chsh -s "$(which nu)" &>>$INSTLOG
+	;;
+esac
 
 ### Install software for Asus ROG laptops ###
 read -rep $'[\e[1;33mACTION\e[0m] - For ASUS ROG Laptops - Would you like to install Asus ROG software support? (y,n) ' ROG
