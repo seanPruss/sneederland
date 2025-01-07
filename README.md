@@ -17,7 +17,7 @@ You should also look at the docs for the packages if you wanna change anything.
 - Status bar: [Waybar](https://github.com/Alexays/waybar)
 - Notification daemon: [Dunst](https://github.com/dunst-project/dunst)
 - Terminal: [Ghostty](https://github.com/ghostty-org/ghostty)
-- Shell: [Fish](https://github.com/fish-shell/fish-shell) (yeah I know it says bash idk why)
+- Shell: [Nushell](https://nushell.sh) or [Fish](https://github.com/fish-shell/fish-shell) (yeah I know it says bash idk why)
 - Browser: [Zen Browser](https://zen-browser.app/)
 - Text editor: [Neovim](https://github.com/neovim/neovim)
 - File manager: [Yazi](https://github.com/sxyazi/yazi)
