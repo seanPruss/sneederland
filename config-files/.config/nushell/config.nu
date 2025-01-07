@@ -1,4 +1,4 @@
-try {tmux ls | null} catch {tmux new-session -d}
+try { tmux ls out+err> /dev/null } catch { tmux new-session -d }
 randomlogo.sh
 source ~/.zoxide.nu
 source ~/.cache/carapace/init.nu
@@ -44,7 +44,7 @@ def cll [] {clear ; ll}
 alias fzf = fzf --height 40% --reverse
 
 # Type less letters
-alias v = vim
+alias v = nvim
 alias y = yay
 alias fp = flatpak
 alias sd = sudo
