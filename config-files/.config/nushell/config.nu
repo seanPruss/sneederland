@@ -117,7 +117,7 @@ def t [] {
     sesh connect $session
 }
 
-def --env y [...args] {
+def --env yz [...args] {
     let tmp = (mktemp -t "yazi-cwd.XXXXXX")
     yazi ...$args --cwd-file $tmp
     let cwd = (open $tmp)
