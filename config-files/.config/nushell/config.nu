@@ -3,6 +3,8 @@ randomlogo.sh
 source ~/.zoxide.nu
 source ~/.cache/carapace/init.nu
 
+$env.LS_COLORS = (vivid generate rose-pine | str trim)
+
 $env.config = {
     show_banner: false
 
