@@ -6,7 +6,6 @@ source ~/.cache/carapace/init.nu
 $env.LS_COLORS = (vivid generate rose-pine | str trim)
 
 $env.TRANSIENT_PROMPT_COMMAND = ^starship module character
-$env.TRANSIENT_PROMPT_COMMAND_RIGHT = ^starship module time
 
 $env.config = {
     show_banner: false
@@ -132,9 +131,14 @@ def --env yz [...args] {
     rm -fp $tmp
 }
 
-def mcd [args] {
-    mkdir $args
-    cd $args
+def --env cx [arg] {
+    cd $arg
+    ls
+}
+
+def --env mcd [arg] {
+    mkdir $arg
+    cd $arg
 }
 
 # typo aliases
