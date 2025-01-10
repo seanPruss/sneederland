@@ -14,7 +14,7 @@
 	},
 
 	"custom/updates": {
-		"format": " {}",
+		"format": " {}",
 		"tooltip-format": "{} updates available",
 		"exec": "~/.local/bin/update.sh check",
 		"on-click": "pypr toggle update",

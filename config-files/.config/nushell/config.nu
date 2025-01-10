@@ -141,6 +141,16 @@ def --env mcd [arg] {
     cd $arg
 }
 
+def --env up [arg?: number = 1] {
+    mut dir = ".."
+    if $arg > 1 {
+        for i in 2..$arg {
+            $dir = $dir + "/.."
+        }
+    }
+    cd $dir
+}
+
 # typo aliases
 alias sl = ls
 alias xs = cd

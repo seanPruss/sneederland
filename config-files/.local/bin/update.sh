@@ -37,7 +37,7 @@ check() {
 
 	[[ $UPDATE_COUNT -gt 1 ]] && PLURAL="s"
 
-	[[ $UPDATE_COUNT -gt 0 ]] && [[ ! -e $NOTIFICATION_SENT ]] && dunstify "$UPDATE_COUNT update$PLURAL available" "$OFFICIAL_UPDATES from pacman $AUR_UPDATES from AUR" -u $URGENCY -i edit-download && touch $NOTIFICATION_SENT
+	[[ $UPDATE_COUNT -gt 0 ]] && [[ ! -e $NOTIFICATION_SENT ]] && dunstify "$UPDATE_COUNT update$PLURAL available" "$OFFICIAL_UPDATES from pacman $AUR_UPDATES from AUR" -u $URGENCY -i mintupdate-updates-available && touch $NOTIFICATION_SENT
 	echo "$UPDATE_COUNT"
 }
 

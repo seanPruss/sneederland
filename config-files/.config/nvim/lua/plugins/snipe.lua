@@ -3,7 +3,7 @@ return {
     lazy = false,
     keys = {
         {
-            "<A-s>",
+            "<S-b>",
             function()
                 require("snipe").open_buffer_menu()
             end,
