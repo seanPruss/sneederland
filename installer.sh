@@ -93,7 +93,6 @@ install_stage=(
 	slurp
 	htim
 	zen-browser-bin
-	spotify-launcher
 	gammastep
 	shellcheck
 	fzf
@@ -156,6 +155,7 @@ install_stage=(
 )
 
 flatpaks=(
+	com.spotify.Client
 	dev.vencord.Vesktop
 )
 
