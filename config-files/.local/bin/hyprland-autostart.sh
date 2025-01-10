@@ -46,7 +46,7 @@ start-gammastep &
 load-hyprland-plugins &
 hyprctl dispatch exec -- tldr --update
 hyprctl dispatch exec spotify-launcher
-hyprctl dispatch exec vesktop
+hyprctl dispatch exec -- flatpak run dev.vencord.Vesktop
 sleep 8
 hyprctl dispatch killactive
 hyprctl dispatch killactive

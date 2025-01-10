@@ -68,6 +68,7 @@ install_stage=(
 	bat
 	git-delta
 	rust
+	rust-analyzer
 	jdk-openjdk
 	npm
 	vlc
@@ -92,7 +93,6 @@ install_stage=(
 	slurp
 	htim
 	zen-browser-bin
-	vesktop
 	spotify-launcher
 	gammastep
 	shellcheck
@@ -100,7 +100,7 @@ install_stage=(
 	tealdeer
 	fish
 	nushell
-    vivid
+	vivid
 	carapace
 	trash-cli
 	starship
@@ -153,6 +153,10 @@ install_stage=(
 	simple-sddm-theme-2-git
 	simple-sddm-theme-git
 	win11-sddm-theme
+)
+
+flatpaks=(
+	dev.vencord.Vesktop
 )
 
 # set some colors
@@ -299,6 +303,12 @@ yay -S --needed --noconfirm hyprland || exit
 echo -e "$CNT - Installing main components, this may take a while..."
 for SOFTWR in ${install_stage[@]}; do
 	yay -S --needed --noconfirm $SOFTWR || exit
+done
+
+# Flatpaks
+echo -e "$CNT - Installing main components, this may take a while..."
+for SOFTWR in ${flatpaks[@]}; do
+	flatpak install $SOFTWR || exit
 done
 
 # generate symlinks for dotfiles
