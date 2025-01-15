@@ -18,7 +18,7 @@
     background = "#26233a"
     foreground = "#e0def4"
     follow = mouse
-    origin = top-center
+    origin = center
     offset = (0, 48)
 
     progress_bar = true

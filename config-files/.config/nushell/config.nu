@@ -39,12 +39,12 @@ $env.config = {
 # Aliases for builtins
 alias ls = ls --all
 alias ll = ls -l
-def c [] {clear ;randomlogo.sh}
+def c [] {clear; randomlogo.sh}
 alias tree = eza -A --tree --git-ignore --group-directories-first
 alias fd = fd --hidden
 alias locate = plocate
-def cls [] {clear ; ls}
-def cll [] {clear ; ll}
+def cls [] {clear; ls}
+def cll [] {clear; ll}
 alias fzf = fzf --height 40% --reverse
 
 # Type less letters
@@ -74,19 +74,19 @@ alias gpr = git remote prune origin
 alias gpl = git pull
 def grd [] {git fetch origin; git rebase origin/master}
 alias gbb = git-switchbranch
-alias gbf = git branch | head -1 | xargs # top branch
+def gbf [] {git branch | head -1 | xargs}
 alias gl = git log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(white)%s%C(reset) %C(green)%an %ar %C(reset) %C(bold magenta)%d%C(reset)'
 alias gla = git log --all --graph --format=format:'%C(bold blue)%h%C(reset) - %C(white)%s%C(reset) %C(bold magenta)%d%C(reset)'
-alias git-current-branch = git branch | grep \* | cut -d ' ' -f2
+def gcb [] {git branch | grep \* | cut -d ' ' -f2}
 alias grc = git rebase --continue
 alias gra = git rebase --abort
-alias gec = git status | grep "both modified:" | cut -d ":" -f 2 | trim | xargs nvim -
+def gec [] {git status | grep "both modified:" | cut -d ":" -f 2 | xargs nvim -}
 alias gcan = gc --amend --no-edit
 alias gpf = git push --force-with-lease
 alias gbdd = git-branch-utils -d
 alias gbuu = git-branch-utils -u
 alias gbrr = git-branch-utils -r -b develop
-alias gg = git branch | fzf | xargs git checkout
+def gg [] {git branch | fzf | xargs git checkout}
 alias gprev = git checkout HEAD^
 
 # update mirrors
