@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 update() {
-	sudo touch /tmp/update
-	yay -Syyu --noconfirm &
+	yay -Syyu --noconfirm
 	dunstify -u low "Yay Finished" "System packages are up to date" -t 2000 -i check-filled
 	flatpak update
 	dunstify -u low "Flatpak Finished" "Flatpaks are up to date" -t 2000 -i check-filled
