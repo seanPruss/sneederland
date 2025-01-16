@@ -314,7 +314,7 @@ done
 # generate symlinks for dotfiles
 cd $REPO_DIR || exit
 xdg-user-dirs-update
-stow --adopt --target=$HOME config-files
+stow --target=$HOME config-files
 
 # Start the bluetooth service
 echo -e "$CNT - Starting the Bluetooth Service..."
