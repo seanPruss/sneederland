@@ -39,6 +39,7 @@ $env.config = {
 # Aliases for builtins
 alias ls = ls --all
 alias ll = ls -l
+alias grep = grep --color=auto
 def c [] {clear; randomlogo.sh}
 alias tree = eza -A --tree --git-ignore --group-directories-first
 alias fd = fd --hidden

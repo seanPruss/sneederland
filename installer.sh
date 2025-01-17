@@ -77,6 +77,7 @@ install_stage=(
 	banana-cursor-bin
 	ghostty
 	dunst
+	vesktop
 	battery-notify
 	waybar
 	power-profiles-daemon
@@ -156,7 +157,6 @@ install_stage=(
 
 flatpaks=(
 	com.spotify.Client
-	dev.vencord.Vesktop
 )
 
 # set some colors
