@@ -328,6 +328,10 @@ sudo systemctl enable sddm &>>$INSTLOG
 echo -e "$CNT - Enabling the auto-cpufreq Service..."
 sudo systemctl enable auto-cpufreq &>>$INSTLOG
 
+# Enable power-profiles-daemon service
+echo -e "$CNT - Enabling the power-profiles-daemon Service..."
+sudo systemctl enable power-profiles-daemon &>>$INSTLOG
+
 # Enable screen lock service
 echo -e "$CNT - Enabling the screen lock Service..."
 sudo cp $REPO_DIR/suspend@.service /etc/systemd/system

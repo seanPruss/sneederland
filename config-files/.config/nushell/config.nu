@@ -149,7 +149,7 @@ def --env up [arg?: number = 1] {
             $dir = $dir + "/.."
         }
     }
-    cd $dir
+    cx $dir
 }
 
 # typo aliases
