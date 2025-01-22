@@ -2,4 +2,4 @@ config-files/.config/systemd/user/*.wants
 config-files/.config/fish/fish_variables
 install.log
 yay-bin
-config-files/.config/nushell/history.txt
+*/history.txt

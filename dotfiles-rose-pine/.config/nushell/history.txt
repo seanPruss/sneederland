@@ -5,3 +5,5 @@ rm -rf dotfiles-rose-pine
 ls
 ll dotfiles-rose-pine/
 stow --target=/home/seanp dotfiles-rose-pine
+t
+c

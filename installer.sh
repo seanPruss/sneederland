@@ -314,7 +314,8 @@ done
 # generate symlinks for dotfiles
 cd $REPO_DIR || exit
 xdg-user-dirs-update
-stow --target=$HOME config-files
+# Rose Pine config by default
+stow --target=$HOME dotfiles-rose-pine
 
 # Start the bluetooth service
 echo -e "$CNT - Starting the Bluetooth Service..."
