@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-COLOUR_SCHEMES=(rose-pine catpuccin)
+COLOUR_SCHEMES=(rose-pine catppuccin)
 
 SELECTION=$(printf '%s\n' "${COLOUR_SCHEMES[@]}" | tofi)
 

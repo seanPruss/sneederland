@@ -1,0 +1,74 @@
+ls
+ls dotfiles-rose-pine/
+rmdir dotfiles-rose-pine
+rm -rf dotfiles-rose-pine
+ls
+ll dotfiles-rose-pine/
+stow --target=/home/seanp dotfiles-rose-pine
+t
+c
+yz
+mkdir scripts
+yz
+up
+stow --target=/home/seanp scripts
+t
+ll .local/bin
+rm .local/bin/*
+stow --target=/home/seanp scripts
+t
+cowsay -l | tofi
+fortune | cowsay -f (cowsay -l | tofi)
+fortune | cowsay -f (cowsay -l | shuf -n 1)
+fortune | cowsay -f (cowsay -l | shuf -n 1) | lolcat
+c
+bat restart-dunst.sh 
+bat cache --build
+bat restart-dunst.sh 
+t
+cx Downloads/
+rm archlinux-2024.12.01-x86_64.iso
+c
+colour-scheme-selector.sh
+ll .config
+colour-scheme-selector.sh
+ll .config
+colour-scheme-selector.sh
+colour-scheme-selector.sh
+colour-scheme-selector.sh
+co
+colour-scheme-selector.sh
+colour-scheme-selector.sh
+colour-scheme-selector.sh
+t
+cx ghostty
+cd .config
+cx ghostty
+ls
+vivid --help
+vivid themes
+ls
+nvim
+t
+ls
+cd .config
+v starship.toml 
+t
+ls
+ls
+t
+ls
+cdi gui
+cd -
+ll
+cdi dunst
+v
+v dunstrc 
+ls
+ls
+ll
+v userChrome.css 
+colour-scheme-selector.sh
+rm ~/.config/gtk-4.0/gtk.css
+t
+ls
