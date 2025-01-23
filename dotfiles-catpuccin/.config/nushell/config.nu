@@ -3,7 +3,7 @@ randomlogo.sh
 source ~/.zoxide.nu
 source ~/.cache/carapace/init.nu
 
-$env.LS_COLORS = (vivid generate rose-pine | str trim)
+$env.LS_COLORS = (vivid generate catppuccin-mocha | str trim)
 
 $env.TRANSIENT_PROMPT_COMMAND = ^starship module character
 
