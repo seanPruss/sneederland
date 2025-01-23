@@ -1,0 +1,31 @@
+ls
+ls dotfiles-rose-pine/
+rmdir dotfiles-rose-pine
+rm -rf dotfiles-rose-pine
+ls
+ll dotfiles-rose-pine/
+stow --target=/home/seanp dotfiles-rose-pine
+t
+c
+yz
+mkdir scripts
+yz
+up
+stow --target=/home/seanp scripts
+t
+ll .local/bin
+rm .local/bin/*
+stow --target=/home/seanp scripts
+t
+cowsay -l | tofi
+fortune | cowsay -f (cowsay -l | tofi)
+fortune | cowsay -f (cowsay -l | shuf -n 1)
+fortune | cowsay -f (cowsay -l | shuf -n 1) | lolcat
+c
+bat restart-dunst.sh 
+bat cache --build
+bat restart-dunst.sh 
+t
+cx Downloads/
+rm archlinux-2024.12.01-x86_64.iso
+c

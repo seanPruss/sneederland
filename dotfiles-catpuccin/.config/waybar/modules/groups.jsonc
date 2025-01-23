@@ -1,0 +1,17 @@
+{
+	"group/systray": {
+		"orientation": "horizontal",
+		"modules": ["custom/media", "wireplumber", "tray"]
+	},
+	"group/hardware-info": {
+		"orientation": "horizontal",
+		"modules": [
+			"power-profiles-daemon",
+			"battery",
+			"cpu",
+			"memory",
+			"backlight",
+			"custom/power"
+		]
+	}
+}
