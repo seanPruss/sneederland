@@ -124,6 +124,7 @@ install_stage=(
 	cowsay
 	lolcat
 	rose-pine-gtk-theme
+	catppuccin-gtk-theme-mocha
 	beautyline
 	libreoffice-fresh
 	thunderbird
