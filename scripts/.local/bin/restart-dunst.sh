@@ -1,0 +1,1 @@
+killall dunst && dunst &
