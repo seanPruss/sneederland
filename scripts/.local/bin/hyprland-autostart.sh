@@ -6,14 +6,6 @@ start-gammastep() {
 	hyprctl dispatch exec -- gammastep -t 6500:1200 -l $latitude:$longitude && dunstify -u low -i check-filled "Gammastep Started" "Night light will turn on at sunset"
 }
 
-load-hyprland-plugins() {
-	if ! hyprpm list | grep hyprland-plugins; then
-		hyprpm add https://github.com/hyprwm/hyprland-plugins
-		hyprpm enable hyprtrails
-	fi
-	hyprpm update --no-shallow
-}
-
 check-repo-updates() {
 	# Navigate to the local Git repository
 	local REPO_DIR="$(fd -td sneederland -a $HOME)"
@@ -43,7 +35,6 @@ done
 
 check-repo-updates &
 start-gammastep &
-load-hyprland-plugins &
 hyprctl dispatch exec -- tldr --update
 hyprctl dispatch exec -- flatpak run com.spotify.Client
 hyprctl dispatch exec -- vesktop
