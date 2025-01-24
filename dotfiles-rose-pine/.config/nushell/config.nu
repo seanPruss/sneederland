@@ -3,6 +3,7 @@ randomlogo.sh
 source ~/.zoxide.nu
 source ~/.cache/carapace/init.nu
 
+$env.LS_COLORS = (vivid generate rose-pine | str trim)
 
 $env.TRANSIENT_PROMPT_COMMAND = ^starship module character
 
@@ -10,6 +11,7 @@ $env.config = {
     show_banner: false
 
     ls: {
+        use_ls_colors: true # use the LS_COLORS environment variable to colorize output
         clickable_links: true # enable or disable clickable links. Your terminal has to support links.
     }
 

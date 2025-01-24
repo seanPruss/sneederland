@@ -100,6 +100,7 @@ install_stage=(
 	tealdeer
 	fish
 	nushell
+	vivid
 	carapace
 	trash-cli
 	starship
