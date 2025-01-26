@@ -20,5 +20,5 @@ catppuccin)
 	;;
 esac
 
-pypr reload
+killall hyprpaper && hyprctl dispatch exec hyprpaper
 bat cache --build
