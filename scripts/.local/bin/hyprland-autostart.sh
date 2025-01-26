@@ -23,7 +23,6 @@ check-repo-updates() {
 
 hyprctl dispatch exec hyprpaper
 hyprctl dispatch exec battery-notify
-hyprctl dispatch exec waybar
 hyprctl dispatch exec pypr
 gsettings set org.gnome.desktop.interface cursor-theme "Banana"
 gsettings set org.gnome.desktop.interface cursor-size 38
