@@ -22,14 +22,12 @@ num-results = 5
 prompt-text = "󰀻 "
 
 background-color = #1917248f
-text-color = #e0def4
-input-color = #c4a7e7
-prompt-color = #eb6f92
-selection-color = #1f1d2e
+text-color = #cdd6f4
+prompt-color = #f38ba8
+selection-color = #f9e2af
+background-color = #1e1e2e8f
 selection-background-corner-radius = 10
 selection-background-padding = 10, 16
-selection-background = #c4a7e7
-selection-match-color = #ebbcba
 
 clip-to-padding = false
 require-match = false

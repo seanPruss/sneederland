@@ -2,7 +2,7 @@
 
 COLOUR_SCHEMES=(rose-pine catppuccin)
 
-SELECTION=$(printf '%s\n' "${COLOUR_SCHEMES[@]}" | tofi)
+SELECTION=$(printf '%s\n' "${COLOUR_SCHEMES[@]}" | tofi --config "$HOME/.config/tofi/colour-scheme-switcher-config")
 
 cd $(fd -td sneederland $HOME) || exit
 
@@ -19,3 +19,6 @@ catppuccin)
 	echo default
 	;;
 esac
+
+pypr reload
+bat cache --build

@@ -316,8 +316,8 @@ done
 cd $REPO_DIR || exit
 xdg-user-dirs-update
 # Rose Pine config by default
+stow --target=$HOME common
 stow --target=$HOME dotfiles-rose-pine
-stow --target=$HOME scripts
 
 # Start the bluetooth service
 echo -e "$CNT - Starting the Bluetooth Service..."
