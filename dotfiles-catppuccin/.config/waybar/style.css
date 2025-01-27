@@ -30,9 +30,9 @@ window#waybar {
 #systray,
 #mpd {
 	padding: 0px 8px;
-	color: rgba(243, 139, 168, 1);
+	color: rgba(203, 166, 247, 1);
 	border-radius: 20px;
-	border: 1px solid rgba(203, 166, 247, 1);
+	border: 1px solid rgba(243, 139, 168, 1);
 	background-color: rgba(30, 30, 46, 0.7);
 	margin-left: 10px;
 }
@@ -48,7 +48,7 @@ window#waybar {
 #taskbar,
 #window {
 	margin-right: 10px;
-	border: 1px solid rgba(203, 166, 247, 1);
+	border: 1px solid rgba(243, 139, 168, 1);
 	border-radius: 20px;
 	background-color: rgba(30, 30, 46, 0.7);
 	transition: all 0.4s ease-out;
@@ -64,13 +64,13 @@ window#waybar {
 #workspaces button {
 	border-radius: 20px;
 	border: none;
-	color: rgba(203, 166, 247, 1);
+	color: rgba(243, 139, 168, 1);
 	transition: all 0.4s ease-out;
 }
 
 #taskbar button.active,
 #workspaces button.active {
-	background-color: rgba(203, 166, 247, 0.5);
+	background-color: rgba(243, 139, 168, 0.5);
 	color: rgba(30, 30, 46, 1);
 	animation-name: blink-workspace;
 	animation-duration: 0.5s;
@@ -113,7 +113,7 @@ window#waybar {
 }
 
 #clock {
-	border: 1px solid rgba(203, 166, 247, 1);
+	border: 1px solid rgba(243, 139, 168, 1);
 	margin-left: 10px;
 	color: rgba(250, 179, 135, 1);
 	border-radius: 20px;
@@ -161,7 +161,7 @@ window#waybar {
 }
 
 #systray {
-	color: rgba(203, 166, 247, 1);
+	color: rgba(249, 226, 175, 1);
 	padding: 0px 4px;
 }
 
@@ -191,7 +191,7 @@ window#waybar {
 
 #custom-launcher,
 #custom-updates {
-	border: 1px solid rgba(203, 166, 247, 1);
+	border: 1px solid rgba(243, 139, 168, 1);
 	margin-right: 10px;
 	color: rgba(137, 220, 235, 1);
 	background-color: rgba(30, 30, 46, 0.7);
@@ -202,7 +202,7 @@ window#waybar {
 }
 
 #custom-launcher {
-	color: rgba(243, 139, 168, 1);
+	color: rgba(203, 166, 247, 1);
 	padding-left: 9px;
 	padding-right: 10px;
 	font-size: 20px;
@@ -222,7 +222,7 @@ window#waybar {
 }
 
 #custom-weather {
-	border: 1px solid rgba(203, 166, 247, 1);
+	border: 1px solid rgba(243, 139, 168, 1);
 	margin-left: 10px;
 	color: rgba(137, 220, 235, 1);
 	background-color: rgba(30, 30, 46, 0.7);
