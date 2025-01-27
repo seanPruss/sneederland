@@ -20,5 +20,4 @@ catppuccin)
 	;;
 esac
 
-killall hyprpaper && hyprctl dispatch exec hyprpaper
 bat cache --build

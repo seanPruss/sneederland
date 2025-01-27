@@ -24,10 +24,12 @@ prompt-text = "󰀻 "
 background-color = #1917248f
 text-color = #cdd6f4
 prompt-color = #f38ba8
-selection-color = #f9e2af
+selection-color = #191724
 background-color = #1e1e2e8f
 selection-background-corner-radius = 10
 selection-background-padding = 10, 16
+selection-background = #f9e2af
+selection-match-color = #f38ba8
 
 clip-to-padding = false
 require-match = false
