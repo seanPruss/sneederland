@@ -13,7 +13,7 @@
 }
 
 window#waybar {
-	background-color: rgba(25, 23, 36, 0);
+	background-color: rgba(30, 30, 46, 0);
 	border-radius: 20px;
 	color: rgba(76, 79, 105, 1);
 	transition-property: background-color;
@@ -30,16 +30,16 @@ window#waybar {
 #systray,
 #mpd {
 	padding: 0px 8px;
-	color: rgba(235, 111, 146, 1);
+	color: rgba(243, 139, 168, 1);
 	border-radius: 20px;
-	border: 1px solid rgba(196, 167, 231, 1);
-	background-color: rgba(25, 23, 36, 0.7);
+	border: 1px solid rgba(203, 166, 247, 1);
+	background-color: rgba(30, 30, 46, 0.7);
 	margin-left: 10px;
 }
 
 @keyframes blink-workspace {
 	to {
-		color: rgba(25, 23, 36, 0.7);
+		color: rgba(30, 30, 46, 0.7);
 		font-weight: 800;
 	}
 }
@@ -48,30 +48,30 @@ window#waybar {
 #taskbar,
 #window {
 	margin-right: 10px;
-	border: 1px solid rgba(196, 167, 231, 1);
+	border: 1px solid rgba(203, 166, 247, 1);
 	border-radius: 20px;
-	background-color: rgba(25, 23, 36, 0.7);
+	background-color: rgba(30, 30, 46, 0.7);
 	transition: all 0.4s ease-out;
 }
 
 #window {
 	padding-left: 7px;
 	padding-right: 7px;
-	color: rgba(156, 207, 216, 1);
+	color: rgba(137, 220, 235, 1);
 }
 
 #taskbar button,
 #workspaces button {
 	border-radius: 20px;
 	border: none;
-	color: rgba(196, 167, 231, 1);
+	color: rgba(203, 166, 247, 1);
 	transition: all 0.4s ease-out;
 }
 
 #taskbar button.active,
 #workspaces button.active {
-	background-color: rgba(196, 167, 231, 0.5);
-	color: rgba(25, 23, 36, 1);
+	background-color: rgba(203, 166, 247, 0.5);
+	color: rgba(30, 30, 46, 1);
 	animation-name: blink-workspace;
 	animation-duration: 0.5s;
 	animation-timing-function: steps(12);
@@ -80,7 +80,7 @@ window#waybar {
 }
 
 #workspaces button.urgent {
-	color: rgba(235, 111, 146, 0.5);
+	color: rgba(243, 139, 168, 0.5);
 	font-weight: 800;
 	animation-name: blink-workspace;
 	animation-duration: 0.5s;
@@ -90,7 +90,7 @@ window#waybar {
 }
 
 #workspaces button.empty {
-	color: rgba(156, 207, 216, 1);
+	color: rgba(137, 220, 235, 1);
 	animation-name: blink-workspace;
 	animation-duration: 0.5s;
 	animation-timing-function: steps(12);
@@ -99,7 +99,7 @@ window#waybar {
 }
 
 #workspaces button.occupied {
-	background-color: rgba(235, 188, 186, 0.5);
+	background-color: rgba(250, 179, 135, 0.5);
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -113,11 +113,11 @@ window#waybar {
 }
 
 #clock {
-	border: 1px solid rgba(196, 167, 231, 1);
+	border: 1px solid rgba(203, 166, 247, 1);
 	margin-left: 10px;
-	color: rgba(235, 188, 186, 1);
+	color: rgba(250, 179, 135, 1);
 	border-radius: 20px;
-	background-color: rgba(25, 23, 36, 0.7);
+	background-color: rgba(30, 30, 46, 0.7);
 	padding-left: 5px;
 	padding-right: 5px;
 }
@@ -132,7 +132,7 @@ window#waybar {
 
 #battery.charging,
 #battery.plugged {
-	color: rgba(156, 207, 216, 1);
+	color: rgba(137, 220, 235, 1);
 }
 
 @keyframes blink-battery {
@@ -143,7 +143,7 @@ window#waybar {
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.warning:not(.charging) {
-	color: rgba(235, 188, 186, 1);
+	color: rgba(250, 179, 135, 1);
 	animation-name: blink-battery;
 	animation-duration: 0.5s;
 	animation-timing-function: steps(12);
@@ -152,7 +152,7 @@ window#waybar {
 }
 
 #battery.critical:not(.charging) {
-	color: rgba(235, 111, 146, 1);
+	color: rgba(243, 139, 168, 1);
 	animation-name: blink-battery;
 	animation-duration: 0.5s;
 	animation-timing-function: steps(12);
@@ -161,7 +161,7 @@ window#waybar {
 }
 
 #systray {
-	color: rgba(196, 167, 231, 1);
+	color: rgba(203, 166, 247, 1);
 	padding: 0px 4px;
 }
 
@@ -175,26 +175,26 @@ window#waybar {
 
 #tray > .needs-attention {
 	-gtk-icon-effect: highlight;
-	background-color: rgba(235, 111, 146, 1);
+	background-color: rgba(243, 139, 168, 1);
 }
 
 #custom-power {
 	padding: 0px 6px;
-	color: rgba(235, 111, 146, 1);
+	color: rgba(243, 139, 168, 1);
 }
 
 @keyframes blink-update {
 	to {
-		background-color: rgba(156, 207, 216, 1);
+		background-color: rgba(137, 220, 235, 1);
 	}
 }
 
 #custom-launcher,
 #custom-updates {
-	border: 1px solid rgba(196, 167, 231, 1);
+	border: 1px solid rgba(203, 166, 247, 1);
 	margin-right: 10px;
-	color: rgba(156, 207, 216, 1);
-	background-color: rgba(25, 23, 36, 0.7);
+	color: rgba(137, 220, 235, 1);
+	background-color: rgba(30, 30, 46, 0.7);
 	border-radius: 20px;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
@@ -202,7 +202,7 @@ window#waybar {
 }
 
 #custom-launcher {
-	color: rgba(235, 111, 146, 1);
+	color: rgba(243, 139, 168, 1);
 	padding-left: 9px;
 	padding-right: 10px;
 	font-size: 20px;
@@ -214,7 +214,7 @@ window#waybar {
 }
 
 #custom-notification {
-	background-color: rgba(25, 23, 36, 0.7);
+	background-color: rgba(30, 30, 46, 0.7);
 	padding-left: 10px;
 	padding-right: 10px;
 	border-radius: 20px;
@@ -222,10 +222,10 @@ window#waybar {
 }
 
 #custom-weather {
-	border: 1px solid rgba(196, 167, 231, 1);
+	border: 1px solid rgba(203, 166, 247, 1);
 	margin-left: 10px;
-	color: rgba(156, 207, 216, 1);
-	background-color: rgba(25, 23, 36, 0.7);
+	color: rgba(137, 220, 235, 1);
+	background-color: rgba(30, 30, 46, 0.7);
 	border-radius: 20px;
 	padding: 0px 8px;
 }
