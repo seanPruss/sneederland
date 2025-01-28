@@ -21,9 +21,11 @@ update-colours() {
 		;;
 	esac
 
+	# reload everything that doesn't hot reload
 	killall hyprpaper && hyprctl dispatch exec hyprpaper
 	pypr reload
 	bat cache --build
+	tmux kill-server
 }
 case "$1" in
 random)
