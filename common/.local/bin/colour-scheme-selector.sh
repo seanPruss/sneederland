@@ -2,27 +2,39 @@
 
 COLOUR_SCHEMES=(rose-pine catppuccin)
 
-SELECTION=$(printf '%s\n' "${COLOUR_SCHEMES[@]}" | tofi --config "$HOME/.config/tofi/colour-scheme-switcher-config")
+update-colours() {
+	[[ -z $1 ]] && exit
+	cd "$(fd -td sneederland $HOME)" || exit
+	rm -rf ~/Pictures/wallpapers/*
+	stow --override=.* --target=$HOME common
+	stow --override=.* --target=$HOME "dotfiles-$SELECTION"
 
-[[ -z $SELECTION ]] && exit
-cd "$(fd -td sneederland $HOME)" || exit
+	case "$1" in
+	rose-pine)
+		gsettings set org.gnome.desktop.interface gtk-theme "rose-pine-gtk"
+		;;
+	catppuccin)
+		gsettings set org.gnome.desktop.interface gtk-theme "catppuccin-mocha-red-standard+default"
+		;;
+	*)
+		echo default
+		;;
+	esac
 
-rm -rf ~/Pictures/wallpapers/*
-stow --override=.* --target=$HOME common
-stow --override=.* --target=$HOME "dotfiles-$SELECTION"
-
-case "$SELECTION" in
-rose-pine)
-	gsettings set org.gnome.desktop.interface gtk-theme "rose-pine-gtk"
+	killall hyprpaper && hyprctl dispatch exec hyprpaper
+	pypr reload
+	bat cache --build
+}
+case "$1" in
+random)
+	SELECTION=$(printf '%s\n' "${COLOUR_SCHEMES[@]}" | shuf -n 1)
+	update-colours $SELECTION
 	;;
-catppuccin)
-	gsettings set org.gnome.desktop.interface gtk-theme "catppuccin-mocha-red-standard+default"
+choose)
+	SELECTION=$(printf '%s\n' "${COLOUR_SCHEMES[@]}" | tofi --config "$HOME/.config/tofi/colour-scheme-switcher-config")
+	update-colours $SELECTION
 	;;
 *)
-	echo default
+	echo "invalid command"
 	;;
 esac
-
-killall hyprpaper && hyprctl dispatch exec hyprpaper
-pypr reload
-bat cache --build
