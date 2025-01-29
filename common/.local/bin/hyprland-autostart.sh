@@ -21,9 +21,6 @@ check-repo-updates() {
 	[ "$LOCAL" != "$REMOTE" ] && dunstify "Update available for SneederLand" "Run git pull in $REPO_DIR and run installer.sh" -u critical -i edit-download
 }
 
-hyprctl dispatch exec hyprpaper
-hyprctl dispatch exec battery-notify
-hyprctl dispatch exec pypr
 hyprctl monitors | grep HDMI-A-1 && hyprctl dispatch workspace 2
 
 while ! ping -c 1 archlinux.org; do
