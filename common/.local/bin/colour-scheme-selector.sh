@@ -17,7 +17,7 @@ update-colours() {
 		gsettings set org.gnome.desktop.interface gtk-theme "catppuccin-mocha-red-standard+default"
 		;;
 	*)
-		echo default
+		echo "how tf did you get here"
 		;;
 	esac
 
