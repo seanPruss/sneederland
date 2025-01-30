@@ -66,12 +66,15 @@ highlight = "#89b4fa"
 [urgency_low]
 background = "#1e1e2e80"
 foreground = "#cdd6f4"
+default_icon = "preferences-system-notifications"
 
 [urgency_normal]
 background = "#1e1e2e80"
 foreground = "#cdd6f4"
+default_icon = "help-hint"
 
 [urgency_critical]
 background = "#1e1e2e80"
 foreground = "#cdd6f4"
+default_icon = "emblem-unreadable"
 frame_color = "#fab387"
