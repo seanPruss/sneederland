@@ -137,6 +137,11 @@ def --env cx [arg] {
     ls
 }
 
+def --env cxi [arg] {
+    cdi $arg
+    ls
+}
+
 def --env mcd [arg] {
     mkdir $arg
     cd $arg
