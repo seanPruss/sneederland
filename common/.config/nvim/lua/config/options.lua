@@ -26,3 +26,4 @@ opt.updatetime = 50
 opt.colorcolumn = "80"
 opt.clipboard = ""
 opt.cursorcolumn = true
+vim.g.lazyvim_picker = "snacks"
