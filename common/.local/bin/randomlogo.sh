@@ -7,9 +7,9 @@ if [ $rand -eq 0 ] || [ $rand -eq 4 ]; then
 elif [ $rand -eq 1 ] || [ $rand -eq 5 ]; then
 	colorscript random
 elif [ $rand -eq 2 ]; then
-	toilet -t -f mono9 'I use Arch btw' | lolcat
+	toilet -t -f mono9 'I use Arch btw' --rainbow
 elif [ $rand -eq 3 ]; then
-	toilet -t -f mono9 'The Sneed Machine' | lolcat
+	toilet -t -f mono9 'The Sneed Machine' --rainbow
 else
 	fortune | cowsay -f "$(cowsay -l | shuf -n 1)"
 fi

@@ -122,7 +122,6 @@ install_stage=(
 	toilet-fonts
 	fortune-mod
 	cowsay
-	lolcat
 	rose-pine-gtk-theme
 	catppuccin-gtk-theme-mocha
 	beautyline

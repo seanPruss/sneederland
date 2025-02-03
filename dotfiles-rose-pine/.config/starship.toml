@@ -41,7 +41,8 @@ foam = '#9ccfd8'
 iris = '#c4a7e7'
 
 [character]
-format = "[󰁔 ](fg:iris)"
+success_symbol = "[󰁔 ](fg:iris)"
+error_symbol = "[󰁔 ](fg:love)"
 
 [directory]
 format = "[](fg:overlay)[ $path ]($style)[](fg:overlay)"
