@@ -33,7 +33,7 @@ set -Ux MANPAGER 'nvim +Man!'
 if status is-interactive
     tmux ls &>/dev/null || tmux new-session -d
     randomlogo.sh
-    fish_config theme choose "Rosé Pine"
+    fish_config theme choose "Catppuccin Mocha"
     zoxide init fish | source
     set fish_greeting
 
