@@ -55,26 +55,6 @@
 			"keyColor": "blue"
 		},
 		{
-			"type": "theme",
-			"key": "├󰉼",
-			"keyColor": "blue"
-		},
-		{
-			"type": "icons",
-			"key": "├󰀻",
-			"keyColor": "blue"
-		},
-		{
-			"type": "cursor",
-			"key": "├󰆿",
-			"keyColor": "blue"
-		},
-		{
-			"type": "font",
-			"key": "├",
-			"keyColor": "blue"
-		},
-		{
 			"type": "terminal",
 			"key": "└",
 			"keyColor": "blue"
