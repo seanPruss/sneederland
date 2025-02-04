@@ -314,7 +314,8 @@ done
 # generate symlinks for dotfiles
 cd $REPO_DIR || exit
 xdg-user-dirs-update
-# Random theme gets chosen when hyprland starts
+# Initialize with Rose Pine config
+stow --target=$HOME dotfiles-rose-pine
 stow --target=$HOME common
 
 # Start the bluetooth service
