@@ -2,8 +2,7 @@ try { tmux ls out+err> /dev/null } catch { tmux new-session -d }
 randomlogo.sh
 source ~/.zoxide.nu
 source ~/.cache/carapace/init.nu
-
-$env.LS_COLORS = (vivid generate catppuccin-mocha | str trim)
+source ~/.config/nushell/colours.nu
 
 $env.TRANSIENT_PROMPT_COMMAND = ^starship module character
 
