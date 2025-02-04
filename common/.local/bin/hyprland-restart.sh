@@ -1,24 +1,12 @@
 #!/usr/bin/env bash
 
-if pgrep waybar; then
-	killall waybar
-	hyprctl dispatch exec waybar
-else
-	hyprctl dispatch exec waybar
-fi
+pgrep waybar && killall waybar
+hyprctl dispatch exec waybar
 
-if pgrep dunst; then
-	killall dunst
-	hyprctl dispatch exec dunst
-else
-	hyprctl dispatch exec dunst
-fi
+pgrep dunst && killall dunst
+hyprctl dispatch exec dunst
 
-if pgrep hyprpaper; then
-	killall hyprpaper
-	hyprctl dispatch exec hyprpaper
-else
-	hyprctl dispatch exec hyprpaper
-fi
+pgrep hyprpaper && killall hyprpaper
+hyprctl dispatch exec hyprpaper
 
 pgrep pypr && pypr reload
