@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-COLOUR_SCHEMES=(rose-pine catppuccin)
+COLOUR_SCHEMES=(rose-pine catppuccin dracula)
 
 update-colours() {
 	[[ -z $1 ]] && exit
@@ -15,6 +15,9 @@ update-colours() {
 		;;
 	catppuccin)
 		gsettings set org.gnome.desktop.interface gtk-theme "catppuccin-mocha-red-standard+default"
+		;;
+	dracula)
+		gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
 		;;
 	*)
 		echo "how tf did you get here"
