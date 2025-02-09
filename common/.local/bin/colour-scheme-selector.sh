@@ -25,6 +25,7 @@ update-colours() {
 	esac
 
 	# reload everything that doesn't hot reload
+	pypr wall next
 	hyprctl reload
 	tmux kill-server
 }
