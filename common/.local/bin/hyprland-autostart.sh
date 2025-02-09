@@ -32,6 +32,6 @@ start-gammastep &
 hyprctl dispatch exec -- tldr --update
 hyprctl dispatch exec -- flatpak run com.spotify.Client
 hyprctl dispatch exec -- vesktop
-sleep 8
+sleep 10
 hyprctl dispatch killactive
 hyprctl dispatch killactive
