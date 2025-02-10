@@ -123,6 +123,7 @@ install_stage=(
 	cowsay
 	rose-pine-gtk-theme
 	catppuccin-gtk-theme-mocha
+	dracula-gtk-theme
 	beautyline
 	libreoffice-fresh
 	thunderbird
