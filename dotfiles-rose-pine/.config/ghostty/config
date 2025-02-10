@@ -8,7 +8,6 @@
 #                                                              ███
 
 theme = rose-pine
-background = #000000
 
 font-family = Jetbrains Mono Nerd Font
 font-size = 19
