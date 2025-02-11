@@ -25,8 +25,9 @@ update-colours() {
 	esac
 
 	# reload everything that doesn't hot reload
-	pypr wall next
 	hyprctl reload
+	sleep 1
+	pypr wall next
 	tmux kill-server
 }
 case "$1" in
