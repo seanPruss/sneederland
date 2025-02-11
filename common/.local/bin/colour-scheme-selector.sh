@@ -23,6 +23,7 @@ update-colours() {
 		echo "how tf did you get here"
 		;;
 	esac
+	gsettings set org.gnome.desktop.interface icon-theme "BeautyLine"
 
 	# reload everything that doesn't hot reload
 	hyprctl reload
