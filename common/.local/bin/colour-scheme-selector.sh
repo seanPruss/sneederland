@@ -26,9 +26,9 @@ update-colours() {
 
 	# reload everything that doesn't hot reload
 	hyprctl reload
+	tmux kill-server
 	sleep 1
 	pypr wall next
-	tmux kill-server
 }
 case "$1" in
 random)
