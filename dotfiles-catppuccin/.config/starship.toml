@@ -27,6 +27,13 @@ style = "bold mauve"
 [directory]
 truncation_length = 4
 style = "bold lavender"
+home_symbol = " "
+
+[directory.substitutions]
+Documents = "󰈙"
+Downloads = " "
+Music = " "
+Pictures = " "
 
 # Palette definitions
 [palettes.catppuccin_latte]
