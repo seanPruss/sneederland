@@ -32,7 +32,7 @@ window#waybar {
 	padding: 0px 8px;
 	color: rgba(142, 192, 124, 1);
 	border-radius: 20px;
-	border: 1px solid rgba(204, 36, 29, 1);
+	border: 1px solid rgba(251, 73, 52, 1);
 	background-color: rgba(60, 56, 54, 0.7);
 	margin-left: 10px;
 }
@@ -48,7 +48,7 @@ window#waybar {
 #taskbar,
 #window {
 	margin-right: 10px;
-	border: 1px solid rgba(204, 36, 29, 1);
+	border: 1px solid rgba(251, 73, 52, 1);
 	border-radius: 20px;
 	background-color: rgba(60, 56, 54, 0.7);
 	transition: all 0.4s ease-out;
@@ -64,13 +64,13 @@ window#waybar {
 #workspaces button {
 	border-radius: 20px;
 	border: none;
-	color: rgba(204, 36, 29, 1);
+	color: rgba(251, 73, 52, 1);
 	transition: all 0.4s ease-out;
 }
 
 #taskbar button.active,
 #workspaces button.active {
-	background-color: rgba(204, 36, 29, 0.5);
+	background-color: rgba(251, 73, 52, 0.5);
 	color: rgba(60, 56, 54, 1);
 	animation-name: blink-workspace;
 	animation-duration: 0.5s;
@@ -80,7 +80,7 @@ window#waybar {
 }
 
 #workspaces button.urgent {
-	color: rgba(204, 36, 29, 0.5);
+	color: rgba(251, 73, 52, 0.5);
 	font-weight: 800;
 	animation-name: blink-workspace;
 	animation-duration: 0.5s;
@@ -113,7 +113,7 @@ window#waybar {
 }
 
 #clock {
-	border: 1px solid rgba(204, 36, 29, 1);
+	border: 1px solid rgba(251, 73, 52, 1);
 	margin-left: 10px;
 	color: rgba(214, 93, 14, 1);
 	border-radius: 20px;
@@ -152,7 +152,7 @@ window#waybar {
 }
 
 #battery.critical:not(.charging) {
-	color: rgba(204, 36, 29, 1);
+	color: rgba(251, 73, 52, 1);
 	animation-name: blink-battery;
 	animation-duration: 0.5s;
 	animation-timing-function: steps(12);
@@ -175,12 +175,12 @@ window#waybar {
 
 #tray > .needs-attention {
 	-gtk-icon-effect: highlight;
-	background-color: rgba(204, 36, 29, 1);
+	background-color: rgba(251, 73, 52, 1);
 }
 
 #custom-power {
 	padding: 0px 6px;
-	color: rgba(204, 36, 29, 1);
+	color: rgba(251, 73, 52, 1);
 }
 
 @keyframes blink-update {
@@ -191,7 +191,7 @@ window#waybar {
 
 #custom-launcher,
 #custom-updates {
-	border: 1px solid rgba(204, 36, 29, 1);
+	border: 1px solid rgba(251, 73, 52, 1);
 	margin-right: 10px;
 	color: rgba(69, 133, 136, 1);
 	background-color: rgba(60, 56, 54, 0.7);
@@ -214,7 +214,7 @@ window#waybar {
 }
 
 #custom-weather {
-	border: 1px solid rgba(204, 36, 29, 1);
+	border: 1px solid rgba(251, 73, 52, 1);
 	margin-left: 10px;
 	color: rgba(69, 133, 136, 1);
 	background-color: rgba(60, 56, 54, 0.7);
