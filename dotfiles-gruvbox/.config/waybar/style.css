@@ -1,0 +1,223 @@
+/* ▄▄      ▄▄                     ▄▄ */
+/* ██      ██                     ██ */
+/* ▀█▄ ██ ▄█▀  ▄█████▄  ▀██  ███  ██▄███▄    ▄█████▄   ██▄████ */
+/*  ██ ██ ██   ▀ ▄▄▄██   ██▄ ██   ██▀  ▀██   ▀ ▄▄▄██   ██▀ */
+/*  ███▀▀███  ▄██▀▀▀██    ████▀   ██    ██  ▄██▀▀▀██   ██ */
+/*  ███  ███  ██▄▄▄███     ███    ███▄▄██▀  ██▄▄▄███   ██ */
+/*  ▀▀▀  ▀▀▀   ▀▀▀▀ ▀▀     ██     ▀▀ ▀▀▀     ▀▀▀▀ ▀▀   ▀▀ */
+/*                       ███ */
+
+* {
+	font-family: "JetBrainsMono NF";
+	font-size: 15px;
+}
+
+window#waybar {
+	background-color: rgba(60, 56, 54, 0);
+	border-radius: 20px;
+	color: rgba(224, 222, 244, 1);
+	transition-property: background-color;
+	transition-duration: 0.5s;
+}
+
+#hardware-info,
+#disk,
+#temperature,
+#network,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#systray,
+#mpd {
+	padding: 0px 8px;
+	color: rgba(142, 192, 124, 1);
+	border-radius: 20px;
+	border: 1px solid rgba(204, 36, 29, 1);
+	background-color: rgba(60, 56, 54, 0.7);
+	margin-left: 10px;
+}
+
+@keyframes blink-workspace {
+	to {
+		color: rgba(60, 56, 54, 0.7);
+		font-weight: 800;
+	}
+}
+
+#workspaces,
+#taskbar,
+#window {
+	margin-right: 10px;
+	border: 1px solid rgba(204, 36, 29, 1);
+	border-radius: 20px;
+	background-color: rgba(60, 56, 54, 0.7);
+	transition: all 0.4s ease-out;
+}
+
+#window {
+	padding-left: 7px;
+	padding-right: 7px;
+	color: rgba(69, 133, 136, 1);
+}
+
+#taskbar button,
+#workspaces button {
+	border-radius: 20px;
+	border: none;
+	color: rgba(204, 36, 29, 1);
+	transition: all 0.4s ease-out;
+}
+
+#taskbar button.active,
+#workspaces button.active {
+	background-color: rgba(204, 36, 29, 0.5);
+	color: rgba(60, 56, 54, 1);
+	animation-name: blink-workspace;
+	animation-duration: 0.5s;
+	animation-timing-function: steps(12);
+	animation-iteration-count: 2;
+	animation-direction: alternate;
+}
+
+#workspaces button.urgent {
+	color: rgba(204, 36, 29, 0.5);
+	font-weight: 800;
+	animation-name: blink-workspace;
+	animation-duration: 0.5s;
+	animation-timing-function: steps(12);
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+#workspaces button.empty {
+	color: rgba(69, 133, 136, 1);
+	animation-name: blink-workspace;
+	animation-duration: 0.5s;
+	animation-timing-function: steps(12);
+	animation-iteration-count: 4;
+	animation-direction: alternate;
+}
+
+#workspaces button.occupied {
+	background-color: rgba(214, 93, 14, 0.5);
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+	margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+	margin-right: 0;
+}
+
+#clock {
+	border: 1px solid rgba(204, 36, 29, 1);
+	margin-left: 10px;
+	color: rgba(214, 93, 14, 1);
+	border-radius: 20px;
+	background-color: rgba(60, 56, 54, 0.7);
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#backlight {
+	padding: 0px 8px 0px 4px;
+}
+
+#battery {
+	padding: 0px 8px 0px 4px;
+}
+
+#battery.charging,
+#battery.plugged {
+	color: rgba(69, 133, 136, 1);
+}
+
+@keyframes blink-battery {
+	to {
+		color: rgba(224, 222, 244, 1);
+	}
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.warning:not(.charging) {
+	color: rgba(214, 93, 14, 1);
+	animation-name: blink-battery;
+	animation-duration: 0.5s;
+	animation-timing-function: steps(12);
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+#battery.critical:not(.charging) {
+	color: rgba(204, 36, 29, 1);
+	animation-name: blink-battery;
+	animation-duration: 0.5s;
+	animation-timing-function: steps(12);
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+#systray {
+	color: rgba(215, 153, 33, 1);
+	padding: 0px 4px;
+}
+
+#tray {
+	padding: 0px 8px;
+}
+
+#tray > .passive {
+	-gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+	-gtk-icon-effect: highlight;
+	background-color: rgba(204, 36, 29, 1);
+}
+
+#custom-power {
+	padding: 0px 6px;
+	color: rgba(204, 36, 29, 1);
+}
+
+@keyframes blink-update {
+	to {
+		background-color: rgba(69, 133, 136, 1);
+	}
+}
+
+#custom-launcher,
+#custom-updates {
+	border: 1px solid rgba(204, 36, 29, 1);
+	margin-right: 10px;
+	color: rgba(69, 133, 136, 1);
+	background-color: rgba(60, 56, 54, 0.7);
+	border-radius: 20px;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+#custom-launcher {
+	color: rgba(142, 192, 124, 1);
+	padding-left: 9px;
+	padding-right: 10px;
+	font-size: 20px;
+}
+
+#custom-updates {
+	padding-right: 8px;
+	padding-left: 8px;
+}
+
+#custom-weather {
+	border: 1px solid rgba(204, 36, 29, 1);
+	margin-left: 10px;
+	color: rgba(69, 133, 136, 1);
+	background-color: rgba(60, 56, 54, 0.7);
+	border-radius: 20px;
+	padding: 0px 8px;
+}
