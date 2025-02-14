@@ -29,7 +29,6 @@ update-colours() {
 	gsettings set org.gnome.desktop.interface icon-theme "BeautyLine"
 
 	# reload everything that doesn't hot reload
-	hyprctl reload
 	tmux kill-server
 	sleep 1
 	pypr wall next
