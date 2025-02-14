@@ -60,19 +60,19 @@
     mouse_right_click = close_all
 
 [urgency_low]
-    background = "#26273d80"
+    background = "#26273d8f"
     highlight = "#31748f"
     frame_color = "#31748f"
     default_icon = "preferences-system-notifications"
 
 [urgency_normal]
-    background = "#26273d80"
+    background = "#26273d8f"
     highlight = "#31748f"
     frame_color = "#31748f"
     default_icon = "help-hint"
 
 [urgency_critical]
-    background = "#35263d80"
+    background = "#35263d8f"
     highlight = "#eb6f92"
     frame_color = "#eb6f92"
     default_icon = "emblem-unreadable"

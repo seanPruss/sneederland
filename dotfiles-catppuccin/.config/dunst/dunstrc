@@ -63,17 +63,17 @@ separator_color= frame
 highlight = "#89b4fa"
 
 [urgency_low]
-background = "#1e1e2e80"
+background = "#1e1e2e8f"
 foreground = "#cdd6f4"
 default_icon = "preferences-system-notifications"
 
 [urgency_normal]
-background = "#1e1e2e80"
+background = "#1e1e2e8f"
 foreground = "#cdd6f4"
 default_icon = "help-hint"
 
 [urgency_critical]
-background = "#1e1e2e80"
+background = "#1e1e2e8f"
 foreground = "#cdd6f4"
 default_icon = "emblem-unreadable"
 frame_color = "#fab387"
