@@ -30,7 +30,7 @@ update-colours() {
 
 	# reload tmux and change wallpaper
 	tmux kill-server
-	sleep 1
+	sleep 0.6
 	pypr wall next
 }
 case "$1" in

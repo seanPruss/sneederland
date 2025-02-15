@@ -3,7 +3,7 @@
 start-gammastep() {
 	local latitude=$(curl -s https://ipinfo.io/loc | cut -d ',' -f 1)
 	local longitude=$(curl -s https://ipinfo.io/loc | cut -d ',' -f 2)
-	hyprctl dispatch exec -- gammastep -t 6500:1200 -l $latitude:$longitude && dunstify -u low -i check-filled "Gammastep Started" "Night light will turn on at sunset"
+	hyprctl dispatch exec -- gammastep -t 6500:1500 -l $latitude:$longitude && dunstify -u low -i check-filled "Gammastep Started" "Night light will turn on at sunset"
 }
 
 check-repo-updates() {
@@ -21,6 +21,10 @@ check-repo-updates() {
 	[ "$LOCAL" != "$REMOTE" ] && dunstify "Update available for SneederLand" "Run git pull in $REPO_DIR and run installer.sh" -u critical -i edit-download
 }
 
+hyprctl dispatch exec waybar
+hyprctl dispatch exec dunst
+hyprctl dispatch exec hyprpaper
+hyprctl dispatch exec pypr
 hyprctl monitors | grep HDMI-A-1 && hyprctl dispatch workspace 2
 
 while ! ping -c 1 archlinux.org; do
