@@ -6,7 +6,7 @@ update-colours() {
 	[[ -z $1 ]] && exit
 	cd "$(fd -td sneederland $HOME)" || exit
 	rm -rf ~/Pictures/wallpapers/*
-	stow --override=.* --target=$HOME "dotfiles-$SELECTION"
+	stow --override=.* --target=$HOME "dotfiles-$1"
 	stow --override=.* --target=$HOME common
 
 	case "$1" in
@@ -30,7 +30,6 @@ update-colours() {
 
 	# reload tmux and change wallpaper
 	tmux kill-server
-	pypr wall next
 }
 case "$1" in
 random)
@@ -45,3 +44,4 @@ choose)
 	echo "invalid command"
 	;;
 esac
+pypr wall next
