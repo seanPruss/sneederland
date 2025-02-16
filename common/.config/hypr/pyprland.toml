@@ -24,7 +24,7 @@ command = 'thunderbird'
 class = "thunderbird"
 
 [wallpapers]
-interval = 15
+interval = 10
 extensions = ["png", "jpg", "jpeg", "webp", "JPG"]
 path = '~/Pictures/wallpapers/'
 recurse = true
