@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CHOSEN=$(printf "Lock\nSuspend\nReboot\nShutdown\nLog Out" | tofi --config "$HOME"/.config/tofi/powermenu-config)
+CHOSEN=$(printf "Lock\nSuspend\nReboot\nShutdown\nLog Out" | tofi --config "$HOME"/.config/tofi/powermenu-config --fuzzy-match=true)
 
 case "$CHOSEN" in
 "Lock") hyprlock ;;

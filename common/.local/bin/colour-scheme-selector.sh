@@ -30,6 +30,7 @@ update-colours() {
 
 	# reload tmux and change wallpaper
 	tmux kill-server
+	pypr wall next
 }
 case "$1" in
 random)
@@ -37,11 +38,10 @@ random)
 	update-colours $SELECTION
 	;;
 choose)
-	SELECTION=$(printf '%s\n' "${COLOUR_SCHEMES[@]}" | tofi --config "$HOME/.config/tofi/colour-scheme-switcher-config")
+	SELECTION=$(printf '%s\n' "${COLOUR_SCHEMES[@]}" | tofi --config "$HOME/.config/tofi/colour-scheme-switcher-config" --fuzzy-match=true)
 	update-colours $SELECTION
 	;;
 *)
 	echo "invalid command"
 	;;
 esac
-pypr wall next
