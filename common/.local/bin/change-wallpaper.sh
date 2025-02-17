@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
-cp -f "$1" ~/.cache/current_wallpaper
-hyprctl hyprpaper reload ,"$1"
+WALLPAPER="$(fd . ~/Pictures/wallpapers -tf --follow | shuf -n 1)"
+cp -f "$WALLPAPER" ~/.cache/current_wallpaper
+hyprctl hyprpaper reload ,"$WALLPAPER"
