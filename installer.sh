@@ -122,7 +122,6 @@ install_stage=(
 	fortune-mod
 	cowsay
 	rose-pine-gtk-theme
-	catppuccin-gtk-theme-mocha
 	dracula-gtk-theme
 	gruvbox-gtk-theme-git
 	beautyline
@@ -316,8 +315,8 @@ done
 cd $REPO_DIR || exit
 xdg-user-dirs-update
 # Initialize with Rose Pine config
-stow --override=.* --target=$HOME dotfiles-rose-pine
-stow --override=.* --target=$HOME common
+stow --target=$HOME dotfiles-rose-pine &>>$INSTLOG
+stow --override=.* --target=$HOME common &>>$INSTLOG
 
 # Start the bluetooth service
 echo -e "$CNT - Starting the Bluetooth Service..."
@@ -366,6 +365,11 @@ sudo updatedb &>>$INSTLOG
 echo -e "$CNT - Building Bat theme cache"
 bat cache --build &>>$INSTLOG
 
+# Install catppuccin gtk theme
+echo -e "$CNT - Installing catppuccin gtk theme"
+curl -LsSO "https://raw.githubusercontent.com/catppuccin/gtk/v1.0.3/install.py" &>>$INSTLOG
+python3 install.py mocha red &>>$INSTLOG
+
 # Set up ufw
 echo -e "$CNT - Setting up UFW"
 sudo ufw limit 22/tcp &>>$INSTLOG
@@ -384,7 +388,7 @@ echo -e "$CNT - Setting up tldr"
 tldr --update &>>$INSTLOG
 
 # Set up nushell
-chsh -s "$(which nu)" &>>$INSTLOG
+chsh -s "$(which nu)"
 
 ### Install software for Asus ROG laptops ###
 read -rep $'[\e[1;33mACTION\e[0m] - For ASUS ROG Laptops - Would you like to install Asus ROG software support? (y,n) ' ROG
