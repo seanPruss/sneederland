@@ -41,7 +41,7 @@ prep_stage=(
 	cliphist
 	python-requests
 	pacman-contrib
-	mkinitcpio-firmware
+	mkinitcpio-archlogo
 	cpio
 )
 
