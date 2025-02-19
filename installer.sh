@@ -361,10 +361,6 @@ fi
 echo -e "$CNT - Updating plocate database"
 sudo updatedb &>>$INSTLOG
 
-# Build theme cache for bat
-echo -e "$CNT - Building Bat theme cache"
-bat cache --build &>>$INSTLOG
-
 # Install catppuccin gtk theme
 echo -e "$CNT - Installing catppuccin gtk theme"
 curl -LsSO "https://raw.githubusercontent.com/catppuccin/gtk/v1.0.3/install.py" &>>$INSTLOG
