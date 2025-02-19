@@ -306,17 +306,17 @@ for SOFTWR in ${install_stage[@]}; do
 done
 
 # Flatpaks
-echo -e "$CNT - Installing main components, this may take a while..."
+echo -e "$CNT - Installing flatpaks..."
 for SOFTWR in ${flatpaks[@]}; do
 	flatpak install $SOFTWR || exit
 done
 
 # generate symlinks for dotfiles
 cd $REPO_DIR || exit
-xdg-user-dirs-update
+xdg-user-dirs-update &>>$INSTLOG
 # Initialize with Rose Pine config
 stow --target=$HOME dotfiles-rose-pine &>>$INSTLOG
-stow --override=.* --target=$HOME common &>>$INSTLOG
+stow --target=$HOME common &>>$INSTLOG
 
 # Start the bluetooth service
 echo -e "$CNT - Starting the Bluetooth Service..."
