@@ -316,7 +316,7 @@ cd $REPO_DIR || exit
 xdg-user-dirs-update &>>$INSTLOG
 # Initialize with Rose Pine config
 stow --target=$HOME dotfiles-rose-pine &>>$INSTLOG
-stow --target=$HOME common &>>$INSTLOG
+stow --override=.* --target=$HOME common &>>$INSTLOG
 
 # Start the bluetooth service
 echo -e "$CNT - Starting the Bluetooth Service..."
@@ -382,9 +382,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &>>$INSTLOG
 # Set up tldr
 echo -e "$CNT - Setting up tldr"
 tldr --update &>>$INSTLOG
-
-# Set up nushell
-chsh -s "$(which nu)"
 
 ### Install software for Asus ROG laptops ###
 read -rep $'[\e[1;33mACTION\e[0m] - For ASUS ROG Laptops - Would you like to install Asus ROG software support? (y,n) ' ROG

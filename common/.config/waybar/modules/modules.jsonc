@@ -16,7 +16,7 @@
 	"custom/updates": {
 		"format": " {}",
 		"tooltip-format": "{} updates available",
-		"exec": "~/.local/bin/update.sh check",
+		"exec": "update.sh check",
 		"on-click": "pypr toggle update",
 		"interval": 60
 	},
@@ -56,7 +56,7 @@
 		"format": "&#x23FB;",
 		"tooltip": true,
 		"tooltip-format": "Power Menu",
-		"on-click": "~/.local/bin/powermenu.sh"
+		"on-click": "powermenu.sh"
 	},
 
 	"wireplumber": {
@@ -76,16 +76,16 @@
 			"default": ["", "", ""]
 		},
 		"on-click": "pavucontrol",
-		"on-click-right": "~/.local/bin/change-volume.sh mute",
-		"on-scroll-up": "~/.local/bin/change-volume.sh up",
-		"on-scroll-down": "~/.local/bin/change-volume.sh down"
+		"on-click-right": "change-volume.sh mute",
+		"on-scroll-up": "change-volume.sh up",
+		"on-scroll-down": "change-volume.sh down"
 	},
 
 	"backlight": {
 		"format": " {percent}% {icon}",
 		"format-icons": ["", "", "", "", "", "", "", "", ""],
-		"on-scroll-up": "~/.local/bin/change-brightness.sh up",
-		"on-scroll-down": "~/.local/bin/change-brightness.sh down"
+		"on-scroll-up": "change-brightness.sh up",
+		"on-scroll-down": "change-brightness.sh down"
 	},
 
 	"cpu": {
@@ -105,7 +105,7 @@
 
 	"custom/media": {
 		"format": "  {}",
-		"exec": "~/.local/bin/mediaplayer.sh",
+		"exec": "mediaplayer.sh",
 		"return-type": "json",
 		"interval": 3,
 		"on-click": "playerctl -p spotify play-pause"
