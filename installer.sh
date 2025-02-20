@@ -315,8 +315,8 @@ done
 cd $REPO_DIR || exit
 xdg-user-dirs-update &>>$INSTLOG
 # Initialize with Rose Pine config
-rm ~/.bashrc
-rm ~/.bash_profile
+mv ~/.bashrc ~/.bashrc.bak
+mv ~/.bash_profile ~/.bash_profile.bak
 stow --target=$HOME dotfiles-rose-pine &>>$INSTLOG
 stow --target=$HOME common &>>$INSTLOG
 
