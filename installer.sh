@@ -379,10 +379,6 @@ sudo ufw enable &>>$INSTLOG
 echo -e "$CNT - Setting up tmux plugins"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &>>$INSTLOG
 
-# Set up tldr
-echo -e "$CNT - Setting up tldr"
-tldr --update &>>$INSTLOG
-
 ### Install software for Asus ROG laptops ###
 read -rep $'[\e[1;33mACTION\e[0m] - For ASUS ROG Laptops - Would you like to install Asus ROG software support? (y,n) ' ROG
 if [[ $ROG == "Y" || $ROG == "y" ]]; then
