@@ -315,8 +315,10 @@ done
 cd $REPO_DIR || exit
 xdg-user-dirs-update &>>$INSTLOG
 # Initialize with Rose Pine config
+rm ~/.bashrc
+rm ~/.bash_profile
 stow --target=$HOME dotfiles-rose-pine &>>$INSTLOG
-stow --override=.* --target=$HOME common &>>$INSTLOG
+stow --target=$HOME common &>>$INSTLOG
 
 # Start the bluetooth service
 echo -e "$CNT - Starting the Bluetooth Service..."
