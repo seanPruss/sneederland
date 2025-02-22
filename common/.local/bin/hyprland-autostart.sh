@@ -29,7 +29,6 @@ done
 
 check-repo-updates &
 start-gammastep &
-hyprctl dispatch exec -- tldr --update
 hyprctl dispatch exec -- flatpak run com.spotify.Client
 hyprctl dispatch exec -- vesktop
 sleep 10
