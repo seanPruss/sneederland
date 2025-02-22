@@ -23,7 +23,7 @@ send_notification() {
 	if [ "$1" = "mute" ]; then ICON="muted"; elif [ "$VOLUME" -lt 33 ]; then ICON="low"; elif [ "$VOLUME" -lt 66 ]; then ICON="medium"; else ICON="high"; fi
 	if [ "$1" = "mute" ]; then TEXT="Currently muted"; else TEXT="Currently at ${VOLUME}%"; fi
 
-	dunstify -u low -a "Volume" -r 9993 -h int:value:"$VOLUME" -i "audio-volume-$ICON" "Volume" "$TEXT" -t 2000
+	notify-send -u low -a "Volume" -r 9993 -h int:value:"$VOLUME" -i "audio-volume-$ICON" "Volume" "$TEXT" -t 2000
 }
 
 case $1 in
