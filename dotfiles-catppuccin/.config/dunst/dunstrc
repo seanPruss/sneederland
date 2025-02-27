@@ -58,22 +58,19 @@ width = 500
     mouse_left_click = do_action, close_current
     mouse_middle_click = do_action, close_current
     mouse_right_click = close_all
-frame_color = "#89b4fa"
-separator_color= frame
-highlight = "#89b4fa"
 
 [urgency_low]
 background = "#1e1e2e8f"
-foreground = "#cdd6f4"
+foreground = "#89b4fa"
 default_icon = "preferences-system-notifications"
 
 [urgency_normal]
 background = "#1e1e2e8f"
-foreground = "#cdd6f4"
+foreground = "#89b4fa"
 default_icon = "help-hint"
 
 [urgency_critical]
-background = "#1e1e2e8f"
+background = "#f38ba88f"
 foreground = "#cdd6f4"
 default_icon = "emblem-unreadable"
-frame_color = "#fab387"
+frame_color = "#f38ba8"
