@@ -106,7 +106,6 @@
 	"custom/media": {
 		"format": "  {}",
 		"exec": "mediaplayer.sh",
-		"return-type": "json",
 		"interval": 3,
 		"on-click": "playerctl -p spotify play-pause"
 	},
