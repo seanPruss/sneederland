@@ -35,7 +35,12 @@ set({ "n", "v" }, "<leader>y", '"+y', { silent = true, noremap = true })
 set({ "n", "v" }, "<leader>Y", '"+Y', { silent = true, noremap = true })
 set({ "n", "v" }, "<leader>p", '"+p', { silent = true, noremap = true })
 set("n", "<leader><leader>", function()
-    if pcall(Snacks.picker.git_files) then
+    local handle = io.popen("git rev-parse --is-inside-work-tree 2>/dev/null")
+    local result = handle:read("*a")
+    handle:close()
+    if result:match("true") then
+        Snacks.picker.git_files()
+    else
         Snacks.picker.files({ hidden = true })
     end
 end)
