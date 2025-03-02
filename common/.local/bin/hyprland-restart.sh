@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
-killall waybar && hyprctl dispatch exec waybar
+killall waybar
+hyprctl dispatch exec waybar
 
-killall dunst && hyprctl dispatch exec dunst
+killall dunst
+hyprctl dispatch exec dunst
