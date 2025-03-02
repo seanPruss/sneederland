@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-artist=$(playerctl -p spotify metadata artist | sed 's/&/&amp;/g')
-title=$(playerctl -p spotify metadata title | sed 's/&/&amp;/g')
+artist=$(playerctl -p spotify metadata artist)
+title=$(playerctl -p spotify metadata title)
 echo "$artist - $title"
