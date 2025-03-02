@@ -61,18 +61,16 @@
 
 [urgency_low]
     background = "#26273d8f"
-    highlight = "#31748f"
-    frame_color = "#31748f"
+    foreground = "#31748f"
     default_icon = "preferences-system-notifications"
 
 [urgency_normal]
     background = "#26273d8f"
-    highlight = "#31748f"
-    frame_color = "#31748f"
+    foreground = "#f6c177"
     default_icon = "help-hint"
 
 [urgency_critical]
-    background = "#35263d8f"
-    highlight = "#eb6f92"
+    background = "#eb6f928f"
     frame_color = "#eb6f92"
+    foreground = "#e0def4"
     default_icon = "emblem-unreadable"

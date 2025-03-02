@@ -4,10 +4,10 @@ COLOUR_SCHEMES=(rose-pine catppuccin dracula gruvbox)
 
 update-colours() {
 	[[ -z $1 ]] && exit
-	cd "$(fd -td sneederland $HOME)" || exit
+	cd "$(fd -td sneederland "$HOME")" || exit
 	rm -rf ~/Pictures/wallpapers/*
-	stow --override=.* --target=$HOME "dotfiles-$1"
-	stow --override=.* --target=$HOME common
+	stow --override=.* --target="$HOME" "dotfiles-$1"
+	stow --override=.* --target="$HOME" common
 
 	case "$1" in
 	rose-pine)
@@ -34,11 +34,11 @@ update-colours() {
 case "$1" in
 random)
 	SELECTION=$(printf '%s\n' "${COLOUR_SCHEMES[@]}" | shuf -n 1)
-	update-colours $SELECTION
+	update-colours "$SELECTION"
 	;;
 choose)
 	SELECTION=$(printf '%s\n' "${COLOUR_SCHEMES[@]}" | tofi --config "$HOME/.config/tofi/colour-scheme-switcher-config" --fuzzy-match=true)
-	update-colours $SELECTION
+	update-colours "$SELECTION"
 	;;
 *)
 	echo "invalid command"
