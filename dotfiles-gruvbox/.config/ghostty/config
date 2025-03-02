@@ -13,7 +13,6 @@ font-family = Jetbrains Mono Nerd Font
 font-size = 19
 
 gtk-titlebar = false
-term = xterm-256color
 confirm-close-surface = false
 mouse-hide-while-typing = true
 window-padding-color = background
