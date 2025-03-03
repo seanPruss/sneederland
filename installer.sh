@@ -239,9 +239,9 @@ if [[ $WIFI == "Y" || $WIFI == "y" ]]; then
 	echo -e "\e[1A\e[K$COK - NetworkManager restart completed."
 fi
 
-sudo pacman -S reflector --needed --noconfirm &>>$INSTLOG || exit
+sudo pacman -S reflector --needed --noconfirm &>>"$INSTLOG" || exit
 echo -e "$CNT - Updating mirrorlist"
-sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist &>>$INSTLOG || exit
+sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist &>>"$INSTLOG" || exit
 echo -e "\e[1A\e[K$COK - Mirrorlist updated."
 
 #### Check for package manager ####
@@ -273,26 +273,26 @@ else
 	echo -e "\e[1A\e[K$COK - System updated."
 fi
 
-sudo cp $REPO_DIR/cleancache.hook /usr/share/libalpm/hooks
-sudo cp $REPO_DIR/clearcache /usr/share/libalpm/scripts
+sudo cp "$REPO_DIR"/cleancache.hook /usr/share/libalpm/hooks
+sudo cp "$REPO_DIR"/clearcache /usr/share/libalpm/scripts
 
 # Prep Stage - Bunch of needed items
 echo -e "$CNT - Prep Stage - Installing needed components, this may take a while..."
-for SOFTWR in ${prep_stage[@]}; do
+for SOFTWR in "${prep_stage[@]}"; do
 	yay -S --noconfirm --needed "$SOFTWR" || exit
 done
 
 # Setup Nvidia if it was found
 if [[ "$ISNVIDIA" == true ]]; then
 	echo -e "$CNT - Nvidia GPU support setup stage, this may take a while..."
-	for SOFTWR in ${nvidia_stage[@]}; do
+	for SOFTWR in "${nvidia_stage[@]}"; do
 		yay -S --noconfirm --needed "$SOFTWR" || exit
 	done
 
 	# update config
 	sudo sed -i 's/MODULES=()/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
 	sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
-	echo -e "options nvidia-drm modeset=1" | sudo tee -a /etc/modprobe.d/nvidia.conf &>>$INSTLOG
+	echo -e "options nvidia-drm modeset=1" | sudo tee -a /etc/modprobe.d/nvidia.conf &>>"$INSTLOG"
 fi
 
 # Install the correct hyprland version
@@ -301,18 +301,18 @@ yay -S --needed --noconfirm hyprland || exit
 
 # Stage 1 - main components
 echo -e "$CNT - Installing main components, this may take a while..."
-for SOFTWR in ${install_stage[@]}; do
+for SOFTWR in "${install_stage[@]}"; do
 	yay -S --needed --noconfirm "$SOFTWR" || exit
 done
 
 # Flatpaks
 echo -e "$CNT - Installing flatpaks..."
-for SOFTWR in ${flatpaks[@]}; do
+for SOFTWR in "${flatpaks[@]}"; do
 	flatpak install "$SOFTWR" || exit
 done
 
 # generate symlinks for dotfiles
-cd $REPO_DIR || exit
+cd "$REPO_DIR" || exit
 xdg-user-dirs-update &>>"$INSTLOG"
 # Initialize with Rose Pine config
 mv ~/.bashrc ~/.bashrc.bak
@@ -365,17 +365,19 @@ sudo updatedb &>>"$INSTLOG"
 
 # Install catppuccin gtk theme
 echo -e "$CNT - Installing catppuccin gtk theme"
-curl -LsSO "https://raw.githubusercontent.com/catppuccin/gtk/v1.0.3/install.py" &>>$INSTLOG
+curl -LsSO "https://raw.githubusercontent.com/catppuccin/gtk/v1.0.3/install.py" &>>"$INSTLOG"
 python3 install.py mocha red &>>"$INSTLOG"
 
 # Set up ufw
 echo -e "$CNT - Setting up UFW"
-sudo ufw limit 22/tcp &>>"$INSTLOG"
-sudo ufw allow 80/tcp &>>"$INSTLOG"
-sudo ufw allow 443/tcp &>>"$INSTLOG"
-sudo ufw default deny incoming &>>"$INSTLOG"
-sudo ufw default allow outgoing &>>"$INSTLOG"
-sudo ufw enable &>>"$INSTLOG"
+{
+	sudo ufw limit 22/tcp
+	sudo ufw allow 80/tcp
+	sudo ufw allow 443/tcp
+	sudo ufw default deny incoming
+	sudo ufw default allow outgoing
+	sudo ufw enable
+} &>>"$INSTLOG"
 
 # Set up tpm for tmux
 echo -e "$CNT - Setting up tmux plugins"
@@ -385,16 +387,18 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &>>"$INSTLOG"
 read -rep $'[\e[1;33mACTION\e[0m] - For ASUS ROG Laptops - Would you like to install Asus ROG software support? (y,n) ' ROG
 if [[ $ROG == "Y" || $ROG == "y" ]]; then
 	echo -e "$CNT - Adding Keys..."
-	sudo pacman-key --recv-keys 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35 &>>"$INSTLOG"
-	sudo pacman-key --finger 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35 &>>"$INSTLOG"
-	sudo pacman-key --lsign-key 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35 &>>"$INSTLOG"
-	sudo pacman-key --finger 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35 &>>"$INSTLOG"
+	{
+		sudo pacman-key --recv-keys 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
+		sudo pacman-key --finger 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
+		sudo pacman-key --lsign-key 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
+		sudo pacman-key --finger 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
+	} &>>"$INSTLOG"
 
 	LOC="/etc/pacman.conf"
 	echo -e "$CNT - Updating $LOC with g14 repo."
 	echo -e "\n[g14]\nServer = https://arch.asus-linux.org" | sudo tee -a $LOC &>>"$INSTLOG"
 	echo -e "$CNT - Update the system..."
-	sudo pacman -Syu --noconfirm &>>$INSTLOG
+	sudo pacman -Syu --noconfirm &>>"$INSTLOG"
 
 	echo -e "$CNT - Installing ROG pacakges..."
 	yay -S --needed --noconfirm asusctl || exit
