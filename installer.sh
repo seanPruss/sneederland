@@ -402,8 +402,8 @@ if [[ $ROG == "Y" || $ROG == "y" ]]; then
 	yay -S --needed --noconfirm rog-control-center || exit
 
 	echo -e "$CNT - Activating ROG services..."
-	sudo systemctl enable --now power-profiles-daemon.service &>>$INSTLOG
-	sudo systemctl enable --now supergfxd &>>$INSTLOG
+	sudo systemctl enable --now power-profiles-daemon.service &>>"$INSTLOG"
+	sudo systemctl enable --now supergfxd &>>"$INSTLOG"
 
 	# add the ROG keybinding file to the config
 	echo -e "\nsource = ~/.config/hypr/rog-g15-strix-2021-binds.conf" >>~/.config/hypr/hyprland.conf
