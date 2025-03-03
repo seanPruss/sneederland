@@ -172,7 +172,7 @@ INSTLOG=$REPO_DIR/install.log
 
 # function that would show a progress bar to the user
 show_progress() {
-	while ps | grep $1 &>/dev/null; do
+	while ps | grep "$1" &>/dev/null; do
 		echo -n "."
 		sleep 2
 	done
@@ -226,9 +226,9 @@ read -rep $'[\e[1;33mACTION\e[0m] - Would you like to disable WiFi powersave? (y
 if [[ $WIFI == "Y" || $WIFI == "y" ]]; then
 	LOC="/etc/NetworkManager/conf.d/wifi-powersave.conf"
 	echo -e "$CNT - The following file has been created $LOC.\n"
-	echo -e "[connection]\nwifi.powersave = 2" | sudo tee -a $LOC &>>$INSTLOG
+	echo -e "[connection]\nwifi.powersave = 2" | sudo tee -a $LOC &>>"$INSTLOG"
 	echo -en "$CNT - Restarting NetworkManager service, Please wait."
-	sudo systemctl restart NetworkManager &>>$INSTLOG
+	sudo systemctl restart NetworkManager &>>"$INSTLOG"
 
 	#wait for services to restore (looking at you DNS)
 	for i in {1..6}; do
@@ -247,9 +247,9 @@ echo -e "\e[1A\e[K$COK - Mirrorlist updated."
 #### Check for package manager ####
 if ! which yay &>/dev/null; then
 	echo -en "$CNT - Installing yay."
-	git clone https://aur.archlinux.org/yay-bin.git &>>$INSTLOG
+	git clone https://aur.archlinux.org/yay-bin.git &>>"$INSTLOG"
 	cd yay-bin || exit
-	makepkg -si --noconfirm &>>$INSTLOG &
+	makepkg -si --noconfirm &>>"$INSTLOG" &
 	show_progress $!
 	sleep 2
 	if [ -e "$(which yay)" ]; then
@@ -258,7 +258,7 @@ if ! which yay &>/dev/null; then
 
 		# update the yay database
 		echo -en "$CNT - Running a system update."
-		yay -Syyu --noconfirm &>>$INSTLOG &
+		yay -Syyu --noconfirm &>>"$INSTLOG" &
 		show_progress $!
 		echo -e "\e[1A\e[K$COK - System updated."
 	else
@@ -268,7 +268,7 @@ if ! which yay &>/dev/null; then
 	fi
 else
 	echo -en "$CNT - Running a system update."
-	yay -Syyu --noconfirm &>>$INSTLOG &
+	yay -Syyu --noconfirm &>>"$INSTLOG" &
 	show_progress $!
 	echo -e "\e[1A\e[K$COK - System updated."
 fi
@@ -279,14 +279,14 @@ sudo cp $REPO_DIR/clearcache /usr/share/libalpm/scripts
 # Prep Stage - Bunch of needed items
 echo -e "$CNT - Prep Stage - Installing needed components, this may take a while..."
 for SOFTWR in ${prep_stage[@]}; do
-	yay -S --noconfirm --needed $SOFTWR || exit
+	yay -S --noconfirm --needed "$SOFTWR" || exit
 done
 
 # Setup Nvidia if it was found
 if [[ "$ISNVIDIA" == true ]]; then
 	echo -e "$CNT - Nvidia GPU support setup stage, this may take a while..."
 	for SOFTWR in ${nvidia_stage[@]}; do
-		yay -S --noconfirm --needed $SOFTWR || exit
+		yay -S --noconfirm --needed "$SOFTWR" || exit
 	done
 
 	# update config
@@ -302,55 +302,55 @@ yay -S --needed --noconfirm hyprland || exit
 # Stage 1 - main components
 echo -e "$CNT - Installing main components, this may take a while..."
 for SOFTWR in ${install_stage[@]}; do
-	yay -S --needed --noconfirm $SOFTWR || exit
+	yay -S --needed --noconfirm "$SOFTWR" || exit
 done
 
 # Flatpaks
 echo -e "$CNT - Installing flatpaks..."
 for SOFTWR in ${flatpaks[@]}; do
-	flatpak install $SOFTWR || exit
+	flatpak install "$SOFTWR" || exit
 done
 
 # generate symlinks for dotfiles
 cd $REPO_DIR || exit
-xdg-user-dirs-update &>>$INSTLOG
+xdg-user-dirs-update &>>"$INSTLOG"
 # Initialize with Rose Pine config
 mv ~/.bashrc ~/.bashrc.bak
 mv ~/.bash_profile ~/.bash_profile.bak
-stow --target=$HOME dotfiles-rose-pine &>>$INSTLOG
-stow --target=$HOME common &>>$INSTLOG
+stow --target="$HOME" dotfiles-rose-pine &>>"$INSTLOG"
+stow --target="$HOME" common &>>"$INSTLOG"
 
 # Start the bluetooth service
 echo -e "$CNT - Starting the Bluetooth Service..."
-sudo systemctl enable --now bluetooth.service &>>$INSTLOG
+sudo systemctl enable --now bluetooth.service &>>"$INSTLOG"
 
 # Enable the sddm login manager service
 echo -e "$CNT - Enabling the SDDM Service..."
-sudo systemctl enable sddm &>>$INSTLOG
+sudo systemctl enable sddm &>>"$INSTLOG"
 
 # Enable auto-cpufreq service
 echo -e "$CNT - Enabling the auto-cpufreq Service..."
-sudo systemctl enable auto-cpufreq &>>$INSTLOG
+sudo systemctl enable auto-cpufreq &>>"$INSTLOG"
 
 # Enable power-profiles-daemon service
 echo -e "$CNT - Enabling the power-profiles-daemon Service..."
-sudo systemctl enable power-profiles-daemon &>>$INSTLOG
+sudo systemctl enable power-profiles-daemon &>>"$INSTLOG"
 
 # Enable screen lock service
 echo -e "$CNT - Enabling the screen lock Service..."
-sudo cp $REPO_DIR/suspend@.service /etc/systemd/system
-sudo systemctl enable suspend@$USER.service &>>$INSTLOG
+sudo cp "$REPO_DIR"/suspend@.service /etc/systemd/system
+sudo systemctl enable suspend@"$USER".service &>>"$INSTLOG"
 
 # Clean out other portals
 echo -e "$CNT - Cleaning out conflicting xdg portals..."
-yay -Q xdg-desktop-portal-gnome &>/dev/null && yay -R --noconfirm xdg-desktop-portal-gnome &>>$INSTLOG
+yay -Q xdg-desktop-portal-gnome &>/dev/null && yay -R --noconfirm xdg-desktop-portal-gnome &>>"$INSTLOG"
 
 # Set up sddm
 echo -e "$CNT - Setting up the login screen."
 [[ -d /etc/sddm.conf.d ]] || sudo mkdir /etc/sddm.conf.d
-sudo cp $REPO_DIR/random-sddm-theme.service /etc/systemd/system
-sudo cp $REPO_DIR/random-sddm-theme.sh /usr/bin
-sudo systemctl enable random-sddm-theme.service &>>$INSTLOG
+sudo cp "$REPO_DIR"/random-sddm-theme.service /etc/systemd/system
+sudo cp "$REPO_DIR"/random-sddm-theme.sh /usr/bin
+sudo systemctl enable random-sddm-theme.service &>>"$INSTLOG"
 WLDIR=/usr/share/wayland-sessions
 if [ -d "$WLDIR" ]; then
 	echo -e "$COK - $WLDIR found"
@@ -361,38 +361,38 @@ fi
 
 # Set up plocate
 echo -e "$CNT - Updating plocate database"
-sudo updatedb &>>$INSTLOG
+sudo updatedb &>>"$INSTLOG"
 
 # Install catppuccin gtk theme
 echo -e "$CNT - Installing catppuccin gtk theme"
 curl -LsSO "https://raw.githubusercontent.com/catppuccin/gtk/v1.0.3/install.py" &>>$INSTLOG
-python3 install.py mocha red &>>$INSTLOG
+python3 install.py mocha red &>>"$INSTLOG"
 
 # Set up ufw
 echo -e "$CNT - Setting up UFW"
-sudo ufw limit 22/tcp &>>$INSTLOG
-sudo ufw allow 80/tcp &>>$INSTLOG
-sudo ufw allow 443/tcp &>>$INSTLOG
-sudo ufw default deny incoming &>>$INSTLOG
-sudo ufw default allow outgoing &>>$INSTLOG
-sudo ufw enable &>>$INSTLOG
+sudo ufw limit 22/tcp &>>"$INSTLOG"
+sudo ufw allow 80/tcp &>>"$INSTLOG"
+sudo ufw allow 443/tcp &>>"$INSTLOG"
+sudo ufw default deny incoming &>>"$INSTLOG"
+sudo ufw default allow outgoing &>>"$INSTLOG"
+sudo ufw enable &>>"$INSTLOG"
 
 # Set up tpm for tmux
 echo -e "$CNT - Setting up tmux plugins"
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &>>$INSTLOG
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &>>"$INSTLOG"
 
 ### Install software for Asus ROG laptops ###
 read -rep $'[\e[1;33mACTION\e[0m] - For ASUS ROG Laptops - Would you like to install Asus ROG software support? (y,n) ' ROG
 if [[ $ROG == "Y" || $ROG == "y" ]]; then
 	echo -e "$CNT - Adding Keys..."
-	sudo pacman-key --recv-keys 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35 &>>$INSTLOG
-	sudo pacman-key --finger 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35 &>>$INSTLOG
-	sudo pacman-key --lsign-key 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35 &>>$INSTLOG
-	sudo pacman-key --finger 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35 &>>$INSTLOG
+	sudo pacman-key --recv-keys 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35 &>>"$INSTLOG"
+	sudo pacman-key --finger 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35 &>>"$INSTLOG"
+	sudo pacman-key --lsign-key 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35 &>>"$INSTLOG"
+	sudo pacman-key --finger 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35 &>>"$INSTLOG"
 
 	LOC="/etc/pacman.conf"
 	echo -e "$CNT - Updating $LOC with g14 repo."
-	echo -e "\n[g14]\nServer = https://arch.asus-linux.org" | sudo tee -a $LOC &>>$INSTLOG
+	echo -e "\n[g14]\nServer = https://arch.asus-linux.org" | sudo tee -a $LOC &>>"$INSTLOG"
 	echo -e "$CNT - Update the system..."
 	sudo pacman -Syu --noconfirm &>>$INSTLOG
 
