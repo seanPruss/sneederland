@@ -1,18 +1,10 @@
 return {
-    {
-        "rose-pine/neovim",
-        name = "rose-pine",
-        opts = {
-            styles = {
-                transparency = true,
-            },
-        },
-    },
-
-    {
-        "LazyVim/LazyVim",
-        opts = {
-            colorscheme = "rose-pine",
-        },
-    },
+	"folke/tokyonight.nvim",
+	opts = {
+		transparent = true,
+		styles = {
+			sidebars = "transparent",
+			floats = "transparent",
+		},
+	},
 }

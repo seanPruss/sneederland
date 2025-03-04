@@ -1,3 +1,3 @@
-$env.BAT_THEME = "rose-pine"
-$env.FZF_DEFAULT_OPTS = "--color=fg:#908caa,bg:#191724,hl:#ebbcba --color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba --color=border:#403d52,header:#31748f,gutter:#191724 --color=spinner:#f6c177,info:#9ccfd8,separator:#403d52 --color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
-$env.LS_COLORS = (vivid generate rose-pine | str trim)
+$env.BAT_THEME = "tokyonight_night"
+$env.LS_COLORS = (vivid generate tokyonight-night | str trim)
+$env.FZF_DEFAULT_OPTS = "--color=fg:#CBE0F0,bg:#011628,hl:#B388FF,fg+:#CBE0F0,bg+:#143652,hl+:#B388FF,info:#06BCE4,prompt:#2CF9ED,pointer:#2CF9ED,marker:#2CF9ED,spinner:#2CF9ED,header:#2CF9ED"
