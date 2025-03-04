@@ -4,9 +4,9 @@ A fork of [HyprV4](https://github.com/SolDoesTech/HyprV4) by [SolDoesTech](https
 
 ## Overview
 
-This is my dotfiles repo which includes a script that installs all needed  
-packages and links my configuration with GNU Stow. Feel free to copy the stuff  
-in this repo since I copied a lot of it mostly from [Eric Murphy](https://github.com/ericmurphyxyz).  
+This is my dotfiles repo which includes a script that installs all needed
+packages and links my configuration with GNU Stow. Feel free to copy the stuff
+in this repo since I copied a lot of it mostly from [Eric Murphy](https://github.com/ericmurphyxyz).
 You should also look at the docs for the packages if you wanna change anything.
 
 ### Themes
