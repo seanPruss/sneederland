@@ -125,6 +125,7 @@ install_stage=(
 	rose-pine-gtk-theme
 	dracula-gtk-theme
 	gruvbox-gtk-theme-git
+	tokyonight-gtk-theme-git
 	beautyline
 	libreoffice-fresh
 	thunderbird

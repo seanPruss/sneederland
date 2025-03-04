@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-COLOUR_SCHEMES=(rose-pine catppuccin dracula gruvbox)
+COLOUR_SCHEMES=(rose-pine catppuccin dracula gruvbox tokyo-night)
 
 update-colours() {
 	[[ -z $1 ]] && exit
@@ -21,6 +21,9 @@ update-colours() {
 		;;
 	gruvbox)
 		gsettings set org.gnome.desktop.interface gtk-theme "Gruvbox-Red-Dark"
+		;;
+	tokyo-night)
+		gsettings set org.gnome.desktop.interface gtk-theme "Tokyonight-Dark"
 		;;
 	*)
 		echo "how tf did you get here"
