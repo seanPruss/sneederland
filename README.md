@@ -27,6 +27,10 @@ You should also look at the docs for the packages if you wanna change anything.
 
 ![Gruvbox](./screenshot-gruvbox.png)
 
+#### Tokyo Night
+
+![Tokyo Night](./screenshot-tokyo-night.png)
+
 ### Programs I use
 
 - Window manager: [Hyprland](https://wiki.hyprland.org)
