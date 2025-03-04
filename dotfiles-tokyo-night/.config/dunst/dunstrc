@@ -60,17 +60,17 @@
     mouse_right_click = close_all
 
 [urgency_low]
-    background = "#26273d8f"
-    foreground = "#31748f"
+    background = "#1f23358f"
+    foreground = "#4fd6be"
     default_icon = "preferences-system-notifications"
 
 [urgency_normal]
-    background = "#26273d8f"
-    foreground = "#f6c177"
+    background = "#1f23358f"
+    foreground = "#ffc777"
     default_icon = "help-hint"
 
 [urgency_critical]
-    background = "#eb6f928f"
-    frame_color = "#eb6f92"
-    foreground = "#e0def4"
+    background = "#c53b538f"
+    frame_color = "#c53b53"
+    foreground = "#c0caf5"
     default_icon = "emblem-unreadable"
