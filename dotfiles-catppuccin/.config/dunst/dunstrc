@@ -8,7 +8,7 @@ width = 500
     horizontal_padding = 10
     frame_width = 1
     gap_size = 3
-    font = Jetbrains Mono Nerd Font 19
+    font = CaskaydiaCove Nerd Font 19
 
     icon_theme = BeautyLine
     icon_corner_radius = 20
