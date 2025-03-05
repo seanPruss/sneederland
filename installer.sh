@@ -138,7 +138,7 @@ install_stage=(
 	network-manager-applet
 	gvfs
 	file-roller
-	ttf-jetbrains-mono-nerd
+	nerd-fonts
 	noto-fonts-emoji
 	xfce4-settings
 	nwg-look

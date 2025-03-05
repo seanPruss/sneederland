@@ -9,7 +9,7 @@
 
 theme = tokyonight_night
 
-font-family = Jetbrains Mono Nerd Font
+font-family = CaskaydiaCove Nerd Font
 font-size = 19
 
 gtk-titlebar = false
