@@ -251,9 +251,7 @@ if ! which yay &>/dev/null; then
 	echo -en "$CNT - Installing yay."
 	git clone https://aur.archlinux.org/yay-bin.git &>>"$INSTLOG"
 	cd yay-bin || exit
-	makepkg -si --noconfirm &>>"$INSTLOG" &
-	show_progress $!
-	sleep 2
+	makepkg -si --noconfirm &>>"$INSTLOG"
 	if [ -e "$(which yay)" ]; then
 		echo -e "\e[1A\e[K$COK - yay installed"
 		cd ..
