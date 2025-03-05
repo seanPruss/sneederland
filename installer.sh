@@ -42,7 +42,6 @@ prep_stage=(
 	cliphist
 	python-requests
 	pacman-contrib
-	mkinitcpio-archlogo
 	cpio
 )
 
