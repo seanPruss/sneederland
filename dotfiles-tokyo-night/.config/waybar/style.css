@@ -32,7 +32,7 @@ window#waybar {
   padding: 0px 8px;
   color: rgba(255, 0, 124, 1);
   border-radius: 20px;
-  border: 1px solid rgba(65, 166, 181, 1);
+  border: 0.1rem solid rgba(65, 166, 181, 1);
   background-color: rgba(31, 35, 53, 0.7);
   margin-left: 10px;
 }
@@ -48,7 +48,7 @@ window#waybar {
 #taskbar,
 #window {
   margin-right: 10px;
-  border: 1px solid rgba(65, 166, 181, 1);
+  border: 0.1rem solid rgba(65, 166, 181, 1);
   border-radius: 20px;
   background-color: rgba(31, 35, 53, 0.7);
   transition: all 0.4s ease-out;
@@ -113,7 +113,7 @@ window#waybar {
 }
 
 #clock {
-  border: 1px solid rgba(65, 166, 181, 1);
+  border: 0.1rem solid rgba(65, 166, 181, 1);
   margin-left: 10px;
   color: rgba(255, 117, 127, 1);
   border-radius: 20px;
@@ -203,7 +203,7 @@ window#waybar {
 
 #custom-launcher,
 #custom-updates {
-  border: 1px solid rgba(65, 166, 181, 1);
+  border: 0.1rem solid rgba(65, 166, 181, 1);
   margin-right: 10px;
   color: rgba(187, 154, 247, 1);
   background-color: rgba(31, 35, 53, 0.7);
@@ -225,7 +225,7 @@ window#waybar {
 }
 
 #custom-weather {
-  border: 1px solid rgba(65, 166, 181, 1);
+  border: 0.1rem solid rgba(65, 166, 181, 1);
   margin-left: 10px;
   color: rgba(187, 154, 247, 1);
   background-color: rgba(31, 35, 53, 0.7);
