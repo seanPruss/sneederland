@@ -162,11 +162,7 @@ window#waybar {
 
 #systray {
 	color: rgba(250, 189, 47, 1);
-	padding: 0px 4px;
-}
-
-#tray {
-	padding: 0px 8px;
+	padding: 8px 8px;
 }
 
 #tray > .passive {
