@@ -276,7 +276,6 @@ sudo cp "$REPO_DIR"/cleancache.hook /usr/share/libalpm/hooks
 sudo cp "$REPO_DIR"/clearcache /usr/share/libalpm/scripts
 
 # Prep Stage - Bunch of needed items
-echo -e "$CNT - Prep Stage - Installing needed components, this may take a while..."
 for SOFTWR in "${prep_stage[@]}"; do
 	yay -S --noconfirm --needed "$SOFTWR" || exit
 done
@@ -294,12 +293,10 @@ if [[ "$ISNVIDIA" == true ]]; then
 	echo -e "options nvidia-drm modeset=1" | sudo tee -a /etc/modprobe.d/nvidia.conf &>>"$INSTLOG"
 fi
 
-# Install the correct hyprland version
-echo -e "$CNT - Installing Hyprland, this may take a while..."
+# Install hyprland
 yay -S --needed --noconfirm hyprland || exit
 
 # Stage 1 - main components
-echo -e "$CNT - Installing main components, this may take a while..."
 for SOFTWR in "${install_stage[@]}"; do
 	yay -S --needed --noconfirm "$SOFTWR" || exit
 done
@@ -314,10 +311,10 @@ done
 cd "$REPO_DIR" || exit
 xdg-user-dirs-update &>>"$INSTLOG"
 # Initialize with Rose Pine config
-mv ~/.bashrc ~/.bashrc.bak
-mv ~/.bash_profile ~/.bash_profile.bak
-stow --target="$HOME" dotfiles-rose-pine &>>"$INSTLOG"
-stow --target="$HOME" common &>>"$INSTLOG"
+# mv ~/.bashrc ~/.bashrc.bak
+# mv ~/.bash_profile ~/.bash_profile.bak
+stow --target="$HOME" --override=.* dotfiles-rose-pine &>>"$INSTLOG"
+stow --target="$HOME" --override=.* common &>>"$INSTLOG"
 
 # Start the bluetooth service
 echo -e "$CNT - Starting the Bluetooth Service..."
