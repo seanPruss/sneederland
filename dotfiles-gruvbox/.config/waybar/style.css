@@ -14,7 +14,7 @@
 
 window#waybar {
 	background-color: rgba(60, 56, 54, 0);
-	border-radius: 20px;
+	border-radius: 1rem;
 	color: rgba(224, 222, 244, 1);
 	transition-property: background-color;
 	transition-duration: 0.5s;
@@ -31,7 +31,7 @@ window#waybar {
 #mpd {
 	padding: 0px 8px;
 	color: rgba(142, 192, 124, 1);
-	border-radius: 20px;
+	border-radius: 1rem;
 	border: 0.1rem solid rgba(251, 73, 52, 1);
 	background-color: rgba(60, 56, 54, 0.7);
 	margin-left: 10px;
@@ -49,7 +49,7 @@ window#waybar {
 #window {
 	margin-right: 10px;
 	border: 0.1rem solid rgba(251, 73, 52, 1);
-	border-radius: 20px;
+	border-radius: 1rem;
 	background-color: rgba(60, 56, 54, 0.7);
 	transition: all 0.4s ease-out;
 }
@@ -62,7 +62,7 @@ window#waybar {
 
 #taskbar button,
 #workspaces button {
-	border-radius: 20px;
+	border-radius: 1rem;
 	border: none;
 	color: rgba(251, 73, 52, 1);
 	transition: all 0.4s ease-out;
@@ -116,7 +116,7 @@ window#waybar {
 	border: 0.1rem solid rgba(251, 73, 52, 1);
 	margin-left: 10px;
 	color: rgba(211, 134, 155, 1);
-	border-radius: 20px;
+	border-radius: 1rem;
 	background-color: rgba(60, 56, 54, 0.7);
 	padding-left: 5px;
 	padding-right: 5px;
@@ -191,7 +191,7 @@ window#waybar {
 	margin-right: 10px;
 	color: rgba(131, 165, 152, 1);
 	background-color: rgba(60, 56, 54, 0.7);
-	border-radius: 20px;
+	border-radius: 1rem;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
@@ -213,6 +213,6 @@ window#waybar {
 	margin-left: 10px;
 	color: rgba(131, 165, 152, 1);
 	background-color: rgba(60, 56, 54, 0.7);
-	border-radius: 20px;
+	border-radius: 1rem;
 	padding: 0px 8px;
 }
