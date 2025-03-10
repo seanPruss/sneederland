@@ -104,8 +104,9 @@
 	},
 
 	"custom/media": {
-		"format": "{}",
+		"format": " {}",
 		"escape": true,
+		"max-length": 30,
 		"exec": "mediaplayer.sh",
 		"interval": 3,
 		"on-click": "playerctl -p spotify play-pause"
@@ -134,6 +135,7 @@
 	},
 
 	"hyprland/window": {
+		"max-length": 30,
 		"format": "{title}",
 		"separate-outputs": true
 	}

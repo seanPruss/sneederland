@@ -31,7 +31,6 @@ update-colours() {
 	esac
 	gsettings set org.gnome.desktop.interface icon-theme "BeautyLine"
 
-	# reload tmux and change wallpaper
 	tmux kill-server
 }
 case "$1" in
