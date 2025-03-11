@@ -43,6 +43,7 @@ prep_stage=(
 	python-requests
 	pacman-contrib
 	cpio
+	cmake
 )
 
 #software for nvidia GPU only
