@@ -82,6 +82,7 @@ install_stage=(
 	waybar
 	power-profiles-daemon
 	wttrbar
+	zscroll-git
 	imagemagick
 	gimp
 	hyprlock
