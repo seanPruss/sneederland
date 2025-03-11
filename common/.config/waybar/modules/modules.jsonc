@@ -106,9 +106,7 @@
 	"custom/media": {
 		"format": " {}",
 		"escape": true,
-		"max-length": 30,
-		"exec": "mediaplayer.sh",
-		"interval": 3,
+		"exec": "scroll-media.sh",
 		"on-click": "playerctl -p spotify play-pause"
 	},
 
