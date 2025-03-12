@@ -17,8 +17,7 @@
 
 # Env var for where the repo was cloned
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-# Define the software that would be inbstalled
-#Need some prep work
+# Define the software that would be installed
 prep_stage=(
 	xdg-user-dirs
 	wget

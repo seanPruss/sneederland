@@ -14,3 +14,5 @@ elif [ $rand -eq 3 ]; then
 else
 	fortune | cowsay -f "$(cowsay -l | shuf -n 1)"
 fi
+
+exit 0
