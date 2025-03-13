@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 rand=$((RANDOM % 8))
-FONT=$(ls -1 /usr/share/figlet/ | sed -r '/_/d; s/\..*//' | shuf -n 1)
+FONT=$(ls /usr/share/figlet/ | sed -r '/_/d; s/\..*//' | shuf -n 1)
 
 if [ $rand -eq 0 ] || [ $rand -eq 4 ]; then
 	fastfetch

@@ -31,9 +31,9 @@ set(
     { desc = "HTML boilerplate" }
 )
 set("n", "<C-s>", "<nop>")
-set({ "n", "v" }, "<leader>y", '"+y', { silent = true, noremap = true })
-set({ "n", "v" }, "<leader>Y", '"+Y', { silent = true, noremap = true })
-set({ "n", "v" }, "<leader>p", '"+p', { silent = true, noremap = true })
+set({ "n", "v" }, "<leader>y", '"+y', { silent = true, noremap = true, desc = "Copy to clipboard" })
+set({ "n", "v" }, "<leader>Y", '"+Y', { silent = true, noremap = true, desc = "Copy rest of line to clipboard" })
+set({ "n", "v" }, "<leader>p", '"+p', { silent = true, noremap = true, desc = "Paste from clipboard" })
 set("n", "<leader><leader>", function()
     local handle = io.popen("git rev-parse --is-inside-work-tree 2>/dev/null")
     local result = handle:read("*a")

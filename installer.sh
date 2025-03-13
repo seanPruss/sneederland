@@ -314,6 +314,7 @@ xdg-user-dirs-update &>>"$INSTLOG"
 # Initialize with Rose Pine config
 mv ~/.bashrc ~/.bashrc.bak
 mv ~/.bash_profile ~/.bash_profile.bak
+mkdir -p ~/.config/vesktop/themes
 stow --target="$HOME" dotfiles-rose-pine &>>"$INSTLOG"
 stow --target="$HOME" common &>>"$INSTLOG"
 
