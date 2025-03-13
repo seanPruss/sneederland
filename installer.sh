@@ -312,11 +312,10 @@ done
 cd "$REPO_DIR" || exit
 xdg-user-dirs-update &>>"$INSTLOG"
 # Initialize with Rose Pine config
-mv ~/.bashrc ~/.bashrc.bak
-mv ~/.bash_profile ~/.bash_profile.bak
 mkdir -p ~/.config/vesktop/themes
-stow --target="$HOME" dotfiles-rose-pine &>>"$INSTLOG"
-stow --target="$HOME" common &>>"$INSTLOG"
+stow --adopt --target="$HOME" dotfiles-rose-pine &>>"$INSTLOG"
+stow --adopt --target="$HOME" common &>>"$INSTLOG"
+git reset --hard
 
 # Start the bluetooth service
 echo -e "$CNT - Starting the Bluetooth Service..."
@@ -425,5 +424,4 @@ sudo cp $REPO_DIR/config.kbd /etc
 sudo systemctl enable kanata.service
 "
 
-echo -e "$CNT - run git status and if there are changes, remove the changes with lazygit then reboot"
 exit 0
