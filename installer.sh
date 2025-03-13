@@ -126,6 +126,7 @@ install_stage=(
 	dracula-gtk-theme
 	gruvbox-gtk-theme-git
 	tokyonight-gtk-theme-git
+	nordic-theme
 	beautyline
 	libreoffice-fresh
 	thunderbird
