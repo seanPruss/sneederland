@@ -32,6 +32,7 @@ background-color = #1e1e2e8f
 selection-background-corner-radius = 10
 selection-background-padding = 10, 16
 selection-background = #f38ba8
+input-color = #f38ba8
 selection-match-color = #89dceb
 
 clip-to-padding = false

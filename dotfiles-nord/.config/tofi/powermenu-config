@@ -8,14 +8,15 @@
 
 prompt-text = "󰐥 "
 
-text-color = #c0caf5
-prompt-color = #c53b53
-selection-background = #41a6b5
+text-color = #d8dee9
+prompt-color = #bf616a
+selection-background = #88c0d0
+input-color = #88c0d0
 selection-match-color = #ff757f
 selection-background-padding = 10, 16
 selection-background-corner-radius = 10
-selection-color = #1f2335
-background-color = #1f23358f
+selection-color = #2e3440
+background-color = #2e34408f
 
 width = 100%
 height = 100%

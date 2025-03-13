@@ -11,6 +11,7 @@ prompt-text = "󰐥 "
 text-color = #e0def4
 prompt-color = #eb6f92
 selection-background = #c4a7e7
+input-color = #c4a7e7
 selection-match-color = #ebbcba
 selection-background-padding = 10, 16
 selection-background-corner-radius = 10

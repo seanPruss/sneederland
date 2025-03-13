@@ -9,6 +9,7 @@
 prompt-text = "󰐥 "
 
 text-color = #c0caf5
+input-color = #41a6b5
 prompt-color = #c53b53
 selection-background = #41a6b5
 selection-match-color = #ff757f

@@ -24,15 +24,15 @@ padding-right = 0
 num-results = 5
 prompt-text = " "
 
-background-color = #1f23358f
-text-color = #c0caf5 
-input-color = #41a6b5
-prompt-color = #c53b53
-selection-color = #1f2335
+background-color = #2e34408f
+text-color = #d8dee9 
+input-color = #88c0d0
+prompt-color = #bf616a
+selection-color = #2e3440
 selection-background-corner-radius = 10
 selection-background-padding = 10, 16
-selection-background = #41a6b5
-selection-match-color = #ff757f
+selection-background = #88c0d0
+selection-match-color = #d08770
 
 clip-to-padding = false
 require-match = false
