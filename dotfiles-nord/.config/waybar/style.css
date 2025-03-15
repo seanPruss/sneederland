@@ -156,6 +156,7 @@ window#waybar {
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.warning:not(.charging) {
   color: rgba(208, 135, 112, 1);
+  background-color: rgba(0, 0, 0, 0);
   animation-name: blink-battery;
   animation-duration: 0.5s;
   animation-timing-function: steps(12);
@@ -165,6 +166,7 @@ window#waybar {
 
 #battery.critical:not(.charging) {
   color: rgba(191, 97, 106, 1);
+  background-color: rgba(0, 0, 0, 0);
   animation-name: blink-battery;
   animation-duration: 0.5s;
   animation-timing-function: steps(12);
