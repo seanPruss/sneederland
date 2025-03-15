@@ -31,6 +31,10 @@ You should also look at the docs for the packages if you wanna change anything.
 
 ![Tokyo Night](./screenshot-tokyo-night.png)
 
+#### Nord
+
+![Nord](./screenshot-nord.png)
+
 ### Programs I use
 
 - Window manager: [Hyprland](https://wiki.hyprland.org)
