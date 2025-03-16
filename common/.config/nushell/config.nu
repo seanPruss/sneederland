@@ -45,6 +45,7 @@ alias fd = fd --hidden
 alias locate = plocate
 def cls [] {clear; ls}
 def cll [] {clear; ll}
+alias mkdir = mkdir -pv
 alias fzf = fzf --height 40% --reverse
 
 # Type less letters
