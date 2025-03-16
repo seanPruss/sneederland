@@ -312,7 +312,7 @@ done
 # generate symlinks for dotfiles
 cd "$REPO_DIR" || exit
 xdg-user-dirs-update &>>"$INSTLOG"
-# Initialize with Rose Pine config
+# Initialize with Rose Pine config (config is randomly changed on startup anyway)
 mkdir -p ~/.config/vesktop/themes
 stow --adopt --target="$HOME" dotfiles-rose-pine &>>"$INSTLOG"
 stow --adopt --target="$HOME" common &>>"$INSTLOG"
