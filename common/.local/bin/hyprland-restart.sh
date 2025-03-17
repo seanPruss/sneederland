@@ -5,3 +5,5 @@ waybar &
 
 killall dunst
 dunst &
+
+pgrep hyprpaper || hyprpaper &
