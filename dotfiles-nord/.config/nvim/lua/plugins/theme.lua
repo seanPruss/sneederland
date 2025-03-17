@@ -1,15 +1,15 @@
 return {
-	{
-		"gbprod/nord.nvim",
-		opts = {
-			transparency = true,
-		},
-	},
+    {
+        "gbprod/nord.nvim",
+        opts = {
+            transparent = true,
+        },
+    },
 
-	{
-		"LazyVim/LazyVim",
-		opts = {
-			colorscheme = "nord",
-		},
-	},
+    {
+        "LazyVim/LazyVim",
+        opts = {
+            colorscheme = "nord",
+        },
+    },
 }
