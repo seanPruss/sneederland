@@ -61,7 +61,7 @@
 
 [urgency_low]
     background = "#282a368f"
-    foreground = "#6272a4"
+    foreground = "#50fa7b"
     default_icon = "preferences-system-notifications"
 
 [urgency_normal]

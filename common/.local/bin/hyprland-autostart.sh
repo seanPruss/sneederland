@@ -8,7 +8,7 @@ start-gammastep() {
 
 check-repo-updates() {
 	# Navigate to the local Git repository
-	local REPO_DIR="$(fd -td sneederland -a $HOME)"
+	local REPO_DIR="$(fd -td sneederland $HOME)"
 	cd "$REPO_DIR" || exit
 
 	# Fetch the latest changes from the remote repository
@@ -18,7 +18,7 @@ check-repo-updates() {
 	local LOCAL="$(git rev-parse @)"
 	local REMOTE="$(git rev-parse @{u})"
 
-	[ "$LOCAL" != "$REMOTE" ] && notify-send "Update available for SneederLand" "Run git pull in $REPO_DIR and run installer.sh" -u critical -i edit-download
+	[ "$LOCAL" != "$REMOTE" ] && notify-send "Update available for SneederLand" "Run git pull in $REPO_DIR and run installer.sh" -u critical -i mintupdate-updates-available
 }
 
 hyprctl monitors | grep HDMI-A-1 && hyprctl dispatch workspace 2
