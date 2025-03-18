@@ -57,7 +57,7 @@ window#waybar {
 #window {
   padding-left: 7px;
   padding-right: 7px;
-  color: rgba(143, 188, 187, 1);
+  color: rgba(163, 190, 140, 1);
 }
 
 #taskbar button,
@@ -90,7 +90,7 @@ window#waybar {
 }
 
 #workspaces button.empty {
-  color: rgba(143, 188, 187, 1);
+  color: rgba(163, 190, 140, 1);
   animation-name: blink-workspace;
   animation-duration: 0.5s;
   animation-timing-function: steps(12);
@@ -133,7 +133,7 @@ window#waybar {
 #battery.charging,
 #battery.plugged {
   background-color: rgba(0, 0, 0, 0);
-  color: rgba(143, 188, 187, 1);
+  color: rgba(163, 190, 140, 1);
 }
 
 @keyframes blink-battery {
@@ -196,7 +196,7 @@ window#waybar {
 
 @keyframes blink-update {
   to {
-    background-color: rgba(143, 188, 187, 1);
+    background-color: rgba(163, 190, 140, 1);
   }
 }
 
@@ -204,7 +204,7 @@ window#waybar {
 #custom-updates {
   border: 0.1rem groove rgba(136, 192, 208, 1);
   margin-right: 10px;
-  color: rgba(143, 188, 187, 1);
+  color: rgba(163, 190, 140, 1);
   background-color: rgba(46, 52, 64, 0.7);
   border-radius: 1rem;
   animation-timing-function: linear;
@@ -226,7 +226,7 @@ window#waybar {
 #custom-weather {
   border: 0.1rem groove rgba(136, 192, 208, 1);
   margin-left: 10px;
-  color: rgba(143, 188, 187, 1);
+  color: rgba(163, 190, 140, 1);
   background-color: rgba(46, 52, 64, 0.7);
   border-radius: 1rem;
   padding: 0px 8px;
