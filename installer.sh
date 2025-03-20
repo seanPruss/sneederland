@@ -205,8 +205,7 @@ echo -e "$CNT - This script will run some commands that require sudo. You will b
 If you are worried about entering your password then you may want to review the content of the script.
 IMPORTANT: yay will panic if a package it is trying to install conflicts with an already installed package.
 Feel free to look through the package list and remove any packages that would conflict (AUR packages that may be development branches of official packages).
-ALSO: There are a lot of packages that will be installed. While each package in the list is installed sequentially setting up parallel downloads in pacman.conf
-will allow dependencies to be downloaded concurrently saving time."
+This script is also preferably run in a TTY if you have hyprland already installed as the hyprland configuration will be changed to mine when the script runs."
 
 # give the user an option to exit out
 read -rep $'[\e[1;33mACTION\e[0m] - Would you like to continue with the install (y,n) ' CONTINST
