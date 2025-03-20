@@ -32,6 +32,7 @@ prep_stage=(
 	qt5-graphicaleffects
 	gtk3
 	gtk4
+	gtk4-layer-shell
 	hyprpolkitagent
 	hyprland-qtutils
 	pipewire
