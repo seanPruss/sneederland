@@ -143,7 +143,6 @@ install_stage=(
 	file-roller
 	nerd-fonts
 	noto-fonts-emoji
-	xfce4-settings
 	nwg-look
 	sddm
 	archlinux-themes-sddm
@@ -314,8 +313,9 @@ cd "$REPO_DIR" || exit
 xdg-user-dirs-update &>>"$INSTLOG"
 # Initialize with Rose Pine config (config is randomly changed on startup anyway)
 mkdir -p ~/.config/vesktop/themes
-stow --adopt --target="$HOME" dotfiles-rose-pine &>>"$INSTLOG"
-stow --adopt --target="$HOME" common &>>"$INSTLOG"
+mkdir -p ~/.config/lazygit
+stow --adopt --override=.* --target="$HOME" dotfiles-rose-pine &>>"$INSTLOG"
+stow --adopt --override=.* --target="$HOME" common &>>"$INSTLOG"
 git reset --hard
 
 # Start the bluetooth service
