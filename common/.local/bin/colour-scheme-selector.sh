@@ -6,8 +6,8 @@ update-colours() {
 	[[ -z $1 ]] && exit
 	cd "$(fd -td sneederland "$HOME")" || exit
 	rm -rf ~/Pictures/wallpapers/*
-	stow --override=.* --target="$HOME" "dotfiles-$1"
-	stow --override=.* --target="$HOME" common
+	stow --no-folding --override=.* --target="$HOME" "dotfiles-$1"
+	stow --no-folding --override=.* --target="$HOME" common
 
 	case "$1" in
 	rose-pine)
