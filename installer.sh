@@ -312,8 +312,6 @@ done
 cd "$REPO_DIR" || exit
 xdg-user-dirs-update &>>"$INSTLOG"
 # Initialize with Rose Pine config (config is randomly changed on startup anyway)
-# mkdir -p ~/.config/vesktop/themes
-# mkdir -p ~/.config/lazygit
 stow --adopt --no-folding --target="$HOME" dotfiles-rose-pine &>>"$INSTLOG"
 stow --adopt --no-folding --target="$HOME" common &>>"$INSTLOG"
 git reset --hard
