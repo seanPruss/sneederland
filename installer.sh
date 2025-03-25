@@ -310,7 +310,6 @@ done
 
 # generate symlinks for dotfiles
 cd "$REPO_DIR" || exit
-# Initialize with Rose Pine config (config is randomly changed on startup anyway)
 {
 	xdg-user-dirs-update
 	stow --adopt --no-folding --target="$HOME" dotfiles-rose-pine
