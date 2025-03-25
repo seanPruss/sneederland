@@ -310,10 +310,12 @@ done
 
 # generate symlinks for dotfiles
 cd "$REPO_DIR" || exit
-xdg-user-dirs-update &>>"$INSTLOG"
 # Initialize with Rose Pine config (config is randomly changed on startup anyway)
-stow --adopt --no-folding --target="$HOME" dotfiles-rose-pine &>>"$INSTLOG"
-stow --adopt --no-folding --target="$HOME" common &>>"$INSTLOG"
+{
+	xdg-user-dirs-update
+	stow --adopt --no-folding --target="$HOME" dotfiles-rose-pine
+	stow --adopt --no-folding --target="$HOME" common
+} &>>"$INSTLOG"
 git reset --hard
 
 # Start the bluetooth service
