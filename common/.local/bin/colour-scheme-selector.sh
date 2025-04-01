@@ -33,6 +33,7 @@ update-colours() {
 		;;
 	esac
 	gsettings set org.gnome.desktop.interface icon-theme "BeautyLine"
+	nwg-look -x
 
 	tmux kill-server
 }

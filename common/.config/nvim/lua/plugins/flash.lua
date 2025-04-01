@@ -3,6 +3,7 @@ return {
     event = "VeryLazy",
     vscode = true,
     ---@type Flash.Config
+    ---@diagnostic disable-next-line: missing-fields
     opts = {
         modes = {
             search = {

@@ -1,5 +1,5 @@
 $env.TERMINAL = "ghostty"
-$env.BROWSER = "zen-browser"
+$env.BROWSER = "brave"
 $env.EDITOR = "nvim"
 $env.VISUAL = "nvim"
 $env.PATH ++= ["~/.local/bin"]

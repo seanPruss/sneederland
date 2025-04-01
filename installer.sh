@@ -95,7 +95,7 @@ install_stage=(
 	grim
 	slurp
 	htim
-	zen-browser-bin
+	brave-bin
 	gammastep
 	shellcheck
 	fzf

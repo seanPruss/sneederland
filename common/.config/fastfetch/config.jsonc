@@ -55,6 +55,21 @@
 			"keyColor": "blue"
 		},
 		{
+			"type": "theme",
+			"key": "├",
+			"keyColor": "blue"
+		},
+		{
+			"type": "icons",
+			"key": "├",
+			"keyColor": "blue"
+		},
+		{
+			"type": "font",
+			"key": "├",
+			"keyColor": "blue"
+		},
+		{
 			"type": "terminal",
 			"key": "└",
 			"keyColor": "blue"
@@ -106,6 +121,25 @@
 			"type": "uptime",
 			"key": "└󰅐",
 			"keyColor": "green"
-		}
+		},
+		"break",
+		{
+			"type": "sound",
+			"key": " SOUND",
+			"keyColor": "cyan"
+		},
+		{
+			"type": "player",
+			"key": "├󰥠",
+			"keyColor": "cyan"
+		},
+		{
+			"type": "media",
+			"key": "└󰝚",
+			"keyColor": "cyan"
+		},
+
+		"break",
+		"colors"
 	]
 }
