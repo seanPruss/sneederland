@@ -97,8 +97,9 @@ alias mirrora = sudo reflector --latest 50 --number 20 --sort age --save /etc/pa
 
 # Functions
 def t [] {
-    let session = (sesh list -t -c 
-        | fzf 
+    let session = (sesh list --icons -t -c 
+        | fzf
+        --ansi
         --height 40% 
         --reverse 
         --border-label ' sesh ' 
@@ -106,12 +107,12 @@ def t [] {
         --prompt '  ' 
         --header '  ^a all ^t tmux ^g configs ^x zoxide ^d tmux kill ^f find' 
         --bind 'tab:down,btab:up' 
-        --bind 'ctrl-a:change-prompt(⚡  )+reload(sesh list)' 
-        --bind 'ctrl-t:change-prompt(  )+reload(sesh list -t)' 
-        --bind 'ctrl-g:change-prompt(⚙️  )+reload(sesh list -c)' 
-        --bind 'ctrl-x:change-prompt(📁  )+reload(sesh list -z)' 
+        --bind 'ctrl-a:change-prompt(⚡  )+reload(sesh list --icons)' 
+        --bind 'ctrl-t:change-prompt(  )+reload(sesh list --icons -t)' 
+        --bind 'ctrl-g:change-prompt(⚙️  )+reload(sesh list --icons -c)' 
+        --bind 'ctrl-x:change-prompt(📁  )+reload(sesh list --icons -z)' 
         --bind 'ctrl-f:change-prompt(🔎  )+reload(fd -H -d 2 -t d -E .Trash . ~)' 
-        --bind 'ctrl-d:execute(tmux kill-session -t {})+change-prompt(⚡  )+reload(sesh list -t -c)'
+        --bind 'ctrl-d:execute(tmux kill-session -t {})+change-prompt(⚡  )+reload(sesh list --icons -t -c)'
     )
 
     if $session == "" {
