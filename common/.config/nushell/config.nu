@@ -54,6 +54,10 @@ alias sd = sudo
 alias SS = sudo systemctl
 alias se = sudoedit
 
+# Sesh aliases
+alias sc. = sesh connect .
+alias scl = sesh clone
+
 # Git aliases
 alias lzg = lazygit
 alias gp = git push
@@ -111,7 +115,7 @@ def t [] {
         --bind 'ctrl-g:change-prompt(⚙️  )+reload(sesh list --icons -c)' 
         --bind 'ctrl-x:change-prompt(📁  )+reload(sesh list --icons -z)' 
         --bind 'ctrl-f:change-prompt(🔎  )+reload(fd -H -d 2 -t d -E .Trash . ~)' 
-        --bind 'ctrl-d:execute(tmux kill-session -t {})+change-prompt(⚡  )+reload(sesh list --icons -t -c)'
+        --bind 'ctrl-d:execute(tmux kill-session -t {2..})+change-prompt(⚡  )+reload(sesh list --icons -t -c)'
         --preview-window 'right:70%'
         --preview 'sesh preview {}'
     )
