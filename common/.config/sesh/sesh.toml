@@ -1,2 +1,3 @@
 [default_session]
 startup_command = "nvim"
+preview_command = "eza --all --git-ignore --tree --icons=always --color=always {}"

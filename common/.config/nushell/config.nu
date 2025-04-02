@@ -45,7 +45,6 @@ alias fd = fd --hidden
 alias locate = plocate
 def cls [] {clear; ls}
 def cll [] {clear; ll}
-alias fzf = fzf --height 40% --reverse
 
 # Type less letters
 alias v = nvim
@@ -100,7 +99,7 @@ def t [] {
     let session = (sesh list --icons -t -c 
         | fzf
         --ansi
-        --height 40% 
+        --height 70%
         --reverse 
         --border-label ' sesh ' 
         --border 
@@ -113,6 +112,8 @@ def t [] {
         --bind 'ctrl-x:change-prompt(📁  )+reload(sesh list --icons -z)' 
         --bind 'ctrl-f:change-prompt(🔎  )+reload(fd -H -d 2 -t d -E .Trash . ~)' 
         --bind 'ctrl-d:execute(tmux kill-session -t {})+change-prompt(⚡  )+reload(sesh list --icons -t -c)'
+        --preview-window 'right:70%'
+        --preview 'sesh preview {}'
     )
 
     if $session == "" {
