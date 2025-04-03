@@ -15,8 +15,6 @@ font-size = 19
 gtk-titlebar = false
 confirm-close-surface = false
 mouse-hide-while-typing = true
-window-padding-color = background
-window-padding-balance = true
 background-opacity = 0.75
 
 shell-integration-features = true

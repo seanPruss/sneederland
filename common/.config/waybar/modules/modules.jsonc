@@ -133,7 +133,7 @@
 	},
 
 	"hyprland/window": {
-		"max-length": 40,
+		"max-length": 50,
 		"format": "{title}",
 		"separate-outputs": true
 	}
