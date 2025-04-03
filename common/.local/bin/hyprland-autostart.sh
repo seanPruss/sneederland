@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 
-start-gammastep() {
-	local latitude=$(curl -s https://ipinfo.io/loc | cut -d ',' -f 1)
-	local longitude=$(curl -s https://ipinfo.io/loc | cut -d ',' -f 2)
-	hyprctl dispatch exec -- gammastep -t 6500:1500 -l $latitude:$longitude && notify-send -u low -i check-filled "Gammastep Started" "Night light will turn on at sunset"
-}
-
 check-repo-updates() {
 	# Navigate to the local Git repository
 	local REPO_DIR="$(fd -td sneederland $HOME)"
