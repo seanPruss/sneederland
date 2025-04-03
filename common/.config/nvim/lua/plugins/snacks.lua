@@ -2,6 +2,7 @@ return {
     "folke/snacks.nvim",
     opts = {
         scroll = { enabled = false },
+        bigfile = { enabled = true },
         dashboard = {
             preset = {
                 header = [[
@@ -14,7 +15,21 @@ return {
    ]],
                 ---@type snacks.dashboard.Item[]
                 keys = {
-                    { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
+                    {
+                        icon = " ",
+                        key = "f",
+                        desc = "Find File",
+                        action = function()
+                            local handle = io.popen("git rev-parse --is-inside-work-tree 2>/dev/null")
+                            local result = handle:read("*a")
+                            handle:close()
+                            if result:match("true") then
+                                Snacks.picker.git_files()
+                            else
+                                Snacks.picker.files({ hidden = true })
+                            end
+                        end,
+                    },
                     { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
                     {
                         icon = " ",
