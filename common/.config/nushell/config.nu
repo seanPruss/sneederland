@@ -1,8 +1,10 @@
 try { tmux ls out+err> /dev/null } catch { tmux new-session -d }
-randomlogo.sh
 source ~/.zoxide.nu
 source ~/.cache/carapace/init.nu
 source ~/.config/nushell/colours.nu
+if (is-terminal --stdin) and (is-terminal --stdout) {
+    randomlogo.sh
+}
 
 $env.TRANSIENT_PROMPT_COMMAND = ^starship module character
 
@@ -37,9 +39,9 @@ $env.config = {
 
 export-env {
   $env.FZF_ALT_C_COMMAND = "fd --type directory --hidden --follow"
-  $env.FZF_ALT_C_OPTS = "--preview 'eza -A --tree --git-ignore {} | head -n 200'"
+  $env.FZF_ALT_C_OPTS = "--height 40% --reverse --preview 'eza -A --tree --git-ignore {} | head -n 200'"
   $env.FZF_CTRL_T_COMMAND = "fd --type file --hidden --follow"
-  $env.FZF_CTRL_T_OPTS = "--preview 'bat --color=always --style=full --line-range=:500 {}' "
+  $env.FZF_CTRL_T_OPTS = "--height 40% --reverse --preview 'bat --color=always --style=full --line-range=:500 {}' "
   $env.FZF_DEFAULT_COMMAND = "fd --hidden --follow"
 }
 
