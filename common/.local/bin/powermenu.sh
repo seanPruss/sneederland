@@ -1,12 +1,16 @@
 #!/usr/bin/env bash
-
-CHOSEN=$(printf "Lock\nSuspend\nReboot\nShutdown\nLog Out" | tofi --config "$HOME"/.config/tofi/powermenu-config --fuzzy-match=true)
+shutdown='󰐥'
+reboot='󰜉'
+lock=''
+suspend='󰒲'
+logout='󰍃'
+CHOSEN=$(printf "$lock\n$suspend\n$reboot\n$shutdown\n$logout" | rofi -dmenu -theme power-menu.rasi)
 
 case "$CHOSEN" in
-"Lock") hyprlock ;;
-"Suspend") systemctl suspend ;;
-"Reboot") systemctl reboot ;;
-"Shutdown") systemctl poweroff ;;
-"Log Out") hyprctl dispatch exit ;;
+"$lock") hyprlock ;;
+"$suspend") systemctl suspend ;;
+"$reboot") systemctl reboot ;;
+"$shutdown") systemctl poweroff ;;
+"$logout") hyprctl dispatch exit ;;
 *) exit 1 ;;
 esac
