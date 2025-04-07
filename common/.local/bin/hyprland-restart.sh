@@ -7,3 +7,5 @@ killall dunst
 dunst &
 
 pgrep hyprpaper || hyprpaper &
+
+pypr wall next
