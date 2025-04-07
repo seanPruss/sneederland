@@ -77,7 +77,7 @@ const ctrl_r = {
           | get command
           | str replace --all (char newline) ' '
           | to text
-          | fzf --preview 'printf \'{}\' | nufmt --stdin 2>&1 | rg -v ERROR';
+          | fzf --height 40% --preview 'printf \'{}\' | nufmt --stdin 2>&1 | rg -v ERROR';
         commandline edit --append $result;
         commandline set-cursor --end
       "
