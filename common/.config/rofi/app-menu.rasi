@@ -32,13 +32,14 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       1000px;
+    width:                       120em;
+    height:                      90em;
     x-offset:                    0px;
     y-offset:                    0px;
 
     /* properties for all widgets */
     enabled:                     true;
-    border-radius:               15px;
+    border-radius:               4em;
     cursor:                      "default";
     background-color:            @background;
 }
@@ -63,8 +64,8 @@ listbox {
 /*****----- Inputbar -----*****/
 inputbar {
     enabled:                     true;
-    spacing:                     10px;
-    padding:                     100px 60px;
+    spacing:                     3em;
+    padding:                     20em 10em;
     background-color:            transparent;
     background-image:            url("~/.cache/current_wallpaper", width);
     text-color:                  @foreground;
