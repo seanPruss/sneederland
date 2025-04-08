@@ -54,3 +54,6 @@ set("n", "<leader>sg", function()
         Snacks.picker.grep({ hidden = true })
     end
 end)
+set("n", "B", function()
+    Snacks.picker.buffers()
+end)
