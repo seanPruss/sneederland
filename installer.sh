@@ -88,6 +88,7 @@ install_stage=(
 	gimp
 	hyprlock
 	tofi
+	rofi-wayland
 	rofimoji
 	xdg-desktop-portal-hyprland
 	xdg-desktop-portal-gtk
