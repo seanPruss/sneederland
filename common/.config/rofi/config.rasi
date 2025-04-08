@@ -102,7 +102,6 @@ configuration {
       action: "kb-cancel";
       delay:  0;
     }
-
 	/*---------- Keybindings ----------*/
 /*
 	kb-primary-paste: "Control+V,Shift+Insert";
@@ -179,3 +178,4 @@ configuration {
 	me-accept-custom: "Control+MouseDPrimary";
 */
 }
+@theme "cliphist.rasi"

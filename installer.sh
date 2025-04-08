@@ -87,7 +87,6 @@ install_stage=(
 	imagemagick
 	gimp
 	hyprlock
-	tofi
 	rofi-wayland
 	rofimoji
 	xdg-desktop-portal-hyprland

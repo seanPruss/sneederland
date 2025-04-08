@@ -43,7 +43,7 @@ random)
 	update-colours "$SELECTION"
 	;;
 choose)
-	SELECTION=$(printf '%s\n' "${COLOUR_SCHEMES[@]}" | tofi --config "$HOME/.config/tofi/colour-scheme-switcher-config" --fuzzy-match=true)
+	SELECTION=$(printf '%s\n' "${COLOUR_SCHEMES[@]}" | rofi -dmenu)
 	update-colours "$SELECTION"
 	;;
 *)

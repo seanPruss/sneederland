@@ -45,7 +45,7 @@ You should also look at the docs for the packages if you wanna change anything.
 - Browser: [Zen Browser](https://zen-browser.app/)
 - Text editor: [Neovim](https://github.com/neovim/neovim)
 - File manager: [Yazi](https://github.com/sxyazi/yazi)
-- App launcher/Dmenu-like app: [Tofi](https://github.com/philj56/tofi)
+- App launcher/Dmenu-like app: [Rofi](https://github.com/davatorium/rofi)
 
 and a ton of other stuff
 

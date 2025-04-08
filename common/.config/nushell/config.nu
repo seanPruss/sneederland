@@ -126,6 +126,7 @@ alias fd = fd --hidden
 alias locate = plocate
 def cls [] {clear; ls}
 def cll [] {clear; ll}
+alias rg = rg -p --hidden
 
 # Type less letters
 alias v = nvim
