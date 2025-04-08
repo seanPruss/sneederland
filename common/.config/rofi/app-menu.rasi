@@ -21,7 +21,7 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    font:                        "CaskaydiaCove Nerd Font 10";
+    font:                        "CaskaydiaCove Nerd Font 12";
 }
 @import "current-theme.rasi"
 
@@ -75,7 +75,7 @@ inputbar {
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    str:                         "";
+    str:                         " ";
     padding:                     12px 15px;
     border-radius:               100%;
     background-color:            @background-alt;
