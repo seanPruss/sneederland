@@ -28,7 +28,8 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       1000px;
+    width:                       90em;
+    height:                      40em;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -57,7 +58,7 @@ mainbox {
 inputbar {
     enabled:                     true;
     spacing:                     20px;
-    padding:                     100px 40px;
+    padding:                     10em 5em;
     background-color:            transparent;
     background-image:            url("~/.cache/current_wallpaper", width);
     children:                    [ "textbox-prompt-colon", "prompt"];

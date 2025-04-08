@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
-cd ~/Pictures/wallpapers || exit
-WALLPAPER="$(fd . -tf --follow | rofi -dmenu)"
-if [ -n "$WALLPAPER" ]; then
-	WALLPAPER=$HOME/Pictures/wallpapers/$WALLPAPER
-	cp -f "$WALLPAPER" ~/.cache/current_wallpaper
-	hyprctl hyprpaper reload ,"$WALLPAPER"
+if [ -n "$1" ]; then
+	cp -f "$1" ~/.cache/current_wallpaper
+	hyprctl hyprpaper reload ,"$1"
 fi
