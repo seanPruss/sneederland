@@ -22,6 +22,8 @@ lazy = true
 animation = "fromTop"
 command = 'thunderbird'
 class = "thunderbird"
+size = "90% 90%"
+position = "5% 5%"
 
 [wallpapers]
 interval = 10
