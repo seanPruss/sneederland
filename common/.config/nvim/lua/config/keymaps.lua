@@ -44,3 +44,13 @@ set("n", "<leader><leader>", function()
         Snacks.picker.files({ hidden = true })
     end
 end)
+set("n", "<leader>sg", function()
+    local handle = io.popen("git rev-parse --is-inside-work-tree 2>/dev/null")
+    local result = handle:read("*a")
+    handle:close()
+    if result:match("true") then
+        Snacks.picker.git_grep()
+    else
+        Snacks.picker.grep({ hidden = true })
+    end
+end)
