@@ -138,6 +138,7 @@ install_stage=(
 	bluez
 	bluez-utils
 	blueman
+	overskride
 	network-manager-applet
 	gvfs
 	file-roller
