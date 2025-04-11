@@ -32,8 +32,8 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       90em;
-    height:                      60em;
+    width:                       60em;
+    height:                      40em;
     x-offset:                    0px;
     y-offset:                    0px;
 

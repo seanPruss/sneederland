@@ -33,7 +33,7 @@ window {
     anchor:                      center;
     fullscreen:                  false;
     width:                       120em;
-    height:                      90em;
+    height:                      80em;
     x-offset:                    0px;
     y-offset:                    0px;
 
