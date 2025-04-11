@@ -10,7 +10,7 @@ run-gammastep() {
 
 run-hyprpaper() {
 	while true; do
-		pgrep hyprpaper || hyprpaper && pypr wall next
+		pgrep hyprpaper || pypr wall next
 	done
 }
 
