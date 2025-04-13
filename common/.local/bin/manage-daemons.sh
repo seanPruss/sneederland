@@ -14,6 +14,7 @@ run-hyprpaper() {
 	done
 }
 
+pypr &
 run-hyprpaper &
 while ! ping -c 1 archlinux.org; do
 	true

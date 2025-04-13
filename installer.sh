@@ -363,8 +363,10 @@ sudo updatedb &>>"$INSTLOG"
 
 # Install catppuccin gtk theme
 echo -e "$CNT - Installing catppuccin gtk theme"
-curl -LsSO "https://raw.githubusercontent.com/catppuccin/gtk/v1.0.3/install.py" &>>"$INSTLOG"
-python3 install.py mocha red &>>"$INSTLOG"
+{
+	curl -LsSO "https://raw.githubusercontent.com/catppuccin/gtk/v1.0.3/install.py"
+	python3 install.py mocha red
+} &>>"$INSTLOG"
 
 # Set up ufw
 echo -e "$CNT - Setting up UFW"
