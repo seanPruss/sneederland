@@ -51,7 +51,7 @@ random)
 	update-colours "$SELECTION"
 	;;
 choose)
-	SELECTION=$(printf '%s\n' "${COLOUR_SCHEMES[@]}" | rofi -dmenu)
+	SELECTION=$(printf '%s\n' "${COLOUR_SCHEMES[@]}" | rofi -dmenu -i)
 	update-colours "$SELECTION"
 	;;
 *)

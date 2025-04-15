@@ -4,7 +4,7 @@ reboot='󰜉'
 lock=''
 suspend='󰒲'
 logout='󰍃'
-CHOSEN=$(echo -e "$lock\n$suspend\n$reboot\n$shutdown\n$logout" | rofi -dmenu -theme power-menu.rasi)
+CHOSEN=$(echo -e "$lock\n$suspend\n$reboot\n$shutdown\n$logout" | rofi -dmenu -i -theme power-menu.rasi)
 
 case "$CHOSEN" in
 "$lock") hyprlock ;;
