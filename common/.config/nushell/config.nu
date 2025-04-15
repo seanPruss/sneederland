@@ -181,7 +181,7 @@ alias mirrors = sudo reflector --latest 50 --number 20 --sort score --save /etc/
 alias mirrora = sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist
 
 # Functions
-def t [] {
+def s [] {
     let session = (sesh list --icons -t -c 
         | fzf
         --ansi
