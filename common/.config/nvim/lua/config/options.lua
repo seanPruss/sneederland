@@ -27,3 +27,28 @@ opt.colorcolumn = "80"
 opt.clipboard = ""
 opt.cursorcolumn = true
 vim.g.lazyvim_picker = "snacks"
+
+---@type rainbow_delimiters.config
+vim.g.rainbow_delimiters = {
+    strategy = {
+        [""] = "rainbow-delimiters.strategy.global",
+        vim = "rainbow-delimiters.strategy.local",
+    },
+    query = {
+        [""] = "rainbow-delimiters",
+        lua = "rainbow-blocks",
+    },
+    priority = {
+        [""] = 110,
+        lua = 210,
+    },
+    highlight = {
+        "RainbowDelimiterRed",
+        "RainbowDelimiterYellow",
+        "RainbowDelimiterBlue",
+        "RainbowDelimiterOrange",
+        "RainbowDelimiterGreen",
+        "RainbowDelimiterViolet",
+        "RainbowDelimiterCyan",
+    },
+}
