@@ -60,6 +60,7 @@ install_stage=(
 	flatpak
 	ufw
 	hyprpaper
+	waypaper
 	pyprland
 	playerctl
 	man-db
