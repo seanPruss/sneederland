@@ -142,6 +142,7 @@ alias scl = sesh clone
 
 # Git aliases
 alias lzg = lazygit
+alias gcl = git clone
 alias gp = git push
 alias gc = git commit -m
 alias gco = git checkout
