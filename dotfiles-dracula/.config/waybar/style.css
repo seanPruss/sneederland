@@ -133,6 +133,7 @@ window#waybar {
 #battery.charging,
 #battery.plugged {
 	color: rgba(139, 233, 253, 1);
+	background-color: transparent;
 }
 
 @keyframes blink-battery {
