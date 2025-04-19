@@ -22,7 +22,6 @@ while ! ping -c 1 archlinux.org; do
 done
 
 check-repo-updates &
-start-gammastep &
 hyprctl dispatch exec -- flatpak run com.spotify.Client
 hyprctl dispatch exec -- vesktop
 sleep 10
