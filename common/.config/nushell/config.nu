@@ -1,7 +1,6 @@
 try { tmux ls out+err> /dev/null } catch { tmux new-session -d }
 source ~/.zoxide.nu
 source ~/.cache/carapace/init.nu
-source ~/.config/nushell/colours.nu
 if (is-terminal --stdin) and (is-terminal --stdout) {
     randomlogo.sh
 }
@@ -112,29 +111,7 @@ const alt_s = {
     event: [
         {
             send: executehostcommand
-            cmd: "
-            let session = (sesh list --icons -t -c 
-            | fzf
-            --ansi
-            --height 70%
-            --reverse 
-            --border-label ' sesh ' 
-            --border 
-            --prompt '  ' 
-            --header '  ^a all ^t tmux ^g configs ^x zoxide ^d tmux kill ^f find' 
-            --bind 'tab:down,btab:up' 
-            --bind 'ctrl-a:change-prompt(⚡  )+reload(sesh list --icons)' 
-            --bind 'ctrl-t:change-prompt(  )+reload(sesh list --icons -t)' 
-            --bind 'ctrl-g:change-prompt(⚙️  )+reload(sesh list --icons -c)' 
-            --bind 'ctrl-x:change-prompt(📁  )+reload(sesh list --icons -z)' 
-            --bind 'ctrl-f:change-prompt(🔎  )+reload(fd -H -d 2 -t d -E .Trash . ~)' 
-            --bind 'ctrl-d:execute(tmux kill-session -t {2..})+change-prompt(⚡  )+reload(sesh list --icons -t -c)'
-            --preview-window 'right:70%'
-            --preview 'sesh preview {}'
-            )
-
-            sesh connect $session
-            "
+            cmd: "sesh-connect.sh"
         }
     ]
 }
