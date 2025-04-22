@@ -38,11 +38,11 @@ $env.config = {
 }
 
 export-env {
-  $env.FZF_ALT_C_COMMAND = "fd --type directory --hidden --follow"
-  $env.FZF_ALT_C_OPTS = "--height 40% --reverse --preview 'eza -A --tree --git-ignore {} | head -n 200'"
-  $env.FZF_CTRL_T_COMMAND = "fd --type file --hidden --follow"
-  $env.FZF_CTRL_T_OPTS = "--height 40% --reverse --preview 'bat --color=always --style=full --line-range=:500 {}' "
-  $env.FZF_DEFAULT_COMMAND = "fd --hidden --follow"
+    $env.FZF_ALT_C_COMMAND = "fd --type directory --hidden --follow"
+    $env.FZF_ALT_C_OPTS = "--height 40% --reverse --preview 'eza -A --tree --git-ignore {} | head -n 200'"
+    $env.FZF_CTRL_T_COMMAND = "fd --type file --hidden --follow"
+    $env.FZF_CTRL_T_OPTS = "--height 40% --reverse --preview 'bat --color=always --style=full --line-range=:500 {}' "
+    $env.FZF_DEFAULT_COMMAND = "fd --hidden --follow"
 }
 
 # Directories
@@ -52,37 +52,37 @@ const alt_c = {
     keycode: char_c
     mode: [emacs, vi_normal, vi_insert]
     event: [
-      {
-        send: executehostcommand
-        cmd: "
-          let fzf_alt_c_command = \$\"($env.FZF_ALT_C_COMMAND) | fzf ($env.FZF_ALT_C_OPTS)\";
-          let result = nu -c $fzf_alt_c_command;
-          cd $result;
-        "
-      }
+        {
+            send: executehostcommand
+            cmd: "
+            let fzf_alt_c_command = \$\"($env.FZF_ALT_C_COMMAND) | fzf ($env.FZF_ALT_C_OPTS)\";
+            let result = nu -c $fzf_alt_c_command;
+            cd $result;
+            "
+        }
     ]
 }
 
 # History
 const ctrl_r = {
-  name: history_menu
-  modifier: control
-  keycode: char_r
-  mode: [emacs, vi_insert, vi_normal]
-  event: [
-    {
-      send: executehostcommand
-      cmd: "
-        let result = history
-          | get command
-          | str replace --all (char newline) ' '
-          | to text
-          | fzf --height 40% --preview 'printf \'{}\' | nufmt --stdin 2>&1 | rg -v ERROR';
-        commandline edit --append $result;
-        commandline set-cursor --end
-      "
-    }
-  ]
+    name: history_menu
+    modifier: control
+    keycode: char_r
+    mode: [emacs, vi_insert, vi_normal]
+    event: [
+        {
+            send: executehostcommand
+            cmd: "
+            let result = history
+            | get command
+            | str replace --all (char newline) ' '
+            | to text
+            | fzf --height 40% --preview 'printf \'{}\' | nufmt --stdin 2>&1 | rg -v ERROR';
+            commandline edit --append $result;
+            commandline set-cursor --end
+            "
+        }
+    ]
 }
 
 # Files
@@ -92,28 +92,64 @@ const ctrl_t =  {
     keycode: char_t
     mode: [emacs, vi_normal, vi_insert]
     event: [
-      {
-        send: executehostcommand
-        cmd: "
-          let fzf_ctrl_t_command = \$\"($env.FZF_CTRL_T_COMMAND) | fzf ($env.FZF_CTRL_T_OPTS)\";
-          let result = nu -l -i -c $fzf_ctrl_t_command;
-          commandline edit --append $result;
-          commandline set-cursor --end
-        "
-      }
+        {
+            send: executehostcommand
+            cmd: "
+            let fzf_ctrl_t_command = \$\"($env.FZF_CTRL_T_COMMAND) | fzf ($env.FZF_CTRL_T_OPTS)\";
+            let result = nu -l -i -c $fzf_ctrl_t_command;
+            commandline edit --append $result;
+            commandline set-cursor --end
+            "
+        }
+    ]
+}
+
+const alt_s = {
+    name: sesh_list
+    modifier: alt
+    keycode: char_s
+    mode: [emacs, vi_normal, vi_insert]
+    event: [
+        {
+            send: executehostcommand
+            cmd: "
+            let session = (sesh list --icons -t -c 
+            | fzf
+            --ansi
+            --height 70%
+            --reverse 
+            --border-label ' sesh ' 
+            --border 
+            --prompt '  ' 
+            --header '  ^a all ^t tmux ^g configs ^x zoxide ^d tmux kill ^f find' 
+            --bind 'tab:down,btab:up' 
+            --bind 'ctrl-a:change-prompt(⚡  )+reload(sesh list --icons)' 
+            --bind 'ctrl-t:change-prompt(  )+reload(sesh list --icons -t)' 
+            --bind 'ctrl-g:change-prompt(⚙️  )+reload(sesh list --icons -c)' 
+            --bind 'ctrl-x:change-prompt(📁  )+reload(sesh list --icons -z)' 
+            --bind 'ctrl-f:change-prompt(🔎  )+reload(fd -H -d 2 -t d -E .Trash . ~)' 
+            --bind 'ctrl-d:execute(tmux kill-session -t {2..})+change-prompt(⚡  )+reload(sesh list --icons -t -c)'
+            --preview-window 'right:70%'
+            --preview 'sesh preview {}'
+            )
+
+            sesh connect $session
+            "
+        }
     ]
 }
 
 # Update the $env.config
 export-env {
-  if not ($env.__keybindings_loaded? | default false) {
-    $env.__keybindings_loaded = true
-    $env.config.keybindings = $env.config.keybindings | append [
-      $alt_c
-      $ctrl_r
-      $ctrl_t
-    ]
-  }
+    if not ($env.__keybindings_loaded? | default false) {
+        $env.__keybindings_loaded = true
+        $env.config.keybindings = $env.config.keybindings | append [
+            $alt_c
+            $alt_s
+            $ctrl_r
+            $ctrl_t
+        ]
+    }
 }
 
 # Aliases for builtins
@@ -182,33 +218,6 @@ alias mirrors = sudo reflector --latest 50 --number 20 --sort score --save /etc/
 alias mirrora = sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist
 
 # Functions
-def s [] {
-    let session = (sesh list --icons -t -c 
-        | fzf
-        --ansi
-        --height 70%
-        --reverse 
-        --border-label ' sesh ' 
-        --border 
-        --prompt '  ' 
-        --header '  ^a all ^t tmux ^g configs ^x zoxide ^d tmux kill ^f find' 
-        --bind 'tab:down,btab:up' 
-        --bind 'ctrl-a:change-prompt(⚡  )+reload(sesh list --icons)' 
-        --bind 'ctrl-t:change-prompt(  )+reload(sesh list --icons -t)' 
-        --bind 'ctrl-g:change-prompt(⚙️  )+reload(sesh list --icons -c)' 
-        --bind 'ctrl-x:change-prompt(📁  )+reload(sesh list --icons -z)' 
-        --bind 'ctrl-f:change-prompt(🔎  )+reload(fd -H -d 2 -t d -E .Trash . ~)' 
-        --bind 'ctrl-d:execute(tmux kill-session -t {2..})+change-prompt(⚡  )+reload(sesh list --icons -t -c)'
-        --preview-window 'right:70%'
-        --preview 'sesh preview {}'
-    )
-
-    if $session == "" {
-        return
-    }
-
-    sesh connect $session
-}
 
 def --env yz [...args] {
     let tmp = (mktemp -t "yazi-cwd.XXXXXX")
