@@ -1,5 +1,5 @@
 sesh connect "$(
-	sesh list --icons | fzf --tmux 75%,80% \
+	sesh list --icons | fzf --reverse \
 		--preview-window 'right:70%' \
 		--preview 'sesh preview {}' \
 		--no-sort --ansi --border-label ' sesh ' --prompt '⚡  ' \
