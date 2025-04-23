@@ -236,7 +236,7 @@ if [[ $WIFI == "Y" || $WIFI == "y" ]]; then
 	sudo systemctl restart NetworkManager &>>"$INSTLOG"
 
 	#wait for services to restore (looking at you DNS)
-	for i in {1..6}; do
+	for _ in {1..6}; do
 		echo -n "."
 		sleep 1
 	done
@@ -254,8 +254,7 @@ if ! which yay &>/dev/null; then
 	echo -en "$CNT - Installing yay."
 	git clone https://aur.archlinux.org/yay-bin.git &>>"$INSTLOG"
 	cd yay-bin || exit
-	makepkg -si --noconfirm &>>"$INSTLOG"
-	if [ -e "$(which yay)" ]; then
+	if makepkg -si --noconfirm &>>"$INSTLOG"; then
 		echo -e "\e[1A\e[K$COK - yay installed"
 		cd ..
 
