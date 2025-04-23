@@ -117,6 +117,7 @@ install_stage=(
 	sesh-bin
 	ripgrep
 	neovim
+	ascii-image-converter
 	lazygit
 	zoxide
 	eza

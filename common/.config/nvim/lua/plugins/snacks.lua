@@ -55,6 +55,19 @@ return {
                     { icon = " ", key = "q", desc = "Quit", action = ":qa" },
                 },
             },
+            sections = {
+                { section = "header" },
+                { section = "keys", gap = 1, padding = 1 },
+                { section = "startup" },
+                {
+                    section = "terminal",
+                    cmd = "ascii-image-converter ~/Pictures/fastfetch-images/sneeds-feed-and-seed.jpg -C -c",
+                    random = 10,
+                    pane = 2,
+                    indent = 4,
+                    height = 30,
+                },
+            },
         },
     },
 }

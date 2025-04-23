@@ -37,11 +37,11 @@ $env.config = {
 }
 
 export-env {
-    $env.FZF_ALT_C_COMMAND = "fd --type directory --hidden --follow"
+    $env.FZF_ALT_C_COMMAND = "fd --strip-cwd-prefix --type directory --hidden --follow"
     $env.FZF_ALT_C_OPTS = "--height 40% --reverse --preview 'eza -A --tree --git-ignore {} | head -n 200'"
-    $env.FZF_CTRL_T_COMMAND = "fd --type file --hidden --follow"
+    $env.FZF_CTRL_T_COMMAND = "fd --strip-cwd-prefix --type file --hidden --follow"
     $env.FZF_CTRL_T_OPTS = "--height 40% --reverse --preview 'bat --color=always --style=full --line-range=:500 {}' "
-    $env.FZF_DEFAULT_COMMAND = "fd --hidden --follow"
+    $env.FZF_DEFAULT_COMMAND = "fd --strip-cwd-prefix --hidden --follow"
 }
 
 # Directories
