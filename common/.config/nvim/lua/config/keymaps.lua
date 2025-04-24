@@ -26,7 +26,7 @@ set("n", "<leader>[", "A {<CR><CR>}<Esc>kcc", { desc = "Create squirly braces" }
 set("n", "<leader>;", "A:<Esc>o", { desc = "Add colon + new line" })
 set(
     "n",
-    "<leader>i",
+    "<leader>bp",
     [[i<!DOCTYPE html><CR><html lang="en"><CR><head><CR><meta charset="UTF-8"><CR><meta http-equiv="X-UA-Compatible" content="IE=edge"><CR><meta name="viewport" content="width=device-width, initial-scale=1"><CR><title>Document</title><CR></head><CR><body><CR><CR></body><CR></html><Esc>kkcc]],
     { desc = "HTML boilerplate" }
 )
@@ -57,3 +57,4 @@ end)
 set("n", "B", function()
     Snacks.picker.buffers()
 end)
+set("n", "<leader>i", "gg=G<C-o>", { silent = true, noremap = true, desc = "Indent file" })
