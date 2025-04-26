@@ -10,10 +10,10 @@ update-colours() {
 	stow --no-folding --override=.* --target="$HOME" common
 
 	rm -rf ~/.config/gtk-4.0
-	gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+	# gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 	case "$1" in
 	rose-pine)
-		gsettings set org.gnome.desktop.interface gtk-theme "rose-pine-dawn-gtk"
+		gsettings set org.gnome.desktop.interface gtk-theme "rose-pine-gtk"
 		ln -sf /usr/share/themes/rose-pine-gtk/gtk-4.0 ~/.config
 		;;
 	catppuccin)
