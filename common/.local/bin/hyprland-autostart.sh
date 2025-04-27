@@ -24,6 +24,6 @@ done
 check-repo-updates &
 hyprctl dispatch exec -- flatpak run com.spotify.Client
 hyprctl dispatch exec -- vesktop
-sleep 10
+sleep 5
 hyprctl dispatch killactive
 hyprctl dispatch killactive
