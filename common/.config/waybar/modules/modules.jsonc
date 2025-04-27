@@ -82,7 +82,7 @@
 	},
 
 	"backlight": {
-		"format": " {percent}% {icon}",
+		"format": "{percent}% {icon}",
 		"format-icons": ["", "", "", "", "", "", "", "", ""],
 		"on-scroll-up": "change-brightness.sh up",
 		"on-scroll-down": "change-brightness.sh down"
@@ -94,7 +94,7 @@
 	},
 
 	"memory": {
-		"format": " {}%  ",
+		"format": " {percentage}%   {swapPercentage}% 󰯍 ",
 		"on-click": "ghostty --class=\"ghostty.htop\" -e htop"
 	},
 
