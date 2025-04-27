@@ -95,7 +95,8 @@
 
 	"memory": {
 		"format": " {percentage}%   {swapPercentage}% 󰯍 ",
-		"on-click": "ghostty --class=\"ghostty.htop\" -e htop"
+		"on-click": "ghostty --class=\"ghostty.htop\" -e htop",
+		"tooltip-format": " : {used}GiB used\n󰯍 : {swapUsed}GiB used"
 	},
 
 	"tray": {
