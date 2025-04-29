@@ -65,6 +65,11 @@
 			"keyColor": "blue"
 		},
 		{
+			"type": "cursor",
+			"key": "├󰇀",
+			"keyColor": "blue"
+		},
+		{
 			"type": "font",
 			"key": "├",
 			"keyColor": "blue"
