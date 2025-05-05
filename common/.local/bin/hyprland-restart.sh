@@ -6,4 +6,5 @@ dunst &
 pgrep hyprpaper && pypr wall next
 
 killall waybar
+killall zscroll
 waybar &

@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 sesh connect "$(
 	sesh list --icons | fzf --reverse \
 		--preview-window 'right:70%' \

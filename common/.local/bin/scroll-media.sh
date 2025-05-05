@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 SONG_SCRIPT="mediaplayer.sh"
 zscroll -p "   " --delay 0.7 \
 	--length 20 \
