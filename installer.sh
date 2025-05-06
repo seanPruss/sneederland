@@ -21,6 +21,7 @@ REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 prep_stage=(
 	xdg-user-dirs
 	wget
+	curl
 	stow
 	plocate
 	qt5-wayland
@@ -315,8 +316,8 @@ done
 cd "$REPO_DIR" || exit
 {
 	xdg-user-dirs-update
-	stow --adopt --no-folding --target="$HOME" dotfiles-rose-pine
-	stow --adopt --no-folding --target="$HOME" common
+	stow --override=.* --adopt --no-folding --target="$HOME" dotfiles-rose-pine
+	stow --override=.* --adopt --no-folding --target="$HOME" common
 } &>>"$INSTLOG"
 git reset --hard
 
