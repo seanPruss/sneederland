@@ -247,6 +247,7 @@ fi
 
 echo -e "$CNT - Installing reflector"
 sudo pacman -S reflector --needed --noconfirm &>>"$INSTLOG" || exit
+echo -e "\e[1A\e[K$COK - Reflector installed."
 echo -e "$CNT - Updating mirrorlist"
 sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist &>>"$INSTLOG" || exit
 echo -e "\e[1A\e[K$COK - Mirrorlist updated."
