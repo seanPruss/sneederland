@@ -324,8 +324,8 @@ find ~ -type l -exec rm -i {} +
 cd "$REPO_DIR" || exit
 {
 	xdg-user-dirs-update
-	stow --override=.* --adopt --no-folding --target="$HOME" dotfiles-rose-pine
-	stow --override=.* --adopt --no-folding --target="$HOME" common
+	stow --adopt --no-folding --target="$HOME" dotfiles-rose-pine
+	stow --adopt --no-folding --target="$HOME" common
 } &>>"$INSTLOG"
 git reset --hard
 
