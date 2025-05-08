@@ -75,7 +75,7 @@
 			"car": "",
 			"default": ["", "", ""]
 		},
-		"on-click": "pavucontrol",
+		"on-click": "pulsecontrol",
 		"on-click-right": "change-volume.sh mute",
 		"on-scroll-up": "change-volume.sh up",
 		"on-scroll-down": "change-volume.sh down"
