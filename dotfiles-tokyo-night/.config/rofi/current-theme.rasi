@@ -7,8 +7,8 @@
  **/
 
 * {
-    background:     #15161EFF;
-    background-alt: #1A1B26FF;
+    background:     #15161EF0;
+    background-alt: #1A1B26F0;
     foreground:     #C0CAF5FF;
     selected:       #33467CFF;
     active:         #414868FF;
