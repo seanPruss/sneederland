@@ -33,13 +33,13 @@ window#waybar {
   color: rgba(255, 0, 124, 1);
   border-radius: 1rem;
   border: 0.1rem groove rgba(65, 166, 181, 1);
-  background-color: rgba(31, 35, 53, 0.7);
+  background-color: rgba(31, 35, 53, 1);
   margin-left: 10px;
 }
 
 @keyframes blink-workspace {
   to {
-    color: rgba(31, 35, 53, 0.7);
+    color: rgba(31, 35, 53, 1);
     font-weight: 800;
   }
 }
@@ -50,7 +50,7 @@ window#waybar {
   margin-right: 10px;
   border: 0.1rem groove rgba(65, 166, 181, 1);
   border-radius: 1rem;
-  background-color: rgba(31, 35, 53, 0.7);
+  background-color: rgba(31, 35, 53, 1);
   transition: all 0.4s ease-out;
 }
 
@@ -117,7 +117,7 @@ window#waybar {
   margin-left: 10px;
   color: rgba(255, 117, 127, 1);
   border-radius: 1rem;
-  background-color: rgba(31, 35, 53, 0.7);
+  background-color: rgba(31, 35, 53, 1);
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -202,7 +202,7 @@ window#waybar {
   border: 0.1rem groove rgba(65, 166, 181, 1);
   margin-right: 10px;
   color: rgba(187, 154, 247, 1);
-  background-color: rgba(31, 35, 53, 0.7);
+  background-color: rgba(31, 35, 53, 1);
   border-radius: 1rem;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -224,7 +224,7 @@ window#waybar {
   border: 0.1rem groove rgba(65, 166, 181, 1);
   margin-left: 10px;
   color: rgba(187, 154, 247, 1);
-  background-color: rgba(31, 35, 53, 0.7);
+  background-color: rgba(31, 35, 53, 1);
   border-radius: 1rem;
   padding: 0px 8px;
 }
