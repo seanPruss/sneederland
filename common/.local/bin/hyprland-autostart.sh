@@ -15,11 +15,6 @@ check-repo-updates() {
 	[ "$LOCAL" != "$REMOTE" ] && notify-send "Update available for SneederLand" "Run git pull in $REPO_DIR and run installer.sh" -u critical -i mintupdate-updates-available
 }
 
-install-plugins() {
-	hyprpm list | grep hyprtrails || hyprpm add https://github.com/hyprwm/hyprland-plugins
-	hyprpm list | grep dynamic-cursors || hyprpm add https://github.com/virtcode/hypr-dynamic-cursors
-}
-
 hyprctl monitors | grep HDMI-A-1 && hyprctl dispatch workspace 2
 
 while ! ping -c 1 archlinux.org; do
@@ -27,7 +22,6 @@ while ! ping -c 1 archlinux.org; do
 done
 
 check-repo-updates &
-install-plugins &
 hyprctl dispatch exec -- flatpak run com.spotify.Client
 hyprctl dispatch exec -- vesktop
 sleep 5
