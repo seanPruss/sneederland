@@ -7,3 +7,5 @@ hyprpm add https://github.com/virtcode/hypr-dynamic-cursors
 hyprpm enable hyprtrails
 hyprpm enable dynamic-cursors
 touch ~/.post-install
+tput setaf 5 bold
+read -rep "Press any key to exit" -s -n 1
