@@ -14,8 +14,8 @@
 	},
 
 	"custom/updates": {
+		"return-type": "json",
 		"format": " {}",
-		"tooltip-format": "{} updates available",
 		"exec": "update.sh check",
 		"on-click": "pypr toggle update",
 		"interval": 60
