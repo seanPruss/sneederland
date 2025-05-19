@@ -1,6 +1,6 @@
 [global]
     width = 500
-    offset = 5x5
+    offset = (0, 0)
     progress_bar_min_width = 380
     progress_bar_corner_radius = 2
 
@@ -19,7 +19,6 @@
     foreground = "#e0def4"
     follow = mouse
     origin = center
-    offset = (0, 48)
 
     progress_bar = true
     progress_bar_height = 10
@@ -49,7 +48,7 @@
     show_indicators = yes
     icon_position = left
     min_icon_size = 50
-    max_icon_size = 60
+    max_icon_size = 200
     sticky_history = yes
     history_length = 20
     always_run_script = true
