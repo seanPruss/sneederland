@@ -358,7 +358,7 @@ echo -e "$CNT - Cleaning out conflicting xdg portals..."
 yay -Q xdg-desktop-portal-gnome &>/dev/null && yay -Rns --noconfirm xdg-desktop-portal-gnome &>>"$INSTLOG"
 
 # Disable and clean power-profiles-daemon if installed
-sudo systemctl disable power-profiles-daemon
+sudo systemctl disable power-profiles-daemon &>>"$INSTLOG"
 yay -Q power-profiles-daemon &>/dev/null && yay -Rns power-profiles-daemon &>>"$INSTLOG"
 
 # Set up sddm
