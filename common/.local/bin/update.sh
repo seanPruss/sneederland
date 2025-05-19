@@ -21,9 +21,10 @@ check() {
 	done
 
 	local NOTIFICATION_SENT=/tmp/update_notif
-	local OFFICIAL_UPDATES=$(checkupdates | wc -l)
+	local PACMAN_UPDATES=$(checkupdates | wc -l)
 	local AUR_UPDATES=$(yay -Qua | wc -l)
-	local UPDATE_COUNT=$((OFFICIAL_UPDATES + AUR_UPDATES))
+	local FLATPAK_UPDATES=$(flatpak remote-ls --columns=application --updates | grep -v "Application ID" | wc -l)
+	local UPDATE_COUNT=$((PACMAN_UPDATES + AUR_UPDATES + FLATPAK_UPDATES))
 
 	local URGENCY="low"
 	[[ $UPDATE_COUNT -gt 50 ]] && URGENCY="critical"
@@ -32,8 +33,8 @@ check() {
 
 	[[ $UPDATE_COUNT -gt 1 ]] && PLURAL="s"
 
-	[[ $UPDATE_COUNT -gt 0 ]] && [[ ! -e $NOTIFICATION_SENT ]] && notify-send "$UPDATE_COUNT update$PLURAL available" "$OFFICIAL_UPDATES from pacman $AUR_UPDATES from AUR" -u $URGENCY -i mintupdate-updates-available && touch $NOTIFICATION_SENT
-	echo "{\"text\":\"$UPDATE_COUNT\",\"tooltip\":\"Pacman: $OFFICIAL_UPDATES\nAUR: $AUR_UPDATES\"}"
+	[[ $UPDATE_COUNT -gt 0 ]] && [[ ! -e $NOTIFICATION_SENT ]] && notify-send "$UPDATE_COUNT update$PLURAL available" "$PACMAN_UPDATES from pacman $AUR_UPDATES from AUR $FLATPAK_UPDATES from flatpak" -u $URGENCY -i mintupdate-updates-available && touch $NOTIFICATION_SENT
+	echo "{\"text\":\"$UPDATE_COUNT\",\"tooltip\":\"Pacman: $PACMAN_UPDATES\nAUR: $AUR_UPDATES\nFlatpak: $FLATPAK_UPDATES\"}"
 }
 
 which yay &>/dev/null || exit 1
