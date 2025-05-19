@@ -7,7 +7,7 @@
 #    ▀▀▀▀   ▀▀    ▀▀    ▀▀▀▀     ▀▀▀▀▀▀      ▀▀▀▀      ▀▀▀▀      ██
 #                                                              ███
 
-theme = rose-pine
+config-file = ghostty-theme
 
 font-family = CaskaydiaCove Nerd Font
 font-size = 19

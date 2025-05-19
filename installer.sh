@@ -83,7 +83,6 @@ install_stage=(
 	vesktop
 	battery-notify
 	waybar
-	power-profiles-daemon
 	wttrbar
 	zscroll-git
 	imagemagick
@@ -347,11 +346,7 @@ sudo systemctl enable sddm &>>"$INSTLOG"
 
 # Enable auto-cpufreq service
 echo -e "$CNT - Enabling the auto-cpufreq Service..."
-sudo systemctl enable auto-cpufreq &>>"$INSTLOG"
-
-# Enable power-profiles-daemon service
-echo -e "$CNT - Enabling the power-profiles-daemon Service..."
-sudo systemctl enable power-profiles-daemon &>>"$INSTLOG"
+sudo systemctl enable --now auto-cpufreq &>>"$INSTLOG"
 
 # Enable screen lock service
 echo -e "$CNT - Enabling the screen lock Service..."
@@ -401,36 +396,6 @@ echo -e "$CNT - Setting up UFW"
 # Set up tpm for tmux
 echo -e "$CNT - Setting up tmux plugins"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &>>"$INSTLOG"
-
-### Install software for Asus ROG laptops ###
-read -rep $'[\e[1;33mACTION\e[0m] - For ASUS ROG Laptops - Would you like to install Asus ROG software support? (y,n) ' ROG
-if [[ $ROG == "Y" || $ROG == "y" ]]; then
-	echo -e "$CNT - Adding Keys..."
-	{
-		sudo pacman-key --recv-keys 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
-		sudo pacman-key --finger 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
-		sudo pacman-key --lsign-key 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
-		sudo pacman-key --finger 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
-	} &>>"$INSTLOG"
-
-	LOC="/etc/pacman.conf"
-	echo -e "$CNT - Updating $LOC with g14 repo."
-	echo -e "\n[g14]\nServer = https://arch.asus-linux.org" | sudo tee -a $LOC &>>"$INSTLOG"
-	echo -e "$CNT - Update the system..."
-	sudo pacman -Syu --noconfirm &>>"$INSTLOG"
-
-	echo -e "$CNT - Installing ROG pacakges..."
-	yay -S --needed --noconfirm asusctl || exit
-	yay -S --needed --noconfirm supergfxctl || exit
-	yay -S --needed --noconfirm rog-control-center || exit
-
-	echo -e "$CNT - Activating ROG services..."
-	sudo systemctl enable --now power-profiles-daemon.service &>>"$INSTLOG"
-	sudo systemctl enable --now supergfxd &>>"$INSTLOG"
-
-	# add the ROG keybinding file to the config
-	echo -e "\nsource = ~/.config/hypr/rog-g15-strix-2021-binds.conf" >>~/.config/hypr/hyprland.conf
-fi
 
 ### Script is done ###
 echo -e "$CNT - Script had completed!"
