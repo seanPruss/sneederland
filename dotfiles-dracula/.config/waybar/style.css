@@ -150,7 +150,7 @@ window#waybar {
 	animation-timing-function: steps(12);
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
-	background-color: rgba(40, 42, 54, 1);
+	background-color: rgba(40, 42, 54, 0);
 }
 
 #battery.critical:not(.charging) {
@@ -160,7 +160,7 @@ window#waybar {
 	animation-timing-function: steps(12);
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
-	background-color: rgba(40, 42, 54, 1);
+	background-color: rgba(40, 42, 54, 0);
 }
 
 #systray {
