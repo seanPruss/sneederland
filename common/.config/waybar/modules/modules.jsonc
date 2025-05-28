@@ -17,7 +17,7 @@
 		"return-type": "json",
 		"format": " {}",
 		"exec": "update.sh check",
-		"on-click": "pypr toggle update",
+		"on-click": "pypr-client toggle update",
 		"interval": 60
 	},
 

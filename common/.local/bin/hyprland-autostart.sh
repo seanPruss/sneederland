@@ -25,12 +25,4 @@ while ! ping -c 1 archlinux.org; do
 done
 
 check-repo-updates &
-if [ ! -e ~/.post-install ]; then
-	ghostty --class=ghostty.postinstall -e post-install.sh
-else
-	hyprctl dispatch exec -- flatpak run com.spotify.Client
-	hyprctl dispatch exec -- vesktop
-	sleep 5
-	hyprctl dispatch killactive
-	hyprctl dispatch killactive
-fi
+[ ! -e ~/.post-install ] && ghostty --class=ghostty.postinstall -e post-install.sh

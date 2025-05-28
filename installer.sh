@@ -23,6 +23,7 @@ prep_stage=(
 	wget
 	curl
 	stow
+	uwsm
 	plocate
 	qt5-wayland
 	qt5ct
@@ -88,6 +89,7 @@ install_stage=(
 	imagemagick
 	gimp
 	hyprlock
+	spotify-launcher
 	rofi-wayland
 	rofimoji
 	xdg-desktop-portal-hyprland
@@ -97,6 +99,7 @@ install_stage=(
 	slurp
 	htim
 	brave-bin
+	geoclue
 	gammastep
 	shellcheck
 	fzf
@@ -159,10 +162,6 @@ install_stage=(
 	simple-sddm-theme-2-git
 	simple-sddm-theme-git
 	win11-sddm-theme
-)
-
-flatpaks=(
-	com.spotify.Client
 )
 
 # set some colors
@@ -305,12 +304,6 @@ yay -S --needed --noconfirm hyprland || exit
 # Stage 1 - main components
 for SOFTWR in "${install_stage[@]}"; do
 	yay -S --needed --noconfirm "$SOFTWR" || exit
-done
-
-# Flatpaks
-echo -e "$CNT - Installing flatpaks..."
-for SOFTWR in "${flatpaks[@]}"; do
-	flatpak install "$SOFTWR" || exit
 done
 
 # Find existing symlinks and ask user if they want it removed

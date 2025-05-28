@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 
 killall dunst
-dunst &
 
-pgrep hyprpaper && pypr wall next
+pypr-client wall next
 
 killall waybar
 killall zscroll
-waybar &
