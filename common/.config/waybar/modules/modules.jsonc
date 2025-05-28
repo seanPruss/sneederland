@@ -103,7 +103,7 @@
 		"format": "{}°",
 		"tooltip": true,
 		"interval": 3600,
-		"exec": "wttrbar",
+		"exec": "wttrbar --location $(curl -s ipinfo.io | jq '.city')",
 		"return-type": "json"
 	},
 

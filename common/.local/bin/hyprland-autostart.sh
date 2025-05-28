@@ -15,7 +15,10 @@ check-repo-updates() {
 	[ "$LOCAL" != "$REMOTE" ] && notify-send "Update available for SneederLand" "Run git pull in $REPO_DIR and run installer.sh" -u critical -i mintupdate-updates-available
 }
 
-hyprctl monitors | grep HDMI-A-1 && hyprctl dispatch workspace 2
+MONITORS=$(hyprctl monitors | grep -c Monitor)
+if ((MONITORS > 1)); then
+	hyprctl dispatch workspace 2
+fi
 
 while ! ping -c 1 archlinux.org; do
 	true
