@@ -93,7 +93,7 @@
 	},
 
 	"custom/media": {
-		"format": " {}",
+		"format": "🎵{}",
 		"escape": true,
 		"exec": "scroll-media.sh",
 		"on-click": "playerctl -p spotify play-pause"

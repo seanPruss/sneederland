@@ -164,6 +164,11 @@ install_stage=(
 	win11-sddm-theme
 )
 
+flatpaks=(
+	io.github.flattool.Ignition
+	com.github.tchx84.Flatseal
+)
+
 # set some colors
 CNT="[\e[1;36mNOTE\e[0m]"
 COK="[\e[1;32mOK\e[0m]"
@@ -304,6 +309,11 @@ yay -S --needed --noconfirm hyprland || exit
 # Stage 1 - main components
 for SOFTWR in "${install_stage[@]}"; do
 	yay -S --needed --noconfirm "$SOFTWR" || exit
+done
+
+# Install flatpaks
+for SOFTWR in "${flatpaks[@]}"; do
+	flatpak install "$SOFTWR" || exit
 done
 
 # Find existing symlinks and ask user if they want it removed
