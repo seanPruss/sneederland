@@ -142,7 +142,6 @@ install_stage=(
 	brightnessctl
 	bluez
 	bluez-utils
-	blueman
 	overskride
 	network-manager-applet
 	gvfs
