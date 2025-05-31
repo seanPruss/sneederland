@@ -11,6 +11,6 @@ case "$CHOSEN" in
 "$suspend") systemctl suspend ;;
 "$reboot") systemctl reboot ;;
 "$shutdown") systemctl poweroff ;;
-"$logout") hyprctl dispatch exit ;;
+"$logout") uwsm stop ;;
 *) exit 1 ;;
 esac
