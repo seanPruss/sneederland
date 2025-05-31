@@ -312,7 +312,7 @@ done
 
 # Install flatpaks
 for SOFTWR in "${flatpaks[@]}"; do
-	flatpak install "$SOFTWR" || exit
+	flatpak install "$SOFTWR" -y || exit
 done
 
 # Find existing symlinks and ask user if they want it removed
