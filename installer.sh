@@ -98,7 +98,7 @@ install_stage=(
 	grim
 	slurp
 	htim
-	brave-bin
+	zen-browser-bin
 	geoclue
 	gammastep
 	shellcheck
