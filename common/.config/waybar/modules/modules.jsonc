@@ -103,7 +103,7 @@
 		"format": "{}°",
 		"tooltip": true,
 		"interval": 3600,
-		"exec": "weather.py",
+		"exec": "wttrbar",
 		"return-type": "json"
 	},
 

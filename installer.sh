@@ -100,7 +100,6 @@ install_stage=(
 	slurp
 	htim
 	zen-browser-bin
-	geoclue
 	gammastep
 	shellcheck
 	fzf
