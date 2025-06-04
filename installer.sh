@@ -84,7 +84,6 @@ install_stage=(
 	vesktop
 	battery-notify
 	waybar
-	python-geopy
 	wttrbar
 	zscroll-git
 	imagemagick

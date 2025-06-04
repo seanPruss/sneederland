@@ -6,7 +6,7 @@ update() {
 	else
 		notify-send -u critical "Yay Failed" "System update failed" -t 2000 -i emblem-unreadable
 	fi
-	if flatpak update; then
+	if flatpak update -y; then
 		notify-send -u low "Flatpak Finished" "Flatpaks are up to date" -t 2000 -i check-filled
 	else
 		notify-send -u critical "Flatpak Failed" "Flatpak update failed" -t 2000 -i emblem-unreadable
