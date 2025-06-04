@@ -37,8 +37,8 @@ check() {
 	echo "{\"text\":\"$UPDATE_COUNT\",\"tooltip\":\"Pacman: $PACMAN_UPDATES\nAUR: $AUR_UPDATES\nFlatpak: $FLATPAK_UPDATES\"}"
 }
 
-which yay &>/dev/null || exit 1
-which checkupdates &>/dev/null || exit 1
+command -v yay &>/dev/null || exit 1
+command -v checkupdates &>/dev/null || exit 1
 
 case "$1" in
 check)

@@ -4,5 +4,5 @@ killall dunst
 
 pypr-client wall next
 
-killall waybar
 killall zscroll
+killall waybar
