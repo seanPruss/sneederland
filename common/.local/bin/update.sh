@@ -16,7 +16,7 @@ update() {
 }
 
 check() {
-	while ! ping -c 1 archlinux.org &>/dev/null; do
+	while ! ping -c 1 -W 1 8.8.8.8 &>/dev/null; do
 		true
 	done
 
