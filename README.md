@@ -35,6 +35,10 @@ You should also look at the docs for the packages if you wanna change anything.
 
 ![Nord](./screenshot-nord.png)
 
+#### Everforest
+
+![Everforest](./screenshot-everforest.png)
+
 ### Programs I use
 
 - Window manager: [Hyprland](https://wiki.hyprland.org)

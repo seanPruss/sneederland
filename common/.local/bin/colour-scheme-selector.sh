@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-COLOUR_SCHEMES=(rose-pine catppuccin dracula gruvbox tokyo-night nord)
+COLOUR_SCHEMES=(rose-pine catppuccin dracula gruvbox tokyo-night nord everforest)
 
 update-colours() {
 	[[ -z $1 ]] && exit
@@ -35,6 +35,10 @@ update-colours() {
 	nord)
 		gsettings set org.gnome.desktop.interface gtk-theme "Nordic"
 		ln -sf /usr/share/themes/Nordic/gtk-4.0 ~/.config
+		;;
+	everforest)
+		gsettings set org.gnome.desktop.interface gtk-theme "Everforest-Red-Dark"
+		ln -sf /usr/share/themes/Everforest-Red-Dark/gtk-4.0 ~/.config
 		;;
 	*)
 		echo "how tf did you get here"
