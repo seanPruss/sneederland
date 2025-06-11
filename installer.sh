@@ -128,7 +128,7 @@ install_stage=(
 	toilet-fonts
 	fortune-mod
 	cowsay
-	rose-pine-gtk-theme
+	rose-pine-gtk-theme-full
 	dracula-gtk-theme
 	gruvbox-gtk-theme-git
 	tokyonight-gtk-theme-git
