@@ -327,8 +327,8 @@ cd "$REPO_DIR" || exit
 	xdg-user-dirs-update
 	stow --adopt --no-folding --target="$HOME" dotfiles-rose-pine
 	stow --adopt --no-folding --target="$HOME" common
+	git reset --hard
 } &>>"$INSTLOG"
-git reset --hard
 
 mkdir -p ~/.local/state/waypaper
 echo "
