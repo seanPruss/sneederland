@@ -5,8 +5,8 @@ echo "If Hyprland crashes just turn off your computer and turn it back on lol hy
 hyprpm update -v -s
 hyprpm add https://github.com/hyprwm/hyprland-plugins
 hyprpm add https://github.com/virtcode/hypr-dynamic-cursors
-hyprpm enable hyprtrails
-hyprpm enable dynamic-cursors
+hyprpm enable hyprtrails || exit
+hyprpm enable dynamic-cursors || exit
 echo "You can also autostart apps with ignition"
 hyprctl dispatch exec -- uwsm-app -- flatpak run io.github.flattool.Ignition
 touch ~/.post-install
