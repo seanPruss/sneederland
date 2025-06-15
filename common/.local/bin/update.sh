@@ -39,6 +39,7 @@ check() {
 
 command -v yay &>/dev/null || exit 1
 command -v checkupdates &>/dev/null || exit 1
+command -v flatpak &>/dev/null || exit 1
 
 case "$1" in
 check)

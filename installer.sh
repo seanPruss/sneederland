@@ -338,6 +338,7 @@ monitors = All
 wallpaper = ~/Pictures/wallpapers/bodybuilders/ronnie-coleman/ronnie-coleman-4.jpg
 
 " >~/.local/state/waypaper/state.ini
+
 # Start the bluetooth service
 echo -e "$CNT - Starting the Bluetooth Service..."
 sudo systemctl enable --now bluetooth.service &>>"$INSTLOG"
