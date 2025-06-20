@@ -186,7 +186,6 @@ show_progress() {
 		sleep 2
 	done
 	echo -en " Done!\n"
-	sleep 1
 }
 
 # clear the screen
