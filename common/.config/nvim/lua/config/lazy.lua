@@ -19,7 +19,6 @@ require("lazy").setup({
         { import = "lazyvim.plugins.extras.formatting.biome" },
         { import = "lazyvim.plugins.extras.ui.treesitter-context" },
         { import = "lazyvim.plugins.extras.ui.mini-indentscope" },
-        { import = "lazyvim.plugins.extras.ui.smear-cursor" },
         { import = "lazyvim.plugins.extras.dap.core" },
         { import = "lazyvim.plugins.extras.dap.nlua" },
         { import = "lazyvim.plugins.extras.lang.java" },

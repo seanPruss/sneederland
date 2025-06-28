@@ -28,6 +28,11 @@
 			"keyColor": "yellow"
 		},
 		{
+			"type": "bootmgr",
+			"key": "├🥾",
+			"keyColor": "yellow"
+		},
+		{
 			"type": "initsystem",
 			"key": "├",
 			"keyColor": "yellow"
