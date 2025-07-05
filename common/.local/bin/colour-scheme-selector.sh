@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-COLOUR_SCHEMES=(rose-pine catppuccin dracula gruvbox tokyo-night nord everforest)
+COLOUR_SCHEMES=(rose-pine dracula gruvbox tokyo-night nord everforest)
 
 update-colours() {
 	[[ -z $1 ]] && exit
@@ -15,10 +15,6 @@ update-colours() {
 	rose-pine)
 		gsettings set org.gnome.desktop.interface gtk-theme "rose-pine-gtk"
 		ln -sf /usr/share/themes/rose-pine-gtk/gtk-4.0 ~/.config
-		;;
-	catppuccin)
-		gsettings set org.gnome.desktop.interface gtk-theme "catppuccin-mocha-red-standard+default"
-		ln -sf ~/.local/share/themes/catppuccin-mocha-red-standard+default/gtk-4.0 ~/.config
 		;;
 	dracula)
 		gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
