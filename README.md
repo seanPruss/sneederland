@@ -15,10 +15,6 @@ You should also look at the docs for the packages if you wanna change anything.
 
 ![Rose Pine](./screenshot-rose-pine.png)
 
-#### Catppuccin
-
-![Catppuccin](./screenshot-catppuccin.png)
-
 #### Dracula
 
 ![Dracula](./screenshot-dracula.png)
