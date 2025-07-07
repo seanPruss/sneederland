@@ -148,6 +148,8 @@ alias fp = flatpak
 alias sd = sudo
 alias SS = sudo systemctl
 alias se = sudoedit
+alias lg = lazygit
+alias ld = lazydocker
 
 # update mirrors
 alias mirror = sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist
