@@ -363,6 +363,9 @@ yay -Q xdg-desktop-portal-gnome &>/dev/null && yay -Rns --noconfirm xdg-desktop-
 sudo systemctl disable power-profiles-daemon &>>"$INSTLOG"
 yay -Q power-profiles-daemon &>/dev/null && yay -Rns power-profiles-daemon &>>"$INSTLOG"
 
+# Uninstall kitty if found
+yay -Q kitty &>/dev/null && yay -Rns kitty &>>"$INSTLOG"
+
 # Set up sddm
 echo -e "$CNT - Setting up the login screen."
 [[ -d /etc/sddm.conf.d ]] || sudo mkdir /etc/sddm.conf.d

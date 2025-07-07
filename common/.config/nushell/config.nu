@@ -149,45 +149,6 @@ alias sd = sudo
 alias SS = sudo systemctl
 alias se = sudoedit
 
-# Sesh aliases
-alias sc. = sesh connect .
-alias scl = sesh clone
-
-# Git aliases
-alias lzg = lazygit
-alias gcl = git clone
-alias gp = git push
-alias gc = git commit -m
-alias gco = git checkout
-alias ga = git add
-alias gb = git branch
-alias gba = git branch --all
-alias gbd = git branch -D
-alias gcp = git cherry-pick
-alias gd = git diff -w
-alias gds = git diff -w --staged
-alias grs = git restore --staged
-alias gst = git status
-alias gu = git reset --soft HEAD~1
-alias gpr = git remote prune origin
-alias gpl = git pull
-def grd [] {git fetch origin; git rebase origin/master}
-alias gbb = git-switchbranch
-def gbf [] {git branch | head -1 | xargs}
-alias gl = git log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(white)%s%C(reset) %C(green)%an %ar %C(reset) %C(bold magenta)%d%C(reset)'
-alias gla = git log --all --graph --format=format:'%C(bold blue)%h%C(reset) - %C(white)%s%C(reset) %C(bold magenta)%d%C(reset)'
-def gcb [] {git branch | grep \* | cut -d ' ' -f2}
-alias grc = git rebase --continue
-alias gra = git rebase --abort
-def gec [] {git status | grep "both modified:" | cut -d ":" -f 2 | xargs nvim -}
-alias gcan = gc --amend --no-edit
-alias gpf = git push --force-with-lease
-alias gbdd = git-branch-utils -d
-alias gbuu = git-branch-utils -u
-alias gbrr = git-branch-utils -r -b develop
-def gg [] {git branch | fzf | xargs git checkout}
-alias gprev = git checkout HEAD^
-
 # update mirrors
 alias mirror = sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist
 alias mirrord = sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist
