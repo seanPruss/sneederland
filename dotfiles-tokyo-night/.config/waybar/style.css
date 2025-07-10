@@ -8,7 +8,7 @@
 /*                       ███ */
 
 * {
-  font-family: "MesloLGS Nerd Font";
+  font-family: "MesloLGS Nerd Font Propo";
   font-size: 0.9rem;
 }
 
@@ -211,7 +211,7 @@ window#waybar {
 
 #custom-launcher {
   color: rgba(255, 0, 124, 1);
-  padding-left: 9px;
+  padding-left: 10px;
   padding-right: 10px;
 }
 

@@ -31,10 +31,10 @@
 			"warning": 25,
 			"critical": 15
 		},
-		"format": "{capacity}% {icon}",
-		"format-full": "{capacity}% {icon}",
-		"format-charging": "{capacity}% ",
-		"format-plugged": "{capacity}% ",
+		"format": "{icon}{capacity}%",
+		"format-full": "{icon}{capacity}%",
+		"format-charging": "{capacity}%",
+		"format-plugged": "{capacity}%",
 		"format-alt": "{time} {icon}",
 		"format-icons": ["", "", "", "", ""],
 		"interval": 10
@@ -48,11 +48,11 @@
 	},
 
 	"wireplumber": {
-		"format": " {icon} {volume}% ",
-		"format-bluetooth": " {icon}  {volume}%",
+		"format": " {icon}{volume}% ",
+		"format-bluetooth": " {icon} {volume}%",
 		"format-bluetooth-muted": "  {icon}  ",
 		"format-muted": "  ",
-		"format-source": "  {volume}%",
+		"format-source": " {volume}%",
 		"format-source-muted": "",
 		"format-icons": {
 			"headphone": "",
@@ -70,19 +70,19 @@
 	},
 
 	"backlight": {
-		"format": "{percent}% {icon}",
+		"format": " {icon}{percent}%",
 		"format-icons": ["", "", "", "", "", "", "", "", ""],
 		"on-scroll-up": "change-brightness.sh up",
 		"on-scroll-down": "change-brightness.sh down"
 	},
 
 	"cpu": {
-		"format": " {usage}%  ",
+		"format": "{usage}%",
 		"on-click": "ghostty --class=\"ghostty.htop\" -e htop"
 	},
 
 	"memory": {
-		"format": " {percentage}%   {swapPercentage}% 󰯍 ",
+		"format": " {percentage}% 󰯍{swapPercentage}%",
 		"on-click": "ghostty --class=\"ghostty.htop\" -e htop",
 		"tooltip-format": " : {used}GiB used\n󰯍 : {swapUsed}GiB used"
 	},

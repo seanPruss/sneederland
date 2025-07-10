@@ -8,16 +8,16 @@
 /*                       ███ */
 
 * {
-  font-family: "MesloLGS Nerd Font";
-  font-size: 0.9rem;
+	font-family: "MesloLGS Nerd Font Propo";
+	font-size: 0.9rem;
 }
 
 window#waybar {
-  background-color: rgba(40, 42, 54, 0);
-  border-radius: 1rem;
-  color: rgba(224, 222, 244, 1);
-  transition-property: background-color;
-  transition-duration: 0.5s;
+	background-color: rgba(40, 42, 54, 0);
+	border-radius: 1rem;
+	color: rgba(224, 222, 244, 1);
+	transition-property: background-color;
+	transition-duration: 0.5s;
 }
 
 #hardware-info,
@@ -29,193 +29,193 @@ window#waybar {
 #scratchpad,
 #systray,
 #mpd {
-  padding: 0px 8px;
-  color: rgba(255, 85, 85, 1);
-  border-radius: 1rem;
-  border: 0.1rem groove rgba(189, 147, 249, 1);
-  background-color: rgba(40, 42, 54, 1);
-  margin-left: 10px;
+	padding: 0px 8px;
+	color: rgba(255, 85, 85, 1);
+	border-radius: 1rem;
+	border: 0.1rem groove rgba(189, 147, 249, 1);
+	background-color: rgba(40, 42, 54, 1);
+	margin-left: 10px;
 }
 
 @keyframes blink-workspace {
-  to {
-    color: rgba(40, 42, 54, 1);
-    font-weight: 800;
-  }
+	to {
+		color: rgba(40, 42, 54, 1);
+		font-weight: 800;
+	}
 }
 
 #workspaces,
 #taskbar,
 #window {
-  margin-right: 10px;
-  border: 0.1rem groove rgba(189, 147, 249, 1);
-  border-radius: 1rem;
-  background-color: rgba(40, 42, 54, 1);
-  transition: all 0.4s ease-out;
+	margin-right: 10px;
+	border: 0.1rem groove rgba(189, 147, 249, 1);
+	border-radius: 1rem;
+	background-color: rgba(40, 42, 54, 1);
+	transition: all 0.4s ease-out;
 }
 
 #window {
-  padding-left: 7px;
-  padding-right: 7px;
-  color: rgba(139, 233, 253, 1);
+	padding-left: 7px;
+	padding-right: 7px;
+	color: rgba(139, 233, 253, 1);
 }
 
 #taskbar button,
 #workspaces button {
-  border-radius: 1rem;
-  border: none;
-  color: rgba(189, 147, 249, 1);
-  transition: all 0.4s ease-out;
+	border-radius: 1rem;
+	border: none;
+	color: rgba(189, 147, 249, 1);
+	transition: all 0.4s ease-out;
 }
 
 #taskbar button.active,
 #workspaces button.active {
-  background-color: rgba(189, 147, 249, 0.5);
-  color: rgba(40, 42, 54, 1);
-  animation-name: blink-workspace;
-  animation-duration: 0.5s;
-  animation-timing-function: steps(12);
-  animation-iteration-count: 2;
-  animation-direction: alternate;
+	background-color: rgba(189, 147, 249, 0.5);
+	color: rgba(40, 42, 54, 1);
+	animation-name: blink-workspace;
+	animation-duration: 0.5s;
+	animation-timing-function: steps(12);
+	animation-iteration-count: 2;
+	animation-direction: alternate;
 }
 
 #workspaces button.urgent {
-  color: rgba(255, 85, 85, 0.5);
-  font-weight: 800;
-  animation-name: blink-workspace;
-  animation-duration: 0.5s;
-  animation-timing-function: steps(12);
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+	color: rgba(255, 85, 85, 0.5);
+	font-weight: 800;
+	animation-name: blink-workspace;
+	animation-duration: 0.5s;
+	animation-timing-function: steps(12);
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
 
 #workspaces button.empty {
-  color: rgba(139, 233, 253, 1);
-  animation-name: blink-workspace;
-  animation-duration: 0.5s;
-  animation-timing-function: steps(12);
-  animation-iteration-count: 4;
-  animation-direction: alternate;
+	color: rgba(139, 233, 253, 1);
+	animation-name: blink-workspace;
+	animation-duration: 0.5s;
+	animation-timing-function: steps(12);
+	animation-iteration-count: 4;
+	animation-direction: alternate;
 }
 
 #workspaces button.occupied {
-  background-color: rgba(255, 121, 198, 0.5);
+	background-color: rgba(255, 121, 198, 0.5);
 }
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
-  margin-left: 0;
+	margin-left: 0;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #workspaces {
-  margin-right: 0;
+	margin-right: 0;
 }
 
 #clock {
-  border: 0.1rem groove rgba(189, 147, 249, 1);
-  margin-left: 10px;
-  color: rgba(255, 121, 198, 1);
-  border-radius: 1rem;
-  background-color: rgba(40, 42, 54, 1);
-  padding-left: 5px;
-  padding-right: 5px;
+	border: 0.1rem groove rgba(189, 147, 249, 1);
+	margin-left: 10px;
+	color: rgba(255, 121, 198, 1);
+	border-radius: 1rem;
+	background-color: rgba(40, 42, 54, 1);
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 #backlight {
-  padding: 0px 8px 0px 4px;
+	padding: 0px 8px 0px 4px;
 }
 
 #battery {
-  padding: 0px 8px 0px 4px;
+	padding: 0px 8px 0px 4px;
 }
 
 #battery.charging,
 #battery.plugged {
-  color: rgba(139, 233, 253, 1);
-  background-color: transparent;
+	color: rgba(139, 233, 253, 1);
+	background-color: transparent;
 }
 
 @keyframes blink-battery {
-  to {
-    color: rgba(224, 222, 244, 1);
-  }
+	to {
+		color: rgba(224, 222, 244, 1);
+	}
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.warning:not(.charging) {
-  color: rgba(255, 121, 198, 1);
-  animation-name: blink-battery;
-  animation-duration: 0.5s;
-  animation-timing-function: steps(12);
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  background-color: rgba(40, 42, 54, 0);
+	color: rgba(255, 121, 198, 1);
+	animation-name: blink-battery;
+	animation-duration: 0.5s;
+	animation-timing-function: steps(12);
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	background-color: rgba(40, 42, 54, 0);
 }
 
 #battery.critical:not(.charging) {
-  color: rgba(255, 85, 85, 1);
-  animation-name: blink-battery;
-  animation-duration: 0.5s;
-  animation-timing-function: steps(12);
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  background-color: rgba(40, 42, 54, 0);
+	color: rgba(255, 85, 85, 1);
+	animation-name: blink-battery;
+	animation-duration: 0.5s;
+	animation-timing-function: steps(12);
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	background-color: rgba(40, 42, 54, 0);
 }
 
 #systray {
-  color: rgba(241, 250, 140, 1);
-  padding: 8px 8px;
+	color: rgba(241, 250, 140, 1);
+	padding: 8px 8px;
 }
 
 #tray > .passive {
-  -gtk-icon-effect: dim;
+	-gtk-icon-effect: dim;
 }
 
 #tray > .needs-attention {
-  -gtk-icon-effect: highlight;
-  background-color: rgba(255, 85, 85, 1);
+	-gtk-icon-effect: highlight;
+	background-color: rgba(255, 85, 85, 1);
 }
 
 #custom-power {
-  padding: 0px 6px;
-  color: rgba(255, 85, 85, 1);
+	padding: 0px 6px;
+	color: rgba(255, 85, 85, 1);
 }
 
 @keyframes blink-update {
-  to {
-    background-color: rgba(139, 233, 253, 1);
-  }
+	to {
+		background-color: rgba(139, 233, 253, 1);
+	}
 }
 
 #custom-launcher,
 #custom-updates {
-  border: 0.1rem groove rgba(189, 147, 249, 1);
-  margin-right: 10px;
-  color: rgba(139, 233, 253, 1);
-  background-color: rgba(40, 42, 54, 1);
-  border-radius: 1rem;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+	border: 0.1rem groove rgba(189, 147, 249, 1);
+	margin-right: 10px;
+	color: rgba(139, 233, 253, 1);
+	background-color: rgba(40, 42, 54, 1);
+	border-radius: 1rem;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
 
 #custom-launcher {
-  color: rgba(255, 85, 85, 1);
-  padding-left: 9px;
-  padding-right: 10px;
+	color: rgba(255, 85, 85, 1);
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 #custom-updates {
-  padding-right: 8px;
-  padding-left: 8px;
+	padding-right: 8px;
+	padding-left: 8px;
 }
 
 #custom-weather {
-  border: 0.1rem groove rgba(189, 147, 249, 1);
-  margin-left: 10px;
-  color: rgba(139, 233, 253, 1);
-  background-color: rgba(40, 42, 54, 1);
-  border-radius: 1rem;
-  padding: 0px 8px;
+	border: 0.1rem groove rgba(189, 147, 249, 1);
+	margin-left: 10px;
+	color: rgba(139, 233, 253, 1);
+	background-color: rgba(40, 42, 54, 1);
+	border-radius: 1rem;
+	padding: 0px 8px;
 }
