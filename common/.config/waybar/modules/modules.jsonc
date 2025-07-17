@@ -22,7 +22,7 @@
 	},
 
 	"clock": {
-		"format": "󰥔 {:%H:%M 󰃭 %m-%d-%Y}",
+		"format": "󰥔{:%H:%M 󰃭%m-%d-%Y}",
 		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
 	},
 
@@ -84,7 +84,7 @@
 	"memory": {
 		"format": " {percentage}% 󰯍{swapPercentage}%",
 		"on-click": "ghostty --class=\"ghostty.htop\" -e htop",
-		"tooltip-format": " : {used}GiB used\n󰯍 : {swapUsed}GiB used"
+		"tooltip-format": ": {used}GiB used\n󰯍: {swapUsed}GiB used"
 	},
 
 	"tray": {
