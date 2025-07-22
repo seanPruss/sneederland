@@ -74,6 +74,7 @@ install_stage=(
 	rust
 	rust-analyzer
 	jdk-openjdk
+	vesktop
 	npm
 	vlc
 	composer
@@ -81,7 +82,6 @@ install_stage=(
 	banana-cursor-bin
 	ghostty
 	dunst
-	vesktop
 	battery-notify
 	waybar
 	wttrbar
