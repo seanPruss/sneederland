@@ -1,6 +1,7 @@
 try { tmux ls out+err> /dev/null } catch { tmux new-session -d }
 source ~/.zoxide.nu
 source ~/.cache/carapace/init.nu
+source ~/.pay-respects.nu
 if (is-terminal --stdin) and (is-terminal --stdout) {
     randomlogo.sh
 }
@@ -140,6 +141,7 @@ alias locate = plocate
 def cls [] {clear; ls}
 def cll [] {clear; ll}
 alias rg = rg -p --hidden
+alias cat = bat -p
 
 # Type less letters
 alias v = nvim

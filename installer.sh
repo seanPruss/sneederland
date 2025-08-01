@@ -125,6 +125,7 @@ install_stage=(
 	toilet
 	toilet-fonts
 	fortune-mod
+	pay-respects
 	cowsay
 	rose-pine-gtk-theme
 	dracula-gtk-theme

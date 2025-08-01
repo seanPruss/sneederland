@@ -12,6 +12,12 @@ if ('~/.zoxide.nu' | path exists) {
 mkdir ~/.cache/carapace
 if ('~/.cache/carapace/init.nu' | path exists) {
     true out+err> /dev/null
-    } else {
+} else {
     carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
+}
+
+if ('~/.pay-respects.nu' | path exists) {
+    true out+err> /dev/null
+} else {
+    pay-respects nushell --alias f | save -f ~/.pay-respects.nu
 }
