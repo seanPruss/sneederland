@@ -33,7 +33,7 @@ check() {
 
 	[[ $UPDATE_COUNT -gt 1 ]] && PLURAL="s"
 
-	[[ $UPDATE_COUNT -gt 0 ]] && [[ ! -e $NOTIFICATION_SENT ]] && notify-send "$UPDATE_COUNT update$PLURAL available" "$PACMAN_UPDATES from pacman $AUR_UPDATES from AUR $FLATPAK_UPDATES from flatpak" -u $URGENCY -i mintupdate-updates-available && touch $NOTIFICATION_SENT
+	[[ $UPDATE_COUNT -gt 0 ]] && [[ ! -e $NOTIFICATION_SENT ]] && touch $NOTIFICATION_SENT && notify-send "$UPDATE_COUNT update$PLURAL available" "$PACMAN_UPDATES from pacman $AUR_UPDATES from AUR $FLATPAK_UPDATES from flatpak" -u $URGENCY -i mintupdate-updates-available
 	echo "{\"text\":\"$UPDATE_COUNT\",\"tooltip\":\"Pacman: $PACMAN_UPDATES\nAUR: $AUR_UPDATES\nFlatpak: $FLATPAK_UPDATES\"}"
 }
 

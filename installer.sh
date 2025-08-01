@@ -77,7 +77,6 @@ install_stage=(
 	vesktop
 	npm
 	vlc
-	composer
 	auto-cpufreq
 	banana-cursor-bin
 	ghostty
@@ -87,7 +86,6 @@ install_stage=(
 	wttrbar
 	zscroll-git
 	imagemagick
-	gimp
 	hyprlock
 	spotify-launcher
 	rofi-wayland
