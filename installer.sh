@@ -93,7 +93,7 @@ install_stage=(
 	xdg-desktop-portal-hyprland
 	xdg-desktop-portal-gtk
 	hyprshot
-	htim
+	btop
 	zen-browser-bin
 	gammastep
 	shellcheck
