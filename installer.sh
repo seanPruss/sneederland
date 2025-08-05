@@ -92,9 +92,7 @@ install_stage=(
 	rofimoji
 	xdg-desktop-portal-hyprland
 	xdg-desktop-portal-gtk
-	swappy
-	grim
-	slurp
+	hyprshot
 	htim
 	zen-browser-bin
 	gammastep
