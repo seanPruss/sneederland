@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-MODE=$(echo -e "output\nwindow\nregion" | rofi -dmenu -i)
-SAVE=$(echo -e "Save\nDon't save" | rofi -dmenu -i)
+MODE=$(echo -e "output\nwindow\nregion" | rofi -dmenu -i) || exit
+SAVE=$(echo -e "Save\nDon't save" | rofi -dmenu -i) || exit
 
 [[ $SAVE = "Don't save" ]] && CLIP="--clipboard-only"
 

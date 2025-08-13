@@ -118,6 +118,9 @@ install_stage=(
 	neovim
 	ascii-image-converter
 	lazygit
+	docker
+	docker-desktop
+	lazydocker
 	zoxide
 	eza
 	toilet
