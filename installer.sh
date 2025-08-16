@@ -119,6 +119,7 @@ install_stage=(
 	ascii-image-converter
 	lazygit
 	docker
+	pass
 	docker-desktop
 	lazydocker
 	zoxide
