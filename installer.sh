@@ -316,6 +316,7 @@ for SOFTWR in "${flatpaks[@]}"; do
 done
 
 # Find existing symlinks and ask user if they want it removed
+clear
 echo -e "$CNT - Existing symlinks to your configs will need to be removed for
 stow to work properly. If you have an existing symlink, remove it if it is for
 something in this repo. The interactive menu is below."
