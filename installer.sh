@@ -322,7 +322,8 @@ clear
 echo -e "$CNT - Existing symlinks to your configs will need to be removed for
 stow to work properly. If you have an existing symlink, remove it if it is for
 something in this repo. The interactive menu is below."
-find ~ -type l -exec rm -i {} +
+find ~/.config -type l -exec rm -i {} +
+find ~/.local -type l -exec rm -i {} +
 
 # generate symlinks for dotfiles
 cd "$REPO_DIR" || exit
