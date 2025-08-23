@@ -324,7 +324,11 @@ stow to work properly. If you have an existing symlink, remove it if it is for
 something in this repo. The interactive menu is below."
 find ~/.config -type l -exec rm -i {} +
 find ~/.local -type l -exec rm -i {} +
-
+[[ -L ~/.bashrc ]] && rm ~/.bashrc
+[[ -L ~/.bash_profile ]] && rm ~/.bash_profile
+[[ -L ~/.gitconfig ]] && rm ~/.gitconfig
+[[ -L ~/.tmux.conf ]] && rm ~/.tmux.conf
+[[ -L ~/.Xresources ]] && rm ~/.Xresources
 # generate symlinks for dotfiles
 cd "$REPO_DIR" || exit
 {
