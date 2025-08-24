@@ -329,6 +329,7 @@ find ~/.local -type l -exec rm -i {} +
 [[ -L ~/.gitconfig ]] && rm ~/.gitconfig
 [[ -L ~/.tmux.conf ]] && rm ~/.tmux.conf
 [[ -L ~/.Xresources ]] && rm ~/.Xresources
+
 # generate symlinks for dotfiles
 cd "$REPO_DIR" || exit
 {
