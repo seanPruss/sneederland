@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-keybinds=$(grep -E '^bind' ~/.config/hypr/common.conf | grep -v XF86 | grep -v bindm)
+keybinds=$(grep -E '^bindd' ~/.config/hypr/common.conf | grep -v XF86 | grep -v bindm)
 
 # check for any keybinds to display
 if [[ -z "$keybinds" ]]; then
@@ -8,7 +8,7 @@ if [[ -z "$keybinds" ]]; then
 fi
 
 # replace $mainmod with super in the displayed keybinds for rofi
-display_keybinds=$(echo "$keybinds" | sed 's/\$mainMod/SUPER/g' | sed 's/bind =//g' | awk -F , '{print $1" +" $2":" $5}')
+display_keybinds=$(echo "$keybinds" | sed 's/\$mainMod/SUPER/g' | sed 's/bindd =//g' | awk -F , '{print $1" +" $2":" $3}')
 
 # use rofi to display the keybinds with the modified content
 echo "$display_keybinds" | rofi -dmenu -i
