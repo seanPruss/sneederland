@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 sesh connect "$(
-	sesh list --icons | fzf --reverse \
+	sesh list --hide-attached --icons | fzf --reverse \
 		--preview-window 'right:70%' \
 		--preview 'sesh preview {}' \
 		--no-sort --ansi --border-label ' sesh ' --prompt '⚡  ' \
