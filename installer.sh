@@ -93,6 +93,7 @@ install_stage=(
 	xdg-desktop-portal-hyprland
 	xdg-desktop-portal-gtk
 	hyprshot
+	swappy
 	btop
 	zen-browser-bin
 	gammastep
