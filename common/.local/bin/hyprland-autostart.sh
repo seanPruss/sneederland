@@ -25,4 +25,4 @@ while ! ping -c 1 archlinux.org; do
 done
 
 check-repo-updates &
-[ ! -e ~/.post-install ] && ghostty --class=ghostty.postinstall -e post-install.sh
+[ ! -e ~/.cache/post-install ] && ghostty --class=ghostty.postinstall -e post-install.sh

@@ -12,6 +12,6 @@ clear
 echo "You can also autostart apps with ignition"
 echo "Press SUPER+/ for keybindings"
 hyprctl dispatch exec -- uwsm-app -- flatpak run io.github.flattool.Ignition
-touch ~/.post-install
+touch ~/.cache/post-install
 tput setaf 5 bold
 read -rep "Press any key to exit" -s -n 1
