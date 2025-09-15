@@ -130,7 +130,7 @@ install_stage=(
 	fortune-mod
 	pay-respects
 	cowsay
-	rose-pine-gtk-theme
+	rose-pine-gtk-theme-full
 	dracula-gtk-theme
 	gruvbox-gtk-theme-git
 	tokyonight-gtk-theme-git
