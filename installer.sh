@@ -103,7 +103,6 @@ install_stage=(
 	nushell
 	vivid
 	carapace
-	carapace-bridge-bin
 	trash-cli
 	starship
 	yazi
