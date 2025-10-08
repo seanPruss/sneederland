@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "One more step to complete the installation. Enter your password below to install and Hyprland plugins. They are not enabled by default because plugins are unstable but there are configs for certain plugins included."
+echo "One more step to complete the installation. Enter your password below to install Hyprland plugins. They are not enabled by default because plugins are unstable but there are configs for certain plugins included."
 hyprpm update -v -s
 hyprpm add https://github.com/hyprwm/hyprland-plugins
 hyprpm add https://github.com/virtcode/hypr-dynamic-cursors
