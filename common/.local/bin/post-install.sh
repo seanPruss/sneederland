@@ -1,13 +1,9 @@
 #!/usr/bin/env bash
 
-echo "One more step to complete the installation. Enter your password below to install and enable Hyprland plugins."
-echo "If Hyprland crashes just turn off your computer and turn it back on lol hyprpm is weird like that"
+echo "One more step to complete the installation. Enter your password below to install and Hyprland plugins. They are not enabled by default because plugins are unstable but there are configs for certain plugins included."
 hyprpm update -v -s
 hyprpm add https://github.com/hyprwm/hyprland-plugins
 hyprpm add https://github.com/virtcode/hypr-dynamic-cursors
-hyprpm enable hyprtrails || exit
-hyprpm enable hyprfocus || exit
-hyprpm enable dynamic-cursors || exit
 clear
 echo "You can also autostart apps with ignition"
 echo "Press SUPER+/ for keybindings"
