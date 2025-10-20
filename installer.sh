@@ -63,7 +63,6 @@ install_stage=(
 	ufw
 	hyprpaper
 	waypaper
-	pyprland
 	playerctl
 	man-db
 	man-pages
