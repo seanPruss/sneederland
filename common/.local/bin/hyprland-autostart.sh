@@ -16,9 +16,7 @@ check-repo-updates() {
 }
 
 MONITORS=$(hyprctl monitors | grep -c Monitor)
-if ((MONITORS > 1)); then
-	hyprctl dispatch workspace 2
-fi
+hyprctl dispatch workspace "$MONITORS"
 
 while ! ping -c 1 archlinux.org; do
 	true
