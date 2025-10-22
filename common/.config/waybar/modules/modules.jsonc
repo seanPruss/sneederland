@@ -17,7 +17,7 @@
 		"return-type": "json",
 		"format": " {}",
 		"exec": "update.sh check",
-		"on-click": "pypr-client toggle update",
+		"on-click": "ghostty --class=\"ghostty.update\" -e update.sh update",
 		"interval": 60
 	},
 
