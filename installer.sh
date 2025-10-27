@@ -316,6 +316,15 @@ for SOFTWR in "${flatpaks[@]}"; do
 	flatpak install "$SOFTWR" -y || exit
 done
 
+# Install hyprland plugins
+hyprpm update -v -s
+hyprpm add https://github.com/hyprwm/hyprland-plugins
+hyprpm add https://github.com/virtcode/hypr-dynamic-cursors
+hyprpm enable hyprscrolling
+hyprpm enable hyprfocus
+hyprpm enable hyprtrails
+hyprpm enable dynamic-cursors
+
 # Find existing symlinks and ask user if they want it removed
 clear
 echo -e "$CNT - Existing symlinks to your configs will need to be removed for
