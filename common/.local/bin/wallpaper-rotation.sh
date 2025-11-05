@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
 while true; do
-	waypaper --random
+	hyprpaper-service.sh
 	sleep 600
 done
