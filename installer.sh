@@ -343,9 +343,7 @@ echo "
 [State]
 folder = ~/Pictures/wallpapers
 monitors = All
-wallpaper = ~/Pictures/wallpapers/bodybuilders/ronnie-coleman/ronnie-coleman-4.jpg
-
-" >~/.local/state/waypaper/state.ini
+wallpaper = ~/Pictures/wallpapers/bodybuilders/ronnie-coleman/ronnie-coleman-4.jpg" >~/.local/state/waypaper/state.ini
 
 # Start the bluetooth service
 echo -e "$CNT - Starting the Bluetooth Service..."

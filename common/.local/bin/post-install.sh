@@ -5,7 +5,6 @@ hyprpm update -v -s
 hyprpm add https://github.com/hyprwm/hyprland-plugins
 hyprpm add https://github.com/virtcode/hypr-dynamic-cursors
 hyprpm enable hyprscrolling
-hyprpm enable hyprfocus
 hyprpm enable hyprtrails
 hyprpm enable dynamic-cursors
 clear
