@@ -36,7 +36,6 @@ prep_stage=(
 	gtk4
 	gtk4-layer-shell
 	hyprpolkitagent
-	hyprland-qtutils
 	pipewire
 	wireplumber
 	jq
@@ -304,7 +303,7 @@ if [[ "$ISNVIDIA" == true ]]; then
 fi
 
 # Install hyprland
-yay -S --needed --noconfirm hyprland || exit
+yay -S --needed --noconfirm hyprland-git || exit
 
 # Stage 1 - main components
 for SOFTWR in "${install_stage[@]}"; do
