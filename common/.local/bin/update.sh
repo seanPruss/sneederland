@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 update() {
-	if yay -Syyu --noconfirm; then
+	if yay -Syyu --noconfirm --devel; then
 		notify-send -u low "Yay Finished" "System packages are up to date" -i check-filled
 	else
 		notify-send -u critical "Yay Failed" "System update failed" -i emblem-unreadable
