@@ -58,7 +58,7 @@ nvidia_stage=(
 install_stage=(
 	flatpak
 	ufw
-	hyprpaper
+	hyprpaper-git
 	waypaper
 	playerctl
 	man-db
@@ -68,7 +68,7 @@ install_stage=(
 	bat
 	git-delta
 	rust
-	hyprpolkitagent
+	hyprpolkitagent-git
 	rust-analyzer
 	jdk-openjdk
 	vesktop
@@ -84,11 +84,11 @@ install_stage=(
 	wttrbar
 	zscroll-git
 	imagemagick
-	hyprlock
+	hyprlock-git
 	spotify-launcher
 	rofi-wayland
 	rofimoji
-	xdg-desktop-portal-hyprland
+	xdg-desktop-portal-hyprland-git
 	xdg-desktop-portal-gtk
 	hyprshot
 	swappy
