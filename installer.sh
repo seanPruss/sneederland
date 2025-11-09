@@ -35,7 +35,6 @@ prep_stage=(
 	gtk3
 	gtk4
 	gtk4-layer-shell
-	hyprpolkitagent
 	pipewire
 	wireplumber
 	jq
@@ -43,7 +42,6 @@ prep_stage=(
 	cliphist
 	python-requests
 	pacman-contrib
-	cpio
 	cmake
 )
 
@@ -70,6 +68,7 @@ install_stage=(
 	bat
 	git-delta
 	rust
+	hyprpolkitagent
 	rust-analyzer
 	jdk-openjdk
 	vesktop
@@ -77,6 +76,7 @@ install_stage=(
 	vlc
 	auto-cpufreq
 	banana-cursor-bin
+	cpio
 	ghostty
 	dunst
 	battery-notify
