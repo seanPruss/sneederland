@@ -81,7 +81,7 @@ install_stage=(
 	dunst
 	battery-notify
 	waybar
-	wttrbar
+	wayweather
 	zscroll-git
 	imagemagick
 	hyprlock-git
@@ -337,12 +337,16 @@ cd "$REPO_DIR" || exit
 	git reset --hard
 } &>>"$INSTLOG"
 
+# Set up waypaper
 mkdir -p ~/.local/state/waypaper
 echo "
 [State]
 folder = ~/Pictures/wallpapers
 monitors = All
 wallpaper = ~/Pictures/wallpapers/bodybuilders/ronnie-coleman/ronnie-coleman-4.jpg" >~/.local/state/waypaper/state.ini
+
+# Set up wayweather
+wayweather --reset &>>"$INSTLOG"
 
 # Start the bluetooth service
 echo -e "$CNT - Starting the Bluetooth Service..."

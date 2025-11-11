@@ -100,10 +100,9 @@
 	},
 
 	"custom/weather": {
-		"format": "{}°",
-		"tooltip": true,
+		"format": "{text}",
 		"interval": 3600,
-		"exec": "wttrbar",
+		"exec": "wayweather --get",
 		"return-type": "json"
 	},
 
