@@ -11,6 +11,11 @@ update() {
 	else
 		notify-send -u critical "Flatpak Failed" "Flatpak update failed" -i emblem-unreadable
 	fi
+	if hyprpm update -v; then
+		notify-send -u low "Hyprpm finished" "Hyprland plugins are up to date" -i check-filled
+	else
+		notify-send -u critical "Hyprpm failed" "Hyprpm update failed" -i emblem-unreadable
+	fi
 	tput setaf 5 bold
 	read -rep "Press any key to exit" -s -n 1
 }
