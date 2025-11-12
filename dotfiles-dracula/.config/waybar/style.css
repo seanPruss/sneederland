@@ -217,4 +217,5 @@ window#waybar {
 	color: rgba(139, 233, 253, 1);
 	background-color: rgba(40, 42, 54, 1);
 	border-radius: 1rem;
+	padding-left: 10px;
 }
