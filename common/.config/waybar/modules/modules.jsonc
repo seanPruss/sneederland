@@ -100,8 +100,8 @@
 	},
 
 	"custom/weather": {
-		"format": "{text}",
-		"interval": 3600,
+		"format": "{}",
+		"interval": 600,
 		"exec": "wayweather --get",
 		"return-type": "json"
 	},
