@@ -258,8 +258,8 @@ sudo pacman -S --needed base-devel &>>"$INSTLOG" || exit
 #### Check for package manager ####
 if ! command -v yay &>/dev/null; then
 	echo -en "$CNT - Installing yay."
-	git clone https://aur.archlinux.org/yay-bin.git &>>"$INSTLOG"
-	cd yay-bin || exit
+	git clone https://aur.archlinux.org/yay.git &>>"$INSTLOG"
+	cd yay || exit
 	if makepkg -si --noconfirm; then
 		echo -e "\e[1A\e[K$COK - yay installed"
 		cd ..
