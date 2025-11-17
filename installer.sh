@@ -93,7 +93,7 @@ install_stage=(
 	hyprshot
 	swappy
 	btop
-	zen-browser-bin
+	helium-browser-bin
 	gammastep
 	shellcheck
 	fzf

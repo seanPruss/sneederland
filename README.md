@@ -42,7 +42,7 @@ You should also look at the docs for the packages if you wanna change anything.
 - Notification daemon: [Dunst](https://github.com/dunst-project/dunst)
 - Terminal: [Ghostty](https://github.com/ghostty-org/ghostty)
 - Shell: [Nushell](https://nushell.sh) (Login shell is bash but nushell is interactive shell)
-- Browser: [Zen Browser](https://zen-browser.app/)
+- Browser: [Helium](https://helium.computer/)
 - Text editor: [Neovim](https://github.com/neovim/neovim)
 - File manager: [Yazi](https://github.com/sxyazi/yazi)
 - App launcher/Dmenu-like app: [Rofi](https://github.com/davatorium/rofi)
