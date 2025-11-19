@@ -28,7 +28,7 @@ prep_stage=(
 	qt5-wayland
 	qt5ct
 	qt6-wayland
-	qt6ct
+	hyprqt6engine-git
 	qt5-svg
 	qt5-quickcontrols2
 	qt5-graphicaleffects
