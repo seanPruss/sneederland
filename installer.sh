@@ -84,7 +84,7 @@ install_stage=(
 	wayweather
 	zscroll-git
 	imagemagick
-	hyprlock-git
+	hyprlock
 	spotify-launcher
 	rofi-wayland
 	rofimoji
