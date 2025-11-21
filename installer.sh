@@ -84,13 +84,13 @@ install_stage=(
 	wayweather
 	zscroll-git
 	imagemagick
-	hyprlock
+	hyprlock-git
 	spotify-launcher
 	rofi-wayland
 	rofimoji
 	xdg-desktop-portal-hyprland-git
 	xdg-desktop-portal-gtk
-	hyprshot
+	hyprshot-git
 	swappy
 	btop
 	helium-browser-bin
