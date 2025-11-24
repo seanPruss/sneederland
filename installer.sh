@@ -302,7 +302,7 @@ if [[ "$ISNVIDIA" == true ]]; then
 fi
 
 # Install hyprland
-while ! yay -S hyprland-git; do
+while ! yay -S hyprland-git --noconfirm; do
 	true
 done
 
