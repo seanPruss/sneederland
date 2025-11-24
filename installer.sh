@@ -40,7 +40,6 @@ prep_stage=(
 	jq
 	wl-clipboard
 	cliphist
-	python-requests
 	pacman-contrib
 	cmake
 )
@@ -303,7 +302,9 @@ if [[ "$ISNVIDIA" == true ]]; then
 fi
 
 # Install hyprland
-yay -S --needed --noconfirm hyprland-git || exit
+while ! yay -S hyprland-git; do
+	true
+done
 
 # Stage 1 - main components
 for SOFTWR in "${install_stage[@]}"; do
