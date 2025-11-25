@@ -76,7 +76,7 @@ install_stage=(
 	auto-cpufreq
 	banana-cursor-bin
 	cpio
-	ghostty
+	ghostty-git
 	dunst
 	battery-notify
 	waybar
@@ -101,7 +101,7 @@ install_stage=(
 	vivid
 	carapace
 	trash-cli
-	starship
+	starship-git
 	yazi
 	ueberzugpp
 	ffmpegthumbnailer
@@ -147,7 +147,7 @@ install_stage=(
 	nerd-fonts
 	noto-fonts-emoji
 	nwg-look
-	sddm
+	sddm-git
 	archlinux-themes-sddm
 	catppuccin-sddm-theme-mocha
 	chili-sddm-theme
@@ -159,6 +159,12 @@ install_stage=(
 	simple-sddm-theme-2-git
 	simple-sddm-theme-git
 	win11-sddm-theme
+	win10-sddm-theme
+	sddm-minesddm-theme-git
+	sddm-terminal-inspired-theme-git
+	sddm-elegant-theme-git
+	sddm-eucalyptus-drop
+	sddm-sugar-dark
 )
 
 flatpaks=(
