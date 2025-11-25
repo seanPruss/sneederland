@@ -85,7 +85,7 @@ install_stage=(
 	imagemagick
 	hyprlock-git
 	spotify-launcher
-	rofi-wayland
+	rofi
 	rofimoji
 	xdg-desktop-portal-hyprland-git
 	xdg-desktop-portal-gtk
