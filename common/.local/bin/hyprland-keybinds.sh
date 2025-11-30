@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-keybinds=$(grep -E '^bindd' ~/.config/hypr/common.conf | grep -v XF86 | grep -v bindm)
+keybinds=$(grep -E '^bindd' ~/.config/hypr/*.conf | awk -F : '{print $2}')
 
 # check for any keybinds to display
 if [[ -z "$keybinds" ]]; then
