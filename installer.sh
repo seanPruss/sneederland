@@ -149,7 +149,6 @@ install_stage=(
 	nwg-look
 	sddm-git
 	archlinux-themes-sddm
-	catppuccin-sddm-theme-mocha
 	chili-sddm-theme
 	sddm-archlinux-theme-git
 	sddm-theme-abstractdark-git
