@@ -67,6 +67,8 @@ install_stage=(
 	bat
 	git-delta
 	rust
+	swww
+	niri
 	hyprpolkitagent-git
 	rust-analyzer
 	jdk-openjdk

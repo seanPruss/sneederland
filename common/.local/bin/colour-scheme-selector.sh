@@ -43,7 +43,14 @@ update-colours() {
 	gsettings set org.gnome.desktop.interface icon-theme "BeautyLine"
 	nwg-look -x
 
+	killall waybar
+	killall dunst
 	tmux kill-server
+	if pgrep swww; then
+		WALLPAPER=$(fd . ~/Pictures/wallpapers | shuf -n 1)
+		swww img "$WALLPAPER"
+		cp -f "$WALLPAPER" ~/.cache/current_wallpaper
+	fi
 }
 case "$1" in
 random)
