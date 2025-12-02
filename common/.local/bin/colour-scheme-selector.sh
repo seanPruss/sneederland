@@ -48,7 +48,7 @@ update-colours() {
 	tmux kill-server
 	if pgrep swww; then
 		WALLPAPER=$(fd . ~/Pictures/wallpapers | shuf -n 1)
-		swww img "$WALLPAPER"
+		swww img "$WALLPAPER" --transition-type random
 		cp -f "$WALLPAPER" ~/.cache/current_wallpaper
 	fi
 }
