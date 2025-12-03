@@ -109,7 +109,7 @@
 	"custom/launcher": {
 		"format": "󰀻",
 		"on-click": "rofi -show drun -theme app-menu.rasi",
-		"on-click-right": "hyprland-keybinds.sh",
+		"on-click-right": "waybar-keybinds.sh",
 		"tooltip-format": "Left click: App launcher\nRight click: Keybindings"
 	},
 
