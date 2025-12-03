@@ -68,7 +68,8 @@ install_stage=(
 	git-delta
 	rust
 	swww
-	niri
+	niri-git
+	xwayland-satellite
 	hyprpolkitagent-git
 	rust-analyzer
 	jdk-openjdk
@@ -91,6 +92,7 @@ install_stage=(
 	rofimoji
 	xdg-desktop-portal-hyprland-git
 	xdg-desktop-portal-gtk
+	xdg-desktop-portal-gnome
 	hyprshot-git
 	swappy
 	btop
@@ -372,10 +374,6 @@ sudo systemctl enable --now auto-cpufreq &>>"$INSTLOG"
 echo -e "$CNT - Enabling the screen lock Service..."
 sudo cp "$REPO_DIR"/suspend@.service /etc/systemd/system
 sudo systemctl enable suspend@"$USER".service &>>"$INSTLOG"
-
-# Clean out other portals
-echo -e "$CNT - Cleaning out conflicting xdg portals..."
-yay -Q xdg-desktop-portal-gnome &>/dev/null && yay -Rns --noconfirm xdg-desktop-portal-gnome &>>"$INSTLOG"
 
 # Disable and clean power-profiles-daemon if installed
 sudo systemctl disable power-profiles-daemon &>>"$INSTLOG"

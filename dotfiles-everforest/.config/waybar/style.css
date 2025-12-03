@@ -13,7 +13,7 @@
 }
 
 window#waybar {
-	background-color: rgba(39, 46, 51, 0);
+	background-color: rgba(39, 46, 51, 1);
 	border-radius: 1rem;
 	color: rgba(76, 79, 105, 1);
 	transition-property: background-color;
@@ -32,8 +32,8 @@ window#waybar {
 	padding: 0px 8px;
 	color: rgba(214, 153, 182, 1);
 	border-radius: 1rem;
-	border: 0.1rem groove rgba(230, 126, 128, 1);
-	background-color: rgba(39, 46, 51, 1);
+	border: none;
+	background-color: rgba(39, 46, 51, 0);
 	margin-left: 10px;
 }
 
@@ -48,9 +48,9 @@ window#waybar {
 #taskbar,
 #window {
 	margin-right: 10px;
-	border: 0.1rem groove rgba(230, 126, 128, 1);
+	border: none;
 	border-radius: 1rem;
-	background-color: rgba(39, 46, 51, 1);
+	background-color: rgba(39, 46, 51, 0);
 	transition: all 0.4s ease-out;
 }
 
@@ -113,11 +113,11 @@ window#waybar {
 }
 
 #clock {
-	border: 0.1rem groove rgba(230, 126, 128, 1);
+	border: none;
 	margin-left: 10px;
 	color: rgba(230, 152, 117, 1);
 	border-radius: 1rem;
-	background-color: rgba(39, 46, 51, 1);
+	background-color: rgba(39, 46, 51, 0);
 	padding-left: 5px;
 	padding-right: 5px;
 }
@@ -187,10 +187,10 @@ window#waybar {
 
 #custom-launcher,
 #custom-updates {
-	border: 0.1rem groove rgba(230, 126, 128, 1);
+	border: none;
 	margin-right: 10px;
 	color: rgba(131, 192, 146, 1);
-	background-color: rgba(39, 46, 51, 1);
+	background-color: rgba(39, 46, 51, 0);
 	border-radius: 1rem;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
@@ -209,7 +209,7 @@ window#waybar {
 }
 
 #custom-notification {
-	background-color: rgba(39, 46, 51, 1);
+	background-color: rgba(39, 46, 51, 0);
 	padding-left: 10px;
 	padding-right: 10px;
 	border-radius: 1rem;
@@ -217,10 +217,10 @@ window#waybar {
 }
 
 #custom-weather {
-	border: 0.1rem groove rgba(230, 126, 128, 1);
+	border: none;
 	margin-left: 10px;
 	color: rgba(131, 192, 146, 1);
-	background-color: rgba(39, 46, 51, 1);
+	background-color: rgba(39, 46, 51, 0);
 	border-radius: 1rem;
 	padding-left: 10px;
 }

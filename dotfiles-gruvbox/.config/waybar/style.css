@@ -13,7 +13,7 @@
 }
 
 window#waybar {
-	background-color: rgba(60, 56, 54, 0);
+	background-color: rgba(60, 56, 54, 1);
 	border-radius: 1rem;
 	color: rgba(224, 222, 244, 1);
 	transition-property: background-color;
@@ -32,7 +32,7 @@ window#waybar {
 	padding: 0px 8px;
 	color: rgba(142, 192, 124, 1);
 	border-radius: 1rem;
-	border: 0.1rem groove rgba(251, 73, 52, 1);
+	border: none;
 	background-color: rgba(60, 56, 54, 1);
 	margin-left: 10px;
 }
@@ -48,7 +48,7 @@ window#waybar {
 #taskbar,
 #window {
 	margin-right: 10px;
-	border: 0.1rem groove rgba(251, 73, 52, 1);
+	border: none;
 	border-radius: 1rem;
 	background-color: rgba(60, 56, 54, 1);
 	transition: all 0.4s ease-out;
@@ -113,11 +113,11 @@ window#waybar {
 }
 
 #clock {
-	border: 0.1rem groove rgba(251, 73, 52, 1);
+	border: none;
 	margin-left: 10px;
 	color: rgba(211, 134, 155, 1);
 	border-radius: 1rem;
-	background-color: rgba(60, 56, 54, 1);
+	background-color: rgba(60, 56, 54, 0);
 	padding-left: 5px;
 	padding-right: 5px;
 }
@@ -187,10 +187,10 @@ window#waybar {
 
 #custom-launcher,
 #custom-updates {
-	border: 0.1rem groove rgba(251, 73, 52, 1);
+	border: none;
 	margin-right: 10px;
 	color: rgba(131, 165, 152, 1);
-	background-color: rgba(60, 56, 54, 1);
+	background-color: rgba(60, 56, 54, 0);
 	border-radius: 1rem;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
@@ -209,10 +209,10 @@ window#waybar {
 }
 
 #custom-weather {
-	border: 0.1rem groove rgba(251, 73, 52, 1);
+	border: none;
 	margin-left: 10px;
 	color: rgba(131, 165, 152, 1);
-	background-color: rgba(60, 56, 54, 1);
+	background-color: rgba(60, 56, 54, 0);
 	border-radius: 1rem;
 	padding-left: 10px;
 }
