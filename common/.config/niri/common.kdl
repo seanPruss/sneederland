@@ -260,6 +260,7 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-sh-at-startup "systemctl --user enable --now waybar.service"
 spawn-sh-at-startup "colour-scheme-selector.sh random"
+spawn-sh-at-startup "wl-paste --watch cliphist store"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "swww-rotation.sh"
 spawn-at-startup "battery-notify"
@@ -320,7 +321,7 @@ animations {
 
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
-window-rule {
+/-window-rule {
     // This regular expression is intentionally made as specific as possible,
     // since this is the default config, and we want no false positives.
     // You can get away with just app-id="wezterm" if you want.
@@ -329,7 +330,7 @@ window-rule {
 }
 
 // Open the Firefox picture-in-picture player as floating by default.
-window-rule {
+/-window-rule {
     // This app-id regular expression will work for both:
     // - host Firefox (app-id is "firefox")
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
@@ -377,7 +378,7 @@ binds {
     Mod+Tab hotkey-overlay-title="Active windows" { spawn-sh "rofi -show window -theme app-menu.rasi"; }
     Mod+Shift+E hotkey-overlay-title="Emoji selector" { spawn-sh "rofimoji -a copy"; }
     Mod+C hotkey-overlay-title="Switch colour scheme" { spawn-sh "colour-scheme-selector.sh choose"; }
-    Mod+U hotkey-overlay-title="Update system" { spawn-sh "ghostty --class=ghostty.update -e update.sh update"; }
+    Mod+U hotkey-overlay-title="Update system" { spawn-sh "ghostty --class='ghostty.update' -e update.sh update"; }
     Mod+M hotkey-overlay-title="Power menu" { spawn "powermenu.sh"; }
     Mod+B hotkey-overlay-title="Browser" { spawn "helium-browser"; }
     Mod+D hotkey-overlay-title="Discord" { spawn "vesktop"; }
@@ -385,6 +386,8 @@ binds {
     Mod+E hotkey-overlay-title="Email" { spawn "thunderbird"; }
     Mod+V hotkey-overlay-title="Volume" { spawn "pulsecontrol"; }
     Mod+Shift+B hotkey-overlay-title="Bluetooth" { spawn "overskride"; }
+    Mod+Shift+V hotkey-overlay-title="Clipboard history" { spawn-sh "cliphist list | rofi -dmenu -i | cliphist decode | wl-copy"; }
+    Mod+Shift+W hotkey-overlay-title="Wipe clipboard history" { spawn-sh "cliphist wipe"; }
     Mod+W hotkey-overlay-title="Choose wallpaper" { spawn-sh "waypaper --backend swww"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
