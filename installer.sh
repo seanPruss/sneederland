@@ -86,7 +86,7 @@ install_stage=(
 	wayweather
 	zscroll-git
 	imagemagick
-	hyprlock-git
+	gtklock
 	spotify-launcher
 	rofi
 	rofimoji
@@ -369,11 +369,6 @@ sudo systemctl enable sddm &>>"$INSTLOG"
 # Enable auto-cpufreq service
 echo -e "$CNT - Enabling the auto-cpufreq Service..."
 sudo systemctl enable --now auto-cpufreq &>>"$INSTLOG"
-
-# Enable screen lock service
-echo -e "$CNT - Enabling the screen lock Service..."
-sudo cp "$REPO_DIR"/suspend@.service /etc/systemd/system
-sudo systemctl enable suspend@"$USER".service &>>"$INSTLOG"
 
 # Disable and clean power-profiles-daemon if installed
 sudo systemctl disable power-profiles-daemon &>>"$INSTLOG"
