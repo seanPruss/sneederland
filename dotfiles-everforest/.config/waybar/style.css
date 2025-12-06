@@ -13,7 +13,7 @@
 }
 
 window#waybar {
-	background-color: rgba(39, 46, 51, 1);
+	background-color: rgba(39, 46, 51, 0.8);
 	border-radius: 1rem;
 	color: rgba(76, 79, 105, 1);
 	transition-property: background-color;
