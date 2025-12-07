@@ -13,7 +13,7 @@ update-colours() {
 	gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
 	case "$1" in
 	rose-pine)
-		gsettings set org.gnome.desktop.interface gtk-theme "rose-pine-gtk"
+		gsettings set org.gnome.desktop.interface gtk-theme "Rosepine-Purple-Dark"
 		ln -sf /usr/share/themes/rose-pine-gtk/gtk-4.0 ~/.config
 		;;
 	dracula)

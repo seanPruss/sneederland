@@ -338,13 +338,19 @@ find ~/.local/bin -type l -exec rm -i {} +
 [[ -L ~/.tmux.conf ]] && rm ~/.tmux.conf
 [[ -L ~/.Xresources ]] && rm ~/.Xresources
 
-# generate symlinks for dotfiles
-cd "$REPO_DIR" || exit
+# generate symlinks for dotfiles and install rose pine gtk3 theme
 {
+	cd "$REPO_DIR" || exit
 	xdg-user-dirs-update
 	stow --adopt --no-folding --target="$HOME" dotfiles-rose-pine
 	stow --adopt --no-folding --target="$HOME" common
 	git reset --hard
+	mkdir -p ~/Downloads/repos
+	cd ~/Downloads/repos || exit
+	git clone https://github.com/Fausto-Korpsvart/Rose-Pine-GTK-Theme.git
+	cd Rose-Pine-GTK-Theme || exit
+	./install.sh -t purple -l
+	cd "$REPO_DIR" || exit
 } &>>"$INSTLOG"
 
 # Set up waypaper
