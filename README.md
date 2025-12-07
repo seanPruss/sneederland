@@ -37,7 +37,7 @@ You should also look at the docs for the packages if you wanna change anything.
 
 ### Programs I use
 
-- Window manager: [Niri](https://yalter.github.io/niri/Getting-Started.html) or [Hyprland](https://wiki.hyprland.org)
+- Window manager: [Niri](https://yalter.github.io/niri/index.html) or [Hyprland](https://wiki.hyprland.org)
 - Status bar: [Waybar](https://github.com/Alexays/waybar)
 - Notification daemon: [Dunst](https://github.com/dunst-project/dunst)
 - Terminal: [Ghostty](https://github.com/ghostty-org/ghostty)

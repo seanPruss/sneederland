@@ -338,19 +338,24 @@ find ~/.local/bin -type l -exec rm -i {} +
 [[ -L ~/.tmux.conf ]] && rm ~/.tmux.conf
 [[ -L ~/.Xresources ]] && rm ~/.Xresources
 
+# Set up sddm
+echo -e "$CNT - Setting up the login screen."
+sudo systemctl enable sddm &>>"$INSTLOG"
+[[ -d /etc/sddm.conf.d ]] || sudo mkdir /etc/sddm.conf.d
+sudo cp "$REPO_DIR"/random-sddm-theme.service /etc/systemd/system
+sudo cp "$REPO_DIR"/random-sddm-theme.sh /usr/bin
+sudo systemctl enable random-sddm-theme.service &>>"$INSTLOG"
+
 # generate symlinks for dotfiles and install rose pine gtk3 theme
+cd "$REPO_DIR" || exit
 {
-	cd "$REPO_DIR" || exit
 	xdg-user-dirs-update
 	stow --adopt --no-folding --target="$HOME" dotfiles-rose-pine
 	stow --adopt --no-folding --target="$HOME" common
 	git reset --hard
 	mkdir -p ~/Downloads/repos
-	cd ~/Downloads/repos || exit
-	git clone https://github.com/Fausto-Korpsvart/Rose-Pine-GTK-Theme.git
-	cd Rose-Pine-GTK-Theme || exit
-	./install.sh -t purple -l
-	cd "$REPO_DIR" || exit
+	git clone https://github.com/Fausto-Korpsvart/Rose-Pine-GTK-Theme.git ~/Downloads/repos/Rose-Pine-GTK-Theme
+	~/Downloads/repos/Rose-Pine-GTK-Theme/themes/install.sh -t purple -l
 } &>>"$INSTLOG"
 
 # Set up waypaper
@@ -368,10 +373,6 @@ wayweather --reset &>>"$INSTLOG"
 echo -e "$CNT - Starting the Bluetooth Service..."
 sudo systemctl enable --now bluetooth.service &>>"$INSTLOG"
 
-# Enable the sddm login manager service
-echo -e "$CNT - Enabling the SDDM Service..."
-sudo systemctl enable sddm &>>"$INSTLOG"
-
 # Enable auto-cpufreq service
 echo -e "$CNT - Enabling the auto-cpufreq Service..."
 sudo systemctl enable --now auto-cpufreq &>>"$INSTLOG"
@@ -383,12 +384,6 @@ yay -Q power-profiles-daemon &>/dev/null && yay -Rns power-profiles-daemon &>>"$
 # Uninstall kitty if found
 yay -Q kitty &>/dev/null && yay -Rns kitty &>>"$INSTLOG"
 
-# Set up sddm
-echo -e "$CNT - Setting up the login screen."
-[[ -d /etc/sddm.conf.d ]] || sudo mkdir /etc/sddm.conf.d
-sudo cp "$REPO_DIR"/random-sddm-theme.service /etc/systemd/system
-sudo cp "$REPO_DIR"/random-sddm-theme.sh /usr/bin
-sudo systemctl enable random-sddm-theme.service &>>"$INSTLOG"
 WLDIR=/usr/share/wayland-sessions
 if [ -d "$WLDIR" ]; then
 	echo -e "$COK - $WLDIR found"
