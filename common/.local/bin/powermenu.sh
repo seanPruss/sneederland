@@ -8,7 +8,10 @@ CHOSEN=$(echo -e "$lock\n$suspend\n$reboot\n$shutdown\n$logout" | rofi -dmenu -i
 
 case "$CHOSEN" in
 "$lock") gtklock ;;
-"$suspend") gtklock -d && systemctl suspend ;;
+"$suspend")
+	gtklock -d
+	systemctl suspend
+	;;
 "$reboot") systemctl reboot ;;
 "$shutdown") systemctl poweroff ;;
 "$logout") uwsm stop ;;

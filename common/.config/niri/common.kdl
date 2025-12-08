@@ -377,7 +377,7 @@ binds {
     Mod+Space hotkey-overlay-title="App launcher" { spawn-sh "rofi -show drun -theme app-menu.rasi"; }
     Mod+Tab hotkey-overlay-title="Active windows" { spawn-sh "rofi -show window -theme app-menu.rasi"; }
     Mod+Shift+E hotkey-overlay-title="Emoji selector" { spawn-sh "rofimoji -a copy"; }
-    Mod+C hotkey-overlay-title="Switch colour scheme" { spawn-sh "colour-scheme-selector.sh choose"; }
+    Mod+Shift+C hotkey-overlay-title="Switch colour scheme" { spawn-sh "colour-scheme-selector.sh choose"; }
     Mod+U hotkey-overlay-title="Update system" { spawn-sh "ghostty --class='ghostty.update' -e update.sh update"; }
     Mod+M hotkey-overlay-title="Power menu" { spawn "powermenu.sh"; }
     Mod+B hotkey-overlay-title="Browser" { spawn "helium-browser"; }
@@ -579,6 +579,7 @@ binds {
 
     // Center all fully visible columns on screen.
     Mod+Ctrl+C { center-visible-columns; }
+    Mod+C { center-column; }
 
     // Finer width adjustments.
     // This command can also:
