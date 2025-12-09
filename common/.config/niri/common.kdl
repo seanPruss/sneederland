@@ -378,7 +378,7 @@ binds {
     Mod+Tab hotkey-overlay-title="Active windows" { spawn-sh "rofi -show window -theme app-menu.rasi"; }
     Mod+Shift+E hotkey-overlay-title="Emoji selector" { spawn-sh "rofimoji -a copy"; }
     Mod+Shift+C hotkey-overlay-title="Switch colour scheme" { spawn-sh "colour-scheme-selector.sh choose"; }
-    Mod+U hotkey-overlay-title="Update system" { spawn-sh "ghostty --class='ghostty.update' -e update.sh update"; }
+    Mod+U hotkey-overlay-title="Update system" { spawn-sh "ghostty -e update.sh update"; }
     Mod+M hotkey-overlay-title="Power menu" { spawn "powermenu.sh"; }
     Mod+B hotkey-overlay-title="Browser" { spawn "helium-browser"; }
     Mod+D hotkey-overlay-title="Discord" { spawn "vesktop"; }
