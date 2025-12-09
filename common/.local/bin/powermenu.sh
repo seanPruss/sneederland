@@ -14,6 +14,6 @@ case "$CHOSEN" in
 	;;
 "$reboot") systemctl reboot ;;
 "$shutdown") systemctl poweroff ;;
-"$logout") uwsm stop ;;
+"$logout") logout.sh ;;
 *) exit 1 ;;
 esac
