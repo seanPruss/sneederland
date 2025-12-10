@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-head -n 4 ~/.local/state/waypaper/state.ini >~/.local/state/waypaper/state.ini.temp
-cat ~/.local/state/waypaper/state.ini.temp >~/.local/state/waypaper/state.ini
-rm ~/.local/state/waypaper/state.ini.temp
+temp_file=$(mktemp)
+head -n 4 ~/.local/state/waypaper/state.ini >"$temp_file"
+mv "$temp_file" ~/.local/state/waypaper/state.ini
 waypaper --random --backend hyprpaper
 killall hyprpaper
 systemctl --user enable --now hyprpaper.service
