@@ -7,7 +7,6 @@ window {
 }
 
 #date-label,
-#input-label,
 #input-field,
 #clock-label {
 	background-color: rgba(0, 0, 0, 0.5);
