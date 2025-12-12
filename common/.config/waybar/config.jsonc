@@ -18,7 +18,6 @@
 			"custom/updates"
 		],
 		"modules-right": [
-			"custom/notification",
 			"group/systray",
 			"custom/weather",
 			"clock",

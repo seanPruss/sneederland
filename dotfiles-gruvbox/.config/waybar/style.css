@@ -33,7 +33,7 @@ window#waybar {
 	color: rgba(142, 192, 124, 1);
 	border-radius: 1rem;
 	border: none;
-	background-color: rgba(60, 56, 54, 1);
+	background-color: rgba(60, 56, 54, 0);
 	margin-left: 10px;
 }
 
