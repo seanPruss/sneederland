@@ -164,7 +164,6 @@ install_stage=(
 	win11-sddm-theme
 	win10-sddm-theme
 	sddm-minesddm-theme-git
-	sddm-terminal-inspired-theme-git
 	sddm-elegant-theme-git
 	sddm-eucalyptus-drop
 	sddm-sugar-dark
