@@ -78,12 +78,12 @@
 
 	"cpu": {
 		"format": "{usage}%",
-		"on-click": "ghostty --class=\"ghostty.btop\" -e btop.sh"
+		"on-click": "ghostty -e btop.sh"
 	},
 
 	"memory": {
 		"format": " {percentage}% 󰯍{swapPercentage}%",
-		"on-click": "ghostty --class=\"ghostty.btop\" -e btop.sh",
+		"on-click": "ghostty -e btop.sh",
 		"tooltip-format": ": {used}GiB used\n󰯍: {swapUsed}GiB used"
 	},
 
