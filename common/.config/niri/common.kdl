@@ -388,7 +388,7 @@ binds {
     Mod+Shift+B hotkey-overlay-title="Bluetooth" { spawn "overskride"; }
     Mod+Shift+V hotkey-overlay-title="Clipboard history" { spawn-sh "cliphist list | rofi -dmenu -i | cliphist decode | wl-copy"; }
     Mod+Shift+W hotkey-overlay-title="Wipe clipboard history" { spawn-sh "cliphist wipe"; }
-    Mod+Shift+T hotkey-overlay-title="System monitor" { spawn-sh "ghostty -e btop.sh"; }
+    Mod+T hotkey-overlay-title="System monitor" { spawn-sh "ghostty -e btop.sh"; }
     Mod+W hotkey-overlay-title="Choose wallpaper" { spawn-sh "waypaper --backend swww"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.

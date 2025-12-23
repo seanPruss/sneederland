@@ -66,7 +66,7 @@
 [urgency_normal]
     background = "#2E3440f0"
     foreground = "#EBCB8B"
-    default_icon = "help-hint"
+    default_icon = "preferences-system-notifications"
 
 [urgency_critical]
     background = "#BF616Af0"
