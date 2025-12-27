@@ -90,8 +90,7 @@ install_stage=(
 	shellcheck
 	fzf
 	tealdeer
-	nushell
-	vivid
+	zsh
 	carapace
 	trash-cli
 	starship-git
@@ -302,6 +301,9 @@ done
 for SOFTWR in "${flatpaks[@]}"; do
 	flatpak install "$SOFTWR" -y || exit
 done
+
+# Switch to zsh
+chsh -s "$(which zsh)"
 
 # Find existing symlinks and ask user if they want it removed
 clear

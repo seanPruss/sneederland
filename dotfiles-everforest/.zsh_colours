@@ -1,3 +1,2 @@
-export LS_COLORS=$(vivid generate everforest)
 export BAT_THEME="everforest"
 export FZF_DEFAULT_OPTS="--color=bg+:#2E383C,bg:#272E33,spinner:#859289,hl:#F85552 --color=fg:#D3C6AA,header:#F85552,info:#DF69BA,pointer:#859289 --color=marker:#3A94C5,fg+:#D3C6AA,prompt:#DF69BA,hl+:#F85552 --color=selected-bg:#374145 --multi"

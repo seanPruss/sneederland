@@ -1,11 +1,6 @@
-#
-# ~/.bash_profile
-#
 export TERMINAL=ghostty
-export BROWSER=brave
+export BROWSER=helium-browser
 export EDITOR=nvim
 export VISUAL=nvim
-export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
 export PNPM_HOME=$HOME/.local/share/pnpm
 export PATH=$HOME/.local/bin:/usr/lib/docker/cli-plugins:$PNPM_HOME:$PATH
-[[ -f ~/.bashrc ]] && . ~/.bashrc
