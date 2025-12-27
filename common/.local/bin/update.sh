@@ -3,11 +3,6 @@
 update() {
 	if yay -Syyu --noconfirm --devel; then
 		notify-send -u low "Yay Finished" "System packages are up to date" -i check-filled
-		if hyprpm update -v; then
-			notify-send -u low "Hyprpm finished" "Hyprland plugins are up to date" -i check-filled
-		else
-			notify-send -u critical "Hyprpm failed" "Hyprpm update failed" -i emblem-unreadable
-		fi
 	else
 		notify-send -u critical "Yay Failed" "System update failed" -i emblem-unreadable
 	fi
@@ -34,7 +29,7 @@ check() {
 	local URGENCY="low"
 	[[ $UPDATE_COUNT -gt 50 ]] && URGENCY="critical"
 
-	[[ $UPDATE_COUNT -eq 0 ]] && [[ -e $NOTIFICATION_SENT ]] && rm $NOTIFICATION_SENT
+	[[ $UPDATE_COUNT -eq 0 ]] && rm "$NOTIFICATION_SENT"
 
 	[[ $UPDATE_COUNT -gt 1 ]] && PLURAL="s"
 

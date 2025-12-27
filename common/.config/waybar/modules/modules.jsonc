@@ -8,11 +8,6 @@
 //                       ███
 
 {
-	"hyprland/workspaces": {
-		"active-only": false,
-		"format": "{name}"
-	},
-
 	"custom/updates": {
 		"return-type": "json",
 		"format": " {}",
@@ -109,7 +104,7 @@
 	"custom/launcher": {
 		"format": "󰀻",
 		"on-click": "rofi -show drun -theme app-menu.rasi",
-		"on-click-right": "waybar-keybinds.sh",
+		"on-click-right": "niri msg action show-hotkey-overlay",
 		"tooltip-format": "Left click: App launcher\nRight click: Keybindings"
 	},
 
@@ -119,14 +114,6 @@
 		"tooltip-format": "{name}",
 		"on-click": "activate",
 		"on-click-middle": "close"
-	},
-
-	"hyprland/window": {
-		"separate-outputs": true,
-		"expand": true,
-		"rewrite": {
-			"(.*) - Helium": "🌎 $1"
-		}
 	},
 
 	"niri/window": {

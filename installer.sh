@@ -8,13 +8,6 @@
 # ▀▀▀▀▀▀   ▀▀    ▀▀   ▀▀▀▀▀▀      ▀▀▀▀    ▀▀▀▀ ▀▀     ▀▀▀▀      ▀▀▀▀     ▀▀▀▀▀    ▀▀                  ▀▀▀▀▀      ▀▀▀▀▀    ▀▀       ▀▀▀▀▀▀▀▀  ██ ▀▀▀       ▀▀▀▀
 #                                                                                                                                            ██
 
-# HyprV4 By SolDoesTech - https://www.youtube.com/@SolDoesTech
-# License..? - You may copy, edit and ditribute this script any way you like, enjoy! :)
-
-# The follwoing will attempt to install all needed packages to run Hyprland
-# This is a quick and dirty script there are some error checking
-# IMPORTANT - This script is meant to run on a clean fresh Arch install on physical hardware
-
 # Env var for where the repo was cloned
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # Define the software that would be installed
@@ -28,7 +21,7 @@ prep_stage=(
 	qt5-wayland
 	qt5ct
 	qt6-wayland
-	hyprqt6engine-git
+	qt6ct
 	qt5-svg
 	qt5-quickcontrols2
 	qt5-graphicaleffects
@@ -57,7 +50,6 @@ nvidia_stage=(
 install_stage=(
 	flatpak
 	ufw
-	hyprpaper-git
 	waypaper
 	playerctl
 	man-db
@@ -70,7 +62,6 @@ install_stage=(
 	swww
 	niri-git
 	xwayland-satellite
-	hyprpolkitagent-git
 	rust-analyzer
 	jdk-openjdk
 	vesktop
@@ -90,10 +81,8 @@ install_stage=(
 	spotify-launcher
 	rofi
 	rofimoji
-	xdg-desktop-portal-hyprland-git
 	xdg-desktop-portal-gtk
 	xdg-desktop-portal-gnome
-	hyprshot-git
 	swappy
 	btop
 	helium-browser-bin
@@ -197,10 +186,6 @@ show_progress() {
 # clear the screen
 clear
 
-# set some expectations for the user
-echo -e "$CNT - You are about to execute a script that would attempt to setup Hyprland.
-Please note that Hyprland is still in Beta."
-
 # attempt to discover if this is a VM or not
 echo -e "$CNT - Checking for Physical or VM..."
 ISVM=$(hostnamectl | grep Chassis)
@@ -214,14 +199,13 @@ fi
 echo -e "$CNT - This script will run some commands that require sudo. You will be prompted to enter your password.
 If you are worried about entering your password then you may want to review the content of the script.
 IMPORTANT: yay will panic if a package it is trying to install conflicts with an already installed package.
-Feel free to look through the package list and remove any packages that would conflict (AUR packages that may be development branches of official packages).
-This script is also preferably run in a TTY if you have hyprland already installed as the hyprland configuration will be changed to mine when the script runs."
+Feel free to look through the package list and remove any packages that would conflict (AUR packages that may be development branches of official packages)."
 
 # give the user an option to exit out
 read -rep $'[\e[1;33mACTION\e[0m] - Would you like to continue with the install (y,n) ' CONTINST
 if [[ $CONTINST == "Y" || $CONTINST == "y" ]]; then
 	echo -e "$CNT - Setup starting..."
-	sudo touch /tmp/hyprv.tmp
+	sudo touch /tmp/sudo.tmp
 else
 	echo -e "$CNT - This script will now exit, no changes were made to your system."
 	exit
@@ -308,11 +292,6 @@ if [[ "$ISNVIDIA" == true ]]; then
 	sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
 	echo -e "options nvidia-drm modeset=1" | sudo tee -a /etc/modprobe.d/nvidia.conf &>>"$INSTLOG"
 fi
-
-# Install hyprland
-while ! yay -S hyprland-git --noconfirm; do
-	true
-done
 
 # Stage 1 - main components
 for SOFTWR in "${install_stage[@]}"; do
