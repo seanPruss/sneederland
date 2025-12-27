@@ -122,8 +122,18 @@
 	},
 
 	"hyprland/window": {
-		"max-length": 50,
-		"format": "{title}",
-		"separate-outputs": true
+		"separate-outputs": true,
+		"expand": true,
+		"rewrite": {
+			"(.*) - Helium": "🌎 $1"
+		}
+	},
+
+	"niri/window": {
+		"separate-outputs": true,
+		"expand": true,
+		"rewrite": {
+			"(.*) - Helium": "🌎 $1"
+		}
 	}
 }
