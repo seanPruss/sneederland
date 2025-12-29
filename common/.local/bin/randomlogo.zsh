@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 rand=$((RANDOM % 8))
 FONT=$(ls /usr/share/figlet/ | sed -r '/_/d; s/\..*//' | shuf -n 1)
 

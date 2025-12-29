@@ -1,11 +1,4 @@
-source ~/.zsh_colours
-tmux ls &>/dev/null || tmux new-session -d
-randomlogo.sh
-source <(fzf --zsh)
-eval "$(zoxide init --cmd cd zsh)"
-eval "$(pay-respects zsh)"
-eval "$(starship init zsh)"
-
+# Set up plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 if [ ! -d "$ZINIT_HOME" ]; then
@@ -18,6 +11,10 @@ zinit light Aloxaf/fzf-tab
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
+zinit light MichaelAquilina/zsh-you-should-use
+zinit light MichaelAquilina/zsh-auto-notify
+zinit light MichaelAquilina/zsh-autoswitch-virtualenv
+zinit light hlissner/zsh-autopair
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::archlinux
@@ -25,6 +22,43 @@ zinit snippet OMZP::aws
 zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
+
+AUTO_NOTIFY_IGNORE+=("sesh-connect.sh" "yz")
+
+source ~/.zsh_colours
+tmux ls &>/dev/null || tmux new-session -d
+randomlogo.zsh
+source <(fzf --zsh)
+eval "$(zoxide init --cmd cd zsh)"
+eval "$(pay-respects zsh)"
+TRANSIENT_PROMPT=`starship module character`
+zle-line-init() {
+    emulate -L zsh
+
+    [[ $CONTEXT == start ]] || return 0
+    while true; do
+        zle .recursive-edit
+        local -i ret=$?
+        [[ $ret == 0 && $KEYS == $'\4' ]] || break
+        [[ -o ignore_eof ]] || exit 0
+    done
+
+    local saved_prompt=$PROMPT
+    local saved_rprompt=$RPROMPT
+
+    PROMPT=$TRANSIENT_PROMPT
+    zle .reset-prompt
+    PROMPT=$saved_prompt
+
+    if (( ret )); then
+        zle .send-break
+    else
+        zle .accept-line
+    fi
+    return ret
+}
+zle -N zle-line-init
+eval "$(starship init zsh)"
 
 # Load completions
 autoload -Uz compinit && compinit
@@ -73,7 +107,7 @@ zstyle ':completion:*' menu no
 # preview files with bat
 zstyle ':fzf-tab:complete:*' fzf-preview 'bat --color=always --style=full --line-range=:500 $realpath'
 # preview directory's content with eza when completing cd
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --tree --color=always $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --tree --color=always --git-ignore --group-directories-first $realpath'
 # custom fzf flags
 # To make fzf-tab follow FZF_DEFAULT_OPTS.
 # NOTE: This may lead to unexpected behavior since some flags break this plugin. See Aloxaf/fzf-tab#455.
@@ -81,35 +115,8 @@ zstyle ':fzf-tab:*' use-fzf-default-opts yes
 # switch group using `<` and `>`
 zstyle ':fzf-tab:*' switch-group '<' '>'
 
-TRANSIENT_PROMPT=`starship module character`
-zle-line-init() {
-    emulate -L zsh
-
-    [[ $CONTEXT == start ]] || return 0
-    while true; do
-        zle .recursive-edit
-        local -i ret=$?
-        [[ $ret == 0 && $KEYS == $'\4' ]] || break
-        [[ -o ignore_eof ]] || exit 0
-    done
-
-    local saved_prompt=$PROMPT
-    local saved_rprompt=$RPROMPT
-
-    PROMPT=$TRANSIENT_PROMPT
-    zle .reset-prompt
-    PROMPT=$saved_prompt
-
-    if (( ret )); then
-        zle .send-break
-    else
-        zle .accept-line
-    fi
-    return ret
-}
-
 # Aliases
-alias c="clear && randomlogo.sh"
+alias c="clear && randomlogo.zsh"
 alias ls="eza -A --icons=auto"
 alias ll="ls -l"
 alias tree="ls --tree --git-ignore --group-directories-first"
@@ -152,6 +159,7 @@ mcd() {
 
 up() {
     local DIR=".."
+    [ -z $1 ] && cx "$DIR" && return
     if (($1 > 1)); then
         for _ in {2..$1}
         do
@@ -161,10 +169,10 @@ up() {
     cx "$DIR"
 }
 
-function yz() {
+yz() {
     local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
     yazi "$@" --cwd-file="$tmp"
     IFS= read -r -d '' cwd < "$tmp"
-    [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+    [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && cd -- "$cwd"
     rm -f -- "$tmp"
 }
