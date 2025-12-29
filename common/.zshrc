@@ -152,6 +152,10 @@ cxi() {
     ls
 }
 
+# auto ls when cding
+alias cd="cx"
+alias cdi="cxi"
+
 mcd() {
     mkdir -p $1
     cd $1
@@ -166,7 +170,7 @@ up() {
             DIR=$DIR/..
         done
     fi
-    cx "$DIR"
+    cd "$DIR"
 }
 
 yz() {
