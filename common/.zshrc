@@ -23,7 +23,7 @@ zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
 
-AUTO_NOTIFY_IGNORE+=("sesh-connect.sh" "yz")
+AUTO_NOTIFY_IGNORE+=("sesh-connect.sh" "yz" "cat")
 
 source ~/.zsh_colours
 tmux ls &>/dev/null || tmux new-session -d
@@ -114,11 +114,12 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --tree --color=always --git-ign
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
 # switch group using `<` and `>`
 zstyle ':fzf-tab:*' switch-group '<' '>'
+autopair-init
 
 # Aliases
 alias c="clear && randomlogo.zsh"
 alias ls="eza -A --icons=auto"
-alias ll="ls -l"
+alias ll="ls -lh --git"
 alias tree="ls --tree --git-ignore --group-directories-first"
 alias v="nvim"
 alias y="yay"
@@ -162,8 +163,8 @@ mcd() {
 }
 
 up() {
+    [ -z $1 ] && cd .. && return
     local DIR=".."
-    [ -z $1 ] && cx "$DIR" && return
     if (($1 > 1)); then
         for _ in {2..$1}
         do
