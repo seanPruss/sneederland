@@ -13,7 +13,6 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light MichaelAquilina/zsh-you-should-use
 zinit light MichaelAquilina/zsh-auto-notify
-zinit light MichaelAquilina/zsh-autoswitch-virtualenv
 zinit light hlissner/zsh-autopair
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
@@ -25,9 +24,26 @@ zinit snippet OMZP::command-not-found
 
 AUTO_NOTIFY_IGNORE+=("sesh-connect.sh" "yz" "cat")
 
+random_logo() {
+    rand=$((RANDOM % 8))
+    FONT=$(ls /usr/share/figlet/ | sed -r '/_/d; s/\..*//' | shuf -n 1)
+
+    if [ $rand -eq 0 ] || [ $rand -eq 4 ]; then
+        fastfetch
+    elif [ $rand -eq 1 ] || [ $rand -eq 5 ]; then
+        colorscript random
+    elif [ $rand -eq 2 ]; then
+        toilet -t -f "$FONT" 'I use Arch btw' --rainbow
+    elif [ $rand -eq 3 ]; then
+        toilet -t -f "$FONT" 'The Sneed Machine' --rainbow
+    else
+        fortune | cowsay -f "$(cowsay -l | shuf -n 1)"
+    fi
+}
+
 source ~/.zsh_colours
 tmux ls &>/dev/null || tmux new-session -d
-randomlogo.zsh
+random_logo
 source <(fzf --zsh)
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(pay-respects zsh)"
@@ -60,8 +76,11 @@ zle-line-init() {
 zle -N zle-line-init
 eval "$(starship init zsh)"
 
-# Load completions
+# Load stuff
 autoload -Uz compinit && compinit
+autoload -Uz edit-command-line
+autoload -Uz add-zsh-hook
+zle -N edit-command-line
 
 zinit cdreplay -q
 
@@ -70,6 +89,7 @@ bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 bindkey -s '\es' 'sesh-connect.sh^M'
+bindkey '^x^e' edit-command-line
 
 # History
 HISTSIZE=10000
@@ -117,7 +137,7 @@ zstyle ':fzf-tab:*' switch-group '<' '>'
 autopair-init
 
 # Aliases
-alias c="clear && randomlogo.zsh"
+alias c="clear && random_logo"
 alias ls="eza -A --icons=auto"
 alias ll="ls -lh --git"
 alias tree="ls --tree --git-ignore --group-directories-first"
@@ -143,19 +163,28 @@ alias xs="cd"
 alias xsi="cdi"
 
 # Functions
-cx() {
-    cd $1
+chpwd() {
     ls
 }
 
-cxi() {
-    cdi $1
-    ls
-}
+auto_venv() {
+    # If already in a virtualenv, do nothing
+    if [[ -n "$VIRTUAL_ENV" && ! -f "./venv/bin/activate" && ! -f "./.venv/bin/activate" ]]; then
+        deactivate
+    fi
 
-# auto ls when cding
-alias cd="cx"
-alias cdi="cxi"
+    [[ -n "$VIRTUAL_ENV" ]] && return
+
+    local dir="$PWD"
+    while [[ "$dir" != "/" ]]; do
+        if [[ -f "$dir/.venv/bin/activate" || -f "$dir/venv/bin/activate" ]]; then
+            source "$dir/.venv/bin/activate" || source "$dir/venv/bin/activate"
+            return
+        fi
+        dir="${dir:h}"
+    done
+}
+add-zsh-hook chpwd auto_venv
 
 mcd() {
     mkdir -p $1

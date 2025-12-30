@@ -73,7 +73,7 @@ install_stage=(
 	ghostty-git
 	dunst
 	battery-notify
-	waybar
+	waybar-git
 	wayweather
 	zscroll-git
 	imagemagick
