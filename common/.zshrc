@@ -169,7 +169,7 @@ chpwd() {
 
 auto_venv() {
     # If already in a virtualenv, do nothing
-    if [[ -n "$VIRTUAL_ENV" && ! -f "./venv/bin/activate" && ! -f "./.venv/bin/activate" ]]; then
+    if [[ -n "$VIRTUAL_ENV" && "$PWD" != "$VIRTUAL_ENV" ]]; then
         deactivate
     fi
 
@@ -178,7 +178,7 @@ auto_venv() {
     local dir="$PWD"
     while [[ "$dir" != "/" ]]; do
         if [[ -f "$dir/.venv/bin/activate" || -f "$dir/venv/bin/activate" ]]; then
-            source "$dir/.venv/bin/activate" || source "$dir/venv/bin/activate"
+            source "$dir/.venv/bin/activate" 2>/dev/null || source "$dir/venv/bin/activate"
             return
         fi
         dir="${dir:h}"
