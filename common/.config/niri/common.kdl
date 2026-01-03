@@ -357,6 +357,7 @@ animations {
 window-rule {
     geometry-corner-radius 10
     clip-to-geometry true
+    draw-border-with-background false
 }
 
 binds {

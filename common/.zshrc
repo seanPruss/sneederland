@@ -41,9 +41,9 @@ random_logo() {
     fi
 }
 
+random_logo
 source ~/.zsh_colours
 tmux ls &>/dev/null || tmux new-session -d
-random_logo
 source <(fzf --zsh)
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(pay-respects zsh)"
