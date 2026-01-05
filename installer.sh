@@ -78,7 +78,6 @@ install_stage=(
 	zscroll-git
 	imagemagick
 	gtklock
-	spotify-launcher
 	rofi
 	rofimoji
 	xdg-desktop-portal-gtk
@@ -91,7 +90,6 @@ install_stage=(
 	fzf
 	tealdeer
 	zsh
-	carapace
 	trash-cli
 	starship-git
 	yazi
@@ -160,6 +158,7 @@ install_stage=(
 flatpaks=(
 	io.github.flattool.Ignition
 	com.github.tchx84.Flatseal
+	com.spotify.Client
 )
 
 # set some colors

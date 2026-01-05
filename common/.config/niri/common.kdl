@@ -385,7 +385,7 @@ binds {
     Mod+M hotkey-overlay-title="Power menu" { spawn "powermenu.sh"; }
     Mod+B hotkey-overlay-title="Browser" { spawn "helium-browser"; }
     Mod+D hotkey-overlay-title="Discord" { spawn "vesktop"; }
-    Mod+S hotkey-overlay-title="Spotify" { spawn "spotify-launcher"; }
+    Mod+S hotkey-overlay-title="Spotify" { spawn-sh "flatpak run com.spotify.Client"; }
     Mod+E hotkey-overlay-title="Email" { spawn "thunderbird"; }
     Mod+V hotkey-overlay-title="Volume" { spawn "pulsecontrol"; }
     Mod+Shift+B hotkey-overlay-title="Bluetooth" { spawn "overskride"; }
