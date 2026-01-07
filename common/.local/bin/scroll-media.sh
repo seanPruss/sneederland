@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 SONG_SCRIPT="mediaplayer.sh"
 zscroll -p "" --delay 0.7 \
-	--length 20 \
+	--length 30 \
 	--match-command "playerctl status" \
 	--match-text "Playing" "--scroll 1" \
 	--match-text "Paused" "--before-text '󰏤 ' --scroll 1" \

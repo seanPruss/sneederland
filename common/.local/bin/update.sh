@@ -2,6 +2,8 @@
 
 update() {
 	if yay -Syyu --noconfirm --devel; then
+		# Download package repos for pay-respects if update works
+		yay -Fy
 		notify-send -u low "Yay Finished" "System packages are up to date" -i check-filled
 	else
 		notify-send -u critical "Yay Failed" "System update failed" -i emblem-unreadable
