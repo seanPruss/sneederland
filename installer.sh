@@ -50,7 +50,7 @@ nvidia_stage=(
 install_stage=(
 	flatpak
 	ufw
-	waypaper
+	waypaper-git
 	playerctl
 	man-db
 	man-pages
