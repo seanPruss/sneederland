@@ -46,7 +46,7 @@ update-colours() {
 	killall waybar
 	killall dunst
 	tmux kill-server
-	swww-change.sh
+	waypaper --random
 }
 case "$1" in
 random)

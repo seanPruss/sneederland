@@ -59,7 +59,7 @@ install_stage=(
 	bat
 	git-delta
 	rust
-	swww
+	awww-git
 	niri-git
 	xwayland-satellite
 	rust-analyzer
@@ -343,7 +343,10 @@ echo "
 [State]
 folder = ~/Pictures/wallpapers
 monitors = All
-wallpaper = ~/Pictures/wallpapers/bodybuilders/ronnie-coleman/ronnie-coleman-4.jpg" >~/.local/state/waypaper/state.ini
+wallpaper = ~/Pictures/wallpapers/album-covers/malevolence/where-only-the-truth-is-spoken.jpg
+backend = awww
+
+" >~/.local/state/waypaper/state.ini
 
 # Set up wayweather
 wayweather --reset &>>"$INSTLOG"

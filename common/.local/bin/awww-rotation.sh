@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
 while true; do
-	swww-change.sh
+	waypaper --random
 	sleep 600
 done
