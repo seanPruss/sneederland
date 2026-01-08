@@ -169,8 +169,9 @@ chpwd() {
 
 auto_venv() {
     # If already in a virtualenv, do nothing
-    if [[ -n "$VIRTUAL_ENV" && "$PWD" != "$VIRTUAL_ENV" ]]; then
+    if [[ -n "$VIRTUAL_ENV" && "$PWD" != *"${VIRTUAL_ENV:h}"* ]]; then
         deactivate
+        return
     fi
 
     [[ -n "$VIRTUAL_ENV" ]] && return
