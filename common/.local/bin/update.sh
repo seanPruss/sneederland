@@ -24,7 +24,7 @@ check() {
 
 	local NOTIFICATION_SENT=$HOME/.cache/update_notif
 	local PACMAN_UPDATES=$(checkupdates | wc -l)
-	local AUR_UPDATES=$(yay -Qua | wc -l)
+	local AUR_UPDATES=$(yay -Qua --devel | wc -l)
 	local FLATPAK_UPDATES=$(flatpak remote-ls --columns=application --updates | grep -v "Application ID" | wc -l)
 	local UPDATE_COUNT=$((PACMAN_UPDATES + AUR_UPDATES + FLATPAK_UPDATES))
 

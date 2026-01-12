@@ -12,7 +12,7 @@
 		"return-type": "json",
 		"format": " {}",
 		"exec": "update.sh check",
-		"on-click": "ghostty --class=\"ghostty.update\" -e update.sh update",
+		"on-click": "ghostty -e update.sh update",
 		"interval": 60
 	},
 
@@ -88,7 +88,7 @@
 	},
 
 	"custom/media": {
-		"format": "󰥠 {}",
+		"format": "{}",
 		"escape": true,
 		"exec": "scroll-media.sh",
 		"on-click": "playerctl -p spotify play-pause"
