@@ -138,9 +138,9 @@ autopair-init
 
 # Aliases
 alias c="clear && random_logo"
-alias ls="eza -A --icons=auto"
+alias ls="eza -A --icons=auto --group-directories-first"
 alias ll="ls -lh --git"
-alias tree="ls --tree --git-ignore --group-directories-first"
+alias tree="ls --tree --git-ignore"
 alias v="nvim"
 alias y="yay"
 alias grep="grep --color=auto"

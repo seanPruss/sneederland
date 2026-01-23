@@ -50,7 +50,6 @@ nvidia_stage=(
 install_stage=(
 	flatpak
 	ufw
-	waypaper-git
 	playerctl
 	man-db
 	man-pages
@@ -59,7 +58,6 @@ install_stage=(
 	bat
 	git-delta
 	rust
-	awww-git
 	niri-git
 	xwayland-satellite
 	rust-analyzer
@@ -71,19 +69,16 @@ install_stage=(
 	banana-cursor-bin
 	cpio
 	ghostty-git
-	dunst
 	battery-notify
-	waybar-git
-	wayweather
-	zscroll-git
+	quickshell-git
+	dms-shell-git
+	cava
 	imagemagick
-	gtklock
-	rofi
+	tofi-git
 	rofimoji
 	xdg-desktop-portal-gtk
 	xdg-desktop-portal-gnome
-	swappy
-	btop
+	satty
 	helium-browser-bin
 	gammastep
 	shellcheck
@@ -106,8 +101,6 @@ install_stage=(
 	ascii-image-converter
 	lazygit
 	docker
-	pass
-	docker-desktop
 	lazydocker
 	zoxide
 	eza
@@ -121,6 +114,7 @@ install_stage=(
 	gruvbox-gtk-theme-git
 	tokyonight-gtk-theme-git
 	nordic-theme
+	catppuccin-gtk-theme-mocha
 	beautyline
 	libreoffice-fresh
 	thunderbird
@@ -131,28 +125,12 @@ install_stage=(
 	bluez
 	bluez-utils
 	overskride
-	network-manager-applet
 	gvfs
 	file-roller
 	nerd-fonts
 	noto-fonts-emoji
 	nwg-look
-	sddm-git
-	archlinux-themes-sddm
-	chili-sddm-theme
-	sddm-archlinux-theme-git
-	sddm-theme-abstractdark-git
-	sddm-theme-corners-git
-	sddm-theme-mnmlst
-	sddm-theme-tokyo-night-git
-	simple-sddm-theme-2-git
-	simple-sddm-theme-git
-	win11-sddm-theme
-	win10-sddm-theme
-	sddm-minesddm-theme-git
-	sddm-elegant-theme-git
-	sddm-eucalyptus-drop
-	sddm-sugar-dark
+	greetd-dms-greeter-git
 )
 
 flatpaks=(
@@ -317,39 +295,19 @@ find ~/.local/bin -type l -exec rm -i {} +
 [[ -L ~/.tmux.conf ]] && rm ~/.tmux.conf
 [[ -L ~/.Xresources ]] && rm ~/.Xresources
 
-# Set up sddm
-echo -e "$CNT - Setting up the login screen."
-sudo systemctl enable sddm &>>"$INSTLOG"
-[[ -d /etc/sddm.conf.d ]] || sudo mkdir /etc/sddm.conf.d
-sudo cp "$REPO_DIR"/random-sddm-theme.service /etc/systemd/system
-sudo cp "$REPO_DIR"/random-sddm-theme.sh /usr/bin
-sudo systemctl enable random-sddm-theme.service &>>"$INSTLOG"
-
-# generate symlinks for dotfiles and install rose pine gtk3 theme
+# generate symlinks for dotfiles
 cd "$REPO_DIR" || exit
 {
 	xdg-user-dirs-update
 	stow --adopt --no-folding --target="$HOME" dotfiles-rose-pine
 	stow --adopt --no-folding --target="$HOME" common
 	git reset --hard
-	mkdir -p ~/Downloads/repos
-	git clone https://github.com/Fausto-Korpsvart/Rose-Pine-GTK-Theme.git ~/Downloads/repos/Rose-Pine-GTK-Theme
-	~/Downloads/repos/Rose-Pine-GTK-Theme/themes/install.sh -t purple -l
 } &>>"$INSTLOG"
 
-# Set up waypaper
-mkdir -p ~/.local/state/waypaper
-echo "
-[State]
-folder = ~/Pictures/wallpapers
-monitors = All
-wallpaper = ~/Pictures/wallpapers/album-covers/malevolence/where-only-the-truth-is-spoken.jpg
-backend = awww
-
-" >~/.local/state/waypaper/state.ini
-
-# Set up wayweather
-wayweather --reset &>>"$INSTLOG"
+# Install rose pine gtk3 theme
+mkdir -p ~/Downloads/repos
+git clone https://github.com/Fausto-Korpsvart/Rose-Pine-GTK-Theme.git ~/Downloads/repos/Rose-Pine-GTK-Theme
+~/Downloads/repos/Rose-Pine-GTK-Theme/themes/install.sh -t purple -l
 
 # Start the bluetooth service
 echo -e "$CNT - Starting the Bluetooth Service..."
@@ -358,6 +316,14 @@ sudo systemctl enable --now bluetooth.service &>>"$INSTLOG"
 # Enable auto-cpufreq service
 echo -e "$CNT - Enabling the auto-cpufreq Service..."
 sudo systemctl enable --now auto-cpufreq &>>"$INSTLOG"
+
+# Enable and sync DMS greeter
+echo -e "$CNT - Enabling the DMS greeter..."
+{
+	sed -i "s/seanp/$(id -un)/g" "$REPO_DIR"/common/.config/DankMaterialShell/settings.json
+	dms greeter enable
+	dms greeter sync
+} &>>"$INSTLOG"
 
 # Disable and clean power-profiles-daemon if installed
 sudo systemctl disable power-profiles-daemon &>>"$INSTLOG"

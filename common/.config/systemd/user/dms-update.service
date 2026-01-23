@@ -1,0 +1,9 @@
+[Unit]
+Description=Check system updates with DMS
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/dms ipc call systemupdater updatestatus
+
+[Install]
+WantedBy=graphical-session.target

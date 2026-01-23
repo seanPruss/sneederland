@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-COLOUR_SCHEMES=(rose-pine dracula gruvbox tokyo-night nord everforest)
+COLOUR_SCHEMES=(rose-pine catppuccin dracula gruvbox tokyo-night nord everforest)
 
 update-colours() {
 	[[ -z $1 ]] && exit
@@ -16,13 +16,17 @@ update-colours() {
 		gsettings set org.gnome.desktop.interface gtk-theme "Rosepine-Purple-Dark"
 		ln -sf /usr/share/themes/rose-pine-gtk/gtk-4.0 ~/.config
 		;;
+	catppuccin)
+		gsettings set org.gnome.desktop.interface gtk-theme "catppuccin-mocha-mauve-standard+default"
+		ln -sf /usr/share/themes/catppuccin-mocha-mauve-standard+default/gtk-4.0 ~/.config
+		;;
 	dracula)
 		gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
 		ln -sf /usr/share/themes/Dracula/gtk-4.0 ~/.config
 		;;
 	gruvbox)
-		gsettings set org.gnome.desktop.interface gtk-theme "Gruvbox-Red-Dark"
-		ln -sf /usr/share/themes/Gruvbox-Red-Dark/gtk-4.0 ~/.config
+		gsettings set org.gnome.desktop.interface gtk-theme "Gruvbox-Green-Dark"
+		ln -sf /usr/share/themes/Gruvbox-Green-Dark/gtk-4.0 ~/.config
 		;;
 	tokyo-night)
 		gsettings set org.gnome.desktop.interface gtk-theme "Tokyonight-Dark"
@@ -33,8 +37,8 @@ update-colours() {
 		ln -sf /usr/share/themes/Nordic/gtk-4.0 ~/.config
 		;;
 	everforest)
-		gsettings set org.gnome.desktop.interface gtk-theme "Everforest-Red-Dark"
-		ln -sf /usr/share/themes/Everforest-Red-Dark/gtk-4.0 ~/.config
+		gsettings set org.gnome.desktop.interface gtk-theme "Everforest-Green-Dark"
+		ln -sf /usr/share/themes/Everforest-Green-Dark/gtk-4.0 ~/.config
 		;;
 	*)
 		echo "how tf did you get here"
@@ -43,10 +47,9 @@ update-colours() {
 	gsettings set org.gnome.desktop.interface icon-theme "BeautyLine"
 	nwg-look -x
 
-	killall waybar
-	killall dunst
+	dms-random-wallpaper.sh
+	systemctl --user reload-or-restart dms.service
 	tmux kill-server
-	waypaper --random
 }
 case "$1" in
 random)
@@ -54,7 +57,7 @@ random)
 	update-colours "$SELECTION"
 	;;
 choose)
-	SELECTION=$(printf '%s\n' "${COLOUR_SCHEMES[@]}" | rofi -dmenu -i)
+	SELECTION=$(printf '%s\n' "${COLOUR_SCHEMES[@]}" | tofi)
 	update-colours "$SELECTION"
 	;;
 *)

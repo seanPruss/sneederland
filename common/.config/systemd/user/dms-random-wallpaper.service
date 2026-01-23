@@ -1,0 +1,9 @@
+[Unit]
+Description=Random wallpaper with DMS
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/dms-random-wallpaper.sh
+
+[Install]
+WantedBy=graphical-session.target

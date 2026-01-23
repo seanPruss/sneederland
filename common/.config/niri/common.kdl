@@ -259,12 +259,14 @@ layout {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-sh-at-startup "systemctl --user enable --now waybar.service"
-spawn-sh-at-startup "colour-scheme-selector.sh random"
+spawn-sh-at-startup "systemctl --user enable --now dms.service"
 spawn-sh-at-startup "wl-paste --watch cliphist store"
-spawn-at-startup "awww-daemon"
-spawn-at-startup "awww-rotation.sh"
-spawn-at-startup "battery-notify"
+spawn-sh-at-startup "colour-scheme-selector.sh random"
+spawn-sh-at-startup "systemctl --user enable --now dms-update.service"
+spawn-sh-at-startup "systemctl --user enable --now dms-update.timer"
+spawn-sh-at-startup "systemctl --user enable --now dms-random-wallpaper.service"
+spawn-sh-at-startup "systemctl --user enable --now dms-random-wallpaper.timer"
+spawn-sh-at-startup "systemctl --user enable --now battery-notify.service"
 spawn-at-startup "start-gammastep.sh"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
@@ -301,7 +303,7 @@ environment {
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
 // The path is formatted with strftime(3) to give you the screenshot date and time.
-screenshot-path "~/Pictures/Screenshot from %Y-%m-%d %H-%M-%S.png"
+screenshot-path null
 
 // You can also set this to null to disable saving screenshots to disk.
 // screenshot-path null
@@ -373,34 +375,31 @@ binds {
 
     // Mod-Shift-/, which is usually the same as Mod-?,
     // shows a list of important hotkeys.
-    Mod+Slash { show-hotkey-overlay; }
+    Mod+Slash { spawn-sh "dms ipc call keybinds toggle niri"; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return hotkey-overlay-title="Terminal" { spawn "ghostty"; }
-    Mod+Space hotkey-overlay-title="App launcher" { spawn-sh "rofi -show drun -theme app-menu.rasi"; }
-    Mod+Tab hotkey-overlay-title="Active windows" { spawn-sh "rofi -show window -theme app-menu.rasi"; }
+    Mod+Space hotkey-overlay-title="App launcher" { spawn-sh "dms ipc call spotlight toggle"; }
     Mod+Shift+E hotkey-overlay-title="Emoji selector" { spawn-sh "rofimoji -a copy"; }
     Mod+Shift+C hotkey-overlay-title="Switch colour scheme" { spawn-sh "colour-scheme-selector.sh choose"; }
     Mod+U hotkey-overlay-title="Update system" { spawn-sh "ghostty -e update.sh update"; }
-    Mod+M hotkey-overlay-title="Power menu" { spawn "powermenu.sh"; }
+    Mod+M hotkey-overlay-title="Power menu" { spawn-sh "dms ipc call powermenu toggle"; }
     Mod+B hotkey-overlay-title="Browser" { spawn "helium-browser"; }
     Mod+D hotkey-overlay-title="Discord" { spawn "vesktop"; }
     Mod+S hotkey-overlay-title="Spotify" { spawn-sh "flatpak run com.spotify.Client"; }
     Mod+E hotkey-overlay-title="Email" { spawn "thunderbird"; }
     Mod+V hotkey-overlay-title="Volume" { spawn "pulsecontrol"; }
     Mod+Shift+B hotkey-overlay-title="Bluetooth" { spawn "overskride"; }
-    Mod+Shift+V hotkey-overlay-title="Clipboard history" { spawn-sh "cliphist list | rofi -dmenu -i | cliphist decode | wl-copy"; }
-    Mod+Shift+W hotkey-overlay-title="Wipe clipboard history" { spawn-sh "cliphist wipe"; }
-    Mod+T hotkey-overlay-title="System monitor" { spawn-sh "ghostty -e btop.sh"; }
+    Mod+Shift+V hotkey-overlay-title="Clipboard history" { spawn-sh "dms ipc call clipboard toggle"; }
     Mod+W hotkey-overlay-title="Choose wallpaper" { spawn "waypaper"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
     // Using spawn-sh allows to pass multiple arguments together with the command.
     // "-l 1.0" limits the volume to 100%.
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "change-volume.sh up"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "change-volume.sh down"; }
-    XF86AudioMute        allow-when-locked=true { spawn-sh "change-volume.sh mute"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 && wpctl set-volume -l 2.0 @DEFAULT_AUDIO_SINK@ 5%+"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 && wpctl set-volume -l 2.0 @DEFAULT_AUDIO_SINK@ 5%-"; }
+    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
 
     // Example media keys mapping using playerctl.
     // This will work with any MPRIS-enabled media player.
@@ -412,8 +411,8 @@ binds {
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
     // but you need to manually put each argument in separate "" quotes.
-    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "change-brightness.sh up"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "change-brightness.sh down"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "brightnessctl -e4 set 5%+"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "brightnessctl -e4 set 5%-"; }
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
@@ -613,9 +612,7 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Mod+Shift+S { screenshot; }
-    Mod+Control+S { screenshot-screen; }
-    Mod+Alt+S { screenshot-window; }
+    Mod+Shift+S { spawn "dms-niri-screenshot.sh"; }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here

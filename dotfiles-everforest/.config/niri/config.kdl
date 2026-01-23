@@ -1,7 +1,7 @@
 layout {
     focus-ring {
         width 3
-        active-gradient from="#e67e80" to="#83c092" angle=45
+        active-gradient from="#e67e80" to="#a7c080" angle=45
         inactive-gradient from="#1e2326" to="#414b50" angle=45 relative-to="workspace-view"
     }
 }

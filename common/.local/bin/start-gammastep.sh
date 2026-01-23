@@ -4,5 +4,5 @@ done
 
 COORDINATES=$(curl -s ipinfo.io/loc | sed 's/,/:/g')
 while true; do
-	gammastep -t 6500:1500 -l "$COORDINATES"
+	gammastep-indicator -t 6500:1500 -l "$COORDINATES"
 done
