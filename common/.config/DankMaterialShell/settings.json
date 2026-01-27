@@ -4,7 +4,8 @@
   "customThemeFile": "/home/seanp/.config/DankMaterialShell/theme.json",
   "registryThemeVariants": {
     "gruvboxMaterial": "hard",
-    "everforest": "hard"
+    "everforest": "hard",
+    "rosePine": "rosePine"
   },
   "matugenScheme": "scheme-tonal-spot",
   "runUserMatugenTemplates": true,
@@ -101,12 +102,12 @@
       "width": 50
     },
     {
-      "id": "nightMode",
+      "id": "doNotDisturb",
       "enabled": true,
       "width": 50
     },
     {
-      "id": "darkMode",
+      "id": "idleInhibitor",
       "enabled": true,
       "width": 50
     }
@@ -482,7 +483,8 @@
       "shadowIntensity": 0,
       "shadowOpacity": 60,
       "shadowColorMode": "text",
-      "shadowCustomColor": "#000000"
+      "shadowCustomColor": "#000000",
+      "clickThrough": false
     }
   ],
   "desktopClockEnabled": false,
