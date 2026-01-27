@@ -9,7 +9,7 @@
 #                                                                                                                                            ██
 
 # Env var for where the repo was cloned
-REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # Define the software that would be installed
 prep_stage=(
 	xdg-user-dirs
@@ -145,7 +145,7 @@ COK="[\e[1;32mOK\e[0m]"
 CER="[\e[1;31mERROR\e[0m]"
 CAT="[\e[1;37mATTENTION\e[0m]"
 CWR="[\e[1;35mWARNING\e[0m]"
-INSTLOG=$REPO_DIR/install.log
+INSTLOG=$SCRIPT_DIR/install.log
 
 ######
 # functions go here
@@ -248,8 +248,8 @@ else
 	echo -e "\e[1A\e[K$COK - System updated."
 fi
 
-sudo cp "$REPO_DIR"/cleancache.hook /usr/share/libalpm/hooks
-sudo cp "$REPO_DIR"/clearcache /usr/share/libalpm/scripts
+sudo cp "$SCRIPT_DIR"/cleancache.hook /usr/share/libalpm/hooks
+sudo cp "$SCRIPT_DIR"/clearcache /usr/share/libalpm/scripts
 
 # Prep Stage - Bunch of needed items
 for SOFTWR in "${prep_stage[@]}"; do
@@ -296,7 +296,7 @@ find ~/.local/bin -type l -exec rm -i {} +
 [[ -L ~/.Xresources ]] && rm ~/.Xresources
 
 # generate symlinks for dotfiles
-cd "$REPO_DIR" || exit
+cd "$SCRIPT_DIR" || exit
 {
 	xdg-user-dirs-update
 	stow --adopt --no-folding --target="$HOME" dotfiles-rose-pine
@@ -320,7 +320,7 @@ sudo systemctl enable --now auto-cpufreq &>>"$INSTLOG"
 # Enable and sync DMS greeter
 echo -e "$CNT - Enabling the DMS greeter..."
 {
-	sed -i "s/seanp/$(id -un)/g" "$REPO_DIR"/common/.config/DankMaterialShell/settings.json
+	sed -i "s/seanp/$(id -un)/g" "$SCRIPT_DIR"/common/.config/DankMaterialShell/settings.json
 	dms greeter enable
 	dms greeter sync
 } &>>"$INSTLOG"
@@ -368,8 +368,8 @@ if [[ "$ISNVIDIA" == true ]]; then
 fi
 
 echo -e "$CNT - If you are using a laptop, consider using the kanata service to remap your laptop keyboard for easier access to modifier keys. Just run these commands after ensuring that the device specified in config.kbd is the correct one:
-sudo cp $REPO_DIR/kanata.service /etc/systemd/system
-sudo cp $REPO_DIR/config.kbd /etc
+sudo cp $SCRIPT_DIR/kanata.service /etc/systemd/system
+sudo cp $SCRIPT_DIR/config.kbd /etc
 sudo systemctl enable kanata.service
 "
 
