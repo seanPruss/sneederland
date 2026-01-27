@@ -400,6 +400,7 @@ binds {
     Mod+Space hotkey-overlay-title="Application Launcher" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
     Mod+Shift+E hotkey-overlay-title="Emoji selector" { spawn "rofimoji" "-a" "copy"; }
     Mod+Shift+C hotkey-overlay-title="Switch colour scheme" { spawn "colour-scheme-selector.sh" "choose"; }
+    Mod+Shift+S hotkey-overlay-title="Take a screenshot" { spawn "dms-niri-screenshot.sh"; }
     Mod+M hotkey-overlay-title="Power menu" { spawn "dms" "ipc" "call" "powermenu" "toggle"; }
     Mod+T hotkey-overlay-title="Task Manager" { spawn "dms" "ipc" "call" "processlist" "focusOrToggle"; }
     Mod+B hotkey-overlay-title="Browser" { spawn "helium-browser"; }
@@ -632,7 +633,6 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Mod+Shift+S hotkey-overlay-title="Take a screenshot" { spawn "dms-niri-screenshot.sh"; }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here

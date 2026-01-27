@@ -151,8 +151,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "helium": {
-      "count": 2,
-      "lastUsed": 1769444169702,
+      "count": 3,
+      "lastUsed": 1769552261512,
       "name": "Helium Browser"
     }
   },
@@ -304,8 +304,8 @@
   "lockScreenInactiveColor": "#000000",
   "lockScreenNotificationMode": 0,
   "hideBrightnessSlider": false,
-  "notificationTimeoutLow": 5000,
-  "notificationTimeoutNormal": 5000,
+  "notificationTimeoutLow": 8000,
+  "notificationTimeoutNormal": 10000,
   "notificationTimeoutCritical": 0,
   "notificationCompactMode": true,
   "notificationPopupPosition": -1,
