@@ -48,7 +48,8 @@ update-colours() {
 	nwg-look -x
 
 	dms-random-wallpaper.sh
-	systemctl --user reload-or-restart dms.service
+	dms ipc theme toggle
+	dms ipc theme toggle
 	tmux kill-server
 }
 case "$1" in
