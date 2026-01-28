@@ -115,6 +115,7 @@ install_stage=(
 	tokyonight-gtk-theme-git
 	nordic-theme
 	catppuccin-gtk-theme-mocha
+	kanagawa-gtk-theme-git
 	beautyline
 	libreoffice-fresh
 	thunderbird

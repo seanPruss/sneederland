@@ -39,6 +39,10 @@ You should also look at the docs for the packages if you wanna change anything.
 
 ![Everforest](./screenshot-everforest.png)
 
+#### Kanagawa
+
+![Kanagawa](./screenshot-kanagawa.png)
+
 ### Programs I use
 
 - Window manager: [Niri](https://yalter.github.io/niri/index.html)
