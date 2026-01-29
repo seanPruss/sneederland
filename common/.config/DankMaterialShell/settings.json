@@ -220,12 +220,12 @@
   "acMonitorTimeout": 0,
   "acLockTimeout": 0,
   "acSuspendTimeout": 0,
-  "acSuspendBehavior": 2,
+  "acSuspendBehavior": 0,
   "acProfileName": "2",
   "batteryMonitorTimeout": 0,
   "batteryLockTimeout": 0,
   "batterySuspendTimeout": 300,
-  "batterySuspendBehavior": 2,
+  "batterySuspendBehavior": 0,
   "batteryProfileName": "0",
   "batteryChargeLimit": 100,
   "lockBeforeSuspend": true,
@@ -333,12 +333,11 @@
   "powerActionHoldDuration": 0.5,
   "powerMenuActions": [
     "reboot",
-    "logout",
     "poweroff",
     "lock",
     "suspend",
     "restart",
-    "hibernate"
+    "logout"
   ],
   "powerMenuDefaultAction": "suspend",
   "powerMenuGridLayout": true,
