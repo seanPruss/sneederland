@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-dms ipc call wallpaper set "$(fd -tf . ~/Pictures/wallpapers | shuf -n 1)"
+dms ipc call wallpaper set "$(fd -tl . ~/Pictures/wallpapers | shuf -n 1)"
