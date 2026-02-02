@@ -67,7 +67,6 @@ install_stage=(
 	vlc
 	auto-cpufreq
 	banana-cursor-bin
-	cpio
 	ghostty-git
 	battery-notify
 	quickshell-git
@@ -80,7 +79,6 @@ install_stage=(
 	xdg-desktop-portal-gnome
 	satty
 	helium-browser-bin
-	gammastep
 	shellcheck
 	fzf
 	tealdeer
