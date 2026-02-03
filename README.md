@@ -46,9 +46,9 @@ You should also look at the docs for the packages if you wanna change anything.
 ### Programs I use
 
 - Window manager: [Niri](https://yalter.github.io/niri/index.html)
-- Status bar: [Dank Material Shell](https://danklinux.com)
+- Desktop shell: [Dank Material Shell](https://danklinux.com)
 - Terminal: [Ghostty](https://github.com/ghostty-org/ghostty)
-- Shell: [Zsh](https://wiki.archlinux.org/title/Zsh)
+- Login shell: [Zsh](https://wiki.archlinux.org/title/Zsh)
 - Browser: [Helium](https://helium.computer/)
 - Text editor: [Neovim](https://github.com/neovim/neovim)
 - File manager: [Yazi](https://github.com/sxyazi/yazi)
