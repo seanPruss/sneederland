@@ -15,6 +15,7 @@
   "widgetBackgroundColor": "s",
   "widgetColorMode": "default",
   "controlCenterTileColorMode": "primary",
+  "buttonColorMode": "primary",
   "cornerRadius": 21,
   "niriLayoutGapsOverride": -1,
   "niriLayoutRadiusOverride": -1,
@@ -187,7 +188,7 @@
   "networkPreference": "wifi",
   "iconTheme": "BeautyLine",
   "cursorSettings": {
-    "theme": "System Default",
+    "theme": "Banana",
     "size": 38,
     "niri": {
       "hideWhenTyping": false,
@@ -413,7 +414,10 @@
           "enabled": true,
           "clockCompactMode": false
         },
-        "weather",
+        {
+          "id": "weather",
+          "enabled": true
+        },
         {
           "id": "systemUpdate",
           "enabled": true
