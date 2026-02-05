@@ -318,11 +318,9 @@ sudo systemctl enable --now auto-cpufreq &>>"$INSTLOG"
 
 # Enable and sync DMS greeter
 echo -e "$CNT - Enabling the DMS greeter..."
-{
-	sed -i "s/seanp/$(id -un)/g" "$SCRIPT_DIR"/common/.config/DankMaterialShell/settings.json
-	dms greeter enable
-	dms greeter sync
-} &>>"$INSTLOG"
+sed -i "s/seanp/$(id -un)/g" "$SCRIPT_DIR"/common/.config/DankMaterialShell/settings.json
+dms greeter enable
+dms greeter sync
 
 # Disable and clean power-profiles-daemon if installed
 sudo systemctl disable power-profiles-daemon &>>"$INSTLOG"
