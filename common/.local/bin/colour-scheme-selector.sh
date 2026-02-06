@@ -17,8 +17,8 @@ update-colours() {
 		ln -sf /usr/share/themes/rose-pine-gtk/gtk-4.0 ~/.config
 		;;
 	catppuccin)
-		gsettings set org.gnome.desktop.interface gtk-theme "catppuccin-mocha-mauve-standard+default"
-		ln -sf /usr/share/themes/catppuccin-mocha-mauve-standard+default/gtk-4.0 ~/.config
+		gsettings set org.gnome.desktop.interface gtk-theme "catppuccin-mocha-peach-standard+default"
+		ln -sf /usr/share/themes/catppuccin-mocha-peach-standard+default/gtk-4.0 ~/.config
 		;;
 	dracula)
 		gsettings set org.gnome.desktop.interface gtk-theme "Dracula"

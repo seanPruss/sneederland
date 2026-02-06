@@ -5,7 +5,11 @@
   "registryThemeVariants": {
     "gruvboxMaterial": "hard",
     "everforest": "hard",
-    "rosePine": "rosePine"
+    "rosePine": "rosePine",
+    "catppuccin": {
+      "flavor": "mocha",
+      "accent": "peach"
+    }
   },
   "matugenScheme": "scheme-tonal-spot",
   "runUserMatugenTemplates": true,
@@ -324,7 +328,7 @@
   "notificationTimeoutLow": 8000,
   "notificationTimeoutNormal": 10000,
   "notificationTimeoutCritical": 0,
-  "notificationCompactMode": true,
+  "notificationCompactMode": false,
   "notificationPopupPosition": -1,
   "notificationHistoryEnabled": true,
   "notificationHistoryMaxCount": 50,

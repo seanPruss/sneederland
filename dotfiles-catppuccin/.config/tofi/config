@@ -1,8 +1,8 @@
 prompt-text = "> "
 
 text-color = #cdd6f4
-prompt-color = #cba6f7
-selection-color = #cba6f7
+prompt-color = #fab387
+selection-color = #fab387
 background-color = #1e1e2edd
 
 width = 100%
