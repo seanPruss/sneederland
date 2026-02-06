@@ -34,6 +34,10 @@
   "nightModeEnabled": false,
   "animationSpeed": 4,
   "customAnimationDuration": 100,
+  "popoutAnimationSpeed": 1,
+  "popoutCustomAnimationDuration": 150,
+  "modalAnimationSpeed": 1,
+  "modalCustomAnimationDuration": 150,
   "wallpaperFillMode": "Fill",
   "blurredWallpaperLayer": false,
   "blurWallpaperOnOverview": false,
@@ -153,6 +157,7 @@
   "keyboardLayoutNameCompactMode": false,
   "runningAppsCurrentWorkspace": false,
   "runningAppsGroupByApp": false,
+  "runningAppsCurrentMonitor": false,
   "appIdSubstitutions": [],
   "centeringMode": "index",
   "clockDateFormat": "ddd MMM d",
@@ -163,8 +168,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "helium": {
-      "count": 11,
-      "lastUsed": 1770235065236,
+      "count": 18,
+      "lastUsed": 1770394492722,
       "name": "Helium Browser"
     }
   },
@@ -331,6 +336,7 @@
   "osdPosition": 4,
   "osdVolumeEnabled": true,
   "osdMediaVolumeEnabled": true,
+  "osdMediaPlaybackEnabled": true,
   "osdBrightnessEnabled": true,
   "osdIdleInhibitorEnabled": true,
   "osdMicMuteEnabled": true,
