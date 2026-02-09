@@ -16,7 +16,6 @@ prep_stage=(
 	wget
 	curl
 	stow
-	uwsm
 	plocate
 	qt5-wayland
 	qt5ct
