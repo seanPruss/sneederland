@@ -54,7 +54,4 @@ set("n", "<leader>sg", function()
         Snacks.picker.grep({ hidden = true })
     end
 end)
-set("n", "B", function()
-    Snacks.picker.buffers()
-end)
 set("n", "<leader>i", "gg=G<C-o>", { silent = true, noremap = true, desc = "Indent file" })

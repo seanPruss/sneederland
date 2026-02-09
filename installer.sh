@@ -21,6 +21,7 @@ prep_stage=(
 	qt5ct
 	qt6-wayland
 	qt6ct
+	qt6-multimedia
 	qt5-svg
 	qt5-quickcontrols2
 	qt5-graphicaleffects
@@ -70,6 +71,7 @@ install_stage=(
 	battery-notify
 	quickshell-git
 	dms-shell-git
+	dsearch-git
 	cava
 	imagemagick
 	tofi-git
@@ -95,6 +97,7 @@ install_stage=(
 	sesh-bin
 	ripgrep
 	neovim
+	tree-sitter-cli
 	ascii-image-converter
 	lazygit
 	docker
@@ -316,7 +319,6 @@ echo -e "$CNT - Enabling the auto-cpufreq Service..."
 sudo systemctl enable --now auto-cpufreq &>>"$INSTLOG"
 
 # Enable and sync DMS greeter
-echo -e "$CNT - Enabling the DMS greeter..."
 sed -i "s/seanp/$(id -un)/g" "$SCRIPT_DIR"/common/.config/DankMaterialShell/settings.json
 dms greeter enable
 dms greeter sync
