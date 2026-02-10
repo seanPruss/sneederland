@@ -51,9 +51,6 @@ update-colours() {
 	gsettings set org.gnome.desktop.interface icon-theme "BeautyLine"
 	nwg-look -x
 
-	dms ipc theme toggle
-	dms ipc theme toggle
-	dms ipc theme dark
 	dms-random-wallpaper.sh
 	bat cache --build
 	tmux kill-server
