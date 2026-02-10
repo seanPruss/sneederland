@@ -72,6 +72,7 @@ install_stage=(
 	quickshell-git
 	dms-shell-git
 	dsearch-git
+	greetd-dms-greeter-git
 	cava
 	imagemagick
 	tofi-git
@@ -131,7 +132,6 @@ install_stage=(
 	nerd-fonts
 	noto-fonts-emoji
 	nwg-look
-	greetd-dms-greeter-git
 )
 
 flatpaks=(
