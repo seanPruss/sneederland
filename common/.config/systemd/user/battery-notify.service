@@ -1,10 +1,9 @@
-[Service]
-ExecStart=battery-notify
-Restart=always
-Type=notify
+[Unit]
+Description=Desktop alert warning of low remaining battery
 
-# Will be updated once we start the loop
-WatchdogSec=2s
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/battery-notify.sh
 
 [Install]
-WantedBy=default.target
+WantedBy=graphical-session.target

@@ -267,6 +267,7 @@ spawn-sh-at-startup "systemctl --user enable --now dms-update.timer"
 spawn-sh-at-startup "systemctl --user enable --now dms-random-wallpaper.service"
 spawn-sh-at-startup "systemctl --user enable --now dms-random-wallpaper.timer"
 spawn-sh-at-startup "systemctl --user enable --now battery-notify.service"
+spawn-sh-at-startup "systemctl --user enable --now battery-notify.timer"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"

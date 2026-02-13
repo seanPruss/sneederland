@@ -68,7 +68,6 @@ install_stage=(
 	auto-cpufreq
 	banana-cursor-bin
 	ghostty-git
-	battery-notify
 	quickshell-git
 	dms-shell-git
 	dsearch-git
