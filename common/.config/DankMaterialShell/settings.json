@@ -355,6 +355,24 @@
   "notificationHistorySaveLow": true,
   "notificationHistorySaveNormal": true,
   "notificationHistorySaveCritical": true,
+  "notificationRules": [
+    {
+      "enabled": true,
+      "field": "body",
+      "pattern": "are up to date",
+      "matchType": "contains",
+      "action": "popup_only",
+      "urgency": "default"
+    },
+    {
+      "enabled": true,
+      "field": "appName",
+      "pattern": "spotify",
+      "matchType": "contains",
+      "action": "popup_only",
+      "urgency": "default"
+    }
+  ],
   "osdAlwaysShowValue": true,
   "osdPosition": 4,
   "osdVolumeEnabled": true,
