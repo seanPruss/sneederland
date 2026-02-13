@@ -73,10 +73,9 @@ install_stage=(
 	dms-shell-git
 	dsearch-git
 	greetd-dms-greeter-git
+	matugen
 	cava
 	imagemagick
-	tofi-git
-	rofimoji
 	xdg-desktop-portal-gtk
 	xdg-desktop-portal-gnome
 	satty
@@ -110,13 +109,7 @@ install_stage=(
 	fortune-mod
 	pay-respects
 	cowsay
-	rose-pine-gtk-theme-full
-	dracula-gtk-theme
-	gruvbox-gtk-theme-git
-	tokyonight-gtk-theme-git
-	nordic-theme
-	catppuccin-gtk-theme-mocha
-	kanagawa-gtk-theme-git
+	adw-gtk-theme
 	beautyline
 	libreoffice-fresh
 	thunderbird
@@ -300,15 +293,9 @@ find ~/.local/bin -type l -exec rm -i {} +
 cd "$SCRIPT_DIR" || exit
 {
 	xdg-user-dirs-update
-	stow --adopt --no-folding --target="$HOME" dotfiles-rose-pine
 	stow --adopt --no-folding --target="$HOME" common
 	git reset --hard
 } &>>"$INSTLOG"
-
-# Install rose pine gtk3 theme
-mkdir -p ~/Downloads/repos
-git clone https://github.com/Fausto-Korpsvart/Rose-Pine-GTK-Theme.git ~/Downloads/repos/Rose-Pine-GTK-Theme
-~/Downloads/repos/Rose-Pine-GTK-Theme/themes/install.sh -t purple -l
 
 # Start the bluetooth service
 echo -e "$CNT - Starting the Bluetooth Service..."
@@ -318,10 +305,13 @@ sudo systemctl enable --now bluetooth.service &>>"$INSTLOG"
 echo -e "$CNT - Enabling the auto-cpufreq Service..."
 sudo systemctl enable --now auto-cpufreq &>>"$INSTLOG"
 
-# Enable and sync DMS greeter
-sed -i "s/seanp/$(id -un)/g" "$SCRIPT_DIR"/common/.config/DankMaterialShell/settings.json
+# Enable and sync DMS greeter and dsearch
 dms greeter enable
 dms greeter sync
+dsearch index sync
+
+# This colorscript needs .Xresources which you don't need in wayland
+colorscript blacklist hex
 
 # Disable and clean power-profiles-daemon if installed
 sudo systemctl disable power-profiles-daemon &>>"$INSTLOG"

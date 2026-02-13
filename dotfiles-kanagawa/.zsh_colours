@@ -1,2 +1,0 @@
-export BAT_THEME="kanagawa"
-export FZF_DEFAULT_OPTS="--color=fg:#938aa9,bg:#16161d,hl:#e98a9e --color=fg+:#dcd7ba,bg+:#223249,hl+:#e98a9e --color=border:#2a2a37,header:#e98a9e,gutter:#16161d --color=spinner:#ff9e3b,info:#e98a9e,separator:#2a2a37 --color=pointer:#7fb4ca,marker:#e82424,prompt:#938aa9"

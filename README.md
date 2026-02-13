@@ -9,39 +9,11 @@ packages and links my configuration with GNU Stow. Feel free to copy the stuff
 in this repo since I copied a lot of it mostly from [Eric Murphy](https://github.com/ericmurphyxyz).
 You should also look at the docs for the packages if you wanna change anything.
 
-### Themes
+### Preview
 
-#### Rose Pine
-
-![Rose Pine](./screenshot-rose-pine.png)
-
-#### Catppuccin
-
-![Catppuccin](./screenshot-catppuccin.png)
-
-#### Dracula
-
-![Dracula](./screenshot-dracula.png)
-
-#### Gruvbox
-
-![Gruvbox](./screenshot-gruvbox.png)
-
-#### Tokyo Night
-
-![Tokyo Night](./screenshot-tokyo-night.png)
-
-#### Nord
-
-![Nord](./screenshot-nord.png)
-
-#### Everforest
-
-![Everforest](./screenshot-everforest.png)
-
-#### Kanagawa
-
-![Kanagawa](./screenshot-kanagawa.png)
+![Preview](./preview.png)
+Colour scheme for everything is based on the wallpaper with [matugen](https://github.com/InioX/matugen)
+so it always changes
 
 ### Programs I use
 

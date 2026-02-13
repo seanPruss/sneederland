@@ -42,38 +42,10 @@ random_logo() {
 }
 
 random_logo
-source ~/.zsh_colours
 tmux ls &>/dev/null || tmux new-session -d
 source <(fzf --zsh)
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(pay-respects zsh)"
-TRANSIENT_PROMPT=`starship module character`
-zle-line-init() {
-    emulate -L zsh
-
-    [[ $CONTEXT == start ]] || return 0
-    while true; do
-        zle .recursive-edit
-        local -i ret=$?
-        [[ $ret == 0 && $KEYS == $'\4' ]] || break
-        [[ -o ignore_eof ]] || exit 0
-    done
-
-    local saved_prompt=$PROMPT
-    local saved_rprompt=$RPROMPT
-
-    PROMPT=$TRANSIENT_PROMPT
-    zle .reset-prompt
-    PROMPT=$saved_prompt
-
-    if (( ret )); then
-        zle .send-break
-    else
-        zle .accept-line
-    fi
-    return ret
-}
-zle -N zle-line-init
 eval "$(starship init zsh)"
 
 # Load stuff
@@ -108,11 +80,19 @@ setopt hist_find_no_dups
 export MANPAGER='nvim +Man!'
 
 # fzf options
+export FZF_DEFAULT_OPTS='
+  --color=fg:-1,bg:-1,hl:4
+  --color=fg+:-1,bg+:-1,hl+:4
+  --color=info:6,prompt:5,spinner:6,pointer:5,marker:2
+'
 export FZF_ALT_C_COMMAND="fd --strip-cwd-prefix --type directory --hidden --follow"
 export FZF_ALT_C_OPTS="--height 40% --reverse --preview 'eza -A --tree --git-ignore {} | head -n 200'"
 export FZF_CTRL_T_COMMAND="fd --strip-cwd-prefix --type file --hidden --follow"
 export FZF_CTRL_T_OPTS="--height 40% --reverse --preview 'bat --color=always --style=full --line-range=:500 {}' "
 export FZF_DEFAULT_COMMAND="fd --strip-cwd-prefix --hidden --follow"
+
+# bat theme
+export BAT_THEME="base16"
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 # disable sort when completing `git checkout`

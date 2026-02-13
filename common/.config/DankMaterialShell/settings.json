@@ -1,6 +1,6 @@
 {
-  "currentThemeName": "custom",
-  "currentThemeCategory": "custom",
+  "currentThemeName": "dynamic",
+  "currentThemeCategory": "dynamic",
   "customThemeFile": "/home/seanp/.config/DankMaterialShell/theme.json",
   "registryThemeVariants": {
     "gruvboxMaterial": "hard",
@@ -85,22 +85,17 @@
     {
       "id": "volumeSlider",
       "enabled": true,
-      "width": 50
+      "width": 100
+    },
+    {
+      "id": "inputVolumeSlider",
+      "enabled": true,
+      "width": 100
     },
     {
       "id": "brightnessSlider",
       "enabled": true,
-      "width": 50
-    },
-    {
-      "id": "wifi",
-      "enabled": true,
-      "width": 50
-    },
-    {
-      "id": "bluetooth",
-      "enabled": true,
-      "width": 50
+      "width": 100
     },
     {
       "id": "audioOutput",
@@ -113,14 +108,34 @@
       "width": 50
     },
     {
-      "id": "doNotDisturb",
+      "id": "bluetooth",
       "enabled": true,
       "width": 50
     },
     {
-      "id": "idleInhibitor",
+      "id": "wifi",
       "enabled": true,
       "width": 50
+    },
+    {
+      "id": "doNotDisturb",
+      "enabled": true,
+      "width": 25
+    },
+    {
+      "id": "idleInhibitor",
+      "enabled": true,
+      "width": 25
+    },
+    {
+      "id": "nightMode",
+      "enabled": true,
+      "width": 25
+    },
+    {
+      "id": "darkMode",
+      "enabled": true,
+      "width": 25
     }
   ],
   "showWorkspaceIndex": true,
@@ -148,6 +163,7 @@
   "scrollTitleEnabled": true,
   "audioVisualizerEnabled": true,
   "audioScrollMode": "nothing",
+  "audioWheelScrollAmount": 5,
   "clockCompactMode": false,
   "focusedWindowCompactMode": false,
   "runningAppsCompactMode": true,
@@ -174,8 +190,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "helium": {
-      "count": 21,
-      "lastUsed": 1770670604484,
+      "count": 30,
+      "lastUsed": 1770934100330,
       "name": "Helium Browser"
     }
   },
@@ -321,6 +337,7 @@
   "lockScreenShowPasswordField": true,
   "lockScreenShowMediaPlayer": true,
   "lockScreenPowerOffMonitorsOnLock": false,
+  "lockAtStartup": false,
   "enableFprint": false,
   "maxFprintTries": 15,
   "lockScreenActiveMonitor": "all",

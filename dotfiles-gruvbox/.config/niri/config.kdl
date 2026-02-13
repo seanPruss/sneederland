@@ -1,8 +1,0 @@
-layout {
-    focus-ring {
-        width 3
-        active-gradient from="#fb4934" to="#a8b665" angle=45
-        inactive-gradient from="#282828" to="#928374" angle=45 relative-to="workspace-view"
-    }
-}
-include "common.kdl"
