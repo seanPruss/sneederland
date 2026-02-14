@@ -137,8 +137,6 @@ output "HDMI-A-1" {
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
-    // Set gaps around windows in logical pixels.
-    gaps 20
     background-color "transparent"
 
     // When to center a column when changing focus, options are:
@@ -319,12 +317,6 @@ animations {
     // slowdown 3.0
 }
 
-recent-windows {
-    highlight {
-        corner-radius 20
-    }
-}
-
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Window-Rules
@@ -358,15 +350,6 @@ recent-windows {
 
     // Use this instead if you want them visible on third-party screenshot tools.
     // block-out-from "screencast"
-}
-
-// Example: enable rounded corners for all windows.
-// (This example rule is commented out with a "/-" in front.)
-window-rule {
-    geometry-corner-radius 20
-    clip-to-geometry true
-    draw-border-with-background false
-    tiled-state true
 }
 
 window-rule {
@@ -645,3 +628,6 @@ binds {
 }
 
 include "dms/colors.kdl"
+include "dms/layout.kdl"
+include "dms/cursor.kdl"
+include "dms/alttab.kdl"

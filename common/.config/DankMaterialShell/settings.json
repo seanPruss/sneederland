@@ -190,8 +190,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "helium": {
-      "count": 30,
-      "lastUsed": 1770934100330,
+      "count": 32,
+      "lastUsed": 1771101688272,
       "name": "Helium Browser"
     }
   },
@@ -518,7 +518,7 @@
       ],
       "spacing": 4,
       "innerPadding": 4,
-      "bottomGap": -10,
+      "bottomGap": 0,
       "transparency": 0.75,
       "widgetTransparency": 1,
       "squareCorners": false,
