@@ -37,11 +37,11 @@
   "windSpeedUnit": "kmh",
   "nightModeEnabled": false,
   "animationSpeed": 4,
-  "customAnimationDuration": 100,
+  "customAnimationDuration": 50,
   "syncComponentAnimationSpeeds": true,
-  "popoutAnimationSpeed": 1,
+  "popoutAnimationSpeed": 4,
   "popoutCustomAnimationDuration": 150,
-  "modalAnimationSpeed": 1,
+  "modalAnimationSpeed": 4,
   "modalCustomAnimationDuration": 150,
   "enableRippleEffects": true,
   "wallpaperFillMode": "Fill",
@@ -190,8 +190,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "helium": {
-      "count": 32,
-      "lastUsed": 1771101688272,
+      "count": 33,
+      "lastUsed": 1771106302655,
       "name": "Helium Browser"
     }
   },
