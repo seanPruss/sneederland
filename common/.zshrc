@@ -42,7 +42,6 @@ random_logo() {
 }
 
 random_logo
-tmux ls &>/dev/null || tmux new-session -d
 source <(fzf --zsh)
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(pay-respects zsh)"
