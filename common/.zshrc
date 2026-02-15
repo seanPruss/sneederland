@@ -22,7 +22,7 @@ zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
 
-AUTO_NOTIFY_IGNORE+=("sesh-connect.sh" "yz" "cat")
+AUTO_NOTIFY_IGNORE+=("sesh-connect" "yz" "cat")
 
 random_logo() {
     rand=$((RANDOM % 8))
@@ -59,7 +59,7 @@ zinit cdreplay -q
 bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
-bindkey -s '\es' 'sesh-connect.sh^M'
+bindkey -s '\es' 'sesh-connect^M'
 bindkey '^x^e' edit-command-line
 
 # History
@@ -189,4 +189,17 @@ yz() {
     IFS= read -r -d '' cwd < "$tmp"
     [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && cd -- "$cwd"
     rm -f -- "$tmp"
+}
+
+sesh-connect() {
+    sesh connect "$(
+	sesh list --icons | fzf --tmux 80% --reverse \
+		--preview-window 'right:70%' \
+		--preview 'sesh preview {}' \
+		--no-sort --ansi --border-label ' sesh ' --prompt '⚡  ' \
+		--header '  ^a sesh list ^d tmux kill ^f find' \
+		--bind 'tab:down,btab:up' \
+		--bind 'ctrl-a:change-prompt(⚡  )+reload(sesh list --icons)' \
+		--bind 'ctrl-f:change-prompt(🔎  )+reload(fd -H -d 2 -t d -E .Trash . ~)' \
+		--bind 'ctrl-d:execute(tmux kill-session -t {2..})+change-prompt(⚡  )+reload(sesh list --icons)')"
 }
