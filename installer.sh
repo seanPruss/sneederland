@@ -20,7 +20,7 @@ prep_stage=(
 	qt5-wayland
 	qt5ct
 	qt6-wayland
-	qt6ct
+	qt6ct-kde
 	qt6-multimedia
 	qt5-svg
 	qt5-quickcontrols2
