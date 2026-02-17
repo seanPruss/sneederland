@@ -193,7 +193,7 @@ yz() {
 
 sesh-connect() {
     sesh connect "$(
-	sesh list --icons | fzf --tmux 80% --reverse \
+	sesh list --icons | fzf --reverse \
 		--preview-window 'right:70%' \
 		--preview 'sesh preview {}' \
 		--no-sort --ansi --border-label ' sesh ' --prompt '⚡  ' \

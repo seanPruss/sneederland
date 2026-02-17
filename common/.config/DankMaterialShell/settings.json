@@ -190,8 +190,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "helium": {
-      "count": 37,
-      "lastUsed": 1771248947653,
+      "count": 38,
+      "lastUsed": 1771278104765,
       "name": "Helium Browser"
     }
   },
@@ -359,8 +359,8 @@
   "notificationRules": [
     {
       "enabled": true,
-      "field": "body",
-      "pattern": "are up to date",
+      "field": "appName",
+      "pattern": "notify-send",
       "matchType": "contains",
       "action": "popup_only",
       "urgency": "default"
