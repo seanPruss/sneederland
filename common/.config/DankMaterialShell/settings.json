@@ -279,7 +279,7 @@
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
   "syncModeWithPortal": true,
-  "terminalsAlwaysDark": false,
+  "terminalsAlwaysDark": true,
   "runDmsMatugenTemplates": true,
   "matugenTemplateGtk": true,
   "matugenTemplateNiri": true,
@@ -515,10 +515,6 @@
           "showBrightnessPercent": true,
           "showMicIcon": false,
           "showBatteryIcon": false
-        },
-        {
-          "id": "powerMenuButton",
-          "enabled": true
         }
       ],
       "spacing": 4,
