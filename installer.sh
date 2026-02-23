@@ -85,7 +85,7 @@ install_stage=(
 	zsh
 	trash-cli
 	starship-git
-	yazi-git
+	yazi
 	resvg
 	ueberzugpp
 	ffmpegthumbnailer

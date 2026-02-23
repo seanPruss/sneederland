@@ -138,7 +138,7 @@
       "width": 25
     }
   ],
-  "showWorkspaceIndex": true,
+  "showWorkspaceIndex": false,
   "showWorkspaceName": false,
   "showWorkspacePadding": false,
   "workspaceScrolling": false,
@@ -190,8 +190,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "helium": {
-      "count": 47,
-      "lastUsed": 1771611650735,
+      "count": 55,
+      "lastUsed": 1771795026289,
       "name": "Helium Browser"
     }
   },
@@ -336,7 +336,7 @@
   "lockScreenShowSystemIcons": true,
   "lockScreenShowTime": true,
   "lockScreenShowDate": true,
-  "lockScreenShowProfileImage": false,
+  "lockScreenShowProfileImage": true,
   "lockScreenShowPasswordField": true,
   "lockScreenShowMediaPlayer": true,
   "lockScreenPowerOffMonitorsOnLock": false,
@@ -352,8 +352,8 @@
   "notificationTimeoutCritical": 0,
   "notificationCompactMode": false,
   "notificationPopupPosition": -1,
-  "notificationAnimationSpeed": 1,
-  "notificationCustomAnimationDuration": 400,
+  "notificationAnimationSpeed": 4,
+  "notificationCustomAnimationDuration": 100,
   "notificationHistoryEnabled": true,
   "notificationHistoryMaxCount": 50,
   "notificationHistoryMaxAgeDays": 1,
@@ -407,7 +407,7 @@
   "customPowerActionHibernate": "",
   "customPowerActionReboot": "",
   "customPowerActionPowerOff": "",
-  "updaterHideWidget": false,
+  "updaterHideWidget": true,
   "updaterUseCustomCommand": true,
   "updaterCustomCommand": "update.sh update",
   "updaterTerminalAdditionalParams": "",

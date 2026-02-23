@@ -358,6 +358,21 @@ window-rule {
     open-floating true
 }
 
+window-rule {
+    background-effect {
+        blur true
+        xray true
+        noise 0.05
+        saturation 3
+    }
+}
+
+window-rule {
+    match is-floating=true
+    match is-focused=false
+    opacity 0.85
+}
+
 layer-rule {
     match namespace="^quickshell$"
     place-within-backdrop true
@@ -632,3 +647,4 @@ include "dms/colors.kdl"
 include "dms/layout.kdl"
 include "dms/cursor.kdl"
 include "dms/alttab.kdl"
+include "dms/wpblur.kdl"

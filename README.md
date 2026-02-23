@@ -17,7 +17,7 @@ so it always changes
 
 ### Programs I use
 
-- Window manager: [Niri](https://yalter.github.io/niri/index.html)
+- Window manager: [Niri](https://niri-wm.github.io/niri/index.html)
 - Desktop shell: [Dank Material Shell](https://danklinux.com)
 - Terminal: [Ghostty](https://github.com/ghostty-org/ghostty)
 - Login shell: [Zsh](https://wiki.archlinux.org/title/Zsh)
