@@ -362,9 +362,12 @@ window-rule {
     background-effect {
         blur true
         xray true
-        noise 0.05
-        saturation 3
     }
+}
+
+blur {
+    passes 2
+    saturation 1
 }
 
 window-rule {
