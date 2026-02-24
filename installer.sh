@@ -16,6 +16,7 @@ prep_stage=(
 	wget
 	curl
 	stow
+	vulkan-headers
 	plocate
 	qt5-wayland
 	qt5ct
