@@ -154,7 +154,6 @@ show_progress() {
 	echo -en " Done!\n"
 }
 
-# clear the screen
 clear
 
 # attempt to discover if this is a VM or not

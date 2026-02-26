@@ -268,6 +268,9 @@ spawn-sh-at-startup "systemctl --user enable --now battery-notify.service"
 spawn-sh-at-startup "systemctl --user enable --now battery-notify.timer"
 spawn-sh-at-startup "systemctl --user enable --now tmux.service"
 
+workspace "scratch"
+workspace "browser"
+
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
@@ -378,6 +381,17 @@ window-rule {
 window-rule {
     match is-floating=true
     opacity 0.75
+}
+
+window-rule {
+    match app-id="spotify"
+    match app-id="org.mozilla.Thunderbird"
+    open-on-workspace "scratch"
+}
+
+window-rule {
+    match app-id="helium"
+    open-on-workspace "browser"
 }
 
 layer-rule {
