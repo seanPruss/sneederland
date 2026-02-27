@@ -190,8 +190,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "helium": {
-      "count": 58,
-      "lastUsed": 1772048832454,
+      "count": 59,
+      "lastUsed": 1772211914650,
       "name": "Helium Browser"
     }
   },
@@ -343,6 +343,8 @@
   "lockAtStartup": false,
   "enableFprint": false,
   "maxFprintTries": 15,
+  "enableU2f": false,
+  "u2fMode": "or",
   "lockScreenActiveMonitor": "all",
   "lockScreenInactiveColor": "#000000",
   "lockScreenNotificationMode": 0,
