@@ -190,8 +190,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "helium": {
-      "count": 59,
-      "lastUsed": 1772211914650,
+      "count": 62,
+      "lastUsed": 1772404889690,
       "name": "Helium Browser"
     }
   },
@@ -638,5 +638,6 @@
   "clipboardEnterToPaste": false,
   "launcherPluginVisibility": {},
   "launcherPluginOrder": [],
-  "configVersion": 5
+  "configVersion": 6,
+  "barElevationEnabled": false
 }
