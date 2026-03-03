@@ -12,126 +12,127 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # Define the software that would be installed
 prep_stage=(
-	xdg-user-dirs
-	wget
-	curl
-	stow
-	vulkan-headers
-	plocate
-	qt5-wayland
-	qt5ct
-	qt6-wayland
-	qt6ct-kde
-	qt6-multimedia
-	qt5-svg
-	qt5-quickcontrols2
-	qt5-graphicaleffects
-	gtk3
-	gtk4
-	gtk4-layer-shell
-	pipewire
-	wireplumber
-	jq
-	wl-clipboard
-	cliphist
-	pacman-contrib
-	cmake
+    xdg-user-dirs
+    wget
+    curl
+    stow
+    vulkan-headers
+    cpptrace
+    plocate
+    qt5-wayland
+    qt5ct
+    qt6-wayland
+    qt6ct-kde
+    qt6-multimedia
+    qt5-svg
+    qt5-quickcontrols2
+    qt5-graphicaleffects
+    gtk3
+    gtk4
+    gtk4-layer-shell
+    pipewire
+    wireplumber
+    jq
+    wl-clipboard
+    cliphist
+    pacman-contrib
+    cmake
 )
 
 #software for nvidia GPU only
 nvidia_stage=(
-	linux-headers
-	nvidia-dkms
-	nvidia-settings
-	libva
-	libva-nvidia-driver-git
+    linux-headers
+    nvidia-dkms
+    nvidia-settings
+    libva
+    libva-nvidia-driver-git
 )
 
 #the main packages
 install_stage=(
-	flatpak
-	ufw
-	playerctl
-	man-db
-	man-pages
-	kanata-bin
-	fd
-	bat
-	git-delta
-	rust
-	niri-git
-	xwayland-satellite
-	rust-analyzer
-	jdk-openjdk
-	vesktop
-	npm
-	vlc
-	auto-cpufreq
-	banana-cursor-bin
-	ghostty-git
-	quickshell-git
-	dms-shell-git
-	dsearch-git
-	greetd-dms-greeter-git
-	matugen
-	cava
-	imagemagick
-	xdg-desktop-portal-gtk
-	xdg-desktop-portal-gnome
-	satty
-	helium-browser-bin
-	shellcheck
-	fzf
-	tealdeer
-	zsh
-	trash-cli
-	starship-git
-	yazi
-	resvg
-	ueberzugpp
-	ffmpegthumbnailer
-	unarchiver
-	poppler
-	fastfetch
-	shell-color-scripts-git
-	tmux
-	sesh-bin
-	ripgrep
-	neovim
-	tree-sitter-cli
-	ascii-image-converter
-	lazygit
-	docker
-	lazydocker
-	zoxide
-	eza
-	toilet
-	toilet-fonts
-	fortune-mod
-	pay-respects
-	cowsay
-	adw-gtk-theme
-	beautyline
-	libreoffice-fresh
-	thunderbird
-	mpv
-	pamixer
-	pulsecontrol-git
-	brightnessctl
-	bluez
-	bluez-utils
-	overskride
-	gvfs
-	file-roller
-	nerd-fonts
-	noto-fonts-emoji
-	nwg-look
+    flatpak
+    ufw
+    playerctl
+    man-db
+    man-pages
+    kanata-bin
+    fd
+    bat
+    git-delta
+    rust
+    niri-git
+    xwayland-satellite
+    rust-analyzer
+    jdk-openjdk
+    vesktop
+    npm
+    vlc
+    auto-cpufreq
+    banana-cursor-bin
+    ghostty-git
+    quickshell-git
+    dms-shell-git
+    dsearch-git
+    greetd-dms-greeter-git
+    matugen
+    cava
+    imagemagick
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-gnome
+    satty
+    helium-browser-bin
+    shellcheck
+    fzf
+    tealdeer
+    zsh
+    trash-cli
+    starship-git
+    yazi
+    resvg
+    ueberzugpp
+    ffmpegthumbnailer
+    unarchiver
+    poppler
+    fastfetch
+    shell-color-scripts-git
+    tmux
+    sesh-bin
+    ripgrep
+    neovim
+    tree-sitter-cli
+    ascii-image-converter
+    lazygit
+    docker
+    lazydocker
+    zoxide
+    eza
+    toilet
+    toilet-fonts
+    fortune-mod
+    pay-respects
+    cowsay
+    adw-gtk-theme
+    beautyline
+    libreoffice-fresh
+    thunderbird
+    mpv
+    pamixer
+    pulsecontrol-git
+    brightnessctl
+    bluez
+    bluez-utils
+    overskride
+    gvfs
+    file-roller
+    nerd-fonts
+    noto-fonts-emoji
+    nwg-look
 )
 
 flatpaks=(
-	io.github.flattool.Ignition
-	com.github.tchx84.Flatseal
-	com.spotify.Client
+    io.github.flattool.Ignition
+    com.github.tchx84.Flatseal
+    com.spotify.Client
 )
 
 # set some colors
@@ -147,11 +148,11 @@ INSTLOG=$SCRIPT_DIR/install.log
 
 # function that would show a progress bar to the user
 show_progress() {
-	while ps | grep "$1" &>/dev/null; do
-		echo -n "."
-		sleep 2
-	done
-	echo -en " Done!\n"
+    while ps | grep "$1" &>/dev/null; do
+        echo -n "."
+        sleep 2
+    done
+    echo -en " Done!\n"
 }
 
 clear
@@ -161,7 +162,7 @@ echo -e "$CNT - Checking for Physical or VM..."
 ISVM=$(hostnamectl | grep Chassis)
 echo -e "Using $ISVM"
 if [[ $ISVM == *"vm"* ]]; then
-	echo -e "$CWR - Please note that VMs are not fully supported and if you try to run this on
+    echo -e "$CWR - Please note that VMs are not fully supported and if you try to run this on
     a Virtual Machine there is a high chance this will fail."
 fi
 
@@ -174,36 +175,36 @@ Feel free to look through the package list and remove any packages that would co
 # give the user an option to exit out
 read -rep $'[\e[1;33mACTION\e[0m] - Would you like to continue with the install (y,n) ' CONTINST
 if [[ $CONTINST == "Y" || $CONTINST == "y" ]]; then
-	echo -e "$CNT - Setup starting..."
-	sudo touch /tmp/sudo.tmp
+    echo -e "$CNT - Setup starting..."
+    sudo touch /tmp/sudo.tmp
 else
-	echo -e "$CNT - This script will now exit, no changes were made to your system."
-	exit
+    echo -e "$CNT - This script will now exit, no changes were made to your system."
+    exit
 fi
 
 # find the Nvidia GPU
 if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia; then
-	ISNVIDIA=true
+    ISNVIDIA=true
 else
-	ISNVIDIA=false
+    ISNVIDIA=false
 fi
 
 ### Disable wifi powersave mode ###
 read -rep $'[\e[1;33mACTION\e[0m] - Would you like to disable WiFi powersave? (y,n) ' WIFI
 if [[ $WIFI == "Y" || $WIFI == "y" ]]; then
-	LOC="/etc/NetworkManager/conf.d/wifi-powersave.conf"
-	echo -e "$CNT - The following file has been created $LOC.\n"
-	echo -e "[connection]\nwifi.powersave = 2" | sudo tee -a $LOC &>>"$INSTLOG"
-	echo -en "$CNT - Restarting NetworkManager service, Please wait."
-	sudo systemctl restart NetworkManager &>>"$INSTLOG"
+    LOC="/etc/NetworkManager/conf.d/wifi-powersave.conf"
+    echo -e "$CNT - The following file has been created $LOC.\n"
+    echo -e "[connection]\nwifi.powersave = 2" | sudo tee -a $LOC &>>"$INSTLOG"
+    echo -en "$CNT - Restarting NetworkManager service, Please wait."
+    sudo systemctl restart NetworkManager &>>"$INSTLOG"
 
-	#wait for services to restore (looking at you DNS)
-	for _ in {1..6}; do
-		echo -n "."
-		sleep 1
-	done
-	echo -en "Done!\n"
-	echo -e "\e[1A\e[K$COK - NetworkManager restart completed."
+    #wait for services to restore (looking at you DNS)
+    for _ in {1..6}; do
+        echo -n "."
+        sleep 1
+    done
+    echo -en "Done!\n"
+    echo -e "\e[1A\e[K$COK - NetworkManager restart completed."
 fi
 
 echo -e "$CNT - Installing reflector"
@@ -211,35 +212,35 @@ sudo pacman -S reflector --needed --noconfirm &>>"$INSTLOG" || exit
 echo -e "\e[1A\e[K$COK - Reflector installed."
 echo -e "$CNT - Updating mirrorlist"
 while ! sudo reflector -f 30 -l 30 --number 20 --sort rate --verbose --save /etc/pacman.d/mirrorlist &>>"$INSTLOG"; do
-	true
+    true
 done
 echo -e "\e[1A\e[K$COK - Mirrorlist updated."
 sudo pacman -S --needed base-devel &>>"$INSTLOG" || exit
 
 #### Check for package manager ####
 if ! command -v yay &>/dev/null; then
-	echo -en "$CNT - Installing yay."
-	git clone https://aur.archlinux.org/yay.git &>>"$INSTLOG"
-	cd yay || exit
-	if makepkg -si --noconfirm; then
-		echo -e "\e[1A\e[K$COK - yay installed"
-		cd ..
+    echo -en "$CNT - Installing yay."
+    git clone https://aur.archlinux.org/yay.git &>>"$INSTLOG"
+    cd yay || exit
+    if makepkg -si --noconfirm; then
+        echo -e "\e[1A\e[K$COK - yay installed"
+        cd ..
 
-		# update the yay database
-		echo -en "$CNT - Running a system update."
-		yay -Syyu --noconfirm &>>"$INSTLOG" &
-		show_progress $!
-		echo -e "\e[1A\e[K$COK - System updated."
-	else
-		# if this is hit then a package is missing, exit to review log
-		echo -e "\e[1A\e[K$CER - yay install failed, please check the install.log"
-		exit
-	fi
+        # update the yay database
+        echo -en "$CNT - Running a system update."
+        yay -Syyu --noconfirm &>>"$INSTLOG" &
+        show_progress $!
+        echo -e "\e[1A\e[K$COK - System updated."
+    else
+        # if this is hit then a package is missing, exit to review log
+        echo -e "\e[1A\e[K$CER - yay install failed, please check the install.log"
+        exit
+    fi
 else
-	echo -en "$CNT - Running a system update."
-	yay -Syyu --noconfirm &>>"$INSTLOG" &
-	show_progress $!
-	echo -e "\e[1A\e[K$COK - System updated."
+    echo -en "$CNT - Running a system update."
+    yay -Syyu --noconfirm &>>"$INSTLOG" &
+    show_progress $!
+    echo -e "\e[1A\e[K$COK - System updated."
 fi
 
 sudo cp "$SCRIPT_DIR"/cleancache.hook /usr/share/libalpm/hooks
@@ -247,30 +248,30 @@ sudo cp "$SCRIPT_DIR"/clearcache /usr/share/libalpm/scripts
 
 # Prep Stage - Bunch of needed items
 for SOFTWR in "${prep_stage[@]}"; do
-	yay -S --noconfirm --needed "$SOFTWR" || exit
+    yay -S --noconfirm --needed "$SOFTWR" || exit
 done
 
 # Setup Nvidia if it was found
 if [[ "$ISNVIDIA" == true ]]; then
-	echo -e "$CNT - Nvidia GPU support setup stage, this may take a while..."
-	for SOFTWR in "${nvidia_stage[@]}"; do
-		yay -S --noconfirm --needed "$SOFTWR" || exit
-	done
+    echo -e "$CNT - Nvidia GPU support setup stage, this may take a while..."
+    for SOFTWR in "${nvidia_stage[@]}"; do
+        yay -S --noconfirm --needed "$SOFTWR" || exit
+    done
 
-	# update config
-	sudo sed -i 's/MODULES=()/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
-	sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
-	echo -e "options nvidia-drm modeset=1" | sudo tee -a /etc/modprobe.d/nvidia.conf &>>"$INSTLOG"
+    # update config
+    sudo sed -i 's/MODULES=()/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
+    sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
+    echo -e "options nvidia-drm modeset=1" | sudo tee -a /etc/modprobe.d/nvidia.conf &>>"$INSTLOG"
 fi
 
 # Stage 1 - main components
 for SOFTWR in "${install_stage[@]}"; do
-	yay -S --needed --noconfirm "$SOFTWR" || exit
+    yay -S --needed --noconfirm "$SOFTWR" || exit
 done
 
 # Install flatpaks
 for SOFTWR in "${flatpaks[@]}"; do
-	flatpak install "$SOFTWR" -y || exit
+    flatpak install "$SOFTWR" -y || exit
 done
 
 # Switch to zsh
@@ -292,9 +293,9 @@ find ~/.local/bin -type l -exec rm -i {} +
 # generate symlinks for dotfiles
 cd "$SCRIPT_DIR" || exit
 {
-	xdg-user-dirs-update
-	stow --adopt --no-folding --target="$HOME" common
-	git reset --hard
+    xdg-user-dirs-update
+    stow --adopt --no-folding --target="$HOME" common
+    git reset --hard
 } &>>"$INSTLOG"
 
 # Start the bluetooth service
@@ -322,10 +323,10 @@ yay -Q kitty &>/dev/null && yay -Rns kitty &>>"$INSTLOG"
 
 WLDIR=/usr/share/wayland-sessions
 if [ -d "$WLDIR" ]; then
-	echo -e "$COK - $WLDIR found"
+    echo -e "$COK - $WLDIR found"
 else
-	echo -e "$CWR - $WLDIR NOT found, creating..."
-	sudo mkdir $WLDIR
+    echo -e "$CWR - $WLDIR NOT found, creating..."
+    sudo mkdir $WLDIR
 fi
 
 # Set up plocate
@@ -335,12 +336,12 @@ sudo updatedb &>>"$INSTLOG"
 # Set up ufw
 echo -e "$CNT - Setting up UFW"
 {
-	sudo ufw limit 22/tcp
-	sudo ufw allow 80/tcp
-	sudo ufw allow 443/tcp
-	sudo ufw default deny incoming
-	sudo ufw default allow outgoing
-	sudo ufw enable
+    sudo ufw limit 22/tcp
+    sudo ufw allow 80/tcp
+    sudo ufw allow 443/tcp
+    sudo ufw default deny incoming
+    sudo ufw default allow outgoing
+    sudo ufw enable
 } &>>"$INSTLOG"
 
 # Set up tpm for tmux
@@ -350,9 +351,9 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &>>"$INSTLOG"
 ### Script is done ###
 echo -e "$CNT - Script had completed!"
 if [[ "$ISNVIDIA" == true ]]; then
-	echo -e "$CAT - Since we attempted to setup an Nvidia GPU the script will now end and you should reboot.
+    echo -e "$CAT - Since we attempted to setup an Nvidia GPU the script will now end and you should reboot.
     Please type 'reboot' at the prompt and hit Enter when ready."
-	exit 0
+    exit 0
 fi
 
 echo -e "$CNT - If you are using a laptop, consider using the kanata service to remap your laptop keyboard for easier access to modifier keys. Just run these commands after ensuring that the device specified in config.kbd is the correct one:
