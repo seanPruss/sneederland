@@ -62,6 +62,8 @@ install_stage=(
     rust
     niri-git
     xwayland-satellite
+    cups-pk-helper
+    kimageformats
     rust-analyzer
     jdk-openjdk
     vesktop
