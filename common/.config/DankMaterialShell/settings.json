@@ -194,14 +194,16 @@
   "centeringMode": "index",
   "clockDateFormat": "ddd MMM d",
   "lockDateFormat": "",
+  "greeterRememberLastSession": true,
+  "greeterRememberLastUser": true,
   "mediaSize": 1,
   "appLauncherViewMode": "list",
   "spotlightModalViewMode": "list",
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "helium": {
-      "count": 70,
-      "lastUsed": 1772658018570,
+      "count": 71,
+      "lastUsed": 1772731374510,
       "name": "Helium Browser"
     }
   },

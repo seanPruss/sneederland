@@ -347,6 +347,7 @@ echo -e "$CNT - Setting up UFW"
 # Set up tpm for tmux
 echo -e "$CNT - Setting up tmux plugins"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &>>"$INSTLOG"
+systemctl --user enable tmux.service
 
 ### Script is done ###
 echo -e "$CNT - Script had completed!"

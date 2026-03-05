@@ -266,7 +266,6 @@ spawn-sh-at-startup "systemctl --user enable --now dms-random-wallpaper.service"
 spawn-sh-at-startup "systemctl --user enable --now dms-random-wallpaper.timer"
 spawn-sh-at-startup "systemctl --user enable --now battery-notify.service"
 spawn-sh-at-startup "systemctl --user enable --now battery-notify.timer"
-spawn-sh-at-startup "systemctl --user enable --now tmux.service"
 
 workspace "scratch"
 workspace "browser"
@@ -417,9 +416,8 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return hotkey-overlay-title="Terminal" { spawn "ghostty"; }
     Mod+Space hotkey-overlay-title="Application Launcher" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
-    Mod+Shift+S hotkey-overlay-title="Take a screenshot" { spawn "dms" "ipc" "call" "niri" "screenshot"; }
-    Mod+Ctrl+S hotkey-overlay-title="Screenshot screen" { spawn "dms" "ipc" "call" "niri" "screenshotScreen"; }
-    Mod+Alt+S hotkey-overlay-title="Screenshot window" { spawn "dms" "ipc" "call" "niri" "screenshotWindow"; }
+    Mod+Shift+S hotkey-overlay-title="Take a screenshot" { spawn-sh "dms screenshot --stdout | satty --filename -"; }
+    Mod+Ctrl+S hotkey-overlay-title="Screenshot screen" { spawn-sh "dms screenshot full --stdout | satty --filename -"; }
     Mod+M hotkey-overlay-title="Power menu" { spawn "dms" "ipc" "call" "powermenu" "toggle"; }
     Mod+T hotkey-overlay-title="Task Manager" { spawn "dms" "ipc" "call" "processlist" "focusOrToggle"; }
     Mod+B hotkey-overlay-title="Browser" { spawn "helium-browser"; }

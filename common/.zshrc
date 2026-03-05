@@ -137,6 +137,7 @@ alias mirror="sudo reflector -f 30 -l 30 --number 20 --sort rate --verbose --sav
 alias sl="ls"
 alias xs="cd"
 alias xsi="cdi"
+alias s="sesh"
 
 # Functions
 chpwd() {
