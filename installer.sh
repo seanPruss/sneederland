@@ -15,6 +15,7 @@ prep_stage=(
     xdg-user-dirs
     wget
     curl
+    inotify-tools
     stow
     vulkan-headers
     cpptrace
