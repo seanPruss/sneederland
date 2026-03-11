@@ -383,6 +383,11 @@ window-rule {
 }
 
 window-rule {
+    match app-id="swappy"
+    opacity 1.0
+}
+
+window-rule {
     match app-id="spotify"
     match app-id="org.mozilla.Thunderbird"
     open-on-workspace "scratch"
@@ -416,8 +421,8 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return hotkey-overlay-title="Terminal" { spawn "ghostty"; }
     Mod+Space hotkey-overlay-title="Application Launcher" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
-    Mod+Shift+S hotkey-overlay-title="Take a screenshot" { spawn-sh "dms screenshot --stdout | satty --filename -"; }
-    Mod+Ctrl+S hotkey-overlay-title="Screenshot screen" { spawn-sh "dms screenshot full --stdout | satty --filename -"; }
+    Mod+Shift+S hotkey-overlay-title="Take a screenshot" { spawn-sh "dms screenshot --stdout | swappy -f -"; }
+    Mod+Ctrl+S hotkey-overlay-title="Screenshot screen" { spawn-sh "dms screenshot full --stdout | swappy -f -"; }
     Mod+M hotkey-overlay-title="Power menu" { spawn "dms" "ipc" "call" "powermenu" "toggle"; }
     Mod+T hotkey-overlay-title="Task Manager" { spawn "dms" "ipc" "call" "processlist" "focusOrToggle"; }
     Mod+B hotkey-overlay-title="Browser" { spawn "helium-browser"; }

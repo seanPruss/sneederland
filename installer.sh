@@ -82,7 +82,8 @@ install_stage=(
     imagemagick
     xdg-desktop-portal-gtk
     xdg-desktop-portal-gnome
-    satty
+    swappy
+    otf-font-awesome
     helium-browser-bin
     shellcheck
     fzf
