@@ -211,8 +211,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "helium": {
-      "count": 73,
-      "lastUsed": 1772923024866,
+      "count": 78,
+      "lastUsed": 1773247840829,
       "name": "Helium Browser"
     }
   },
@@ -325,10 +325,12 @@
   "matugenTemplateKcolorscheme": true,
   "matugenTemplateVscode": true,
   "matugenTemplateEmacs": true,
+  "matugenTemplateZed": true,
   "showDock": false,
   "dockAutoHide": true,
   "dockSmartAutoHide": false,
   "dockGroupByApp": false,
+  "dockRestoreSpecialWorkspaceOnClick": false,
   "dockOpenOnOverview": false,
   "dockPosition": 1,
   "dockSpacing": 4,
@@ -406,6 +408,7 @@
       "urgency": "default"
     }
   ],
+  "notificationFocusedMonitor": false,
   "osdAlwaysShowValue": true,
   "osdPosition": 4,
   "osdVolumeEnabled": true,
