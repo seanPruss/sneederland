@@ -329,7 +329,7 @@
   "matugenTemplateZed": true,
   "matugenTemplateNeovimSettings": {
     "dark": {
-      "baseTheme": "github_dark",
+      "baseTheme": "tokyonight",
       "harmony": 0.5
     },
     "light": {
