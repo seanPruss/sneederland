@@ -1,6 +1,15 @@
 return {
-    "LazyVim/LazyVim",
-    opts = {
-        colorscheme = "base16-edge-dark",
+    {
+        "AvengeMedia/base46",
+        lazy = true,
+        opts = {
+            transparency = true,
+        },
+    },
+    {
+        "LazyVim/LazyVim",
+        opts = {
+            colorscheme = "base46-aylin",
+        },
     },
 }
