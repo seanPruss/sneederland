@@ -513,6 +513,10 @@
           "enabled": true
         },
         {
+          "id": "privacyIndicator",
+          "enabled": true
+        },
+        {
           "id": "systemUpdate",
           "enabled": true
         }
@@ -540,6 +544,12 @@
           "enabled": true,
           "minimumWidth": true,
           "showSwap": true
+        },
+        {
+          "id": "diskUsage",
+          "enabled": true,
+          "mountPath": "/",
+          "diskUsageMode": 0
         },
         {
           "id": "battery",
@@ -593,7 +603,8 @@
       "shadowOpacity": 60,
       "shadowColorMode": "text",
       "shadowCustomColor": "#000000",
-      "clickThrough": false
+      "clickThrough": false,
+      "widgetPadding": 8
     }
   ],
   "desktopClockEnabled": false,
