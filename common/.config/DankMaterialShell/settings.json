@@ -31,6 +31,7 @@
   "mangoLayoutRadiusOverride": -1,
   "mangoLayoutBorderSize": -1,
   "firstDayOfWeek": -1,
+  "showWeekNumber": false,
   "use24HourClock": true,
   "showSeconds": false,
   "padHours12Hour": false,
@@ -304,6 +305,10 @@
   "qtThemingEnabled": false,
   "syncModeWithPortal": true,
   "terminalsAlwaysDark": true,
+  "muxType": "tmux",
+  "muxUseCustomCommand": false,
+  "muxCustomCommand": "",
+  "muxSessionFilter": "",
   "runDmsMatugenTemplates": true,
   "matugenTemplateGtk": true,
   "matugenTemplateNiri": true,
@@ -391,7 +396,7 @@
   "notificationTimeoutLow": 8000,
   "notificationTimeoutNormal": 10000,
   "notificationTimeoutCritical": 0,
-  "notificationCompactMode": false,
+  "notificationCompactMode": true,
   "notificationPopupPosition": -1,
   "notificationAnimationSpeed": 4,
   "notificationCustomAnimationDuration": 100,
@@ -686,5 +691,5 @@
   "clipboardEnterToPaste": false,
   "launcherPluginVisibility": {},
   "launcherPluginOrder": [],
-  "configVersion": 6
+  "configVersion": 5
 }
