@@ -12,6 +12,7 @@
     }
   },
   "matugenScheme": "scheme-tonal-spot",
+  "matugenContrast": 1,
   "runUserMatugenTemplates": true,
   "matugenTargetMonitor": "",
   "popupTransparency": 0.9,
@@ -213,8 +214,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "helium": {
-      "count": 90,
-      "lastUsed": 1773853250342,
+      "count": 94,
+      "lastUsed": 1773960653327,
       "name": "Helium Browser"
     }
   },
