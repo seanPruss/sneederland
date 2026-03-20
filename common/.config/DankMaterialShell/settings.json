@@ -12,7 +12,7 @@
     }
   },
   "matugenScheme": "scheme-tonal-spot",
-  "matugenContrast": 1,
+  "matugenContrast": 0.3,
   "runUserMatugenTemplates": true,
   "matugenTargetMonitor": "",
   "popupTransparency": 0.9,
