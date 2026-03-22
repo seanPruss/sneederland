@@ -61,7 +61,7 @@ install_stage=(
     bat
     git-delta
     rust
-    niri-git
+    niri-wip-git
     xwayland-satellite
     cups-pk-helper
     kimageformats
