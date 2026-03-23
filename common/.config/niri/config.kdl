@@ -356,7 +356,7 @@ animations {
 }
 
 window-rule {
-    match app-id=r#"org.quickshell$"#
+    match app-id="com.danklinux.dms"
     open-floating true
 }
 
