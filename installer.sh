@@ -322,9 +322,6 @@ colorscript blacklist hex
 sudo systemctl disable power-profiles-daemon &>>"$INSTLOG"
 yay -Q power-profiles-daemon &>/dev/null && yay -Rns power-profiles-daemon &>>"$INSTLOG"
 
-# Uninstall kitty if found
-yay -Q kitty &>/dev/null && yay -Rns kitty &>>"$INSTLOG"
-
 WLDIR=/usr/share/wayland-sessions
 if [ -d "$WLDIR" ]; then
     echo -e "$COK - $WLDIR found"
