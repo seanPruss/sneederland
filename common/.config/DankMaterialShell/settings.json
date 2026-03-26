@@ -214,8 +214,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "helium": {
-      "count": 110,
-      "lastUsed": 1774469699999,
+      "count": 112,
+      "lastUsed": 1774528296631,
       "name": "Helium Browser"
     }
   },
@@ -343,6 +343,7 @@
       "harmony": 0.5
     }
   },
+  "matugenTemplateNeovimSetBackground": true,
   "showDock": false,
   "dockAutoHide": true,
   "dockSmartAutoHide": false,
