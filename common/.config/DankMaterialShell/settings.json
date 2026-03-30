@@ -15,7 +15,7 @@
   "matugenContrast": 0.3,
   "runUserMatugenTemplates": true,
   "matugenTargetMonitor": "",
-  "popupTransparency": 0.9,
+  "popupTransparency": 0.7,
   "dockTransparency": 0.85,
   "widgetBackgroundColor": "s",
   "widgetColorMode": "default",
@@ -56,6 +56,10 @@
   "modalElevationEnabled": true,
   "popoutElevationEnabled": true,
   "barElevationEnabled": true,
+  "blurEnabled": true,
+  "blurBorderColor": "primary",
+  "blurBorderCustomColor": "#ffffff",
+  "blurBorderOpacity": 1,
   "wallpaperFillMode": "Fill",
   "blurredWallpaperLayer": false,
   "blurWallpaperOnOverview": false,
@@ -224,6 +228,7 @@
   "sortAppsAlphabetically": false,
   "appLauncherGridColumns": 5,
   "spotlightCloseNiriOverview": true,
+  "rememberLastQuery": false,
   "spotlightSectionViewModes": {
     "apps": "tile"
   },
