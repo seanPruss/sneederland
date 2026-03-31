@@ -59,7 +59,7 @@
   "blurEnabled": true,
   "blurBorderColor": "primary",
   "blurBorderCustomColor": "#ffffff",
-  "blurBorderOpacity": 1,
+  "blurBorderOpacity": 0.7,
   "wallpaperFillMode": "Fill",
   "blurredWallpaperLayer": false,
   "blurWallpaperOnOverview": false,
@@ -218,8 +218,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "helium": {
-      "count": 120,
-      "lastUsed": 1774825258563,
+      "count": 121,
+      "lastUsed": 1774958277354,
       "name": "Helium Browser"
     }
   },
