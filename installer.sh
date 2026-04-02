@@ -313,6 +313,7 @@ sudo systemctl enable --now auto-cpufreq &>>"$INSTLOG"
 # Enable and sync DMS greeter and dsearch
 dms greeter enable
 dms greeter sync
+dms auth sync
 dsearch index sync
 
 # This colorscript needs .Xresources which you don't need in wayland
