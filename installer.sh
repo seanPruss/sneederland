@@ -113,7 +113,7 @@ install_stage=(
     toilet
     toilet-fonts
     fortune-mod
-    pay-respects
+    pay-respects-git
     cowsay
     adw-gtk-theme
     beautyline
