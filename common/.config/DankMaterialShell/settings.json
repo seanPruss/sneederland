@@ -584,7 +584,7 @@
       "spacing": 4,
       "innerPadding": 4,
       "bottomGap": 0,
-      "transparency": 0.75,
+      "transparency": 0.5,
       "widgetTransparency": 1,
       "squareCorners": false,
       "noBackground": false,
