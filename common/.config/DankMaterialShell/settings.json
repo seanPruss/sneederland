@@ -281,6 +281,7 @@
   "notepadLastCustomTransparency": 0.7,
   "soundsEnabled": true,
   "useSystemSoundTheme": false,
+  "soundLogin": false,
   "soundNewNotification": false,
   "soundVolumeChanged": true,
   "soundPluggedIn": true,
