@@ -82,7 +82,8 @@ export MANPAGER='nvim +Man!'
 export FZF_DEFAULT_OPTS='
   --color=fg:-1,bg:-1,hl:4
   --color=fg+:-1,bg+:-1,hl+:4
-  --color=info:6,prompt:5,spinner:6,pointer:5,marker:2
+  --color=info:6,prompt:5,spinner:6,pointer:6,marker:2,gutter:0
+  --pointer="󰶻"
 '
 export FZF_ALT_C_COMMAND="fd --strip-cwd-prefix --type directory --hidden --follow"
 export FZF_ALT_C_OPTS="--height 40% --reverse --preview 'eza -A --tree --git-ignore {} | head -n 200'"
