@@ -178,6 +178,7 @@
   "workspaceNameIcons": {},
   "waveProgressEnabled": true,
   "scrollTitleEnabled": true,
+  "mediaAdaptiveWidthEnabled": true,
   "audioVisualizerEnabled": true,
   "audioScrollMode": "nothing",
   "audioWheelScrollAmount": 5,
@@ -218,8 +219,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "helium": {
-      "count": 132,
-      "lastUsed": 1775349872040,
+      "count": 134,
+      "lastUsed": 1775658984881,
       "name": "Helium Browser"
     }
   },
