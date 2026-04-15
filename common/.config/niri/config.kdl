@@ -368,13 +368,12 @@ window-rule {
 }
 
 blur {
-    passes 2
+    passes 3
     saturation 1
 }
 
 window-rule {
-    match is-focused=false
-    opacity 0.85
+    opacity 0.9
 }
 
 window-rule {
