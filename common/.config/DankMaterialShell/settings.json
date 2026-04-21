@@ -76,6 +76,7 @@
   "selectedGpuIndex": 0,
   "enabledGpuPciIds": [],
   "showSystemTray": true,
+  "systemTrayMonochromeIcons": true,
   "showClock": true,
   "showNotificationButton": true,
   "showBattery": true,
@@ -219,8 +220,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "helium": {
-      "count": 155,
-      "lastUsed": 1776688697434,
+      "count": 162,
+      "lastUsed": 1776804001784,
       "name": "Helium Browser"
     }
   },
@@ -542,7 +543,8 @@
       "rightWidgets": [
         {
           "id": "systemTray",
-          "enabled": true
+          "enabled": true,
+          "trayUseInlineExpansion": false
         },
         {
           "id": "notificationButton",
