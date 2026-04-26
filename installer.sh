@@ -59,6 +59,7 @@ install_stage=(
     kanata-bin
     fd
     bat
+    topgrade
     git-delta
     rust
     niri-git

@@ -474,7 +474,7 @@
   "customPowerActionPowerOff": "",
   "updaterHideWidget": true,
   "updaterUseCustomCommand": true,
-  "updaterCustomCommand": "update.sh update",
+  "updaterCustomCommand": "topgrade",
   "updaterTerminalAdditionalParams": "",
   "displayNameMode": "system",
   "screenPreferences": {
