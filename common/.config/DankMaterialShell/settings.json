@@ -57,6 +57,8 @@
   "popoutElevationEnabled": true,
   "barElevationEnabled": true,
   "blurEnabled": true,
+  "blurForegroundLayers": true,
+  "blurLayerOutlineOpacity": 0.12,
   "blurBorderColor": "primary",
   "blurBorderCustomColor": "#ffffff",
   "blurBorderOpacity": 0.7,
@@ -76,7 +78,9 @@
   "selectedGpuIndex": 0,
   "enabledGpuPciIds": [],
   "showSystemTray": true,
-  "systemTrayMonochromeIcons": true,
+  "systemTrayIconTintMode": "primary",
+  "systemTrayIconTintSaturation": 20,
+  "systemTrayIconTintStrength": 70,
   "showClock": true,
   "showNotificationButton": true,
   "showBattery": true,
@@ -220,8 +224,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "helium": {
-      "count": 167,
-      "lastUsed": 1777150106461,
+      "count": 169,
+      "lastUsed": 1777165854630,
       "name": "Helium Browser"
     }
   },
