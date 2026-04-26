@@ -440,6 +440,14 @@
       "matchType": "contains",
       "action": "popup_only",
       "urgency": "default"
+    },
+    {
+      "enabled": true,
+      "field": "appName",
+      "pattern": "topgrade",
+      "matchType": "contains",
+      "action": "popup_only",
+      "urgency": "default"
     }
   ],
   "notificationFocusedMonitor": false,
