@@ -224,8 +224,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "helium": {
-      "count": 180,
-      "lastUsed": 1777481755545,
+      "count": 182,
+      "lastUsed": 1777571367769,
       "name": "Helium Browser"
     }
   },
@@ -487,6 +487,9 @@
   "updaterUseCustomCommand": true,
   "updaterCustomCommand": "topgrade",
   "updaterTerminalAdditionalParams": "",
+  "updaterIntervalSeconds": 1800,
+  "updaterIncludeFlatpak": true,
+  "updaterAllowAUR": true,
   "displayNameMode": "system",
   "screenPreferences": {
     "wallpaper": [
