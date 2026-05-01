@@ -224,8 +224,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "helium": {
-      "count": 182,
-      "lastUsed": 1777571367769,
+      "count": 184,
+      "lastUsed": 1777635662062,
       "name": "Helium Browser"
     }
   },
@@ -337,6 +337,7 @@
   "matugenTemplatePywalfox": true,
   "matugenTemplateZenBrowser": true,
   "matugenTemplateVesktop": true,
+  "matugenTemplateVencord": true,
   "matugenTemplateEquibop": true,
   "matugenTemplateGhostty": true,
   "matugenTemplateKitty": true,
@@ -487,7 +488,7 @@
   "updaterUseCustomCommand": true,
   "updaterCustomCommand": "topgrade",
   "updaterTerminalAdditionalParams": "",
-  "updaterIntervalSeconds": 1800,
+  "updaterIntervalSeconds": 900,
   "updaterIncludeFlatpak": true,
   "updaterAllowAUR": true,
   "displayNameMode": "system",
