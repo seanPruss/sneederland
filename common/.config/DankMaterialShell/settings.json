@@ -226,8 +226,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "helium": {
-      "count": 209,
-      "lastUsed": 1778262752886,
+      "count": 212,
+      "lastUsed": 1778373459472,
       "name": "Helium Browser"
     }
   },
@@ -509,7 +509,6 @@
   "displayShowDisconnected": false,
   "displaySnapToEdge": true,
   "connectedFrameBarStyleBackups": {},
-  "connectedFrameModalDarkenBackup": null,
   "barConfigs": [
     {
       "id": "default",
