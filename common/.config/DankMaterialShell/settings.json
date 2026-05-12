@@ -226,8 +226,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "helium": {
-      "count": 221,
-      "lastUsed": 1778549350381,
+      "count": 228,
+      "lastUsed": 1778583233626,
       "name": "Helium Browser"
     }
   },
@@ -283,6 +283,8 @@
   "monoFontFamily": "CaskaydiaCove NFM",
   "fontWeight": 400,
   "fontScale": 1,
+  "textRenderType": 1,
+  "textRenderQuality": 0,
   "notepadUseMonospace": true,
   "notepadFontFamily": "",
   "notepadFontSize": 14,
