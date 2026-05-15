@@ -226,8 +226,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "helium": {
-      "count": 228,
-      "lastUsed": 1778583233626,
+      "count": 241,
+      "lastUsed": 1778845184688,
       "name": "Helium Browser"
     }
   },
@@ -490,6 +490,7 @@
   "customPowerActionReboot": "",
   "customPowerActionPowerOff": "",
   "updaterHideWidget": true,
+  "updaterCheckOnStart": false,
   "updaterUseCustomCommand": true,
   "updaterCustomCommand": "topgrade",
   "updaterTerminalAdditionalParams": "",
@@ -731,16 +732,16 @@
   "clipboardEnterToPaste": false,
   "launcherPluginVisibility": {},
   "launcherPluginOrder": [],
-  "frameEnabled": false,
+  "frameEnabled": true,
   "frameThickness": 16,
   "frameRounding": 23,
   "frameColor": "",
-  "frameOpacity": 1,
+  "frameOpacity": 0.5,
   "frameScreenPreferences": [
     "all"
   ],
   "frameBarSize": 40,
-  "frameShowOnOverview": false,
+  "frameShowOnOverview": true,
   "frameBlurEnabled": true,
   "frameCloseGaps": true,
   "frameLauncherEmergeSide": "bottom",
