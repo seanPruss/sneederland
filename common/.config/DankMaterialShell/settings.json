@@ -226,8 +226,8 @@
   "browserPickerViewMode": "grid",
   "browserUsageHistory": {
     "helium": {
-      "count": 249,
-      "lastUsed": 1779194207557,
+      "count": 250,
+      "lastUsed": 1779230082393,
       "name": "Helium Browser"
     }
   },
@@ -252,6 +252,7 @@
   "dankLauncherV2UnloadOnClose": true,
   "dankLauncherV2IncludeFilesInAll": false,
   "dankLauncherV2IncludeFoldersInAll": false,
+  "launcherShowOverFullscreen": false,
   "launcherStyle": "full",
   "useAutoLocation": true,
   "weatherEnabled": true,
@@ -369,7 +370,7 @@
   "showDock": false,
   "dockAutoHide": true,
   "dockSmartAutoHide": false,
-  "dockHideOnFullscreen": true,
+  "dockShowOverFullscreen": false,
   "dockGroupByApp": false,
   "dockRestoreSpecialWorkspaceOnClick": false,
   "dockOpenOnOverview": false,
