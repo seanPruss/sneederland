@@ -755,7 +755,6 @@
   "frameCloseGaps": true,
   "frameLauncherEmergeSide": "bottom",
   "frameLauncherArcExtender": false,
-  "frameUseSpotlightLauncher": false,
   "frameMode": "separate",
   "configVersion": 11
 }
