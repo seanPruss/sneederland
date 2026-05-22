@@ -238,6 +238,7 @@
   "appLauncherGridColumns": 5,
   "spotlightCloseNiriOverview": true,
   "rememberLastQuery": false,
+  "rememberLastMode": true,
   "spotlightSectionViewModes": {
     "apps": "tile"
   },
