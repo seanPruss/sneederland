@@ -255,6 +255,7 @@
   "dankLauncherV2IncludeFoldersInAll": false,
   "launcherUseOverlayLayer": false,
   "launcherStyle": "full",
+  "spotlightBarShowModeChips": false,
   "useAutoLocation": true,
   "weatherEnabled": true,
   "networkPreference": "wifi",
