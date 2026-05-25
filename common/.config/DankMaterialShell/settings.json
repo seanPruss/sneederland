@@ -762,7 +762,7 @@
   "frameBarSize": 40,
   "frameShowOnOverview": true,
   "frameBlurEnabled": true,
-  "frameCloseGaps": false,
+  "frameCloseGaps": true,
   "frameLauncherEmergeSide": "bottom",
   "frameLauncherArcExtender": true,
   "frameMode": "connected",
