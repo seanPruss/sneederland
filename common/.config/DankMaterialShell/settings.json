@@ -752,7 +752,7 @@
   "launcherPluginVisibility": {},
   "launcherPluginOrder": [],
   "frameEnabled": true,
-  "frameThickness": 16,
+  "frameThickness": 8,
   "frameRounding": 23,
   "frameColor": "",
   "frameOpacity": 0.5,
@@ -762,9 +762,9 @@
   "frameBarSize": 40,
   "frameShowOnOverview": true,
   "frameBlurEnabled": true,
-  "frameCloseGaps": true,
+  "frameCloseGaps": false,
   "frameLauncherEmergeSide": "bottom",
-  "frameLauncherArcExtender": false,
+  "frameLauncherArcExtender": true,
   "frameMode": "connected",
   "configVersion": 11
 }
