@@ -497,7 +497,7 @@
   "updaterHideWidget": true,
   "updaterCheckOnStart": true,
   "updaterUseCustomCommand": true,
-  "updaterCustomCommand": "topgrade",
+  "updaterCustomCommand": "topgrade && dms ipc call systemupdater updatestatus",
   "updaterTerminalAdditionalParams": "",
   "updaterIntervalSeconds": 900,
   "updaterIncludeFlatpak": true,
