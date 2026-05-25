@@ -429,6 +429,7 @@
   "notificationTimeoutNormal": 10000,
   "notificationTimeoutCritical": 0,
   "notificationCompactMode": true,
+  "notificationDedupeEnabled": true,
   "notificationPopupPosition": -1,
   "notificationAnimationSpeed": 4,
   "notificationCustomAnimationDuration": 100,
