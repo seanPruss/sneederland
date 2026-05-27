@@ -106,7 +106,7 @@ install_stage=(
     neovim
     tree-sitter-cli
     ascii-image-converter
-    lazygit
+    lazygit-git
     docker
     lazydocker
     zoxide
