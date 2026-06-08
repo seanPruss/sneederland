@@ -267,7 +267,7 @@
   "useAutoLocation": true,
   "weatherEnabled": true,
   "networkPreference": "wifi",
-  "iconTheme": "BeautyLine",
+  "iconTheme": "neo-candy-icons",
   "cursorSettings": {
     "theme": "Banana",
     "size": 38,

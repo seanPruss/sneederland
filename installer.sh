@@ -80,6 +80,7 @@ install_stage=(
     greetd-dms-greeter-git
     matugen
     cava
+    wtype
     imagemagick
     xdg-desktop-portal-gtk
     xdg-desktop-portal-gnome
@@ -117,7 +118,7 @@ install_stage=(
     pay-respects-git
     cowsay
     adw-gtk-theme
-    beautyline
+    neo-candy-icons
     libreoffice-fresh
     thunderbird
     mpv
