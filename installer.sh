@@ -73,7 +73,7 @@ install_stage=(
     vlc
     auto-cpufreq
     banana-cursor-bin
-    ghostty
+    kitty-git
     quickshell-git
     dms-shell-git
     dsearch-git

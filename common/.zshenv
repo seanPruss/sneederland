@@ -1,4 +1,4 @@
-export TERMINAL=ghostty
+export TERMINAL=kitty
 export BROWSER=helium-browser
 export EDITOR=nvim
 export VISUAL=nvim

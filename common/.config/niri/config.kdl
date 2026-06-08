@@ -414,7 +414,7 @@ binds {
     Mod+Slash hotkey-overlay-title="Show hotkeys" { spawn "dms" "ipc" "call" "keybinds" "toggle" "niri"; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+Return hotkey-overlay-title="Terminal" { spawn "ghostty"; }
+    Mod+Return hotkey-overlay-title="Terminal" { spawn "kitty"; }
     Mod+Space hotkey-overlay-title="Application Launcher" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
     Mod+Shift+S hotkey-overlay-title="Take a screenshot" { spawn-sh "dms screenshot --stdout | swappy -f -"; }
     Mod+Ctrl+S hotkey-overlay-title="Screenshot screen" { spawn-sh "dms screenshot full --stdout | swappy -f -"; }

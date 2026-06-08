@@ -19,7 +19,7 @@ so it always changes
 
 - Window manager: [Niri](https://niri-wm.github.io/niri/index.html)
 - Desktop shell: [Dank Material Shell](https://danklinux.com)
-- Terminal: [Ghostty](https://github.com/ghostty-org/ghostty)
+- Terminal: [Kitty](https://sw.kovidgoyal.net/kitty/)
 - Login shell: [Zsh](https://wiki.archlinux.org/title/Zsh)
 - Browser: [Helium](https://helium.computer/)
 - Text editor: [Neovim](https://github.com/neovim/neovim)
