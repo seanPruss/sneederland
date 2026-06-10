@@ -240,7 +240,13 @@
     }
   },
   "appPickerViewMode": "grid",
-  "filePickerUsageHistory": {},
+  "filePickerUsageHistory": {
+    "helium": {
+      "count": 2,
+      "lastUsed": 1781045501686,
+      "name": "Helium Browser"
+    }
+  },
   "sortAppsAlphabetically": false,
   "appLauncherGridColumns": 5,
   "spotlightCloseNiriOverview": true,
