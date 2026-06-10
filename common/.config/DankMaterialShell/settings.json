@@ -584,11 +584,12 @@
           "enabled": true
         },
         {
-          "id": "privacyIndicator",
-          "enabled": true
+          "id": "systemUpdate",
+          "enabled": true,
+          "hideWhenIdle": true
         },
         {
-          "id": "systemUpdate",
+          "id": "privacyIndicator",
           "enabled": true
         }
       ],
@@ -615,7 +616,8 @@
           "id": "memUsage",
           "enabled": true,
           "minimumWidth": true,
-          "showSwap": true
+          "showSwap": true,
+          "showInGb": false
         },
         {
           "id": "diskUsage",
