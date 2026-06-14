@@ -194,6 +194,7 @@
   "audioVisualizerEnabled": true,
   "audioScrollMode": "nothing",
   "audioWheelScrollAmount": 5,
+  "audioDeviceScrollVolumeEnabled": false,
   "clockCompactMode": false,
   "focusedWindowCompactMode": false,
   "focusedWindowSize": 1,
