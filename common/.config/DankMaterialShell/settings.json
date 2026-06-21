@@ -72,6 +72,8 @@
   "wallpaperFillMode": "Fill",
   "blurredWallpaperLayer": false,
   "blurWallpaperOnOverview": false,
+  "wallpaperBackgroundColorMode": "black",
+  "wallpaperBackgroundCustomColor": "#000000",
   "showLauncherButton": true,
   "showWorkspaceSwitcher": true,
   "showFocusedWindow": true,
@@ -272,6 +274,7 @@
   },
   "niriOverviewOverlayEnabled": true,
   "dankLauncherV2Size": "compact",
+  "dankLauncherV2ShowSourceBadges": true,
   "dankLauncherV2BorderEnabled": false,
   "dankLauncherV2BorderThickness": 2,
   "dankLauncherV2BorderColor": "primary",
@@ -795,6 +798,7 @@
       "trigger": "cb"
     }
   },
+  "clipboardClickToPaste": false,
   "clipboardEnterToPaste": true,
   "clipboardRememberTypeFilter": false,
   "clipboardTypeFilter": "all",
