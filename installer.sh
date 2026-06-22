@@ -280,6 +280,9 @@ for SOFTWR in "${flatpaks[@]}"; do
     flatpak install "$SOFTWR" -y || exit
 done
 
+# Download package db for pay-respects
+yay -Fy --noconfirm
+
 # Switch to zsh
 chsh -s "$(which zsh)"
 
