@@ -93,6 +93,10 @@
   "showClock": true,
   "showNotificationButton": true,
   "showBattery": true,
+  "showBatteryPercent": true,
+  "showBatteryPercentOnlyOnBattery": false,
+  "showBatteryTime": false,
+  "showBatteryTimeOnlyOnBattery": false,
   "showControlCenterButton": true,
   "showCapsLockIndicator": true,
   "controlCenterShowNetworkIcon": true,
@@ -197,6 +201,19 @@
   "workspaceFocusedBorderColor": "secondary",
   "workspaceFocusedBorderCustomColor": "#6750A4",
   "workspaceFocusedBorderThickness": 2,
+  "workspaceUnfocusedMonitorSeparateAppearance": false,
+  "workspaceUnfocusedMonitorColorMode": "default",
+  "workspaceUnfocusedMonitorFocusedCustomColor": "#6750A4",
+  "workspaceUnfocusedMonitorOccupiedColorMode": "none",
+  "workspaceUnfocusedMonitorOccupiedCustomColor": "#625B71",
+  "workspaceUnfocusedMonitorUnfocusedColorMode": "default",
+  "workspaceUnfocusedMonitorUnfocusedCustomColor": "#49454E",
+  "workspaceUnfocusedMonitorUrgentColorMode": "default",
+  "workspaceUnfocusedMonitorUrgentCustomColor": "#B3261E",
+  "workspaceUnfocusedMonitorBorderEnabled": false,
+  "workspaceUnfocusedMonitorBorderColor": "primary",
+  "workspaceUnfocusedMonitorBorderCustomColor": "#6750A4",
+  "workspaceUnfocusedMonitorBorderThickness": 2,
   "workspaceNameIcons": {},
   "waveProgressEnabled": true,
   "scrollTitleEnabled": true,
@@ -288,6 +305,28 @@
   "keybindsFloatingWindow": false,
   "useAutoLocation": true,
   "weatherEnabled": true,
+  "dashTabs": [
+    {
+      "id": "overview",
+      "enabled": true
+    },
+    {
+      "id": "media",
+      "enabled": true
+    },
+    {
+      "id": "wallpaper",
+      "enabled": true
+    },
+    {
+      "id": "weather",
+      "enabled": true
+    },
+    {
+      "id": "settings",
+      "enabled": true
+    }
+  ],
   "networkPreference": "wifi",
   "iconThemeDark": "System Default",
   "iconThemeLight": "System Default",
@@ -824,5 +863,8 @@
   "frameLauncherEmergeSide": "bottom",
   "frameLauncherArcExtender": true,
   "frameMode": "connected",
+  "barInsetPaddingShared": -1,
+  "barInsetPaddingSyncAll": false,
+  "frameBarInsetPadding": -1,
   "configVersion": 11
 }
