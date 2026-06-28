@@ -324,7 +324,7 @@
     },
     {
       "id": "settings",
-      "enabled": true
+      "enabled": false
     }
   ],
   "networkPreference": "wifi",

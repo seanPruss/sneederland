@@ -263,7 +263,7 @@ spawn-sh-at-startup "wl-paste --watch cliphist store"
 spawn-sh-at-startup "systemctl --user enable --now battery-notify.service"
 spawn-sh-at-startup "systemctl --user enable --now battery-notify.timer"
 
-workspace "scratch"
+workspace "email"
 workspace "browser"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
@@ -383,9 +383,8 @@ window-rule {
 }
 
 window-rule {
-    match app-id="spotify"
     match app-id="org.mozilla.Thunderbird"
-    open-on-workspace "scratch"
+    open-on-workspace "email"
 }
 
 window-rule {
