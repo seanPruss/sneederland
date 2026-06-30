@@ -260,8 +260,6 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-sh-at-startup "systemctl --user enable --now dms.service"
 spawn-sh-at-startup "wl-paste --watch cliphist store"
-spawn-sh-at-startup "systemctl --user enable --now battery-notify.service"
-spawn-sh-at-startup "systemctl --user enable --now battery-notify.timer"
 
 workspace "email"
 workspace "browser"
