@@ -396,7 +396,7 @@
   "batteryLockTimeout": 0,
   "batterySuspendTimeout": 300,
   "batterySuspendBehavior": 0,
-  "batteryProfileName": "0",
+  "batteryProfileName": "1",
   "batteryPostLockMonitorTimeout": 0,
   "batteryChargeLimit": 100,
   "batteryNotifyChargeLimit": true,
@@ -404,7 +404,6 @@
   "batteryNotifyCritical": true,
   "batteryLowThreshold": 20,
   "batteryNotifyLow": true,
-  "batteryNotificationType": 0,
   "batteryAutoPowerSaver": false,
   "lockBeforeSuspend": true,
   "loginctlLockIntegration": true,
@@ -509,7 +508,6 @@
   "maxFprintTries": 15,
   "enableU2f": false,
   "u2fMode": "or",
-  "lockScreenActiveMonitor": "all",
   "lockScreenInactiveColor": "#000000",
   "lockScreenNotificationMode": 0,
   "lockScreenVideoEnabled": false,
@@ -875,5 +873,8 @@
   "barInsetPaddingShared": -1,
   "barInsetPaddingSyncAll": false,
   "frameBarInsetPadding": -1,
-  "configVersion": 11
+  "configVersion": 12,
+  "batteryChargeLimitNotificationType": 1,
+  "batteryLowNotificationType": 1,
+  "batteryCriticalNotificationType": 1
 }

@@ -76,6 +76,7 @@ install_stage=(
     kitty-git
     quickshell-git
     dms-shell-git
+    inter-font
     dsearch-git
     greetd-dms-greeter-git
     matugen
