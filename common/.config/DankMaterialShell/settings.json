@@ -404,6 +404,9 @@
   "batteryNotifyCritical": true,
   "batteryLowThreshold": 20,
   "batteryNotifyLow": true,
+  "batteryChargeLimitNotificationType": 1,
+  "batteryLowNotificationType": 1,
+  "batteryCriticalNotificationType": 1,
   "batteryAutoPowerSaver": false,
   "lockBeforeSuspend": true,
   "loginctlLockIntegration": true,
@@ -873,8 +876,5 @@
   "barInsetPaddingShared": -1,
   "barInsetPaddingSyncAll": false,
   "frameBarInsetPadding": -1,
-  "configVersion": 12,
-  "batteryChargeLimitNotificationType": 1,
-  "batteryLowNotificationType": 1,
-  "batteryCriticalNotificationType": 1
+  "configVersion": 12
 }
