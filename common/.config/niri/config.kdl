@@ -350,11 +350,6 @@ animations {
 }
 
 window-rule {
-    match app-id="com.danklinux.dms"
-    open-floating true
-}
-
-window-rule {
     background-effect {
         blur true
         xray true
