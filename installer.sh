@@ -78,7 +78,8 @@ install_stage=(
     dms-shell-git
     inter-font
     dsearch-git
-    greetd-dms-greeter-git
+    sddm
+    sddm-theme-elegant-archlinux-git
     matugen
     cava
     wtype
@@ -316,11 +317,11 @@ sudo systemctl enable --now bluetooth.service &>>"$INSTLOG"
 echo -e "$CNT - Enabling the auto-cpufreq Service..."
 sudo systemctl enable --now auto-cpufreq &>>"$INSTLOG"
 
-# Enable and sync DMS greeter and dsearch
-dms greeter enable
-dms greeter sync
-dms auth sync
+# Sync dsearch
 dsearch index sync
+
+# Configure sddm theme
+sudo /usr/share/sddm/themes/elegant-archlinux/customize.sh
 
 # This colorscript needs .Xresources which you don't need in wayland
 colorscript blacklist hex
