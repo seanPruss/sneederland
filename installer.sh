@@ -10,6 +10,10 @@
 
 # Env var for where the repo was cloned
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# add slangc to PATH
+PATH=/opt/shader-slang/bin:$PATH
+
 # Define the software that would be installed
 prep_stage=(
     xdg-user-dirs
@@ -73,6 +77,7 @@ install_stage=(
     vlc
     auto-cpufreq
     banana-cursor-bin
+    shader-slang-git
     kitty-git
     quickshell-git
     dms-shell-git
