@@ -78,6 +78,7 @@ install_stage=(
     auto-cpufreq
     banana-cursor-bin
     shader-slang-git
+    python-sphinx_design
     kitty-git
     quickshell-git
     dms-shell-git
