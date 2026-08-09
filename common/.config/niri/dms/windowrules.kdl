@@ -1,0 +1,44 @@
+// DMS Window Rules - Managed by DankMaterialShell
+// Do not edit manually - changes may be overwritten
+
+// @id=dms-floating-windows @name=DMS Floating Windows
+window-rule {
+    match app-id="^com.danklinux.dms$"
+    open-floating true
+}
+
+// @id=wr_1786315925873987784 @name=Blur
+window-rule {
+    background-effect {
+        blur true
+    }
+}
+
+// @id=wr_1786316082025538594 @name=Transparency
+window-rule {
+    opacity 0.90
+}
+
+// @id=wr_1786316148394525064 @name=Opacity for floating windows
+window-rule {
+    match is-floating=true
+    opacity 0.75
+}
+
+// @id=wr_1786316265295156625 @name=Opaque swappy window
+window-rule {
+    match app-id="swappy"
+    opacity 1.00
+}
+
+// @id=wr_1786316300327684863 @name=Put thunderbird in email workspace
+window-rule {
+    match app-id="org.mozilla.Thunderbird"
+    open-on-workspace "email"
+}
+
+// @id=wr_1786316338814789794 @name=Put helium in browser workspace
+window-rule {
+    match app-id="helium"
+    open-on-workspace "browser"
+}

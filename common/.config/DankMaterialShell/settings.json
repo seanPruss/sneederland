@@ -86,8 +86,8 @@
   "modalAnimationSpeed": 4,
   "modalCustomAnimationDuration": 150,
   "enableRippleEffects": true,
-  "animationVariant": 0,
-  "motionEffect": 0,
+  "animationVariant": 2,
+  "motionEffect": 2,
   "m3ElevationEnabled": true,
   "m3ElevationIntensity": 12,
   "m3ElevationOpacity": 30,
@@ -566,8 +566,8 @@
   "notificationTimeoutNormal": 10000,
   "notificationTimeoutCritical": 0,
   "notificationIgnoreAppTimeout": false,
-  "notificationCompactMode": true,
-  "notificationShowTimeoutBar": false,
+  "notificationCompactMode": false,
+  "notificationShowTimeoutBar": true,
   "notificationDedupeEnabled": true,
   "notificationPopupPosition": -1,
   "notificationAnimationSpeed": 4,
@@ -660,14 +660,7 @@
   "displayProfileAutoSelect": false,
   "displayShowDisconnected": false,
   "displaySnapToEdge": true,
-  "connectedFrameBarStyleBackups": {
-    "default": {
-      "shadowIntensity": 0,
-      "squareCorners": false,
-      "gothCornersEnabled": false,
-      "borderEnabled": false
-    }
-  },
+  "connectedFrameBarStyleBackups": {},
   "barConfigs": [
     {
       "id": "default",
@@ -779,7 +772,7 @@
       "transparency": 0.5,
       "widgetTransparency": 1,
       "squareCorners": false,
-      "noBackground": false,
+      "noBackground": true,
       "gothCornersEnabled": false,
       "gothCornerRadiusOverride": false,
       "gothCornerRadiusValue": 12,
@@ -789,10 +782,10 @@
       "borderThickness": 1,
       "widgetOutlineEnabled": false,
       "widgetOutlineColor": "secondary",
-      "widgetOutlineOpacity": 0.52,
+      "widgetOutlineOpacity": 1,
       "widgetOutlineThickness": 1,
       "fontScale": 1,
-      "autoHide": false,
+      "autoHide": true,
       "autoHideDelay": 250,
       "showOnWindowsOpen": false,
       "openOnOverview": false,
@@ -811,7 +804,10 @@
       "widgetPadding": 8,
       "maximizeWidgetIcons": false,
       "maximizeWidgetText": false,
-      "removeWidgetPadding": false
+      "removeWidgetPadding": false,
+      "autoHideStrict": false,
+      "hoverPopouts": true,
+      "useOverlayLayer": false
     }
   ],
   "desktopClockEnabled": false,
@@ -891,6 +887,9 @@
     },
     "dms_clipboard_search": {
       "trigger": "cb"
+    },
+    "dms_qr_generator": {
+      "trigger": "qrg"
     }
   },
   "clipboardClickToPaste": false,
@@ -904,7 +903,7 @@
   ],
   "launcherPluginVisibility": {},
   "launcherPluginOrder": [],
-  "frameEnabled": true,
+  "frameEnabled": false,
   "frameThickness": 8,
   "frameRounding": 23,
   "frameColor": "",

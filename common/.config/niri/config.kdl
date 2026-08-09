@@ -349,40 +349,9 @@ animations {
     // block-out-from "screencast"
 }
 
-window-rule {
-    background-effect {
-        blur true
-        xray true
-    }
-}
-
 blur {
     passes 3
     saturation 1
-}
-
-window-rule {
-    opacity 0.9
-}
-
-window-rule {
-    match is-floating=true
-    opacity 0.75
-}
-
-window-rule {
-    match app-id="swappy"
-    opacity 1.0
-}
-
-window-rule {
-    match app-id="org.mozilla.Thunderbird"
-    open-on-workspace "email"
-}
-
-window-rule {
-    match app-id="helium"
-    open-on-workspace "browser"
 }
 
 layer-rule {
@@ -602,7 +571,7 @@ binds {
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-column-width-back; }
     Mod+Ctrl+R { reset-window-height; }
-    Mod+F { maximize-column; }
+    Mod+F { toggle-window-floating; }
     Mod+Shift+F { fullscreen-window; }
 
     // Expand the focused column to space not taken up by other fully visible columns.
@@ -654,8 +623,12 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 }
 
-include "dms/colors.kdl"
-include "dms/layout.kdl"
-include "dms/cursor.kdl"
 include "dms/alttab.kdl"
+include "dms/binds.kdl"
+include "dms/colors.kdl"
+include "dms/cursor.kdl"
+include "dms/input.kdl"
+include "dms/layout.kdl"
+include "dms/outputs.kdl"
+include "dms/windowrules.kdl"
 include "dms/wpblur.kdl"
