@@ -77,7 +77,7 @@ install_stage=(
     vlc
     auto-cpufreq
     banana-cursor-bin
-    shader-slang-bin
+    shader-slang-git
     python-sphinx_design
     kitty-git
     quickshell-git
