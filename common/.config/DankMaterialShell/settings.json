@@ -206,8 +206,27 @@
     {
       "id": "settings",
       "enabled": false
+    },
+    {
+      "id": "notifications",
+      "enabled": true
     }
   ],
+  "dashOptions": {
+    "media": {
+      "titleFont": "ui"
+    },
+    "wallpaper": {
+      "columns": 6,
+      "rows": 5,
+      "panelColumns": 8,
+      "panelRows": 8
+    },
+    "weather": {
+      "city": true,
+      "panelColumns": 8
+    }
+  },
   "networkPreference": "wifi",
   "cursorSettings": {
     "theme": "Banana",
@@ -347,6 +366,10 @@
           "enabled": true
         },
         {
+          "id": "notificationButton",
+          "enabled": true
+        },
+        {
           "id": "systemUpdate",
           "enabled": true,
           "hideWhenIdle": true
@@ -361,10 +384,6 @@
           "id": "systemTray",
           "enabled": true,
           "trayUseInlineExpansion": false
-        },
-        {
-          "id": "notificationButton",
-          "enabled": true
         },
         {
           "id": "clipboard",
