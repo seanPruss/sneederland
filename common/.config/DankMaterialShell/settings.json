@@ -18,6 +18,7 @@
   "useAutoLocation": true,
   "monoFontFamily": "CaskaydiaCove NFM",
   "textRenderType": 1,
+  "lockScreenShowPowerActions": true,
   "powerActionConfirm": false,
   "powerMenuActions": [
     "reboot",
@@ -244,8 +245,6 @@
       "cursorHideTimeout": 0
     }
   },
-  "launcherLogoMode": "os",
-  "launcherLogoColorOverride": "primary",
   "soundNewNotification": false,
   "acProfileName": "2",
   "batterySuspendTimeout": 300,
@@ -328,7 +327,9 @@
       "leftWidgets": [
         {
           "id": "launcherButton",
-          "enabled": true
+          "enabled": true,
+          "launcherLogoMode": "os",
+          "launcherLogoColorOverride": "primary"
         },
         {
           "id": "workspaceSwitcher",
@@ -490,5 +491,5 @@
   "frameThickness": 8,
   "frameShowOnOverview": true,
   "frameLauncherArcExtender": true,
-  "configVersion": 28
+  "configVersion": 29
 }
