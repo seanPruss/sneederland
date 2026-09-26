@@ -101,6 +101,10 @@
   "currentThemeCategory": "dynamic",
   "matugenContrast": 0.3,
   "popupTransparency": 0.7,
+  "dmsWindowsFloatingSeeded": [
+    "niri",
+    "niri"
+  ],
   "widgetBackgroundColor": "s",
   "motionEffect": 2,
   "m3ElevationColorMode": "surfaceVariant",
@@ -470,7 +474,8 @@
       "useOverlayLayer": false,
       "followInterfaceStyle": false,
       "island": false,
-      "attachToScreenEdge": true
+      "attachToScreenEdge": true,
+      "widgetFollowInterfaceStyle": true
     }
   ],
   "builtInPluginSettings": {
@@ -491,5 +496,5 @@
   "frameThickness": 8,
   "frameShowOnOverview": true,
   "frameLauncherArcExtender": true,
-  "configVersion": 29
+  "configVersion": 31
 }
