@@ -1,7 +1,4 @@
 gui:
-  authorColors: {}
-  branchColors: {}
-  branchColorPatterns: {}
   customIcons:
     filenames: {}
     extensions: {}
@@ -54,6 +51,8 @@ gui:
       - red
     defaultFgColor:
       - default
+    authorColors: {}
+    branchColorPatterns: {}
   commitLength:
     show: true
   showListFooter: true
