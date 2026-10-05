@@ -78,6 +78,9 @@
       "showTrash": false,
       "trashFileManager": "default",
       "trashCustomCommand": "",
+      "magnification": false,
+      "magnificationScale": 130,
+      "magnificationProfile": "parabolic",
       "order": [],
       "widgets": [
         {
@@ -114,6 +117,30 @@
   "systemTrayIconTintSaturation": 20,
   "systemTrayIconTintStrength": 70,
   "controlCenterWidgets": [
+    {
+      "id": "user",
+      "enabled": true,
+      "w": 5,
+      "h": 1
+    },
+    {
+      "id": "settings",
+      "enabled": true,
+      "w": 1,
+      "h": 1
+    },
+    {
+      "id": "lock",
+      "enabled": true,
+      "w": 1,
+      "h": 1
+    },
+    {
+      "id": "power",
+      "enabled": true,
+      "w": 1,
+      "h": 1
+    },
     {
       "id": "volumeSlider",
       "enabled": true,
@@ -215,6 +242,10 @@
     {
       "id": "notifications",
       "enabled": true
+    },
+    {
+      "id": "wellbeing",
+      "enabled": false
     }
   ],
   "dashOptions": {
@@ -496,5 +527,5 @@
   "frameThickness": 8,
   "frameShowOnOverview": true,
   "frameLauncherArcExtender": true,
-  "configVersion": 31
+  "configVersion": 36
 }
