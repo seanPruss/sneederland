@@ -42,3 +42,9 @@ window-rule {
     match app-id="helium"
     open-on-workspace "browser"
 }
+
+// @id=dms-window-opaque @name=DMS Window Opaque
+window-rule {
+    match app-id="^com\\.danklinux\\.dms$"
+    opacity 1.00
+}
