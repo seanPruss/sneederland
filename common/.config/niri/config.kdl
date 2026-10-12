@@ -386,6 +386,7 @@ binds {
     Mod+S hotkey-overlay-title="Spotify" { spawn "flatpak" "run" "com.spotify.Client"; }
     Mod+E hotkey-overlay-title="Email" { spawn "thunderbird"; }
     Mod+V hotkey-overlay-title="Volume" { spawn "pulsecontrol"; }
+    Mod+U hotkey-overlay-title="Update system" { spawn "kitty" "-e" "topgrade"; }
     Mod+Shift+B hotkey-overlay-title="Bluetooth" { spawn "overskride"; }
     Mod+Shift+V hotkey-overlay-title="Clipboard Manager" { spawn "dms" "ipc" "call" "clipboard" "toggle"; }
     Mod+W hotkey-overlay-title="Choose wallpaper" { spawn "dms" "ipc" "call" "dankdash" "wallpaper"; }
