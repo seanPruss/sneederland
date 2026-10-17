@@ -368,8 +368,8 @@
       "w": 1,
       "h": 1,
       "small": true,
-      "footer": true,
-      "footerEnd": true
+      "col": 7,
+      "row": 7
     }
   ],
   "appIdSubstitutions": [],
@@ -694,5 +694,5 @@
   "frameThickness": 8,
   "frameShowOnOverview": true,
   "frameLauncherArcExtender": true,
-  "configVersion": 40
+  "configVersion": 42
 }
