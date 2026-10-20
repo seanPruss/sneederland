@@ -128,6 +128,7 @@ install_stage=(
     adw-gtk-theme
     neo-candy-icons
     libreoffice-fresh
+    spotifast
     thunderbird
     mpv
     pamixer
@@ -146,7 +147,6 @@ install_stage=(
 flatpaks=(
     io.github.flattool.Ignition
     com.github.tchx84.Flatseal
-    com.spotify.Client
 )
 
 # set some colors
