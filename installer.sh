@@ -81,9 +81,10 @@ install_stage=(
     python-sphinx_design
     kitty-git
     quickshell-git
-    dms-shell-git
+    dux-shell-git
     inter-font
-    dsearch-git
+    dux-search-git
+    dux-calendar-git
     sddm
     sddm-theme-elegant-archlinux-git
     matugen

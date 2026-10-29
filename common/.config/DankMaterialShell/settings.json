@@ -414,7 +414,8 @@
   ],
   "dashOptions": {
     "media": {
-      "titleFont": "ui"
+      "titleFont": "ui",
+      "smoothLyrics": false
     },
     "wallpaper": {
       "columns": 6,
