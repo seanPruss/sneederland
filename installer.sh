@@ -129,7 +129,7 @@ install_stage=(
     adw-gtk-theme
     neo-candy-icons
     libreoffice-fresh
-    spotifast-bin
+    spotify-launcher
     thunderbird
     mpv
     pamixer
