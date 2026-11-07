@@ -79,7 +79,7 @@
     {
       "id": "lock_power",
       "widgetType": "lockPower",
-      "enabled": false,
+      "enabled": true,
       "config": {
         "displayPreferences": [
           "all"
@@ -157,7 +157,7 @@
     {
       "id": "lock_power",
       "widgetType": "lockPower",
-      "enabled": false,
+      "enabled": true,
       "config": {
         "displayPreferences": [
           "all"
@@ -197,7 +197,7 @@
   "useAutoLocation": true,
   "monoFontFamily": "CaskaydiaCove NFM",
   "textRenderType": 1,
-  "lockScreenShowPowerActions": false,
+  "lockScreenShowPowerActions": true,
   "powerActionConfirm": false,
   "powerMenuActions": [
     "reboot",
@@ -220,6 +220,7 @@
       "showOnLastDisplay": true,
       "position": 1,
       "mode": "compact",
+      "middleClickAction": "close",
       "taskbarAlign": "center",
       "widgetExpansion": "popout",
       "iconSize": 40,
