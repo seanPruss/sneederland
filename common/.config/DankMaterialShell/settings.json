@@ -25,7 +25,7 @@
     {
       "id": "lock_date",
       "widgetType": "lockDate",
-      "enabled": false,
+      "enabled": true,
       "config": {
         "displayPreferences": [
           "all"
@@ -48,7 +48,8 @@
         "style": "expressive",
         "profileVisibility": "always",
         "passwordVisibility": "always"
-      }
+      },
+      "name": "Password"
     },
     {
       "id": "lock_notifications",
@@ -59,7 +60,7 @@
           "all"
         ],
         "syncPositionAcrossScreens": true,
-        "mode": 2
+        "mode": 1
       }
     },
     {
@@ -115,7 +116,7 @@
     {
       "id": "lock_date",
       "widgetType": "lockDate",
-      "enabled": false,
+      "enabled": true,
       "config": {
         "displayPreferences": [
           "all"
@@ -138,7 +139,8 @@
         "style": "expressive",
         "profileVisibility": "always",
         "passwordVisibility": "always"
-      }
+      },
+      "name": "Password"
     },
     {
       "id": "lock_status",
