@@ -576,8 +576,8 @@
         {
           "id": "focusedWindow",
           "enabled": true,
-          "focusedWindowCompactMode": false,
-          "focusedWindowShowIcon": false
+          "focusedWindowShowIcon": false,
+          "focusedWindowShowAppName": true
         }
       ],
       "centerWidgets": [
@@ -722,5 +722,5 @@
   "frameThickness": 8,
   "frameShowOnOverview": true,
   "frameLauncherArcExtender": true,
-  "configVersion": 42
+  "configVersion": 43
 }
