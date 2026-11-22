@@ -193,7 +193,6 @@
   },
   "radiusStrength": 38,
   "clockFormat": "24h",
-  "animationDuration": 50,
   "blurBorderColor": "primary",
   "blurBorderOpacity": 0.7,
   "useAutoLocation": true,
@@ -236,10 +235,12 @@
       "smartAutoHide": false,
       "useOverlayLayer": false,
       "editOnRightClick": false,
+      "showEditWidgetsInContextMenu": true,
       "showOnFullscreen": false,
       "openOnOverview": false,
       "groupByApp": false,
       "separatePinnedAndRunningApps": false,
+      "showRunningApps": true,
       "restoreSpecialWorkspaceOnClick": false,
       "isolateDisplays": false,
       "indicatorStyle": "circle",
@@ -500,7 +501,6 @@
   "notificationCompactMode": true,
   "notificationShowTimeoutBar": true,
   "notificationPopupPosition": -1,
-  "notificationAnimationDuration": 100,
   "notificationHistoryMaxAgeDays": 1,
   "notificationRules": [
     {
@@ -722,5 +722,7 @@
   "frameThickness": 8,
   "frameShowOnOverview": true,
   "frameLauncherArcExtender": true,
-  "configVersion": 44
+  "configVersion": 46,
+  "motionDuration": 0,
+  "reduceMotion": false
 }
